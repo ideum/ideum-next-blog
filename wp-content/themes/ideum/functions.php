@@ -17,6 +17,7 @@
 			add_filter('get_twig', array($this, 'add_to_twig'));
 			add_action('init', array($this, 'register_post_types'));
 			add_action('init', array($this, 'register_taxonomies'));
+			$this->register_field_groups();
 			parent::__construct();
 		}
 
@@ -26,6 +27,48 @@
 
 		function register_taxonomies(){
 			//this is where you can register custom taxonomies
+		}
+
+		function register_field_groups(){
+			if(function_exists("register_field_group")){
+				register_field_group(array (
+					'id' => 'acf_post-fields',
+					'title' => 'Post Fields',
+					'fields' => array (
+						array (
+							'key' => 'field_53fe544ddc5bf',
+							'label' => 'Pull Quote',
+							'name' => 'pull_quote',
+							'type' => 'textarea',
+							'instructions' => 'Quote from the article.	This will appear with the featured image at the top of the page.',
+							'required' => 1,
+							'default_value' => '',
+							'placeholder' => '',
+							'maxlength' => 200,
+							'rows' => 3,
+							'formatting' => 'none',
+						),
+					),
+					'location' => array (
+						array (
+							array (
+								'param' => 'post_type',
+								'operator' => '==',
+								'value' => 'post',
+								'order_no' => 0,
+								'group_no' => 0,
+							),
+						),
+					),
+					'options' => array (
+						'position' => 'normal',
+						'layout' => 'no_box',
+						'hide_on_screen' => array (
+						),
+					),
+					'menu_order' => 0,
+				));
+			}
 		}
 
 		function add_to_context($context){
