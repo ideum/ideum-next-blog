@@ -23,16 +23,16 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 
     // ** MySQL settings - You can get this info from your web host ** //
     /** The name of the database for WordPress */
-    define('DB_NAME', 'ideum_blog');
+    define('DB_NAME', getenv('DB_NAME'));
 
     /** MySQL database username */
-    define('DB_USER', 'root');
+    define('DB_USER', getenv('DB_USER'));
 
     /** MySQL database password */
-    define('DB_PASSWORD', '');
+    define('DB_PASSWORD', getenv('DB_PASSWORD'));
 
     /** MySQL hostname */
-    define('DB_HOST', 'localhost');
+    define('DB_HOST', getenv('DB_HOST'));
 }
 
 /** Database Charset to use in creating database tables. */
@@ -56,14 +56,14 @@ define( 'WP_CONTENT_URL', '/wp-content' );
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '4#l:HdA}h[l1oHl6U>g*od*R,R04Y#F#h#AghcUKF$?4Ak^r1Q[Uo0-W~Xl6)F1o');
-define('SECURE_AUTH_KEY',  '!z?+s$2PVkGRq<K:*a*Rk(2MuMyZ96-#Bp5c M91KzOQsxoRL+=p]3&G]dQEk+l#');
-define('LOGGED_IN_KEY',    'K<);> x1kZ?crkU8AQ:3pk@NGh=-*ci D?edE%d,tZ7~*TP|(mTHLU4DJ5,caga-');
-define('NONCE_KEY',        '-t[r MHs%Z&Rqr<+PwLO9:/%0ZI4|{j&EaUza5;$|)bzp9$y)R|Z+LDUny%7d c@');
-define('AUTH_SALT',        ',kL>,D`&pvZmZfl!M4#,cq2}O!rzq(>4,#-MO`4q9YMDwmQgx0 -hVJ.h&tHj_l?');
-define('SECURE_AUTH_SALT', '.YQ(EU5;wq<]jLc88GOKRO*!G_2bcT@=v!NO=3CHW25S8dCX-bM%qDS$,b|`QGQz');
-define('LOGGED_IN_SALT',   'lv8$9+|,XjK]fyt(`)y*LIBgd8$pIX3[9c*97B;< n}*X;u-GBDT$4<2@~U}>A?o');
-define('NONCE_SALT',       '-GV:wf-< Pv/2yz|$jyqLIZ}4=tb-Fx$Z9UVehA%embRwopNg8@!u^z+g3Y-& EI');
+define('AUTH_KEY', getenv('AUTH_KEY'));
+define('SECURE_AUTH_KEY', getenv('SECURE_AUTH_KEY'));
+define('LOGGED_IN_KEY', getenv('LOGGED_IN_KEY'));
+define('NONCE_KEY', getenv('NONCE_KEY'));
+define('AUTH_SALT', getenv('AUTH_SALT'));
+define('SECURE_AUTH_SALT', getenv('SECURE_AUTH_SALT'));
+define('LOGGED_IN_SALT', getenv('LOGGED_IN_SALT'));
+define('NONCE_SALT', getenv('NONCE_SALT'));
 
 /**#@-*/
 
