@@ -22,7 +22,22 @@
 		}
 
 		function register_post_types(){
-			//this is where you can register custom post types
+			register_post_type( 'ideum_employee', array(
+				'labels' => array(
+					'name' => __( 'Employees' ),
+					'singular_name' => __( 'Employee' )
+				),
+				'public' => true,
+				'has_archive' => true,
+			));
+			register_post_type( 'ideum_project', array(
+				'labels' => array(
+					'name' => __( 'Projects' ),
+					'singular_name' => __( 'Project' )
+				),
+				'public' => true,
+				'has_archive' => true,
+			));
 		}
 
 		function register_taxonomies(){
@@ -92,6 +107,6 @@
 	new StarterSite();
 
 	function myfoo($text){
-    	$text .= ' bar!';
-    	return $text;
+		$text .= ' bar!';
+		return $text;
 	}
