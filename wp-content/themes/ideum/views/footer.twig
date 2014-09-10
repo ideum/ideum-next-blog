@@ -1,1 +1,51 @@
-Copyright {{"now"|date('Y')}}
+<div class="main">
+
+  <div class="mobile-controls">
+    <button class="sitemap" ng-click="toggleSitemap()" ng-class="{open: showSitemap}">
+      <span>Sitemap</span>
+      <i class="icon-caret-down"></i>
+    </button>
+    <button class="newsletter" ng-click="toggleNewsletter()" ng-class="{open: showNewsletter}">
+    <span>Newsletter</span>
+    <i class="icon-caret-down"></i>
+  </button>
+  </div>
+
+  {# Full sitemap for mobile devices #}
+  <nav class="sitemap scroll-bottom" ng-show="showSitemap">
+    <ul>
+      <li><a href="#FIXME">Home</a></li>
+      <li><a href="#FIXME">Creative Services</a></li>
+      <li><a href="#FIXME">Multitouch Tables</a></li>
+      <li><a href="#FIXME">Touch Walls</a></li>
+      <li><a href="#FIXME">Blog</a></li>
+      <li><a href="#FIXME">Our Story</a></li>
+      <li><a href="#FIXME">Social Media Feed</a></li>
+      <li><a href="#FIXME">Jobs</a></li>
+      <li><a href="#FIXME">FAQ</a></li>
+      <li><a href="#FIXME">Legal</a></li>
+    </ul>
+  </nav>
+
+  {# Abbreviated sitemap for larger screens #}
+  <nav class="footer-nav">
+    <ul>
+      <li><a href="#FIXME">Site Map</a></li>
+      <li><a href="#FIXME">Jobs</a></li>
+      <li><a href="#FIXME">FAQ</a></li>
+      <li><a href="#FIXME">Legal</a></li>
+    </ul>
+  </nav>
+
+  <form class="newsletter-signup scroll-bottom" ng-show="showNewsletter">
+    <label for="newsletter_signup_email">Newsletter Signup</label>
+    <input
+      type="email"
+      id="newsletter_signup_email"
+      class="email"
+      name="email"
+      placeholder="Enter Your Email Here"
+    >
+  </form>
+
+</div>

@@ -1,31 +1,30 @@
-{% block html_head_container %}
-{% include 'html-header.twig' %}
-    {% block head %}
-    {% endblock %}
+<!DOCTYPE html>
+<html class="no-js" ng-app="ideum">
+    <head>
+        {% include 'html-header.twig' %}
+        {% block head %}
+        {% endblock %}
     </head>
-{% endblock %}
+
     <body class="{{body_class}}" data-template="base.twig">
-        <header class="header" >
-            {% block header %}
-            <div class="wrapper">
-
-                <h1 class="hdr-logo" role="banner">
-                    <a class="hdr-logo-link" href="/" title="Timber" rel="home">{{site.name}}</a>
-                </h1>
-                <nav id="access" class="main-navigation" role="navigation">
-                    <ul>
-                    {% for item in menu.items %}
-                        <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
-                            <a href="{{item.link}}">{{item.title}}</a>
-                        </li>
-                    {% endfor %}
-                    </ul>
-                </nav><!-- #access -->
-
-            </div>
-            {% endblock %}
+        <header id="header" ng-controller="headerCtrl">
+            {% include 'header.twig' %}
         </header>
 
+        <nav id="mobile-slideout-menu" ideum-mobile-slideout-menu ng-show="open">
+          <header>
+            <h1>Menu</h1>
+            <button class="close" ng-click="close()"><i class="icon-close"></i></button>
+          </header>
+
+          <ul>
+            {% for item in menu.items %}
+              <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
+                <a href="{{item.link}}">{{item.title}}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
 
         <section id="content" role="main" class="content-wrapper">
             {% if title %}<h1>{{title}}</h1>{% endif %}
@@ -33,6 +32,14 @@
                 {% block content %}
                     Sorry, no content
                 {% endblock %}
+
+                <section class="chat foot-chat">
+
+                  <div class="button">
+                    <a href="#FIXME">Ready to Start? Let's Chat.</a>
+                  </div>
+
+                </section>
             </div>
             {% if sidebar %}
                 <aside class="layout-sidebar">
@@ -42,7 +49,7 @@
         </section>
 
         {% block footer %}
-            <footer id="footer">
+            <footer id="footer" ng-controller="footerCtrl">
                 {% include 'footer.twig' %}
             </footer>
             {{ function('wp_footer') }}
