@@ -1,0 +1,121 @@
+// Typography
+$sans-serif: 'Roboto', $helvetica;
+$serif: $georgia;
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+
+// Sizes
+$base-font-size: 14px;
+$em-base: $base-font-size;
+$unitless-line-height: 1.75;
+$base-line-height: $base-font-size * $unitless-line-height;
+$header-line-height: 1.25;
+$base-border-radius: rem(2);
+$footer-overlap-height: 140px;
+
+// Colors
+$black:             hsl(  0,   0%,   0%);
+$white:             hsl(  0,   0%, 100%);
+
+$vv-dark-gray:      hsl(215,  18%,  25%);
+$very-dark-gray:    hsl(216,  17%,  29%);
+$dark-gray:         hsl(216,  11%,  53%);
+$medium-gray:       hsl(  0,   0%,  72%);
+$light-gray:        hsl(  0,   0%,  78%);
+$very-light-gray:   hsl(  0,   0%,  88%);
+$vv-light-gray:     hsl(  0,   0%,  94%);
+
+$very-dark-teal:    hsl(170,  58%,  59%);
+$dark-teal:         hsl(170,  58%,  59%);
+$medium-teal:       hsl(170,  71%,  78%);
+$light-teal:        hsl(170,  69%,  88%);
+$very-light-teal:   hsl(170,  66%,  93%);
+
+$very-dark-orange:  hsl( 40,  81%,  61%);
+$dark-orange:       hsl( 40,  88%,  65%);
+$medium-orange:     hsl( 45, 100%,  73%);
+$light-orange:      hsl( 60,  55%,  87%);
+$very-light-orange: hsl( 60,  67%,  92%);
+
+$very-dark-blue:    hsl(192,  57%,  62%);
+$dark-blue:         hsl(200,  73%,  63%);
+$medium-blue:       hsl(192,  66%,  67%);
+$light-blue:        hsl(188,  52%,  88%);
+$very-light-blue:   hsl(187,  61%,  92%);
+
+$very-dark-purple:  hsl(253,  44%,  65%);
+$dark-purple:       hsl(252,  50%,  70%);
+$medium-purple:     hsl(253,  56%,  78%);
+$light-purple:      hsl(246,  52%,  88%);
+$very-light-purple: hsl(246,  72%,  94%);
+
+$very-dark-green:   hsl(120,  54%,  64%);
+$dark-green:        hsl(141,  52%,  60%);
+$medium-green:      hsl(141,  54%,  70%);
+$light-green:       hsl(147,  55%,  90%);
+$very-light-green:  hsl(147,  60%,  94%);
+
+$very-dark-red:     hsl(  0,  80%,  68%);
+$dark-red:          hsl(  4, 100%,  70%);
+$medium-red:        hsl(  4, 100%,  79%);
+$light-red:         hsl(  0,  68%,  88%);
+$very-light-red:    hsl(  0,  66%,  93%);
+
+// Background Color
+$content-background-color: $white;
+$base-background-color: $vv-light-gray;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: $dark-teal;
+
+// Font Weights
+$light: 300;
+$normal: 400;
+$bold: 700;
+$ultra-bold: 900;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+$base-button-color: $very-dark-gray;
+$hover-button-color: lighten($base-button-color, 15);
+$inactive-button-color: $very-light-gray;
+
+// Border color
+$base-border-color: $light-gray;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+// Animations
+$base-animation-speed: 0.3s;
+$base-animation-easing: ease;
+
+// Neat Overrides
+$column: 60px;
+$gutter: 20px;
+$grid-columns: 12;
+$max-width: 1280px;
+$medium-gutter: $gutter * 1.75;
+$large-gutter: $gutter * 2.5;
+
+// Neat Visual Grid
+$visual-grid: false;
+$visual-grid-index: front;
+
+// Neat Breakpoints
+$small-screen: 280px;
+$medium-screen: 640px;
+$large-screen: 960px;
+
+$small-screen-up: new-breakpoint(min-width $small-screen);
+$medium-screen-up: new-breakpoint(min-width $medium-screen);
+$large-screen-up: new-breakpoint(min-width $large-screen);

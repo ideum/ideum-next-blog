@@ -1,0 +1,59 @@
+#content {
+  @include outer-container;
+  background-color: $content-background-color;
+}
+
+
+@include media($small-screen-up) {
+  .phone-only {
+    display: block;
+  }
+  .phone-n-tablet {
+    display: block;
+  }
+  .tablet-only {
+    display: none;
+  }
+  .tablet-n-desktop {
+    display: none;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
+@include media($medium-screen-up) {
+  .phone-only {
+    display: none;
+  }
+  .phone-n-tablet {
+    display: block;
+  }
+  .tablet-only {
+    display: block;
+  }
+  .tablet-n-desktop {
+    display: block;
+  }
+  .desktop-only {
+    display: block;
+  }
+}
+
+@include media($large-screen-up) {
+  .phone-only {
+    display: none;
+  }
+  .phone-n-tablet {
+    display: none;
+  }
+  .tablet-only {
+    display: none;
+  }
+  .tablet-n-desktop {
+    display: block;
+  }
+  .desktop-only {
+    display: block;
+  }
+}

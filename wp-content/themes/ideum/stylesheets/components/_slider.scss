@@ -1,0 +1,91 @@
+.slider {
+  .rn-carousel-slide {
+     height: 100%;
+     width: 100%;
+
+    // @include media($medium-screen-up) { width: (100% / 2); }
+    // @include media($large-screen-up)  { width: (100% / 3); }
+
+    &.product-slide {
+      @include media($medium-screen-up) { width: (100% / 1); }
+      @include media($large-screen-up)  { width: (100% / 1); }
+    }
+    &.client-slide {
+      @include media($small-screen-up) { width: (100% / 2); }
+      @include media($medium-screen-up) { width: (100% / 3); }
+      @include media($large-screen-up)  { width: (100% / 4); }
+    }
+   
+
+  // button.previous {
+    // display: none;
+    // @include media($medium-screen-up) { 
+      // @include position(absolute, 0 null 0 0);
+      // display: block;
+      // height: rem(50);
+      // margin: auto;
+    // }
+  }
+}
+
+
+  //button.next {
+    //display: none;
+    //@include media($medium-screen-up) { 
+      //@include position(absolute, 0 0 0 null);
+      //display: block;
+      //height: rem(50);
+      //margin: auto;
+    //}
+
+.rn-carousel-controls {
+  .rn-carousel-control {
+    background: $very-light-gray;
+    display: none;
+    font-size: rem(18);
+    opacity: 0.9;
+    @include size(rem(70));
+    line-height: rem(70);
+    text-align: center;
+    vertical-align: middle;
+
+    @include media($medium-screen-up) { 
+      display: block;
+    }
+
+    &:hover { opacity: 1 }
+    &-prev { @extend .icon-arrow-left;  left: 0;  }
+    &-next { @extend .icon-arrow-right; right: 0; }
+  }
+}
+
+// the slider pips
+.rn-carousel-indicator {
+  // Remove default background
+  background: transparent;
+  box-sizing: content-box;
+  @include pad(default 0);
+
+  span {
+    @include size(14px);
+    background-color: $very-light-gray;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 .6em;
+
+    // Remove default pip
+    &:before { content: '' }
+
+    &:hover {
+      background-color: $very-dark-gray;
+    }
+    &.active {
+      @include size(16px);
+      background-color: $white;
+      border: 3px solid $very-dark-gray;
+      &:hover {
+        border: 3px solid $light-gray;
+      }
+    }
+  }
+}

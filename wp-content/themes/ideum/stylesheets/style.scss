@@ -1,0 +1,58 @@
+// This comment must be at the top for WP to recognize the built styles as a
+// valid theme stylesheet.
+/*  Theme Name: Ideum
+    Description: Theme for ideum.com
+    Author: Ideum <info@ideum.com>
+    Version: 0.0.0
+*/
+
+@import 'normalize-scss/normalize';
+
+@import 'bourbon/dist/bourbon';
+@import 'neat/app/assets/stylesheets/neat-helpers';
+
+// Variables
+@import 'variables';
+
+@import 'neat/app/assets/stylesheets/neat';
+
+// FIXME: Third-party Libraries
+// @import 'angular-carousel';
+// @import 'select2';
+
+// Mixins
+@import "mixins/banner";
+@import "mixins/navi-effect";
+
+// Extends
+@import 'extends/button';
+@import 'extends/clearfix';
+@import 'extends/hide-text';
+
+// Typography and Elements
+@import 'layout';
+@import 'typography';
+@import 'forms';
+@import 'tables';
+@import 'lists';
+@import 'buttons';
+@import 'icons';
+
+// Page Components
+@import 'components/header';
+@import 'components/header-image';
+@import 'components/content';
+@import 'components/footer';
+@import 'components/slider';
+@import 'components/our-creative-services';
+@import 'components/mobile-slideout-menu';
+@import 'components/social-media-feed';
+@import 'components/post-style';
+@import 'components/our-products';
+@import 'components/featured-pages';
+@import 'components/clients-n-partners';
+
+// Necessary to avoid flash of unrendered angular templates
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

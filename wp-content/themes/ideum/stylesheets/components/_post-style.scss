@@ -1,0 +1,112 @@
+.post-style {
+    @include row;
+    overflow: hidden;
+    position: relative;
+    
+    .img-wrap {
+      @include span-columns(12);
+      margin: 0;
+      overflow: hidden;
+
+      @include media($medium-screen-up) {
+        @include span-columns(6);
+      }
+      
+      img {
+        display: block;
+        float: left;
+      }
+
+    }
+    
+    &.img-right {
+
+      .txt-wrap {
+        @include span-columns(10);
+        @include shift(1);
+
+        @include media($medium-screen-up) {
+          @include span-columns(4);
+          @include shift(1);
+        }
+
+      }
+
+    }
+
+    &.img-left {
+      /* no op */
+      
+      .txt-wrap {
+        @include span-columns(10);
+        @include shift(1);
+
+        @include media($medium-screen-up) {
+          @include span-columns(4);
+          @include shift(1);
+        }
+
+      }
+
+    }
+
+    .txt-wrap {
+
+      @include omega;
+      padding: $large-gutter 0;
+
+      .time {
+        color: $medium-gray;
+        text-transform: uppercase;
+
+        sup {
+          font-stretch: semi-expanded; // comp calls for it - future feature
+        }
+
+      }
+
+      .view, .share {
+        float: right;
+      }
+
+      a.view, a.share, a.read {
+        text-transform: uppercase;
+      }
+
+      h1 a, a.view, a.share, a.read {
+        font-weight: $bold;
+        color: $very-dark-gray;
+
+        &:hover {
+          color: lighten($very-dark-gray, 15);
+        }
+
+      }
+
+      h1 a {
+        font-weight: $ultra-bold;
+      }
+
+      .footer {
+        @include span-columns(12);
+        @include omega;
+        padding: $gutter 0 0 0;
+
+        @include media($medium-screen-up) {
+          @include span-columns(4);
+          height: 4em;
+          padding: 0 0 $large-gutter + $gutter;        
+          position: absolute;
+            bottom: 0;
+        }
+
+      }
+
+    }
+    
+    .content {
+      @include clearfix;
+      height: 100%;
+      width: 100%;
+    }
+  }

@@ -1,0 +1,95 @@
+.social-media-feed {
+  @include media($medium-screen-up) {
+    padding-bottom: $gutter * 2;
+  }
+
+  .social-media-feed-slider {
+    box-sizing: content-box;
+
+    .item {
+      height: 375px;
+      overflow: hidden;
+      position: relative;
+
+      * { color: $vv-light-gray; }
+
+      img {
+        height: auto;
+        min-height: 100%;
+        min-width: 100%;
+        width: auto;
+      }
+
+      .content {
+        @include position(absolute, 0 0 0 0);
+        @include pad;
+        text-align: center;
+      }
+
+      .icon-youtube, .icon-twitter, .icon-flickr {
+        color: $white;
+        font-size: 32px;
+        position: absolute;
+        left: 10%; top: 6%;
+      }
+
+      &.youtube {
+        background-color: #3A3834;
+      }
+
+      &.twitter {
+        background-color: $medium-blue;
+
+        .content {
+          width:80%;
+          margin:0 auto;
+          padding: ($large-gutter * 2) 0;
+
+          p {
+            color: $white;
+            font-size: 1.4em;
+            text-align: left;
+            word-wrap: break-word;
+          }
+
+        }
+
+      }
+
+      &.flickr {
+        /* no op */
+      }
+
+      .footer {
+        padding: $gutter 0 0 0;
+
+        @include media($medium-screen-up) {
+          height: 4em;
+          padding:0 0 $large-gutter + $gutter;
+          position: absolute;
+          bottom: 0;
+        }
+
+        .read, .share {
+          float: left;
+          margin-right:1em;
+        }
+
+        a.read, a.share {
+          color: $white;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          &:hover {
+            color: darken($white, 15);
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

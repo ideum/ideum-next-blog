@@ -1,0 +1,51 @@
+#mobile-slideout-menu {
+  @include position(fixed, 0px 0px 0px null);
+  @include transition(transform $base-animation-speed $base-animation-easing);
+
+  &.ng-hide-add           { @include transform(translateX(0))    }
+  &.ng-hide-add-active    { @include transform(translateX(100%)) }
+  &.ng-hide-remove        { @include transform(translateX(100%)) }
+  &.ng-hide-remove-active { @include transform(translateX(0))    }
+
+  background-color: $white;
+  overflow-y: scroll;
+  height: 100%;
+  width: 80%;
+  z-index: 1000;
+
+  header {
+    @include clearfix;
+    @include pad(0 default);
+    background-color: $very-dark-gray;
+    height: rem(60);
+    position: relative;
+
+    h1 {
+      color: $white;
+      font-size: rem(24);
+      font-weight: $normal;
+      line-height: rem(60);
+      margin: 0;
+      vertical-align: middle;
+    }
+
+    button.close {
+      @include position(absolute, 0 0 0 null);
+      float: right;
+      width: rem(60);
+      border: none;
+      margin: 0;
+      background: $vv-dark-gray;
+      color: $white;
+    }
+  }
+
+  a {
+    @include pad;
+    border-bottom: 1px solid $very-light-gray;
+    color: $very-dark-gray;
+    display: block;
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+}

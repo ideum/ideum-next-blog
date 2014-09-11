@@ -1,0 +1,49 @@
+/**
+ * Social icons, including RSS, from the Zocial icon font
+ * (http://zocial.smcllns.com/); all other icons from IcoMoon Essential Pack
+ * (https://icomoon.io/).  Font built using Fontello (http://fontello.com).
+ */
+$icons: (
+  gplus:            '\e800',
+  flickr:           '\e801',
+  rss:              '\e802',
+  linkedin:         '\e803',
+  twitter:          '\e804',
+  youtube:          '\e805',
+  vimeo:            '\e806',
+  facebook:         '\e807',
+  pinterest:        '\e808',
+  caret-up:         '\e809',
+  caret-right:      '\e80a',
+  caret-down:       '\e80b',
+  caret-left:       '\e80c',
+  arrow-up-left:    '\e80d',
+  arrow-up:         '\e80e',
+  arrow-up-right:   '\e80f',
+  arrow-right:      '\e810',
+  arrow-down-right: '\e811',
+  arrow-down:       '\e812',
+  arrow-down-left:  '\e813',
+  arrow-left:       '\e814',
+  menu:             '\e815',
+  close:            '\e816'
+);
+
+@include font-face(ideum-icons, 'ideum-icons', $asset-pipeline: true);
+
+%icon {
+  font-family: icons;
+  font-family: ideum-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: none;
+  text-transform: none;
+}
+
+@each $icon, $codepoint in $icons {
+  .icon-#{$icon} {
+    @extend %icon;
+    &:before { content: $codepoint }
+  }
+}

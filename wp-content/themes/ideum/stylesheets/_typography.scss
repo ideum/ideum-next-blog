@@ -1,0 +1,103 @@
+html, body {
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $unitless-line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $very-dark-gray;
+  font-family: $header-font-family;
+  line-height: $header-line-height;
+  margin: 0;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+h1 {
+  font-size: rem(34);
+  font-weight: $ultra-bold;
+  line-height: 1.32;
+  margin: rem(30) 0 rem(16);
+}
+
+h2 {
+  font-size: rem(24);
+  font-weight: $normal;
+  line-height: 1.33;
+}
+
+h3 {
+  font-size: rem(14);
+  font-weight: $bold;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: $medium-gray;
+  font-size: rem(14);
+  font-weight: normal;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: $base-font-size;
+  font-weight: $bold;
+}
+
+h6 {
+  color: $medium-gray;
+  font-size: $base-font-size;
+  font-weight: $bold;
+}
+
+p {
+  margin: 0 0 ($base-line-height * .5);
+}
+
+a {
+  @include transition(color $base-animation-speed $base-animation-easing);
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: 1px solid $base-border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-line-height 0;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: 2px solid $base-border-color;
+  color: lighten($base-font-color, 15);
+  margin: $base-line-height 0;
+  padding-left: $base-line-height / 2;
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}

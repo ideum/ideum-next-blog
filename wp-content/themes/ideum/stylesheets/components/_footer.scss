@@ -1,0 +1,119 @@
+$footer-background-color: $vv-dark-gray;
+$footer-second-background-color: $very-dark-gray;
+$footer-accent-color: $dark-gray;
+$footer-font-color: $white;
+
+#footer {
+  margin-top: -$footer-overlap-height;
+  background-color: $footer-background-color;
+  color: $footer-font-color;
+  padding-top: $footer-overlap-height;
+
+  .main {
+    @include outer-container;
+
+    .mobile-controls {
+      @include row;
+      @include media($medium-screen-up) { display: none }
+
+      button {
+        @include span-columns(6, block-collapse);
+        @include pad(rem(30) default);
+
+        border: none;
+        color: $footer-font-color;
+        margin: 0;
+
+        span { float: left  }
+        i {
+          float: right;
+          @include transition(transform $base-animation-speed $base-animation-easing);
+        }
+        &.open i { @include transform(rotate(180deg)) }
+      }
+
+      .sitemap {
+        background-color: $footer-second-background-color;
+      }
+
+      .newsletter {
+        background-color: $footer-background-color;
+      }
+    }
+
+    nav {
+      a {
+        color: $footer-font-color;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+
+    nav.sitemap {
+      // Only show in mobile
+      @include media($medium-screen-up) { display: none }
+
+      a {
+        display: block;
+        @include pad;
+        border-top: 2px solid $footer-background-color;
+
+        @include transition(background-color $base-animation-speed $base-animation-easing);
+        background-color: $footer-second-background-color;
+        &:hover, &.active { background-color: $footer-accent-color }
+      }
+    }
+
+    nav.footer-nav {
+      // Don't show in mobile
+      display: none;
+      @include media($medium-screen-up) { display: block }
+
+      @include navi-effect($footer-font-color);
+      @include pad;
+
+      li {
+        display: inline-block;
+        padding-right: 1rem;
+      }
+
+      a {
+        position: relative;
+      }
+    }
+
+    .newsletter-signup {
+      // Force display outside mobile even if ng-hide is applied
+      @include media($medium-screen-up) { display: block !important }
+
+      @include pad;
+
+      label {
+        color: $footer-font-color;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      input {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom: 1px solid $footer-font-color;
+        @include placeholder {
+          font-style: italic;
+          color: $footer-font-color;
+        }
+      }
+    }
+
+    @include media($large-screen-up) {
+      @include display(flex);
+      @include align-items(center);
+
+      nav, .newsletter-signup {
+        @include flex(1);
+      }
+    }
+  }
+}

@@ -1,4 +1,9 @@
 /local-config.php
 /wp-content/uploads/
 /wp-content/upgrade/
-.vagrant
+
+node_modules/
+bower_components/
+
+.vagrant/
+.sass-cache/

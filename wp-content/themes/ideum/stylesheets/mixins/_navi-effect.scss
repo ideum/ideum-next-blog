@@ -1,0 +1,28 @@
+@mixin navi-effect($background: $white) {
+  a {
+    padding: 0 0 em(5);
+  }
+  a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $background;
+    content: '';
+    opacity: 0;
+    @include transition(
+      height $base-animation-speed $base-animation-easing,
+      opacity $base-animation-speed $base-animation-easing,
+      transform $base-animation-speed $base-animation-easing
+    );
+    @include transform(translateY(em(-10)));
+  }
+
+  a:hover::after,
+  a:focus::after {
+    height: 2px;
+    opacity: 1;
+    @include transform(translateY(0px));
+  }
+}

@@ -1,0 +1,98 @@
+.clients-n-partners { 
+    /* no op */
+
+  .section-info {
+    padding-bottom: $medium-gutter;
+  }
+
+  ul.rn-carousel-slides {
+    @include span-columns(12);
+    @include omega;
+    height:169px;
+
+
+    li.client-slide {
+      @include filter(grayscale(100%));
+      background-repeat: no-repeat;
+      background-position: center;
+      border-right: 2px solid #ccc;
+      flex-grow: 4;
+      height: 169px;
+      opacity: 0.15;
+      text-align: center;
+
+      &.client-crystalbridges {
+        opacity: 0.6;
+      }
+
+      &.active {
+        @include filter(none);
+        opacity: 1.0;
+      }
+
+      &:nth-of-type(2n) {
+        border-right: none;
+      }
+
+      &:last-of-type {
+        border-right: none;
+      }
+
+      @include media($medium-screen-up) {
+
+        &:nth-of-type(2n) {
+          border-right: 2px solid #ccc;
+        }
+
+        &:nth-of-type(3n) {
+          border-right: none;
+        }
+
+        &:nth-of-type(4n) {
+          border-right: 2px solid #ccc;
+        }
+
+      }
+      @include media($large-screen-up) {
+
+        &:nth-of-type(2n) {
+          border-right: 2px solid #ccc;
+        }
+
+        &:nth-of-type(3n) {
+          border-right: 2px solid #ccc;
+        }
+        &:nth-of-type(4n) {
+          border-right: none;
+        }
+      }
+
+    }
+
+  }
+
+  ul.other-cnp {
+    background-color: $vv-light-gray;
+    @include pad(0 default);
+    @include span-columns(12);
+    height:auto;
+
+    li {
+      @include media($small-screen-up) { width: (100% / 3); }
+      @include media($medium-screen-up) { width: (100% / 4); }
+      @include media($large-screen-up)  { width: (100% / 6); }
+      @include filter(grayscale(100%));
+      background-size: 50%;
+      float:left;
+      height: 100%;
+      opacity: 0.15;
+
+      &:hover {
+        @include filter(none);
+        opacity: 1.0;
+      }
+
+    }
+  }
+
+}

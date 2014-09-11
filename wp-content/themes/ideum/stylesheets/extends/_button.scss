@@ -1,0 +1,53 @@
+%button {
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-background-color;
+  border: 3px solid $inactive-button-color;
+  border-radius: $base-border-radius;
+  color: $very-dark-gray;
+  display: inline-block;
+  font-size: $base-font-size;
+  font-weight: $bold;
+  line-height: 1;
+  margin: .5em;
+  padding: rem(20) 2em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include transition(
+    background-color $base-animation-speed $base-animation-easing,
+    color $base-animation-speed $base-animation-easing
+  );
+
+  &.pointer:after{
+    content: "";
+    margin: auto;
+    @include position(absolute, 100% 0 null 0);
+    @include transition(border-width $base-animation-speed $base-animation-easing);
+    @include triangle(0px, $inactive-button-color, down);
+  }
+
+  &:hover {
+    background-color: $inactive-button-color;
+    color: $base-button-color;
+    &.pointer:after {
+      @include triangle(32px, $inactive-button-color, down);
+    }
+  }
+  &.active {
+    background-color: $base-button-color;
+    border-color: $base-button-color;
+    color: $base-background-color;
+    &.pointer:after {
+      @include triangle(32px, $base-button-color, down);
+    }
+    &:hover {
+      background-color: lighten($base-button-color, 15);
+      border-color: $hover-button-color;
+      color: $base-background-color;
+      &.pointer:after {
+        @include triangle(32px, $hover-button-color, down);
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,52 @@
+ul, ol {
+  margin: 0;
+  padding: 0;
+  
+  list-style-type: none;
+
+  &%default-ul {
+    list-style-type: disc;
+    margin-bottom: $base-line-height / 2;
+    padding-left: $base-line-height;
+    ul {
+      padding-left: $base-line-height;
+      list-style-type: circle;
+      ul {
+        list-style-type: square;
+      }
+    }
+  }
+
+  &%default-ol {
+    margin-bottom: $base-line-height / 2;
+    padding-left: $base-line-height;
+    list-style: decimal;
+    ol { 
+      padding-left: $base-line-height;
+      list-style: upper-alpha;
+      ol  { 
+        list-style: lower-roman ;
+        ol { 
+          list-style: lower-alpha ;
+        }
+      }
+    }
+  }
+}
+
+// FIXME: for example page; delete later
+ul.default { @extend %default-ul }
+ol.default { @extend %default-ol }
+
+dl {
+  margin-bottom: $base-line-height / 2;
+
+  dt {
+    font-weight: bold;
+    margin-top: $base-line-height / 2;
+  }
+
+  dd {
+    margin: 0;
+  }
+}

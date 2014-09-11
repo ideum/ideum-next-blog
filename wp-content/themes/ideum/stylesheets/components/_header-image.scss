@@ -1,0 +1,86 @@
+#header .header-image {
+  @include clearfix;
+  position: relative; // Force a new z-index stacking context
+  z-index: 0;
+
+  // adjustments to pseudo-header will vary by page (as class)
+  //
+  // Images must be formatted as follows:  The desktop image must be named
+  // '{name}.jpg' and the mobile image must be '{name}-phone.jpg'.  {name} may
+  // include containing directories, but the two images must reside in the same
+  // directory and must both be JPEGs.  Note that if an image is not found, the
+  // compiler will throw an error and refuse to continue.
+  //
+  // FIXME: duplicate record added so SASS will recognize this is a list of
+  // lists.  Remove duplicate after a second real item is added.
+  @each $class, $color, $image in (
+    ('home', #62A6E7, 'home-pseudo-header-bg'),
+    ('home', #62A6E7, 'home-pseudo-header-bg')
+  ) {
+    .#{$class} {
+      background: $color image-url('#{$image}-phone.jpg') no-repeat bottom right;
+      height: 460px;
+
+      @include media($medium-screen-up) {
+        background: $color image-url('#{$image}.jpg') no-repeat center center;
+        background-size: auto 800px;
+        height: 800px;
+        margin-bottom: -200px;
+      }
+    }
+  }
+
+  .page-intro {
+    @include outer-container;
+
+    .page-intro-inner {
+      @include span-columns(10);
+      @include shift(1);
+
+      @include media($medium-screen-up) {
+        @include span-columns(5);
+        padding-top: 165px;
+      }
+
+      h1 a, a.view, a.share, a.read {
+        font-weight: $bold;
+        color: $white;
+
+        &:hover {
+          color: $very-light-gray;
+        }
+
+      }
+
+      h2 {
+        display: none;
+        @include media($medium-screen-up) {
+          color: $white;
+          display: block;
+        }
+      }
+
+      .footer {
+        margin: $medium-gutter 0;
+
+        a {
+
+          &:hover {
+            border-bottom: 3px solid $white;
+            color: $white;
+            padding-bottom: 5px;
+          }
+          &.share {
+            margin-left: $medium-gutter;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+}
