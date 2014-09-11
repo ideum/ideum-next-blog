@@ -17,6 +17,7 @@
 			add_filter('get_twig', array($this, 'add_to_twig'));
 			add_action('init', array($this, 'register_post_types'));
 			add_action('init', array($this, 'register_taxonomies'));
+      add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
 			$this->register_field_groups();
 			parent::__construct();
 		}
@@ -101,6 +102,10 @@
 			$twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
 			return $twig;
 		}
+
+    function enqueue_scripts(){
+      wp_enqueue_script('ideum-site', get_template_directory_uri() . '/js/site.js', array(), null, true);
+    }
 
 	}
 
