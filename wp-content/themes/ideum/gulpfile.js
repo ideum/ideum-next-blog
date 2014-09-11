@@ -46,5 +46,18 @@ gulp.task('javascripts', ['lint', 'vendor_javascripts'], function () {
     .pipe(gulp.dest('./js/'));
 });
 
+///////////////
+// Utilities //
+///////////////
+
+// Build
+gulp.task('build', ['javascripts', 'stylesheets']);
+
+// Watch for changes
+gulp.task('watch', ['build'], function () {
+  gulp.watch('javascripts/**/*.js', ['javascripts']);
+  gulp.watch('stylesheets/**/*.scss', ['stylesheets']);
+});
+
 // Default task
-gulp.task('default', []);
+gulp.task('default', ['build']);
