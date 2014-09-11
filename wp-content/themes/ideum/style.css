@@ -863,8 +863,8 @@ a.button {
   font-family: ideum-icons;
   font-weight: normal;
   font-style: normal;
-  src: font-url("ideum-icons.eot");
-  src: font-url("ideum-icons.eot?#iefix") format("embedded-opentype"), font-url("ideum-icons.woff") format("woff"), font-url("ideum-icons.ttf") format("truetype"), font-url("ideum-icons.svg#ideum-icons") format("svg");
+  src: url("fonts/ideum-icons.eot");
+  src: url("fonts/ideum-icons.eot?#iefix") format("embedded-opentype"), url("fonts/ideum-icons.woff") format("woff"), url("fonts/ideum-icons.ttf") format("truetype"), url("fonts/ideum-icons.svg#ideum-icons") format("svg");
 }
 .icon-gplus, .icon-flickr, .icon-rss, .icon-linkedin, .icon-twitter, .icon-youtube, .icon-vimeo, .icon-facebook, .icon-pinterest, .icon-caret-up, .icon-caret-right, .icon-caret-down, .icon-caret-left, .icon-arrow-up-left, .icon-arrow-up, .icon-arrow-up-right, .icon-arrow-right, .rn-carousel-controls .rn-carousel-control-next, .icon-arrow-down-right, .icon-arrow-down, .icon-arrow-down-left, .icon-arrow-left, .rn-carousel-controls .rn-carousel-control-prev, .icon-menu, .icon-close {
   font-family: icons;
@@ -1148,7 +1148,7 @@ a.button {
 #header .logo a {
   display: inline-block;
   overflow: hidden;
-  background: image-url("logo.png") no-repeat center center;
+  background: url("images/logo.png") no-repeat center center;
   height: 50px;
   width: 129px;
 }
@@ -1248,24 +1248,24 @@ a.button {
   clear: both;
 }
 #header .header-image .home {
-  background: #62A6E7 image-url("home-pseudo-header-bg-phone.jpg") no-repeat bottom right;
+  background: #62A6E7 url("images/home-pseudo-header-bg-phone.jpg") no-repeat bottom right;
   height: 460px;
 }
 @media screen and (min-width: 640px) {
   #header .header-image .home {
-    background: #62A6E7 image-url("home-pseudo-header-bg.jpg") no-repeat center center;
+    background: #62A6E7 url("images/home-pseudo-header-bg.jpg") no-repeat center center;
     background-size: auto 800px;
     height: 800px;
     margin-bottom: -200px;
   }
 }
 #header .header-image .home {
-  background: #62A6E7 image-url("home-pseudo-header-bg-phone.jpg") no-repeat bottom right;
+  background: #62A6E7 url("images/home-pseudo-header-bg-phone.jpg") no-repeat bottom right;
   height: 460px;
 }
 @media screen and (min-width: 640px) {
   #header .header-image .home {
-    background: #62A6E7 image-url("home-pseudo-header-bg.jpg") no-repeat center center;
+    background: #62A6E7 url("images/home-pseudo-header-bg.jpg") no-repeat center center;
     background-size: auto 800px;
     height: 800px;
     margin-bottom: -200px;
@@ -1339,7 +1339,7 @@ a.button {
   z-index: 100;
 }
 #content .chat {
-  background: #f0f0f0 image-url("patterns/hex.svg") no-repeat center center;
+  background: #f0f0f0 url("images/patterns/hex.svg") no-repeat center center;
   text-align: center;
   min-height: 140px;
   display: flex;
@@ -2178,11 +2178,11 @@ a.button {
   }
 }
 .featured-pages .content.initiatives {
-  background: image-url("placeholder-featured-pages-initiatives.jpg") no-repeat 0 0;
+  background: url("images/placeholder-featured-pages-initiatives.jpg") no-repeat 0 0;
   background-size: cover;
 }
 .featured-pages .content.team {
-  background: image-url("placeholder-featured-pages-team.jpg") no-repeat bottom right;
+  background: url("images/placeholder-featured-pages-team.jpg") no-repeat bottom right;
   background-size: cover;
 }
 .featured-pages .content .txt-wrap {

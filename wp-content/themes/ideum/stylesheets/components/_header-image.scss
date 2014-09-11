@@ -18,11 +18,11 @@
     ('home', #62A6E7, 'home-pseudo-header-bg')
   ) {
     .#{$class} {
-      background: $color image-url('#{$image}-phone.jpg') no-repeat bottom right;
+      background: $color url("images/#{$image}-phone.jpg") no-repeat bottom right;
       height: 460px;
 
       @include media($medium-screen-up) {
-        background: $color image-url('#{$image}.jpg') no-repeat center center;
+        background: $color url("images/#{$image}.jpg") no-repeat center center;
         background-size: auto 800px;
         height: 800px;
         margin-bottom: -200px;

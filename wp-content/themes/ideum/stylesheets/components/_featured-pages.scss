@@ -23,12 +23,12 @@
     }
 
     &.initiatives {
-      background: image-url("placeholder-featured-pages-initiatives.jpg") no-repeat 0 0;
+      background: url("images/placeholder-featured-pages-initiatives.jpg") no-repeat 0 0;
       background-size:cover;
     }
 
     &.team {
-      background: image-url("placeholder-featured-pages-team.jpg") no-repeat bottom right;
+      background: url("images/placeholder-featured-pages-team.jpg") no-repeat bottom right;
       background-size:cover;
     }  
 

@@ -29,7 +29,7 @@ $icons: (
   close:            '\e816'
 );
 
-@include font-face(ideum-icons, 'ideum-icons', $asset-pipeline: true);
+@include font-face(ideum-icons, 'fonts/ideum-icons');
 
 %icon {
   font-family: icons;
