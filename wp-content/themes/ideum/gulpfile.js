@@ -31,12 +31,19 @@ gulp.task('lint', function () {
     .pipe(plugins.jshint.reporter('default'))
 });
 
+gulp.task('vendor_javascripts', function () {
+  return plugins.bowerFiles()
+    .pipe(plugins.filter('**/*.js'))
+    .pipe(plugins.concat('vendor.js'))
+    .pipe(gulp.dest('./js/'));  
+});
+
 // Compile the scripts
-gulp.task('javascripts', ['lint'], function () {
+gulp.task('javascripts', ['lint', 'vendor_javascripts'], function () {
   return browserify('./javascripts/site.js')
     .bundle()
     .pipe(source('site.js'))
-    .pipe(gulp.dest('./js'));
+    .pipe(gulp.dest('./js/'));
 });
 
 // Default task

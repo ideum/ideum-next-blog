@@ -1,7 +1,9 @@
 {
   "name": "ideum-next-blog",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-filter": "~1.0.2"
+  },
   "devDependencies": {
     "gulp": "~3.8.8",
     "gulp-load-plugins": "~0.6.0",
@@ -9,6 +11,7 @@
     "gulp-jshint": "~1.8.4",
     "gulp-concat": "~2.4.0",
     "vinyl-source-stream": "~1.0.0",
-    "browserify": "~5.11.1"
+    "browserify": "~5.11.1",
+    "gulp-bower-files": "~0.2.7"
   }
 }

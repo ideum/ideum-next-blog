@@ -16,7 +16,12 @@
 
 @import 'neat/app/assets/stylesheets/neat';
 
-// FIXME: Third-party Libraries
+// Third-party Libraries
+//
+// FIXME: These are currently being included as standalone CSS documents using
+// the WP asset mananagement system.  I would like to find a better solution,
+// but in the meantime this is good enough
+//
 // @import 'angular-carousel';
 // @import 'select2';
 
