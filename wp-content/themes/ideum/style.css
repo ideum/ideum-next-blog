@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*  Theme Name: Ideum
     Description: Theme for ideum.com
     Author: Ideum <info@ideum.com>
@@ -877,95 +876,95 @@ a.button {
 }
 
 .icon-gplus:before {
-  content: "";
+  content: "\e800";
 }
 
 .icon-flickr:before {
-  content: "";
+  content: "\e801";
 }
 
 .icon-rss:before {
-  content: "";
+  content: "\e802";
 }
 
 .icon-linkedin:before {
-  content: "";
+  content: "\e803";
 }
 
 .icon-twitter:before {
-  content: "";
+  content: "\e804";
 }
 
 .icon-youtube:before {
-  content: "";
+  content: "\e805";
 }
 
 .icon-vimeo:before {
-  content: "";
+  content: "\e806";
 }
 
 .icon-facebook:before {
-  content: "";
+  content: "\e807";
 }
 
 .icon-pinterest:before {
-  content: "";
+  content: "\e808";
 }
 
 .icon-caret-up:before {
-  content: "";
+  content: "\e809";
 }
 
 .icon-caret-right:before {
-  content: "";
+  content: "\e80a";
 }
 
 .icon-caret-down:before {
-  content: "";
+  content: "\e80b";
 }
 
 .icon-caret-left:before {
-  content: "";
+  content: "\e80c";
 }
 
 .icon-arrow-up-left:before {
-  content: "";
+  content: "\e80d";
 }
 
 .icon-arrow-up:before {
-  content: "";
+  content: "\e80e";
 }
 
 .icon-arrow-up-right:before {
-  content: "";
+  content: "\e80f";
 }
 
 .icon-arrow-right:before, .rn-carousel-controls .rn-carousel-control-next:before {
-  content: "";
+  content: "\e810";
 }
 
 .icon-arrow-down-right:before {
-  content: "";
+  content: "\e811";
 }
 
 .icon-arrow-down:before {
-  content: "";
+  content: "\e812";
 }
 
 .icon-arrow-down-left:before {
-  content: "";
+  content: "\e813";
 }
 
 .icon-arrow-left:before, .rn-carousel-controls .rn-carousel-control-prev:before {
-  content: "";
+  content: "\e814";
 }
 
 .icon-menu:before {
-  content: "";
+  content: "\e815";
 }
 
 .icon-close:before {
-  content: "";
+  content: "\e816";
 }
 
 #header {
@@ -1060,10 +1059,10 @@ a.button {
 #header .social-media-links h2 a:hover {
   color: #3d4757;
 }
-#header .social-media-links h2.active a {
+#header .social-media-links h2.current-menu-item a {
   color: #3d4757;
 }
-#header .social-media-links h2.active a:hover {
+#header .social-media-links h2.current-menu-item a:hover {
   color: #7a8594;
 }
 #header .social-media-links ul.social-icons {
@@ -1199,6 +1198,21 @@ a.button {
   -o-transform: translateY(0px);
   transform: translateY(0px);
 }
+#header nav nav.footer-nav li.current-menu-item a {
+  color: #c7c7c7;
+}
+#header nav nav.footer-nav .current-menu-item a::after {
+  height: 2px;
+  opacity: 0.6;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+#header nav nav.footer-nav li.current-menu-item a:hover {
+  opacity: 0.6;
+}
 #header nav button {
   display: block;
   float: right;
@@ -1225,7 +1239,7 @@ a.button {
 #header nav ul li:last-child {
   margin-right: 0;
 }
-#header nav ul li.active a {
+#header nav ul li.current-menu-item a {
   color: #3d4757;
 }
 #header nav a {
@@ -1248,24 +1262,24 @@ a.button {
   clear: both;
 }
 #header .header-image .home {
-  background: #62A6E7 url("images/home-pseudo-header-bg-phone.jpg") no-repeat bottom right;
+  background: #62a6e7 url("images/home-pseudo-header-bg-phone.jpg") no-repeat bottom right;
   height: 460px;
 }
 @media screen and (min-width: 640px) {
   #header .header-image .home {
-    background: #62A6E7 url("images/home-pseudo-header-bg.jpg") no-repeat center center;
+    background: #62a6e7 url("images/home-pseudo-header-bg.jpg") no-repeat center center;
     background-size: auto 800px;
     height: 800px;
     margin-bottom: -200px;
   }
 }
 #header .header-image .home {
-  background: #62A6E7 url("images/home-pseudo-header-bg-phone.jpg") no-repeat bottom right;
+  background: #62a6e7 url("images/home-pseudo-header-bg-phone.jpg") no-repeat bottom right;
   height: 460px;
 }
 @media screen and (min-width: 640px) {
   #header .header-image .home {
-    background: #62A6E7 url("images/home-pseudo-header-bg.jpg") no-repeat center center;
+    background: #62a6e7 url("images/home-pseudo-header-bg.jpg") no-repeat center center;
     background-size: auto 800px;
     height: 800px;
     margin-bottom: -200px;
@@ -1490,7 +1504,7 @@ a.button {
   transition: background-color 0.3s ease;
   background-color: #3d4757;
 }
-#footer .main nav.sitemap a:hover, #footer .main nav.sitemap a.active {
+#footer .main nav.sitemap a:hover, #footer .main nav.sitemap a.current-menu-item {
   background-color: #7a8594;
 }
 #footer .main nav.footer-nav {
@@ -1533,9 +1547,42 @@ a.button {
   -o-transform: translateY(0px);
   transform: translateY(0px);
 }
+#footer .main nav.footer-nav nav.footer-nav li.current-menu-item a {
+  color: #c7c7c7;
+}
+#footer .main nav.footer-nav nav.footer-nav .current-menu-item a::after {
+  height: 2px;
+  opacity: 0.6;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+#footer .main nav.footer-nav nav.footer-nav li.current-menu-item a:hover {
+  opacity: 0.6;
+}
 #footer .main nav.footer-nav li {
   display: inline-block;
   padding-right: 1rem;
+}
+#footer .main nav.footer-nav li.current-menu-item {
+  /* no op */
+}
+#footer .main nav.footer-nav li.current-menu-item a {
+  color: #c7c7c7;
+}
+#footer .main nav.footer-nav li.current-menu-item a::after {
+  height: 2px;
+  opacity: 0.6;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+#footer .main nav.footer-nav li.current-menu-item a:hover {
+  opacity: 0.6;
 }
 #footer .main nav.footer-nav a {
   position: relative;
