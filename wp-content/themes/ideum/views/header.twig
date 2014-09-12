@@ -3,10 +3,16 @@
   <div class="social-interior">
 
     <div class="tabs">
+      
+      {% for item in tabs.get_items %}
+      <h2 class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></h2>
+      {% endfor %}
 
+      <!-- 
       <h2><a href="#FIXME">Blog</a></h2>
       <h2><a href="#FIXME">Our Story</a></h2>
       <h2 class="active"><a href="#FIXME">Social Media Feed</a></h2>
+      -->
 
     </div>
 
@@ -35,11 +41,16 @@
   <nav>
     <button ng-click="toggleMenu()"><i class="icon-menu"></i></button>
 
-    <ul>
+    <ul class="primary-nav">
+      {% for item in nav.get_items %}
+      <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
+      {% endfor %}
+      <!-- 
       <li><a href="#FIXME">Creative Services</a></li>
       <li class="active"><a href="#FIXME">Multitouch Tables</a></li>
       <li><a href="#FIXME">Touch Walls</a></li>
       <li><a href="#FIXME">Contact</a></li>
+      -->
     </ul>
   </nav>
 

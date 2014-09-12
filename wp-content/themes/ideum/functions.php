@@ -91,7 +91,9 @@
 			$context['foo'] = 'bar';
 			$context['stuff'] = 'I am a value set in your functions.php file';
 			$context['notes'] = 'These values are available everytime you call Timber::get_context();';
-			$context['menu'] = new TimberMenu();
+			$context['tabs'] = new TimberMenu('pre-nav');
+			$context['nav'] = new TimberMenu('primary-nav');
+			$context['foot'] = new TimberMenu('footer-nav');
 			$context['site'] = $this;
 			return $context;
 		}

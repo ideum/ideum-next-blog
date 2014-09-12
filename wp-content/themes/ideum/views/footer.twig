@@ -30,10 +30,15 @@
   {# Abbreviated sitemap for larger screens #}
   <nav class="footer-nav">
     <ul>
+      {% for item in foot.get_items %}
+      <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
+      {% endfor %}
+      <!-- 
       <li><a href="#FIXME">Site Map</a></li>
       <li><a href="#FIXME">Jobs</a></li>
       <li><a href="#FIXME">FAQ</a></li>
       <li><a href="#FIXME">Legal</a></li>
+      -->
     </ul>
   </nav>
 
