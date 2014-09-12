@@ -60,7 +60,7 @@ $footer-font-color: $white;
 
         @include transition(background-color $base-animation-speed $base-animation-easing);
         background-color: $footer-second-background-color;
-        &:hover, &.active { background-color: $footer-accent-color }
+        &:hover, &.current-menu-item { background-color: $footer-accent-color }
       }
     }
 
@@ -75,11 +75,31 @@ $footer-font-color: $white;
       li {
         display: inline-block;
         padding-right: 1rem;
+        
+        // navi-effect for the footer
+        &.current-menu-item {
+        /* no op */
+          a {
+            color: $light-gray;
+          }
+
+          a::after {
+            height: 2px;
+            opacity: 0.6;
+            @include transform(translateY(0px));
+          }
+
+          a:hover {
+            opacity: 0.6;
+          }
+
+        }
       }
 
       a {
         position: relative;
       }
+
     }
 
     .newsletter-signup {

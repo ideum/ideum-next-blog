@@ -69,7 +69,7 @@ $header-main-bar-height: rem(117);
           display: block;
           width: 100%;
       }
-      &.active a {
+      &.current-menu-item a {
         color: $very-dark-gray;
         &:hover { color: $dark-gray }
       }
@@ -153,7 +153,7 @@ $header-main-bar-height: rem(117);
         &:last-child {
           margin-right: 0;
         }
-        &.active {
+        &.current-menu-item {
           a {
             color: $very-dark-gray;
           }

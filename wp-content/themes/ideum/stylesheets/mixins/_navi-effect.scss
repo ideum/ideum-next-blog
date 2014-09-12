@@ -25,4 +25,24 @@
     opacity: 1;
     @include transform(translateY(0px));
   }
+  
+  
+    // navi-effect for the footer
+
+    nav.footer-nav li.current-menu-item a {
+      color: $light-gray;
+    }
+
+    nav.footer-nav .current-menu-item a::after {
+      height: 2px;
+      opacity: 0.6;
+      @include transform(translateY(0px));
+    }
+
+    nav.footer-nav li.current-menu-item a:hover {
+      opacity: 0.6;
+    }
+
+  
+  
 }
