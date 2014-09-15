@@ -14,18 +14,37 @@
   {# Full sitemap for mobile devices #}
   <nav class="sitemap scroll-bottom" ng-show="showSitemap">
     <ul>
+      {% for item in nav.get_items %}
+      <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
+      {% endfor %}
+
+      {% for item in tabs.get_items %}
+      <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
+      {% endfor %}
+
+      {% for item in foot.get_items %}
+      <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+      <!-- #FIXME - delete static nav elements eventually -
       <li><a href="#FIXME">Home</a></li>
       <li><a href="#FIXME">Creative Services</a></li>
       <li><a href="#FIXME">Multitouch Tables</a></li>
       <li><a href="#FIXME">Touch Walls</a></li>
+      <li><a href="#FIXME">Contact</a></li>
+
       <li><a href="#FIXME">Blog</a></li>
       <li><a href="#FIXME">Our Story</a></li>
       <li><a href="#FIXME">Social Media Feed</a></li>
+
+      <li><a href="#FIXME">Site Map</a></li>
       <li><a href="#FIXME">Jobs</a></li>
       <li><a href="#FIXME">FAQ</a></li>
       <li><a href="#FIXME">Legal</a></li>
-    </ul>
-  </nav>
+      <li>
+      -->
 
   {# Abbreviated sitemap for larger screens #}
   <nav class="footer-nav">
@@ -33,12 +52,14 @@
       {% for item in foot.get_items %}
       <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
       {% endfor %}
-      <!-- 
+      
+      <!-- #FIXME - delete static nav elements eventually -
       <li><a href="#FIXME">Site Map</a></li>
       <li><a href="#FIXME">Jobs</a></li>
       <li><a href="#FIXME">FAQ</a></li>
       <li><a href="#FIXME">Legal</a></li>
       -->
+
     </ul>
   </nav>
 
