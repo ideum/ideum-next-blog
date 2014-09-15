@@ -1,0 +1,97 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div id="facilities" class="sub-page-wrap">
+
+  {% include "parent-nav.twig" %}
+
+  <section class="highlight-text">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% endif %}
+
+    <h1>
+      Our {{post.title}}
+    </h1>
+
+    <p>
+      {{post.content}}
+    </p>
+
+  </section>
+
+  <section class="facilities-slider">
+
+    <ul rn-carousel rn-carousel-control rn-carousel-indicator>
+
+      <li class="facilities item">
+
+        <article>
+
+          <img src="{{theme.link}}/images/facilities-slider-placeholder-image-1.jpg">
+
+          <h1 style="text-align:center;">
+            Prototyping + Usability Lab
+          </h1>
+
+          <div class="two-column-text">
+            <p>
+              Each year Ideum produces hundreds of carefully crafted multitouch tables and touch walls for customers all over the world. These products are assembled and our supported by our exhibit technicians and other staff in our Production Studio. This space is optimized to facilitate quality production and testing of our standard models. 
+            </p>
+            <p>
+              I deum works with two metal fabricators in state to produce the touch table and display enclosures it designs. Ideum’s custom designed ATA cases are also fabricated by a local company. All design, computer and display integration, assembly and testing occurs at Ideum’s New Mexico facility.
+            </p>
+          </div>
+
+        </article>
+
+      </li>
+
+      <li class="facilities item">
+
+        <article>
+
+          <img src="{{theme.link}}/images/facilities-slider-placeholder-image-1.jpg">
+
+          <h1 style="text-align:center;">
+            Some Other Description
+          </h1>
+
+          <div class="two-column-text">
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eosi. 
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam nisi ut.
+            </p>
+          </div>
+
+        </article>
+
+      </li>
+
+    </ul>
+
+    <div class="section-info">
+
+      <ol class="slider-controls">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+
+      <p>
+        <a href="#FIXME" class="button active">Follow Us</a>
+      </p>
+
+    </div>
+
+  </section>
+  
+</div>
+
+{% endblock %}
