@@ -2,7 +2,9 @@
     /* no op */
 
   .section-info {
-    padding-bottom: $medium-gutter;
+    @include media($medium-screen-up) {
+      padding-bottom: $medium-gutter;
+    }
   }
 
   ul.rn-carousel-slides {
@@ -13,10 +15,10 @@
 
     li.client-slide {
       @include filter(grayscale(100%));
+      @include flex-grow(4);
       background-repeat: no-repeat;
       background-position: center;
       border-right: 2px solid #ccc;
-      flex-grow: 4;
       height: 169px;
       opacity: 0.15;
       text-align: center;

@@ -7,7 +7,7 @@ $header-main-bar-height: rem(117);
   .social-media-links {
     display: none;
     @include media($medium-screen-up) {
-      display: flex;
+      @include display(flex);
     }
      @include media($large-screen-up) {
       display: block;
@@ -20,7 +20,7 @@ $header-main-bar-height: rem(117);
     .social-interior { 
       @include outer-container;
       @include media($medium-screen-up) { 
-        display: flex;
+        @include display(flex);
         width: 100%
       }
       @include media($large-screen-up) { 
@@ -29,7 +29,7 @@ $header-main-bar-height: rem(117);
       }
       .tabs {
         @include media($medium-screen-up) { 
-          display: flex;
+          @include display(flex);
           width: 100%;
         }
         @include media($large-screen-up) { 
@@ -53,7 +53,7 @@ $header-main-bar-height: rem(117);
         @include pad(0 default);
       }
       border-right:1px solid $vv-light-gray;
-      flex-grow: 3; /* default 0 */
+      @include flex-grow(3); /* default 0 */
       float: left;
       font-size: rem(14);
       font-weight: $bold;
@@ -117,6 +117,7 @@ $header-main-bar-height: rem(117);
 
   .logo {
     @include flex(1);
+    margin: 0;
     min-width: 165px;
     text-align: center;
 
@@ -136,7 +137,7 @@ $header-main-bar-height: rem(117);
 
     button {
       display: block;
-      @include media($medium-screen-up) { display: none }
+      @include media($medium-screen-up) { display: none; }
 
       float: right;
       background-color: transparent;
@@ -145,11 +146,30 @@ $header-main-bar-height: rem(117);
 
     ul {
       display: none;
-      @include media($medium-screen-up) { display: inline-block }
+      @include media($medium-screen-up) { 
+        display: inline-block; 
+        margin-top: 1em;
+      }
+      @include media($large-screen-up) {  
+        margin-top: 0;
+      }
 
       li {
         display: inline-block;
         margin-right: 2em;
+        
+        @include media($medium-screen-up) {
+          float: left;
+          margin: 0 2em 1em 0;
+        }
+
+        @include media($large-screen-up) {
+          float: none;
+          margin-bottom: 0;
+          margin-right: 2em;
+          margin-top: 0;          
+        }
+
         &:last-child {
           margin-right: 0;
         }
