@@ -1,0 +1,11 @@
+.highlight-text {
+  @include span-columns(12);
+  padding: $gutter 0;
+
+  h1 {
+    @include span-columns(10);
+    @include shift(1);
+    color: $white;
+  }
+
+}

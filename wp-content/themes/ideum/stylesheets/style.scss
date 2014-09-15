@@ -28,6 +28,7 @@
 // Mixins
 @import "mixins/banner";
 @import "mixins/navi-effect";
+@import "mixins/highlight-text";
 
 // Extends
 @import 'extends/button';
@@ -56,6 +57,8 @@
 @import 'components/our-products';
 @import 'components/featured-pages';
 @import 'components/clients-n-partners';
+@import 'components/sub-nav';
+@import 'components/talking-points';
 
 // Necessary to avoid flash of unrendered angular templates
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {

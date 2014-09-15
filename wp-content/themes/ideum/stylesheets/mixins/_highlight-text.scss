@@ -1,0 +1,14 @@
+@mixin highlight-text($bg-color, $txt-color) {
+  @include span-columns(12);
+  background-color: $bg-color;
+  padding: $large-gutter 0;
+
+  h2 {
+    @include span-columns(10);
+    @include shift(1);
+    color: $txt-color;
+    padding:0 3.9%;
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,52 @@
+nav.sub-nav {
+  @include navi-effect($very-dark-gray);
+  @include flex(2);
+  @include pad;
+  padding: rem(10px) 0;
+  text-align: center;
+
+  button {
+    display: block;
+    @include media($medium-screen-up) { display: none; }
+
+    float: right;
+    background-color: transparent;
+    border: none;
+  }
+
+  ul {
+    display: inline-block; 
+  
+    @include media($large-screen-up) {  
+      margin-top: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 2em 0 0;
+
+      @include media($medium-screen-up) {
+        margin: 0 2em 0 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+      &.current-menu-item {
+        a {
+          color: $very-dark-gray;
+        }
+      }
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    color: $very-light-gray;
+    font-weight: bold;
+    position: relative;
+    &:hover {
+      color: $very-dark-gray;
+    }
+  }
+}
