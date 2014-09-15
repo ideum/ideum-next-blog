@@ -1,0 +1,125 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div id="our-story" class="sub-page-wrap">
+
+  <!-- {//% include /our-story/sub-nav.html %//} -->
+
+  <!-- #FIXME - replace this nav block with something dynamic -->
+  <nav class="sub-nav">
+      <ul>
+        <li class="current-menu-item"><a href="#FIXME">Our Story</a></li>
+        <li><a href="#FIXME">Mission &amp; Values</a></li>
+        <li><a href="#FIXME">Services</a></li>
+        <li><a href="#FIXME">Team</a></li>
+        <li><a href="#FIXME">Facilities</a></li>
+        <li><a href="#FIXME">Software Initiatives</a></li>
+      </ul>
+    </nav>
+
+  <section class="highlight-text">
+
+    <h2>
+      {{post.content}}
+    </h2>
+
+  </section>
+
+  <section class="talking-points">
+
+    <article class="point">
+
+      <div class="point-icon">
+        
+        <img src="{{theme.link}}/images/our-story-talkingpoint-icons-globe.png">
+
+      </div>
+
+      <div class="point-text">
+
+        <p>
+          Originally founded in 1999 in Sausalito, California, for last 8 years Ideum has been located in the scenic village of Corrales in New Mexico. Our firm provides design &amp; software development services and sells its multitouch tables and touch walls to clients worldwide. 
+        </p>
+
+      </div>
+
+    </article>
+
+    <article class="point">
+
+      <div class="point-icon">
+        
+        <img src="{{theme.link}}/images/our-story-talkingpoint-icons-creative.png">
+
+      </div>
+
+      <div class="point-text">
+
+        <p>
+          Ideum has worked on custom software and hardware projects with some of the world’s top museums such as: Cooper Hewitt Smithsonian Design Museum, The Field Museum, Monterey Bay Aquarium, Museum of Science and Industry (Chicago), Smithsonian National Museum of the American Indian, The San Francisco Museum of Modern Art, among others. In addition, Ideum has worked with Fortune 500 companies and iconic brands such as: Apple, Adobe, Coca-Cola, Boeing, Hewlett-Packard, Intel, Union Pacific, and others.
+        </p>
+
+      </div>
+
+    </article>
+
+    <article class="point">
+
+      <div class="point-icon">
+        
+        <img src="{{theme.link}}/images/our-story-talkingpoint-icons-span.png">
+
+      </div>
+
+      <div class="point-text">
+
+        <p>
+          Our work has spanned the realms of informal and formal education, entertainment and gaming. In over 100 interactive projects, we’ve explored topics in art, culture, history, science and technology. Our 30 employees have expertise in the areas of software and hardware design, user experience, programming, computer vision, gaming, usability testing, video and photography production, and other important and wide ranging skills.
+        </p>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <section class="our-story-slider">
+
+    <ul rn-carousel rn-carousel-control rn-carousel-indicator>
+
+      <li class="story item">
+
+        <img src="{{theme.link}}/images/our-story-slides-1.jpg">
+
+      </li>
+
+      <li class="story item">
+
+        <img src="{{theme.link}}/images/our-story-slides-2.jpg">
+
+      </li>
+
+    </ul>
+
+    <div class="section-info">
+
+      <ol class="slider-controls">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+
+      <p>
+        <a href="#FIXME" class="button active">Follow Us</a>
+      </p>
+
+    </div>
+
+  </section>
+
+</div>
+
+{% endblock %}
