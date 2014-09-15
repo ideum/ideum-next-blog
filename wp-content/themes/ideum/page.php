@@ -24,4 +24,12 @@
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
+$context['post_parent'] = $post_parent;
+ob_start();
+$parent_permalink = get_permalink($post->post_parent); 
+$parent_title= get_the_title($post->post_parent); 
+echo '<li><a href="'.$parent_permalink.'">'.$parent_title.'</a></li>';
+wp_list_pages("title_li=&child_of=".$post->post_parent."");
+$context['parent_menu'] = ob_get_clean();
+
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
