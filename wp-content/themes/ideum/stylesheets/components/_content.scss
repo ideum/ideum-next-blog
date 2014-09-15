@@ -30,7 +30,9 @@
     clear: both;
     margin:0 auto;
     text-align: center;
-    width: 70%;
+    @include media($medium-screen-up) {
+      width: 70%;
+    }
   }
 
   .social-media-feed {
@@ -80,7 +82,7 @@
   #our-story {
 
     .highlight-text {
-      @include highlight-text($dark-teal, $white);
+      @include highlight-text($dark-teal, $white, $white, $white);
     }
 
     .button {      
@@ -93,6 +95,67 @@
       }
     }
 
+    a {
+      /* no op */
+
+      &.edit-link {
+        color: $vv-dark-gray;
+        font-size: .75em;
+        border-bottom:1px dotted $vv-dark-gray;
+
+        &:hover {
+          color: $white;
+          border-bottom: none;
+        }
+      }
+
+    }
+
+  }
+
+  #facilities {
+
+    .highlight-text {
+      border-top: 1px solid $vv-light-gray;
+      @include highlight-text($white, $vv-dark-gray, $vv-dark-gray, $light-medium-gray);
+      font-size: 1em;
+    }
+
+    .button {      
+      background-color: $dark-teal;
+      border-color: $dark-teal;
+      font-size: 34px;
+      font-weight: 400;
+      &:hover {
+        color: $very-dark-gray;
+      }
+    }
+
+    a {
+      /* no op */
+
+      &.edit-link {
+        color: $vv-dark-gray;
+        font-size: .75em;
+        border-bottom:1px dotted $vv-dark-gray;
+
+        &:hover {
+          color: $white;
+          border-bottom: none;
+        }
+      }
+
+    }
+
+  }
+
+  .two-column-text {
+    @include span-columns(10);
+    @include shift(1);
+    @include column-count(2);
+    @include column-gap(40px); // this should be 1 coulmn gutter, but how?
+    padding:0 0 $gutter;
+    text-align: justify;
   }
 
 // end content
