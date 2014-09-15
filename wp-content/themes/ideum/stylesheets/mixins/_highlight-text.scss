@@ -1,9 +1,26 @@
-@mixin highlight-text($bg-color, $txt-color) {
+@mixin highlight-text($bg-color, $h1-color, $h2-color, $txt-color) {
   @include span-columns(12);
   background-color: $bg-color;
   padding: $large-gutter 0;
 
+  h1 {
+    @include span-columns(10);
+    @include shift(1);
+    color: $h1-color;
+    margin-top: 0;
+    padding:0 3.9%;
+    text-align: center;
+  }
+
   h2 {
+    @include span-columns(10);
+    @include shift(1);
+    color: $h2-color;
+    padding:0 3.9%;
+    text-align: center;
+  }
+
+  p {
     @include span-columns(10);
     @include shift(1);
     color: $txt-color;
