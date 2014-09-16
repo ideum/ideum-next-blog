@@ -6,16 +6,16 @@
   // adjustments to pseudo-header will vary by page (as class)
   //
   // Images must be formatted as follows:  The desktop image must be named
-  // '{name}.jpg' and the mobile image must be '{name}-phone.jpg'.  {name} may
+  // '{name}-bg.jpg' and the mobile image must be '{name}-bg-phone.jpg'.  {name} may
   // include containing directories, but the two images must reside in the same
   // directory and must both be JPEGs.  Note that if an image is not found, the
   // compiler will throw an error and refuse to continue.
   //
   // FIXME: duplicate record added so SASS will recognize this is a list of
   // lists.  Remove duplicate after a second real item is added.
-  @each $class, $color, $image in (
-    ('home', #62A6E7, 'home-pseudo-header-bg'),
-    ('home', #62A6E7, 'home-pseudo-header-bg')
+  @each $class, $color, $image, $width, $offset in (
+    ('home',      #62A6E7, 'home-pseudo-header-bg', 800px, 200px),
+    ('our-story', #b8b8b8, 'our-story-pseudo-header-bg', 1200px, 237px)
   ) {
     .#{$class} {
       background: $color url("images/#{$image}-phone.jpg") no-repeat bottom right;
@@ -23,9 +23,9 @@
 
       @include media($medium-screen-up) {
         background: $color url("images/#{$image}.jpg") no-repeat center center;
-        background-size: auto 800px;
+        background-size: auto $width;
         height: 800px;
-        margin-bottom: -200px;
+        margin-bottom: -$offset;
       }
     }
   }
