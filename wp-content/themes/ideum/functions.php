@@ -110,7 +110,7 @@
       wp_enqueue_script('ideum-site', get_template_directory_uri() . '/js/site.js', array('ideum-vendor'), null, true);
 
       wp_enqueue_style('select2', get_template_directory_uri() . '/bower_components/select2/select2.css');
-      wp_enqueue_style('angular-carousel', get_template_directory_uri() . '/bower_components/angular-carousel/dist/angular-carousel.css');
+      wp_enqueue_style('angular-carousel', get_template_directory_uri() . '/bower_components/ideum-angular-carousel/dist/angular-carousel.css');
     }
 
 	}
