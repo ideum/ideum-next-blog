@@ -39,25 +39,27 @@
   </h1>
 
   <nav>
+
     <button ng-click="toggleMenu()"><i class="icon-menu"></i></button>
 
     <ul class="primary-nav">
       {% for item in nav.get_items %}
       <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
       {% endfor %}
-
-      <!-- #FIXME - delete static nav elements eventually -
-      <li><a href="#FIXME">Creative Services</a></li>
-      <li class="active"><a href="#FIXME">Multitouch Tables</a></li>
-      <li><a href="#FIXME">Touch Walls</a></li>
-      <li><a href="#FIXME">Contact</a></li>
-      -->
-
     </ul>
+
   </nav>
 
-  {% block header_image %}
-  
-  {% endblock %}
-
 </div>
+
+{% block header_image %}
+
+  <div class="header-image">
+
+    <div class="{{ post.slug }}">
+
+    </div>
+
+  </div>
+  
+{% endblock %}
