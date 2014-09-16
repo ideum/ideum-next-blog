@@ -1300,16 +1300,16 @@ a.button {
     margin-bottom: -200px;
   }
 }
-#header .header-image .home {
-  background: #62a6e7 url("images/home-pseudo-header-bg-phone.jpg") no-repeat bottom right;
+#header .header-image .our-story {
+  background: #b8b8b8 url("images/our-story-pseudo-header-bg-phone.jpg") no-repeat bottom right;
   height: 460px;
 }
 @media screen and (min-width: 640px) {
-  #header .header-image .home {
-    background: #62a6e7 url("images/home-pseudo-header-bg.jpg") no-repeat center center;
-    background-size: auto 800px;
+  #header .header-image .our-story {
+    background: #b8b8b8 url("images/our-story-pseudo-header-bg.jpg") no-repeat center center;
+    background-size: auto 1200px;
     height: 800px;
-    margin-bottom: -200px;
+    margin-bottom: -237px;
   }
 }
 #header .header-image .page-intro {
@@ -1607,23 +1607,36 @@ a.button {
   color: white;
   border-bottom: none;
 }
+#content .facilities.item {
+  /* no op */
+}
+#content .facilities.item article {
+  /* no op */
+}
+#content .facilities.item article img {
+  width: 100%;
+}
 #content .two-column-text {
   float: left;
   display: block;
   margin-right: 2.12766%;
   width: 82.97872%;
   margin-left: 8.51064%;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  -webkit-column-gap: 40px;
-  -moz-column-gap: 40px;
-  column-gap: 40px;
   padding: 0 0 20px;
   text-align: justify;
 }
 #content .two-column-text:last-child {
   margin-right: 0;
+}
+@media screen and (min-width: 640px) {
+  #content .two-column-text {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+  }
 }
 
 #footer {
@@ -1853,6 +1866,16 @@ a.button {
 }
 @media screen and (min-width: 960px) {
   .slider .rn-carousel-slide.product-slide {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 640px) {
+  .slider .rn-carousel-slide.facilities-slide {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .slider .rn-carousel-slide.facilities-slide {
     width: 100%;
   }
 }
@@ -2695,10 +2718,14 @@ nav.sub-nav a:hover {
   display: block;
   margin-right: 2.12766%;
   width: 100%;
-  padding: 4.28571rem 0;
 }
 .talking-points:last-child {
   margin-right: 0;
+}
+@media screen and (min-width: 640px) {
+  .talking-points {
+    padding: 4.28571rem 0;
+  }
 }
 .talking-points .point {
   float: left;
@@ -2716,50 +2743,69 @@ nav.sub-nav a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid #f0f0f0;
-  padding: 4.28571rem 0 3.57143rem;
+  padding: 2.14286rem 0 3.57143rem;
 }
 .talking-points .point:last-child {
   margin-right: 0;
+}
+@media screen and (min-width: 640px) {
+  .talking-points .point {
+    padding: 4.28571rem 0 3.57143rem;
+  }
 }
 .talking-points .point:last-of-type {
   border: none;
 }
 .talking-points .point .point-icon {
-  float: left;
-  display: block;
-  margin-right: 2.12766%;
-  width: 14.89362%;
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: inline-box;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  align-items: center;
-  float: left;
+  width: 100%;
 }
-.talking-points .point .point-icon:last-child {
-  margin-right: 0;
+@media screen and (min-width: 640px) {
+  .talking-points .point .point-icon {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 14.89362%;
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+    float: left;
+  }
+  .talking-points .point .point-icon:last-child {
+    margin-right: 0;
+  }
+}
+.talking-points .point .point-icon img {
+  display: block;
+  margin: 0 auto;
 }
 .talking-points .point .point-text {
-  float: left;
-  display: block;
-  margin-right: 2.12766%;
-  width: 74.46809%;
-  margin-left: -8.51064%;
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: inline-box;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  align-items: center;
-  float: left;
+  padding-top: 20px;
 }
-.talking-points .point .point-text:last-child {
-  margin-right: 0;
+@media screen and (min-width: 640px) {
+  .talking-points .point .point-text {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 74.46809%;
+    margin-left: -8.51064%;
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+    float: left;
+  }
+  .talking-points .point .point-text:last-child {
+    margin-right: 0;
+  }
 }
 .talking-points .point .point-text p {
   color: #3d4757;
