@@ -17,6 +17,7 @@
     // offset - offset is the amount the content will ride over the header-image
     ('home',      #62A6E7, 'home-pseudo-header-bg', 800px, 200px),
     ('our-story', #b8b8b8, 'our-story-pseudo-header-bg', 1200px, 237px),
+    ('facilities', #b8b8b8, 'facilities-pseudo-header-bg', 800px, 100px),
     ('mission', #b8b8b8, 'mission-pseudo-header-bg', 800px, 100px)
   ) {
     .#{$class} {
