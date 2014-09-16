@@ -13,9 +13,11 @@
   //
   // FIXME: duplicate record added so SASS will recognize this is a list of
   // lists.  Remove duplicate after a second real item is added.
-  @each $class, $color, $image, $width, $offset in (
+  @each $class, $color, $image, $width, $offset in ( 
+    // offset - offset is the amount the content will ride over the header-image
     ('home',      #62A6E7, 'home-pseudo-header-bg', 800px, 200px),
-    ('our-story', #b8b8b8, 'our-story-pseudo-header-bg', 1200px, 237px)
+    ('our-story', #b8b8b8, 'our-story-pseudo-header-bg', 1200px, 237px),
+    ('mission', #b8b8b8, 'mission-pseudo-header-bg', 800px, 100px)
   ) {
     .#{$class} {
       background: $color url("images/#{$image}-phone.jpg") no-repeat bottom right;
