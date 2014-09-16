@@ -69,7 +69,7 @@ $header-main-bar-height: rem(117);
           display: block;
           width: 100%;
       }
-      &.current-menu-item a {
+      &.current-menu-item a, &.current-page-ancestor a {
         color: $very-dark-gray;
         &:hover { color: $dark-gray }
       }
