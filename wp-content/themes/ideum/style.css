@@ -1312,6 +1312,18 @@ a.button {
     margin-bottom: -237px;
   }
 }
+#header .header-image .facilities {
+  background: #b8b8b8 url("images/facilities-pseudo-header-bg-phone.jpg") no-repeat bottom right;
+  height: 460px;
+}
+@media screen and (min-width: 640px) {
+  #header .header-image .facilities {
+    background: #b8b8b8 url("images/facilities-pseudo-header-bg.jpg") no-repeat center center;
+    background-size: auto 800px;
+    height: 800px;
+    margin-bottom: -100px;
+  }
+}
 #header .header-image .mission {
   background: #b8b8b8 url("images/mission-pseudo-header-bg-phone.jpg") no-repeat bottom right;
   height: 460px;
