@@ -2,11 +2,186 @@
 
 {% block content %}
 
-<div id="our-story" class="sub-page-wrap">
+<div id="mission" class="sub-page-wrap">
 
   {% include "parent-nav.twig" %}
 
-  {{post.content}} 
+  <section class="highlight-text child-page">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% endif %}
+
+    <h1>
+      Our {{post.title}}
+    </h1>
+
+    <p>
+      {{post.content}}
+    </p>
+
+  </section>
+
+
+  <section class="talking-points-vertical">
+
+    <article class="point">
+
+      <div class="point-icon">
+        
+        <img src="{{theme.link}}/images/talking-points-175x175-isotope.png">
+
+      </div>
+
+      <div class="point-text">
+
+        <h3>
+          Technology
+        </h3>
+
+        <p>
+          To use technology in innovative ways, creating exciting and inspiring visitor experiences. 
+        </p>
+
+      </div>
+
+    </article>
+
+    <article class="point">
+
+      <div class="point-icon">
+        
+        <img src="{{theme.link}}/images/talking-points-175x175-thumbs-up.png">
+
+      </div>
+
+      <div class="point-text">
+
+        <h3>
+          Customers
+        </h3>
+
+        <p>
+          To provide our customers and clients with software, hardware and installations that are meticulously-crafted, incredibly reliable and long-lasting.
+        </p>
+
+      </div>
+
+    </article>
+
+    <article class="point">
+
+      <div class="point-icon">
+        
+        <img src="{{theme.link}}/images/talking-points-175x175-erlenmeyer-flask.png">
+
+      </div>
+
+      <div class="point-text">
+
+        <h3>
+          Value
+        </h3>
+
+        <p>
+          To create value and make a difference in all of the things that we do.
+        </p>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <section class="featured-page">
+
+    <article class="content team-n-clients">
+
+      <div class="txt-wrap">
+
+        <h1>
+          <a href="#FIXME">Our Staff, Partners, &amp; Clients</a>
+        </h1>
+
+        <p>
+          Everything we do starts with our staff and then involves our partners, and clients. We encourage our staff to reach their full potential and to be successful in what they do. We work with our clients and partners to create long lasting relationships in which our collective efforts produce greater results. 
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="#FIXME">See Our Staff</a>
+          <a class="share" href="#FIXME">View Our Client List</a>
+        </footer>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <section class="featured-pages">
+
+    <article class="content products">
+
+      <div class="txt-wrap">
+
+        <h1>
+          <a href="#FIXME">Our Products</a>
+        </h1>
+
+        <p>
+          Innovation and user-experience drives the design process for all our products. We are meticulous in how build our products and look to build the best quality hardware and software. If something goes wrong, we take responsibility, provide timely support and service. The same people who build our products, support and service them.
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="#FIXME">View Our Products</a>
+          <a class="share" href="#FIXME">Share This</a>
+        </footer>
+
+      </div>
+
+    </article>
+
+    <article class="content projects">
+
+      <div class="txt-wrap">
+
+        <h1>
+          <a href="#FIXME">Our Projects</a>
+        </h1>
+
+        <p>
+         We are passionate about the projects that we take on. We love what do, we are keenly interested in the technologies we utilize and we love the topics that we explore. We attentively manage our projects and encourage the honest and open sharing of ideas, opinions and information.
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="#FIXME">View Our Projects</a>
+          <a class="share" href="#FIXME">Share This</a>
+        </footer>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <div class="section-info">
+
+      <ol class="slider-controls">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+
+      <p>
+        <a href="#FIXME" class="button active">Follow Us</a>
+      </p>
+
+    </div>
   
 </div>
 
