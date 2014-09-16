@@ -149,11 +149,25 @@
 
   }
 
+  .facilities.item {
+    /* no op */
+    article {
+      /* no op */
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   .two-column-text {
     @include span-columns(10);
     @include shift(1);
-    @include column-count(2);
-    @include column-gap(40px); // this should be 1 coulmn gutter, but how?
+
+    @include media($medium-screen-up) {
+      @include column-count(2);
+      @include column-gap(40px); // this should be 1 coulmn gutter, but how?
+    }
+
     padding:0 0 $gutter;
     text-align: justify;
   }
