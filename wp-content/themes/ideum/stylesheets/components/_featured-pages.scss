@@ -1,4 +1,4 @@
-.featured-pages { 
+.featured-pages, .featured-page { 
   @include span-columns(12); 
   @include omega;   
   padding-bottom: $medium-gutter;
@@ -17,21 +17,19 @@
     position: relative;
     width: 100%;
 
-    @include media($medium-screen-up) { 
-      @include span-columns(6, block-collapse);
-      @include omega; 
-    }
-
-    &.initiatives {
-      background: url("images/placeholder-featured-pages-initiatives.jpg") no-repeat 0 0;
-      background-size:cover;
-    }
-
-    &.team {
-      background: url("images/placeholder-featured-pages-team.jpg") no-repeat bottom right;
-      background-size:cover;
-    }  
-
+    @each $class, $bgsize, $image, $bgposvert, $bgposhorz in ( 
+      ('initiatives', cover, 'placeholder-featured-pages-initiatives.jpg', 0, 0),
+      ('team', cover, 'placeholder-featured-pages-team.jpg', bottom, right),
+      ('products', cover, 'placeholder-featured-pages-products.jpg', bottom, right),
+      ('projects', cover, 'placeholder-featured-pages-projects.jpg', bottom, right),
+      ('team-n-clients', cover, 'placeholder-featured-pages-team-n-clients.jpg', top, right)
+    ) {
+      &.#{$class} {
+        background: url("images/#{$image}") no-repeat $bgposvert $bgposhorz;
+        background-size: $bgsize;
+        }
+      }
+    
     .txt-wrap {
       @include span-columns(10);
       @include shift(1);
@@ -89,4 +87,43 @@
       }
     }
   }
+}
+
+.featured-pages {
+
+  .content {
+
+    @include media($medium-screen-up) { 
+      @include span-columns(6, block-collapse);
+      @include omega; 
+    }
+
+  }
+
+}
+
+.featured-page {
+  padding-bottom: 0;
+
+  .content {
+    @include display(flex);
+    align-items: center;
+    justify-content: center;
+    min-height: 440px;
+
+    .txt-wrap {
+      float: none;
+      margin: 0 auto 0 auto !important;
+      padding: $gutter 0;
+      text-align: center;     
+
+      .footer { 
+        position: initial;
+        bottom: initial;
+        width: 100%;
+      }
+    }
+
+  }
+
 }
