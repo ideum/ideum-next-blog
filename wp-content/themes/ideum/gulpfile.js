@@ -1,8 +1,12 @@
 // Load plugins
 var gulp = require('gulp'),
-    plugins = require('gulp-load-plugins')({ camelize: true })
-    browserify = require('browserify')
-    source = require('vinyl-source-stream');
+    rubySass = require('gulp-ruby-sass'),
+    jshint = require('gulp-jshint'),
+    concat = require('gulp-concat'),
+    bowerFiles = require('main-bower-files'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
+    filter = require('gulp-filter');
 
 /////////////////
 // Stylesheets //
@@ -11,7 +15,7 @@ var gulp = require('gulp'),
 // Compile the stylesheets
 gulp.task('stylesheets', function () {
   return gulp.src('stylesheets/**/*.scss')
-    .pipe(plugins.rubySass({
+    .pipe(rubySass({
       loadPath: 'bower_components',
       sourcemap: true,
       sourcemapPath: './stylesheets',
@@ -27,15 +31,15 @@ gulp.task('stylesheets', function () {
 // Run jshint on the scripts
 gulp.task('lint', function () {
   return gulp.src('javascripts/**/*.js')
-    .pipe(plugins.jshint())
-    .pipe(plugins.jshint.reporter('default'))
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
 });
 
 gulp.task('vendor_javascripts', function () {
-  return plugins.bowerFiles()
-    .pipe(plugins.filter('**/*.js'))
-    .pipe(plugins.concat('vendor.js'))
-    .pipe(gulp.dest('./js/'));  
+  return gulp.src(bowerFiles())
+    .pipe(filter('**/*.js'))
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('./js/'));
 });
 
 // Compile the scripts
