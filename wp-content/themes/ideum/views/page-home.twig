@@ -1,0 +1,458 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <section class="our-creative-services">
+
+    <div class="section-info">
+
+      <h1>
+        Our Creative Services
+      </h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
+        ipsum aperiam, non nihil voluptate eligendi, quas obcaecati voluptatum
+        unde voluptas iusto optio omnis possimus? Placeat accusantium
+        reprehenderit dicta rem? Illo!
+      </p>
+
+      <select ui-select2 ng-model="projectType" data-placeholder="Browse By Type">
+        <option value=""></option>
+      </select>
+      <select ui-select2 ng-model="projectTopic" data-placeholder="Browse By Topic">
+        <option value=""></option>
+      </select>
+
+    </div>
+
+    <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator>
+
+      <li class="slide">
+
+        <img src="{{theme.link}}/images/placeholder-science-project-1.jpg">
+
+        <div class="content">
+
+          <header>
+
+            <h2 class="category">
+              Science
+            </h2>
+
+            <h1 class="title">
+              Beyond Rubik’s Cube and Groovik’s Cube Traveling Exhibit
+            </h1>
+
+          </header>
+
+          <p>
+            Limited to 70 characters dolor sit amet, consectetuer adipiscing.
+          </p>
+
+        </div>
+
+      </li>
+
+      <li class="slide">
+
+        <img src="{{theme.link}}/images/placeholder-science-project-2.jpg">
+
+        <div class="content">
+
+          <header>
+
+            <h2 class="category">
+              Science
+            </h2>
+
+            <h1 class="title">
+              Explore the natural resources of New Mexico with a new approach to multiuser interaction.
+            </h1>
+
+          </header>
+
+          <p></p>
+
+        </div>
+      </li>
+
+      <li class="slide">
+
+        <img src="{{theme.link}}/images/placeholder-science-project-3.jpg">
+
+        <div class="content">
+
+          <header>
+            <h2 class="category">
+              Science
+            </h2>
+            <h1 class="title">
+              Discover The World Cup
+            </h1>
+          </header>
+
+          <p>
+            Ideum celebrates The World Cup adding additional levels of engagement.
+          </p>
+
+        </div>
+
+      </li>
+
+    </ul>
+
+    <div class="section-info">
+
+      <ol class="slider-controls">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+
+      <p class=""><a href="#FIXME" class="button active">View All</a></p>
+
+    </div>
+
+  </section>
+
+  <section class="featured-blog-post post-style img-left">
+
+    <article class="content">
+
+      <div class="img-wrap">
+
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-blog-post-image.jpg"></a>
+
+      </div>
+
+      <div class="txt-wrap">
+
+        <time class="time">July 30<sup>th</sup></time>
+        <a class="view" href="#FIXME">View All</a>
+
+        <h1>
+          <a href="#FIXME">Blog Post<!-- with a Long Double Line Title --></A>
+        </h1>
+
+        <p>
+          Limited to 160 characters, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="#FIXME">Read More</a>
+          <a class="share" href="#FIXME">Share This</a>
+        </footer>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  {# `productSliderIndex` is used to track the status of the product slider
+   # contained within.  It must be initialized to zero (the first slide) before the
+   # slider initializes. #}
+  <section class="our-products" ng-init="productSliderIndex = 0">
+
+    <div class="section-info">
+
+      <h1>
+        Our Products
+      </h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae autem dicta eaque, deleniti hic cum. Dolores minima, beatae a explicabo, doloremque debitis deserunt alias quam nam veritatis atque! Sit, voluptas.
+      </p>
+
+      <button class="pointer" ng-class="{active: productSliderIndex == 0}"
+        ng-click="productSliderIndex = 0">Touch Tables</button>
+      <button class="pointer" ng-class="{active: productSliderIndex == 1}"
+        ng-click="productSliderIndex = 1">Touch Walls</button>
+
+    </div>
+
+    <ul rn-carousel rn-carousel-index="productSliderIndex">
+
+      <li class="product-slide">
+
+        <div class="touch-tables product-item post-style img-right">
+
+          <div class="content">
+
+            <div class="img-wrap">
+
+              <a href="#FIXME"><img src="{{theme.link}}/images/product-touch-table.jpg"></a>
+
+            </div>
+
+            <div class="txt-wrap">
+
+              <h1>
+                <a href="#FIXME">Touch Tables</a>
+              </h1>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi explicabo id ut ipsum saepe nemo voluptates natus cumque cupiditate similique esse perferendis illum blanditiis quas odio nobis officiis placeat, hic!
+              </p>
+
+              <footer class="footer">
+                <a class="read" href="#FIXME">View Selection</a>
+                <a class="share" href="#FIXME">Share This</a>
+              </footer>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </li>
+
+      <li class="product-slide">
+
+        <div class="touch-walls product-item post-style img-left">
+
+          <div class="content">
+
+            <div class="img-wrap">
+
+              <a href="#FIXME"><img src="{{theme.link}}/images/product-touch-table-left.jpg"></a>
+
+            </div>
+
+            <div class="txt-wrap">
+
+              <h1>
+                <a href="#FIXME">Touch Walls</a>
+              </h1>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi explicabo id ut ipsum saepe nemo voluptates natus cumque cupiditate similique esse perferendis illum blanditiis quas odio nobis officiis placeat, hic!
+              </p>
+
+              <footer class="footer">
+                <a class="read" href="#FIXME">View Selection</a>
+                <a class="share" href="#FIXME">Share This</a>
+              </footer>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </li>
+
+    </ul>
+
+  </section>
+
+  <section class="chat">
+
+    <div class="button">
+    
+      <a href="#FIXME">Click here to build your own multitouch table.</a>
+
+    </div>
+
+  </section>
+
+
+  <section class="clients-n-partners" ng-init="clientSliderIndex = 0">
+
+    <div class="section-info">
+
+      <h1>Clients &amp; Partners</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae autem dicta eaque, deleniti hic cum. Dolores minima, beatae a explicabo, doloremque debitis deserunt alias quam nam veritatis atque! Sit, voluptas.
+      </p>
+
+    </div>
+
+    <ul rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-index="clientSliderIndex">
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==1}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==2}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==3}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==4}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==5}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
+      </li>
+
+    </ul>
+
+    <div class="section-info">
+
+      <ol class="slider-controls">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+
+      <p>
+        <a href="#FIXME" class="button active">View Client List</a>
+      </p>
+
+    </div>
+
+    <ul class="other-cnp">
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
+      </li>
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
+      </li>
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
+      </li>
+      <li class="crystalbridges">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
+      </li>
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
+      </li>
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
+      </li>
+    </ul>
+
+  </section>
+
+
+  <section class="featured-pages">
+
+    <article class="content initiatives">
+
+      <div class="txt-wrap">
+
+        <h1>
+          <a href="#FIXME">Software Initiatives</a>
+        </h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit.
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="#FIXME">View Initiatives</a>
+          <a class="share" href="#FIXME">Share This</a>
+        </footer>
+
+      </div>
+
+    </article>
+
+    <article class="content team">
+
+      <div class="txt-wrap">
+
+        <h1>
+          <a href="#FIXME">Meet the Team</a>
+        </h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit.
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit.
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="#FIXME">View Team</a>
+          <a class="share" href="#FIXME">Share This</a>
+        </footer>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <section class="social-media-feed">
+
+    <div class="section-info">
+
+      <h1>
+        Social Media Feed
+      </h1>
+
+      <select><option>Browse By Media Type</option></select>
+
+    </div>
+
+    <div class="social-media-feed-slider">
+
+      <ul rn-carousel rn-carousel-control rn-carousel-indicator>
+
+        <li class="youtube item">
+
+          <video controls style="width:100%;height:375px;" poster="{{theme.link}}/images/placeholder-buzz-feed-1.jpg">
+          </video>
+
+          <i class="social-icon icon-youtube"></i>
+
+        </li>
+
+        <li class="twitter item">
+
+          <div class="content">
+
+            <p>
+              Ideum Daily is out! http://paper.li/ideum/1406302985 … Stories via @mdscaff @ntcoding @NeinQuarterly
+            </p>
+
+            <footer class="footer">
+              <a class="read" href="#FIXME">Retweet</a>
+              <a class="share" href="#FIXME">View</a>
+            </footer>
+
+          </div>
+
+          <i class="social-icon icon-twitter"></i>
+
+        </li>
+
+        <li class="flickr item">
+
+          <img src="{{theme.link}}/images/placeholder-buzz-feed-2.jpg">
+
+          <i class="social-icon icon-flickr"></i>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="section-info">
+
+      <ol class="slider-controls">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+
+      <p>
+        <a href="#FIXME" class="button active">View All</a>
+      </p>
+
+    </div>
+
+  </section>
+{% endblock %}
