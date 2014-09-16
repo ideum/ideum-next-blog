@@ -64,3 +64,12 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+
+// Pass the currently active breakpoint to Javascript
+//
+// Technique adapted from http://css-tricks.com/making-sass-talk-to-javascript-with-json/
+body::before {
+  display: none; content: '{"screenSize": "small"}';
+  @include media($medium-screen-up) { content: '{"screenSize": "medium"}' }
+  @include media($large-screen-up)  { content: '{"screenSize": "large"}'  }
+}

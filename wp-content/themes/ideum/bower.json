@@ -11,6 +11,6 @@
     "angular-animate": "~1.2.24",
     "angular-touch": "~1.2.24",
     "angular-ui-select2": "~0.0.5",
-    "ideum-angular-carousel": "~0.3.0"
+    "ideum-angular-carousel": "~0.3.1"
   }
 }

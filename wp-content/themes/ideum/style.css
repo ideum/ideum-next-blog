@@ -1893,6 +1893,16 @@ a.button {
   width: 100%;
 }
 @media screen and (min-width: 640px) {
+  .slider .rn-carousel-slide {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .slider .rn-carousel-slide {
+    width: 33.33333%;
+  }
+}
+@media screen and (min-width: 640px) {
   .slider .rn-carousel-slide.product-slide {
     width: 100%;
   }
@@ -2981,6 +2991,21 @@ nav.sub-nav a:hover {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+body::before {
+  display: none;
+  content: '{"screenSize": "small"}';
+}
+@media screen and (min-width: 640px) {
+  body::before {
+    content: '{"screenSize": "medium"}';
+  }
+}
+@media screen and (min-width: 960px) {
+  body::before {
+    content: '{"screenSize": "large"}';
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
