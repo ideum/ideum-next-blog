@@ -1,34 +1,50 @@
 .talking-points {
   @include span-columns(12);
-  padding: rem(60) 0;
+  @include media($medium-screen-up) {
+    padding: rem(60) 0;
+  }
 
   .point {
     @include span-columns(10);
     @include shift (1);
     @include display(flex);
     flex-wrap: wrap;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
     border-bottom: 1px solid $vv-light-gray;
-    padding: rem(60) 0 rem(50);
+    padding: rem(30) 0 rem(50);
+
+    @include media($medium-screen-up) {
+      padding: rem(60) 0 rem(50);
+    }
 
     &:last-of-type {
       border: none;
     }
 
     .point-icon {
-      @include span-columns(2);
-      @include display(inline-flex);
-      align-items: center;    
-      float: left;
+      width: 100%;
+      @include media($medium-screen-up) {
+        @include span-columns(2);
+        @include display(inline-flex);
+        align-items: center;    
+        float: left;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
     }
 
     .point-text {
-      @include span-columns(9); 
-      @include shift (-1);
-      @include display(inline-flex); 
-      align-items: center; 
-      float: left;        
+      padding-top: $gutter;
+      @include media($medium-screen-up) {
+        @include span-columns(9); 
+        @include shift (-1);
+        @include display(inline-flex); 
+        align-items: center; 
+        float: left; 
+      }       
 
       p {
         color: $very-dark-gray;
