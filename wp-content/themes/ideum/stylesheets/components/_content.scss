@@ -45,7 +45,7 @@
   }
 
   .featured-blog-post {
-    background-color: $vv-light-gray;
+    background-color: $off-vv-light-gray;
 
     @include media($medium-screen-up) {
 
@@ -113,13 +113,13 @@
 
   }
 
-  #facilities {
+  .highlight-text.child-page {
+    border-top: 1px solid $vv-light-gray;
+    @include highlight-text($white, $vv-dark-gray, $vv-dark-gray, $light-medium-gray);
+    font-size: 1em;
+  }
 
-    .highlight-text {
-      border-top: 1px solid $vv-light-gray;
-      @include highlight-text($white, $vv-dark-gray, $vv-dark-gray, $light-medium-gray);
-      font-size: 1em;
-    }
+  #facilities {
 
     .button {      
       background-color: $dark-teal;
@@ -145,6 +145,20 @@
         }
       }
 
+    }
+
+  }
+
+  #mission {
+
+    .button {      
+      background-color: $dark-teal;
+      border-color: $dark-teal;
+      font-size: 34px;
+      font-weight: 400;
+      &:hover {
+        color: $very-dark-gray;
+      }
     }
 
   }
