@@ -278,3 +278,16 @@
     }
   }
 }
+
+#services {
+
+  .button {      
+    background-color: $dark-teal;
+    border-color: $dark-teal;
+    font-size: 34px;
+    font-weight: 400;
+    &:hover {
+      color: $very-dark-gray;
+    }
+  }
+}
