@@ -1,0 +1,78 @@
+.accordion-wrap {
+  @include span-columns(12);
+  @include omega;
+
+  .item-wrap {
+    @include span-columns(12); 
+    @include omega;   
+  
+    &.aquamarine {
+      background-color: $dark-teal;
+    }
+    &.gold {
+      background-color: $medium-orange;
+    }
+    &.blue {
+      background-color: $medium-blue;
+    }
+    &.red {
+      background-color: $very-dark-red;
+    }
+    &.purple {
+      background-color: $medium-purple;
+    }
+    &.green {
+      background-color: $dark-green;
+    }
+
+    article {
+
+      header {
+        @include span-columns(12);
+        @include omega;
+        min-height:130px;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(center);
+
+        h1 {
+          @include span-columns(6);
+          color:$white;
+          margin-bottom: $gutter;
+          text-align: center;
+        }
+
+      }
+
+      .item-content {
+        display:none;
+
+        .accordion-sub-header {
+          @include span-columns(8);
+          @include shift(2);
+          padding: $gutter 0;
+
+          p {
+            color:$white;
+            text-align: center;
+          }
+
+        }
+
+        footer {
+
+        }
+
+      }
+
+    }
+
+    &.open {
+      .item-content {
+        display:block;
+      }
+    }
+
+  }
+
+}
