@@ -1,6 +1,6 @@
 .featured-pages, .featured-page { 
-  @include span-columns(12); 
-  @include omega;   
+  @include span-columns(12);
+  @include omega;
   padding-bottom: $medium-gutter;
 
   @include media($medium-screen-up) { 
