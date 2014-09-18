@@ -13,21 +13,22 @@
   //
   // FIXME: duplicate record added so SASS will recognize this is a list of
   // lists.  Remove duplicate after a second real item is added.
-  @each $class, $color, $image, $width, $offset in ( 
-    // offset - offset is the amount the content will ride over the header-image
-    ('home',      #62A6E7, 'home-pseudo-header-bg', 800px, 200px),
-    ('our-story', #b8b8b8, 'our-story-pseudo-header-bg', 1200px, 237px),
-    ('facilities', #b8b8b8, 'facilities-pseudo-header-bg', 800px, 100px),
-    ('mission', #b8b8b8, 'mission-pseudo-header-bg', 800px, 100px)
+  @each $class, $color, $image, $width, $offset, $bgvert, $bghoriz, $bgheight in ( 
+    ('home',      #62A6E7, 'home-pseudo-header-bg', 800px, 200px, center, center, 800px),
+    ('our-story', #b8b8b8, 'our-story-pseudo-header-bg', 1100px, 180px, center, 0px, 1000px),
+    ('mission', #b8b8b8, 'mission-pseudo-header-bg', 800px, 100px, center, -75px, 460px),
+    ('facilities', #b8b8b8, 'facilities-pseudo-header-bg', 800px, 100px, center, -235px, 460px),
+    ('software-initiatives', #344535, 'software-initiatives-pseudo-header-bg', 800px, 100px, center, -315px, 460px),
+    ('team', #9e9e9d, 'team-pseudo-header-bg', 600px, 100px, center, top, 550px)
   ) {
     .#{$class} {
       background: $color url("images/#{$image}-phone.jpg") no-repeat bottom right;
       height: 460px;
 
       @include media($medium-screen-up) {
-        background: $color url("images/#{$image}.jpg") no-repeat center center;
+        background: $color url("images/#{$image}.jpg") no-repeat $bgvert $bghoriz;
         background-size: auto $width;
-        height: 800px;
+        height: $bgheight;
         margin-bottom: -$offset;
       }
     }
@@ -82,6 +83,73 @@
       }
 
     }
+
+    &.centered-intro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.section-landing {
+        height: 100%;
+      }
+
+      .page-intro-inner {
+        @include span-columns(10);
+        @include shift(1);
+        height: 70%;
+        text-align: center;
+
+        h1 {
+          font-weight: $bold;
+          color: $white;
+        }
+
+        h1 a, a.view, a.share, a.read {
+          font-weight: $bold;
+          color: $white;
+
+          &:hover {
+            color: $very-light-gray;
+          }
+
+        }
+
+        h2 {
+          display: none;
+          @include media($medium-screen-up) {
+            color: $white;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 72%;
+          }
+        }
+
+        .footer {
+          margin: $medium-gutter 0;
+
+          a {
+
+            &:hover {
+              border-bottom: 3px solid $white;
+              color: $white;
+              padding-bottom: 5px;
+            }
+            &.share {
+              margin-left: $medium-gutter;
+            }
+
+          }
+
+        }
+
+      }
+    }
+
+
+
+
+
 
   }
 
