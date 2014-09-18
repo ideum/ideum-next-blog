@@ -14,6 +14,17 @@
       @include media($medium-screen-up) { width: (100% / 1); }
       @include media($large-screen-up)  { width: (100% / 1); }
     }
+    &.story-slide {
+      @include media($medium-screen-up) { width: (100% / 2); }
+      @include media($large-screen-up)  { width: (100% / 2); }
+      img {
+        width: 100%;
+      }
+    }
+    &.talking-point-slide {
+      @include media($medium-screen-up) { width: (100% / 2); }
+      @include media($large-screen-up)  { width: (100% / 2); }
+    }
     &.client-slide {
       @include media($small-screen-up) { width: (100% / 2); }
       @include media($medium-screen-up) { width: (100% / 3); }
@@ -62,7 +73,9 @@
     &-next { @extend .icon-arrow-right; right: 0; }
   }
 }
-
+.rn-carousel-container {
+  width:100% !important; // temporary hack to fix twoup slider miswidth in medium size
+}
 // the slider pips
 .rn-carousel-indicator {
   // Remove default background
