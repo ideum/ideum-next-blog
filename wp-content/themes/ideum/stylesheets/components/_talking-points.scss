@@ -59,66 +59,131 @@
 }
 
 .talking-points-vertical {
-  @include span-columns(12);
-  @include omega;
-  background-color: $off-vv-light-gray;
-  
-  @include media($medium-screen-up) {
-    padding: rem(60) 0;
-  }
 
-  .point {
+  &.threeup {
     @include span-columns(12);
-    @include shift (0);
     @include omega;
-    @include media($small-screen-up) { width: (100% / 1); }
-    @include media($medium-screen-up) { width: (100% / 2); }
-    @include media($large-screen-up)  { width: (100% / 3); }
-    padding: rem(60) 0 rem(50);
-
-    @include media($small-screen-up) {
-      border-bottom: 1px solid $white;
-    }
-
+    background-color: $off-vv-light-gray;
+    
     @include media($medium-screen-up) {
-      border-bottom: 0;
+      padding: rem(60) 0;
     }
-    
-    .point-icon {
-      width: 100%;
+
+    .point {
+      @include span-columns(12);
+      @include shift (0);
+      @include omega;
+      @include media($small-screen-up) { width: (100% / 1); }
+      @include media($medium-screen-up) { width: (100% / 2); }
+      @include media($large-screen-up)  { width: (100% / 3); }
+      padding: rem(60) 0 rem(50);
+
+      @include media($small-screen-up) {
+        border-bottom: 1px solid $white;
+      }
+
       @include media($medium-screen-up) {
-        @include display(inline-flex);
-        align-items: center;    
-        float: left;
+        border-bottom: 0;
       }
-      img {
-        display: block;
-        margin: 0 auto;
-      }
-
-    }
-
-    .point-text {
-      @include clearfix;
-      display: inline-block;
-      margin: $medium-gutter auto $gutter;
-      padding: 0 25%;
-      text-align: center;
       
-      h3 {
-        margin-bottom: $gutter;
+      .point-icon {
+        width: 100%;
+        @include media($medium-screen-up) {
+          @include display(inline-flex);
+          align-items: center;    
+          float: left;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+
       }
 
-      p {
-        color: $dark-gray;
-        font-size: $base-font-size;
-        margin: ($base-line-height * .25) 0 ($base-line-height * .25);
-      }
+      .point-text {
+        @include clearfix;
+        display: inline-block;
+        margin: $medium-gutter auto $gutter;
+        padding: 0 25%;
+        text-align: center;
+        
+        h3 {
+          margin-bottom: $gutter;
+        }
 
+        p {
+          color: $dark-gray;
+          font-size: $base-font-size;
+          margin: ($base-line-height * .25) 0 ($base-line-height * .25);
+        }
+
+      }
+      
     }
-    
+
   }
+
+  &.twoup {
+    @include span-columns(12);
+    @include omega;
+    background-color: $off-vv-light-gray;
+    
+    @include media($medium-screen-up) {
+      padding: rem(60) 0;
+    }
+
+    .point {
+      @include span-columns(12);
+      @include shift (0);
+      @include omega;
+      @include media($small-screen-up) { width: (100% / 1); }
+      @include media($medium-screen-up) { width: (100% / 2); }
+      @include media($large-screen-up)  { width: (100% / 2); }
+      padding: rem(60) 0 rem(50);
+
+      @include media($small-screen-up) {
+        border-bottom: 1px solid $white;
+      }
+
+      @include media($medium-screen-up) {
+        border-bottom: 0;
+      }
+      
+      .point-icon {
+        width: 100%;
+        @include media($medium-screen-up) {
+          @include display(inline-flex);
+          align-items: center;    
+          float: left;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+
+      }
+
+      .point-text {
+        @include clearfix;
+        display: inline-block;
+        margin: $medium-gutter auto $gutter;
+        padding: 0 15%;
+        text-align: center;
+        
+        h3 {
+          margin-bottom: $gutter;
+        }
+
+        p {
+          color: $dark-gray;
+          font-size: $base-font-size;
+          margin: ($base-line-height * .25) 0 ($base-line-height * .25);
+        }
+
+      }
+      
+    }
+
+  }
+
 }
-
-
-
