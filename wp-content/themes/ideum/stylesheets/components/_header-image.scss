@@ -19,7 +19,8 @@
     ('mission', #b8b8b8, 'mission-pseudo-header-bg', 800px, 100px, center, -75px, 460px),
     ('facilities', #b8b8b8, 'facilities-pseudo-header-bg', 800px, 100px, center, -235px, 460px),
     ('software-initiatives', #344535, 'software-initiatives-pseudo-header-bg', 800px, 100px, center, -315px, 460px),
-    ('team', #9e9e9d, 'team-pseudo-header-bg', 600px, 100px, center, top, 550px)
+    ('team', #9e9e9d, 'team-pseudo-header-bg', 600px, 100px, center, top, 550px),
+    ('services', #2c2c2d, 'services-pseudo-header-bg', 600px, 100px, center, top, 550px)
   ) {
     .#{$class} {
       background: $color url("images/#{$image}-phone.jpg") no-repeat bottom right;
