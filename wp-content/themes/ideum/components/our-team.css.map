@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "mappings": "AAAA,SAAU;EACR,OAAO,EAAE,KAAK;;AAEd,sBAAa;EACX,KAAK,EAAE,IAAI",
+  "sources": [
+    "../stylesheets/components/our-team.scss"
+  ],
+  "names": [],
+  "file": "our-team.css"
+}
