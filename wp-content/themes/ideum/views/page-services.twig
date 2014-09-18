@@ -2,12 +2,300 @@
 
 {% block content %}
 
-<div id="our-story" class="sub-page-wrap">
+<div id="services" class="sub-page-wrap">
 
   {% include "parent-nav.twig" %}
 
-  {{post.content}} 
-  
-</div>
+  <section class="highlight-text child-page">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% endif %}
+
+    <h1>
+      Our {{post.title}}
+    </h1>
+
+    <p>
+      {{post.content}}
+    </p>
+
+  </section>
+
+  <div class="accordion-wrap">
+
+    <section class="item-wrap blue open">
+
+      <article>
+
+        <header>
+
+          <h1>
+            Custom Hardware Prototyping &amp; Product Design.
+          </h1>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="accordion-sub-header">
+
+            <p>
+              Integrate latest technology. Works with partners such as: 3M, HP, Intel, LG, PQLabs, Samsung, Zytronic Proven design, work in aluminum. Custom colors, familiar with hydrodipping.
+            </p>
+
+          </div>
+
+          <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveTwoUp()">
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-1.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-2.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-1.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-2.jpg">
+
+            </li>
+
+          </ul>
+
+          <footer>
+
+            <ol class="slider-controls">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+
+          </footer>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap gold active">
+
+      <article>
+
+        <header>
+
+          <h1>
+            Custom Hardware Prototyping &amp; Product Design.
+          </h1>
+
+        </header>
+
+        <div class="item-content">
+
+          <div class="accordion-sub-header">
+
+            <p>
+              Integrate latest technology. Works with partners such as: 3M, HP, Intel, LG, PQLabs, Samsung, Zytronic Proven design, work in aluminum. Custom colors, familiar with hydrodipping.
+            </p>
+
+          </div>
+
+          <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveTwoUp()">
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-1.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-2.jpg">
+
+            </li>
+
+          </ul>
+
+          <footer>
+
+            <ol class="slider-controls">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+
+          </footer>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap purple">
+
+      <article>
+
+        <header>
+
+          <h1>
+            Responsive Web &amp; Mobile Design
+          </h1>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="accordion-sub-header">
+
+            <p>
+              Integrate latest technology. Works with partners such as: 3M, HP, Intel, LG, PQLabs, Samsung, Zytronic Proven design, work in aluminum. Custom colors, familiar with hydrodipping.
+            </p>
+
+          </div>
+
+          <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveTwoUp()">
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-1.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-2.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-1.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-2.jpg">
+
+            </li>
+
+          </ul>
+
+          <footer>
+
+            <ol class="slider-controls">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+
+          </footer>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap green">
+
+      <article>
+
+        <header>
+
+          <h1>
+            Conceptual Design &amp; Usability Testing
+          </h1>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="accordion-sub-header">
+
+            <p>
+              Integrate latest technology. Works with partners such as: 3M, HP, Intel, LG, PQLabs, Samsung, Zytronic Proven design, work in aluminum. Custom colors, familiar with hydrodipping.
+            </p>
+
+          </div>
+
+          <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveTwoUp()">
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-1.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-2.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-1.jpg">
+
+            </li>
+
+            <li class="story-slide item">
+
+              <img src="{{theme.link}}/images/our-story-slides-2.jpg">
+
+            </li>
+
+          </ul>
+
+          <footer>
+
+            <ol class="slider-controls">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+
+          </footer>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <div class="section-info">
+
+      <p>&nbsp;<!-- #FIXME --></p>
+
+      <p>
+        <a href="#FIXME" class="button active">Follow Us</a>
+      </p>
+
+      <p>&nbsp;<!-- #FIXME --></p>
+
+    </div>
+
+  </div>
 
 {% endblock %}
