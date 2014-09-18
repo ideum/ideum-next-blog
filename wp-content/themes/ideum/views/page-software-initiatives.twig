@@ -2,12 +2,249 @@
 
 {% block content %}
 
-<div id="our-story" class="sub-page-wrap">
+<div id="software-initiatives" class="sub-page-wrap">
 
   {% include "parent-nav.twig" %}
 
-  {{post.content}} 
-  
-</div>
+  <section class="highlight-text child-page">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% endif %}
+
+    <h1>
+      Our {{post.title}}
+    </h1>
+
+    <p>
+      {{post.content}}
+    </p>
+
+  </section>
+
+  <section class="featured-video post-style gold img-left">
+
+    <article class="content">
+
+      <div class="img-wrap">
+
+        <a href="#FIXME"><img src="{{theme.link}}/images/gameplay-video-placeholder.jpg"></a>
+
+      </div>
+
+      <div class="txt-wrap">
+
+        <h1>
+          <a href="#FIXME">GestureWorks Gameplay<!-- with a Long Double Line Title --></a>
+        </h1>
+
+        <p>
+          GestureWorks Gameplay overlays Windows 8 games with a touch-enabled interface consisting of virtual controls on touch-enabled devices. These virtual controls are grouped into "Virtual Controllers" which can include such elements as joysticks, D-pads, and buttons. 
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="#FIXME">Visit Website</a>
+          <a class="share" href="#FIXME">Share This</a>
+        </footer>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <div class="section-info">
+
+    <h1>Key Features</h1>
+
+    <p>
+      Gameplay includes many pre-built Virtual Controllers that are ready for immediate use, or you can download new Virtual Controllers from the Gameplay website. GestureWorks Gameplay also includes an editor that allows you to customize or even create your own Virtual Controllers from scratch.
+    </p>
+
+    <p>&nbsp;</p>
+
+  </div>
+
+  <section class="talking-points-vertical twoup">
+
+    <div class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveTwoUp()">
+
+      <article class="point talking-point-slide">
+
+        <div class="point-icon">
+          
+          <img src="{{theme.link}}/images/talking-points-175x175-multitouch.png">
+
+        </div>
+
+        <div class="point-text">
+
+          <h3>
+            Support for Multitouch Gestures
+          </h3>
+
+          <p>
+            Powered by the GestureWorks gesture-processing engine, GestureWorks Gameplay provides support for over 200 gestures. Beyond overlay touch controllers, you can set full-screen (global) multitouch gestures that provide additional controls to your favorite PC game or application. 
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="point talking-point-slide">
+
+        <div class="point-icon">
+          
+          <img src="{{theme.link}}/images/talking-points-175x175-gamepad.png">
+
+        </div>
+
+        <div class="point-text">
+
+          <h3>
+            Gamepad Emulation
+          </h3>
+
+          <p>
+            Included in the Gameplay editor are input ("Key") selections that enable your Virtual Controller to use common gamepad controls such as the d-pad and left and right joysticks, or even the A/B/X/Y buttons, left trigger, right trigger, and more.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="section-info">
+
+      <ol class="slider-controls">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+
+      <p>
+        <a href="#FIXME" class="button active">Purchase On Steam</a>
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="featured-video post-style img-left red">
+
+    <article class="content">
+
+      <div class="img-wrap">
+
+        <a href="#FIXME"><img src="{{theme.link}}/images/openexhibits-video-placeholder.jpg"></a>
+
+      </div>
+
+      <div class="txt-wrap">
+
+        <h1>
+          <a href="#FIXME">Open Exhibits<!-- with a Long Double Line Title --></a>
+        </h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. 
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur 
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="#FIXME">Visit Website</a>
+          <a class="share" href="#FIXME">Share This</a>
+        </footer>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <div class="section-info">
+
+    <h1>Key Features</h1>
+
+    <p>
+      Open Exhibits is a National Science Foundation (NSF) sponsored initiative that looks to transform the way in which museums and other informal learning institutions produce and share computer-based exhibits. Open Exhibits is both a collection of software and a growing community of practice.
+    </p>
+
+    <p>&nbsp;</p>
+
+  </div>
+
+  <section class="talking-points-vertical twoup">
+
+    <div class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveTwoUp()">
+
+      <article class="point talking-point-slide">
+
+        <div class="point-icon">
+          
+          <img src="{{theme.link}}/images/talking-points-175x175-gestures.png">
+
+        </div>
+
+        <div class="point-text">
+
+          <h3>
+            Custom multitouch gesture definition
+          </h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="point talking-point-slide">
+
+        <div class="point-icon">
+          
+          <img src="{{theme.link}}/images/talking-points-175x175-multiuser.png">
+
+        </div>
+
+        <div class="point-text">
+
+          <h3>
+            Make It Multiuser
+          </h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="section-info">
+
+      <ol class="slider-controls">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+
+      <p>
+        <a href="#FIXME" class="button active">Download Open Exhibits</a>
+      </p>
+
+    </div>
+
+  </section>
 
 {% endblock %}
