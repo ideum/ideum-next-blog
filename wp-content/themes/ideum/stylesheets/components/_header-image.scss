@@ -14,13 +14,14 @@
   // FIXME: duplicate record added so SASS will recognize this is a list of
   // lists.  Remove duplicate after a second real item is added.
   @each $class, $color, $image, $width, $offset, $bgvert, $bghoriz, $bgheight in ( 
-    ('home',      #62A6E7, 'home-pseudo-header-bg', 800px, 200px, center, center, 800px),
-    ('our-story', #b8b8b8, 'our-story-pseudo-header-bg', 1100px, 180px, center, 0px, 1000px),
-    ('mission', #b8b8b8, 'mission-pseudo-header-bg', 800px, 100px, center, -75px, 460px),
-    ('facilities', #b8b8b8, 'facilities-pseudo-header-bg', 800px, 100px, center, -235px, 460px),
-    ('software-initiatives', #344535, 'software-initiatives-pseudo-header-bg', 800px, 100px, center, -315px, 460px),
-    ('team', #9e9e9d, 'team-pseudo-header-bg', 600px, 100px, center, top, 550px),
-    ('services', #2c2c2d, 'services-pseudo-header-bg', 600px, 100px, center, top, 550px)
+    ('home',                  #62A6E7, 'home-pseudo-header-bg',                 800px,  200px, center, center,  800px),
+    ('our-story',             #b8b8b8, 'our-story-pseudo-header-bg',            1100px, 180px, center, 0px,     1000px),
+    ('mission',               #b8b8b8, 'mission-pseudo-header-bg',              800px,  100px, center, -75px,   460px),
+    ('facilities',            #b8b8b8, 'facilities-pseudo-header-bg',           800px,  100px, center, -235px,  460px),
+    ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg', 800px,  100px, center, -315px,  460px),
+    ('team',                  #9e9e9d, 'team-pseudo-header-bg',                 600px,  100px, center, top,     550px),
+    ('services',              #2c2c2d, 'services-pseudo-header-bg',             600px,  100px, center, top,     550px),
+    ('blog',                  #2c2c2d, 'blog-pseudo-header-bg',                 600px,  100px, center, top,     550px)
   ) {
     .#{$class} {
       background: $color url("images/#{$image}-phone.jpg") no-repeat bottom right;
