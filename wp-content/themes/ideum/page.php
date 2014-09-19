@@ -23,8 +23,8 @@
 
 $context = Timber::get_context();
 $post = new TimberPost();
-$context["acf"] = get_field_objects($data["post"]->ID);
-$context['slug'] = $slug; // need way to correct for prob on home page
+$context['acf'] = get_field_objects($data['post']->ID);
+$context['slug'] = $slug; 
 $context['post'] = $post;
 $context['post_parent'] = $post_parent;
 ob_start();
