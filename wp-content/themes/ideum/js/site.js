@@ -62,8 +62,9 @@ App.run(function ($rootScope, $document, screenSize) {
 require('./animations');
 require('./header');
 require('./footer');
+require('./expander');
 
-},{"./animations":2,"./footer":3,"./header":4}],2:[function(require,module,exports){
+},{"./animations":2,"./expander":3,"./footer":4,"./header":5}],2:[function(require,module,exports){
 'use strict';
 
 var App = angular.module('ideum');
@@ -98,6 +99,66 @@ App.animation('.scroll-bottom', function () {
 
 var App = angular.module('ideum');
 
+App.directive('idExpander', function () {
+  return {
+    controller: function ($scope) {
+      this.closeAll = function () {
+        $scope.$broadcast('closeIdExpanderItems');
+      };
+    }
+  };
+});
+
+App.directive('idExpanderItem', function () {
+  return {
+    scope: true,
+    require: '^idExpander',
+    controller: function ($scope) {
+      this.toggle = function () {
+        if ($scope.isOpen) {
+          $scope.close();
+        } else {
+          $scope.open();
+        }
+      };
+    },
+    link: function (scope, element, attributes, idExpanderCtrl) {
+      scope.isOpen = false;
+
+      scope.$on('closeIdExpanderItems', function () {
+        scope.close();
+      });
+
+      scope.open = function () {
+        idExpanderCtrl.closeAll();
+        element.addClass('open');
+        scope.isOpen = true;
+      };
+
+      scope.close = function () {
+        element.removeClass('open');
+        scope.isOpen = false;
+      };
+    }
+  };
+});
+
+App.directive('idExpanderButton', function () {
+  return {
+    require: '^idExpanderItem',
+    link: function (scope, element, attributes, idExpanderItemCtrl) {
+      element.on('click', function () {
+        idExpanderItemCtrl.toggle();
+      });
+    }
+  };
+});
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
+var App = angular.module('ideum');
+
 App.controller('footerCtrl', ['$scope', function ($scope) {
   $scope.showNewsletter = false;
   $scope.showSitemap = false;
@@ -113,7 +174,7 @@ App.controller('footerCtrl', ['$scope', function ($scope) {
   };
 }]);
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 var App = angular.module('ideum');
