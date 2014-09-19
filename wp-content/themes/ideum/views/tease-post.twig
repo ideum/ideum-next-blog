@@ -2,11 +2,31 @@
 
 {% block content %}
 
-	<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-	<p>{{post.get_preview(25)}}</p>
+<div class="post-img-wrap">
+  
+  <img src="{{theme.link}}/images/blog-post-img-placeholders-1.jpg">
 
-	{% if post.thumbnail.src %}
-	<img src="{{post.thumbnail.src}}" />
-	{% endif %}
+  {% if post.get_thumbnail %}
+  <img src="{{post.thumbnail.src}}" />
+  {% endif %}
+
+</div>
+
+<div class="post-txt-wrap">
+
+  <time class="time">{{post.post_date|date('F j, Y')}}</time>
+
+  <h2 class="h2">
+    <a href="{{post.link}}">{{post.title}}</a>
+  </h2>
+
+  <p>{{post.get_preview(34, 'true', '', 'true')}}</p>
+
+  <footer class="footer">
+    <a class="read read-more" href="{{post.link}}">Read More</a>
+    <a class="share" href="#FIXME">Share This</a>
+  </footer>
+
+</div>
 
 {% endblock %}
