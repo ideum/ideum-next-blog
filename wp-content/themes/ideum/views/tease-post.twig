@@ -3,11 +3,12 @@
 {% block content %}
 
 <div class="post-img-wrap">
-  
-  <img src="{{theme.link}}/images/blog-post-img-placeholders-1.jpg">
 
   {% if post.get_thumbnail %}
-  <img src="{{post.thumbnail.src}}" />
+  <img src="{{post.thumbnail.src}}" alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/>
+  {% else %}
+  <img src="{{theme.link}}/images/blog-post-img-placeholders-{{ random(2) }}.jpg" alt="Placeholder image for the post: '{{post.title}}'" 
+  title="Placeholder image for the post: '{{post.title}}'"/>
   {% endif %}
 
 </div>
