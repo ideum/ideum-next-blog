@@ -1,0 +1,68 @@
+.tool-pagination {
+  @include span-columns(12);
+  @include omega;
+
+  padding: $large-gutter $large-gutter $medium-gutter $large-gutter;
+  text-align: center;
+
+  .pagination-interior-wrap {
+    display: inline-block;
+    margin: 0 auto;
+
+    a.prev, a.next {
+      font-size: 2em;
+      font-weight:900;
+    }
+
+    a.prev {
+      color: $light-gray; 
+      float: left; 
+      margin-right: $medium-gutter;
+
+      &:before {
+        content: '\2190';
+      }
+    }
+    a.next {
+      color: $light-gray; 
+      float: right; 
+      margin-left: $medium-gutter;
+
+      &:before {
+        content: '\2192';
+      }
+    }
+
+    a.prev:hover, a.next:hover {
+      color: $very-dark-gray;
+      display: inline-block;
+    }
+
+    ul.pages {
+      display: inline-block;
+      padding-top: 16px;
+
+      li {
+        float: left;
+        margin: 0 rem(5);
+
+        a {
+          color: $light-gray;
+          padding: rem(10);
+
+          &:hover {
+            color: $very-dark-gray;
+          }
+
+        }
+
+        .current {
+          color: $very-dark-gray;
+        }
+      }
+
+    }
+
+  }
+
+}
