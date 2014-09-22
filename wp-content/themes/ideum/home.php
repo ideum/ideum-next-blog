@@ -17,6 +17,7 @@
     
     $context = Timber::get_context();
     $context['posts'] = Timber::get_posts();
+    $context['pagination'] = Timber::get_pagination();
     $context['acf'] = get_field_objects($data['post']->ID); // #FIXME - need to be able to get acf value, does not work
     $context['foo'] = 'bar';
     $context['post']['slug'] = 'blog';
