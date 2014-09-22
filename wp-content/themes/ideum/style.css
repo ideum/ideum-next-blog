@@ -3491,6 +3491,16 @@ nav.sub-nav a:hover {
 .accordion-wrap .item-wrap article header h1:last-child {
   margin-right: 0;
 }
+.accordion-wrap .item-wrap article header button {
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -moz-transition: -moz-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
 .accordion-wrap .item-wrap article .item-content {
   display: none;
 }
@@ -3509,8 +3519,12 @@ nav.sub-nav a:hover {
   color: white;
   text-align: center;
 }
-.accordion-wrap .item-wrap.open .item-content {
-  display: block;
+.accordion-wrap .item-wrap.open header button {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .blog-post-listing {

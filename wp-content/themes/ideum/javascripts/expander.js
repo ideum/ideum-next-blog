@@ -12,7 +12,7 @@ App.directive('idExpander', function () {
   };
 });
 
-App.directive('idExpanderItem', function () {
+App.directive('idExpanderItem', function ($animate) {
   return {
     scope: true,
     require: '^idExpander',
@@ -28,18 +28,20 @@ App.directive('idExpanderItem', function () {
     link: function (scope, element, attributes, idExpanderCtrl) {
       scope.isOpen = false;
 
+      element.addClass('id-expander-item');
+
       scope.$on('closeIdExpanderItems', function () {
         scope.close();
       });
 
       scope.open = function () {
         idExpanderCtrl.closeAll();
-        element.addClass('open');
+        $animate.addClass(element, 'open');
         scope.isOpen = true;
       };
 
       scope.close = function () {
-        element.removeClass('open');
+        $animate.removeClass(element, 'open');
         scope.isOpen = false;
       };
     }

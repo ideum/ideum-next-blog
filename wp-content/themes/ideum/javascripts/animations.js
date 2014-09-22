@@ -26,3 +26,19 @@ App.animation('.scroll-bottom', function () {
     },
   };
 });
+
+App.animation('.id-expander-item', function () {
+  return {
+    addClass: function (element, className, done) {
+      if (className !== 'open') return;
+
+      element.find('.item-content').slideDown(done);
+    },
+
+    removeClass: function (element, className, done) {
+      if (className !== 'open') return;
+
+      element.find('.item-content').slideUp(done);
+    }
+  };
+});

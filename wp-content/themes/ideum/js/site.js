@@ -94,6 +94,22 @@ App.animation('.scroll-bottom', function () {
   };
 });
 
+App.animation('.id-expander-item', function () {
+  return {
+    addClass: function (element, className, done) {
+      if (className !== 'open') return;
+
+      element.find('.item-content').slideDown(done);
+    },
+
+    removeClass: function (element, className, done) {
+      if (className !== 'open') return;
+
+      element.find('.item-content').slideUp(done);
+    }
+  };
+});
+
 },{}],3:[function(require,module,exports){
 'use strict';
 
@@ -109,7 +125,7 @@ App.directive('idExpander', function () {
   };
 });
 
-App.directive('idExpanderItem', function () {
+App.directive('idExpanderItem', function ($animate) {
   return {
     scope: true,
     require: '^idExpander',
@@ -125,18 +141,20 @@ App.directive('idExpanderItem', function () {
     link: function (scope, element, attributes, idExpanderCtrl) {
       scope.isOpen = false;
 
+      element.addClass('id-expander-item');
+
       scope.$on('closeIdExpanderItems', function () {
         scope.close();
       });
 
       scope.open = function () {
         idExpanderCtrl.closeAll();
-        element.addClass('open');
+        $animate.addClass(element, 'open');
         scope.isOpen = true;
       };
 
       scope.close = function () {
-        element.removeClass('open');
+        $animate.removeClass(element, 'open');
         scope.isOpen = false;
       };
     }
