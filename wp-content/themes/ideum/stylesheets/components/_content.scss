@@ -4,6 +4,11 @@
   position: relative; // force a new z-index stacking context
   z-index: 100;
 
+  a {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
   .sub-page-wrap { // removes content area padding so sub-nav flush top
     @include media($medium-screen-up) {
       margin-top: rem(-30);
