@@ -61,3 +61,4 @@ App.run(function ($rootScope, $document, screenSize) {
 require('./animations');
 require('./header');
 require('./footer');
+require('./expander');
