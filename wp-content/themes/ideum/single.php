@@ -11,9 +11,20 @@
 
 $context = Timber::get_context();
 $post = Timber::query_post();
+
+$post_cat = $post->get_terms('category');
+$post_cat = $post_cat[0]->ID;
+
 $context['post'] = $post;
 $context['wp_title'] .= ' - ' . $post->title();
-$context['comment_form'] = TimberHelper::get_comment_form();
+
+$context['acf'] = get_field_objects($data['post']->ID); 
+//$context['comment_form'] = TimberHelper::get_comment_form();
+
+$sidebar_context = array();
+$sidebar_context['related'] = Timber::get_posts('cat='.$post_cat.'&posts_per_page=3');
+$context['bottombar'] = Timber::get_sidebar('bottombar-related.twig', $sidebar_context);
+$context['sidebar'] = Timber::get_sidebar('sidebar-post-meta.twig', $sidebar_context);
 
 if (post_password_required($post->ID)){
 	Timber::render('single-password.twig', $context);
