@@ -46,13 +46,36 @@
     float: left;
   
     .post-img-wrap {
+      height:100%;
       margin: 0;
-      max-height: 266px;
-      max-width: 100%;
+      min-width: 100%;
       overflow: hidden;
+      
+      @include media($medium-screen-up) {
+        max-height: 256px;
+        min-width:220px;
+      }
+
+      @include media($large-screen-up) {
+        max-height: 266px;
+      }
 
       img {
+        height: auto;
+        max-width: initial;
         width: 100%;
+        
+        @include media($medium-screen-up) {
+          height: 100%;
+          min-height: 100%;
+          min-width: 100%;
+          width: auto;
+        }
+
+        @include media($large-screen-up) {
+          min-height: 100%;
+        }
+
       }
     
     }
