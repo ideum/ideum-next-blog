@@ -1,0 +1,28 @@
+<p class="author-img">
+  <a href="{{post.author.path}}"><img src="/wp-content/themes/ideum/images/post-author-img-placeholder.png" alt="{{ post.author.name }}" title="{{ post.author.name }}"></a>
+</p><!-- Ben - #FIXME - {{theme.link}} doesn't work in link when included as sidebar, only when included in code of single.twig directly -->
+
+<p class="author-position">
+  Director of Design
+</p>
+
+<h4 class="author-name">
+  {{ post.author.name }}
+  <a href="{{post.author.path}}">Miles Washington</a>
+</h4>
+
+<p class="post-date">
+  <span class="label">Date: </span>{{ post.post_date|date}}
+</p>
+
+<p class="post-category">
+  <span class="label">Category: </span><a href="{{ post.category.path }}">Some Category</a>
+</p>
+
+<p class="sidebar-share-button">
+  <a href="#FIXME" class="button active">Share</a>
+</p>
+
+<p class="sidebar-link-button">
+  <a href="#FIXME" class="button active">Link Here</a>
+</p>
