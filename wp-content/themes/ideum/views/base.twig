@@ -24,10 +24,16 @@
       </header>
 
       <ul>
-        {% for item in menu.items %}
-          <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
-            <a href="{{item.link}}">{{item.title}}</a>
-          </li>
+        {% for item in menu.get_items %}
+        <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a>
+          {% if item.get_children %}
+            <ul class="sub">
+              {% for child in item.get_children %}
+                <li class="nav-sub-item {{child.classes | join(' ')}}"><a href="{{child.get_link}}">{{child.title}}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
         {% endfor %}
       </ul>
 
