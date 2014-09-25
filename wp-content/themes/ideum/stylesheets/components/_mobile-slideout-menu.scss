@@ -41,11 +41,28 @@
   }
 
   a {
-    @include pad;
+    @include pad($small-gutter default);
     border-bottom: 1px solid $very-light-gray;
     color: $very-dark-gray;
     display: block;
     font-weight: $bold;
     text-transform: uppercase;
   }
+
+  ul > li:hover {background-color: darken($white, 10);}
+  ul > li > a {width: 100%;}
+  ul > li.current-menu-item, ul > li.current-page-ancestor {background-color: darken($white, 5);}
+  ul > li.current-menu-item:hover > a {color: lighten($very-dark-gray, 25); padding-left: $tiny-gutter;}
+  ul > li.current-menu-item > a:before {content: '> \00a0';}
+  ul > li.menu-item-has-children > a:after {content: '\00a0 \25BC \00a0 \00a0'; float: right; transform:scale(1.5,1); -webkit-transform:scale(1.5,1);}
+  ul > li.menu-item-has-children:hover > a:after, ul > li.menu-item-has-children:active > a:after {content: '\00a0 \25B2 \00a0 \00a0'; float: right; transform:scale(1.5,1); -webkit-transform:scale(1.5,1);}
+
+  ul > li:hover > ul.sub, ul > li:active > ul.sub {display:block;}
+  ul > li.current-menu-item ul.sub li > a:before {content: '';}
+  ul > li > ul.sub {background-color: darken($white, 5); display:none;}
+  ul > li > ul.sub li {padding: 0 $tiny-gutter;}
+  
+  ul > li > ul.sub li.current-menu-item {background-color: darken($white, 10);}
+  
+
 }
