@@ -89,7 +89,12 @@
     &.centered-intro {
       display: flex;
       align-items: center;
+      height: 100%;
       justify-content: center;
+
+    @include media($medium-screen-up) {
+      height: auto;
+    }
 
       &.section-landing {
         height: 100%;
@@ -98,8 +103,12 @@
       .page-intro-inner {
         @include span-columns(10);
         @include shift(1);
-        height: 70%;
+        height: auto;
         text-align: center;
+        
+        @include media($medium-screen-up) {
+          height: 70%;
+        }
 
         h1 {
           font-weight: $bold;
@@ -148,12 +157,6 @@
       }
     }
 
-
-
-
-
-
   }
-
 
 }
