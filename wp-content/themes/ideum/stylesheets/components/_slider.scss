@@ -59,13 +59,18 @@
     display: none;
     font-size: rem(18);
     opacity: 0.9;
-    @include size(rem(70));
     line-height: rem(70);
     text-align: center;
     vertical-align: middle;
 
     @include media($medium-screen-up) { 
       display: block;
+      width: 2em;
+    }
+
+    @include media($large-screen-up) { 
+      display: block;
+      @include size(rem(70));
     }
 
     &:hover { opacity: 1 }
