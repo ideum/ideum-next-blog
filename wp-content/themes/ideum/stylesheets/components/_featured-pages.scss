@@ -13,9 +13,12 @@
     @include clearfix;
     float: left;
     margin: 0;      
-    min-height: 380px;
     position: relative;
     width: 100%;
+    
+    @include media($medium-screen-up) {
+      min-height: 380px;
+    }
 
     @each $class, $bgsize, $image, $bgposvert, $bgposhorz in ( 
       ('initiatives', cover, 'placeholder-featured-pages-initiatives.jpg', 0, 0),
