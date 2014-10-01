@@ -19,6 +19,9 @@ $context['post'] = $post;
 
 Timber::render(array('front-page.twig'), $context);
 
+$sidebar_context = array();
+$sidebar_context['featured-projects'] = Timber::get_posts('post_type=ideum_project&cat=posts_per_page=3');
+
 $context['featured-projects'] = Timber::get_sidebar('featured-projects', $sidebar_context);
 
 $context['acf'] = get_field_objects($data['post']->ID);
