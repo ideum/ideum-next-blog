@@ -17,29 +17,37 @@
 
     <div class="overlay"></div>
 
-    <div class="content-wrap"><a href="{{post.link}}"></a></div>
+      <div class="content-wrap"><a href="{{post.link}}"></a></div>
 
-    <div class="content">
+      <a href="{{post.link}}"><div class="content">
 
-      <header>
+        <header>
 
-        <h2 class="category">
-          {{ post.get_category }}
-        </h2>
+          <h2 class="category">
+            {{ post.get_category }}
+          </h2>
 
-        <h1 class="title">
-          <a href="{{post.link}}">{{ post.title }}</a>
-        </h1>
+          <h1 class="title">
+            {% if post.landing_page_title %}
+            {{ post.landing_page_title }}
+            {% else %}
+            {{ post.title }}
+            {% endif %}
+          </h1>
 
-      </header>
+        </header>
 
-      {% if post.get_preview %}
-      <p>
-        {{ post.get_preview(10) }}
-      </p>
-      {% endif %}
+        {% if post.landing_page_text %}
+        <p>
+          {{ post.landing_page_text }}
+        </p>
+        {% elseif post.get_preview %}
+        <p>
+          {{ post.get_preview(10) }}
+        </p>
+        {% endif %}
 
-    </div>
+      </div></a>
 
   </li>
 
