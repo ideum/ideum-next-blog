@@ -36,13 +36,14 @@
 					'name' => __( 'Projects' ),
 					'singular_name' => __( 'Project' )
 				),
+				'taxonomies' => array('category'), // added to provide categories for custom post types - or we could register a custom taxonomy for this
 				'public' => true,
 				'has_archive' => true,
 			));
 		}
 
 		function register_taxonomies(){
-			//this is where you can register custom taxonomies
+			// this is where you can register custom taxonomies
 		}
 
 		function register_field_groups(){
@@ -120,6 +121,6 @@
 	new StarterSite();
 
 	function myfoo($text){
-		$text .= ' bar!';
-		return $text;
+		//$text .= ' bar!';
+		//return $text;
 	}
