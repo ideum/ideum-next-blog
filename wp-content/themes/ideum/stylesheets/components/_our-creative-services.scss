@@ -10,6 +10,7 @@
 
 .archive .our-creative-services {
   border-bottom:1px solid $very-light-gray;
+  @include clearfix;
 }
 
 .our-creative-services, .project-post-detail {
