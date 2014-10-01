@@ -14,13 +14,17 @@
 
 
     li.client-slide {
-      @include filter(grayscale(100%));
-      @include flex-grow(4);
+      img {
+        @include filter(grayscale(100%));
+        @include flex-grow(4);
+        opacity: 0.15;
+      }
+
       background-repeat: no-repeat;
       background-position: center;
       border-right: 2px solid #ccc;
       height: 169px;
-      opacity: 0.15;
+      
       text-align: center;
 
       &.client-crystalbridges {
@@ -30,6 +34,13 @@
       &.active {
         @include filter(none);
         opacity: 1.0;
+      }
+
+      &:hover {
+        img{
+          @include filter(none);
+          opacity: 1.0;
+        }
       }
 
       &:nth-of-type(2n) {
@@ -54,6 +65,10 @@
           border-right: 2px solid #ccc;
         }
 
+        &:last-of-type {
+          border-right: none;
+        }
+
       }
       @include media($large-screen-up) {
 
@@ -67,6 +82,11 @@
         &:nth-of-type(4n) {
           border-right: none;
         }
+
+        &:last-of-type {
+          border-right: none;
+        }
+
       }
 
     }
@@ -74,10 +94,11 @@
   }
 
   ul.other-cnp {
-    background-color: $vv-light-gray;
     @include pad(0 default);
     @include span-columns(12);
+    background-color: $vv-light-gray;
     height:auto;
+    position: relative;
 
     li {
       @include media($small-screen-up) { width: (100% / 3); }
