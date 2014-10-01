@@ -17,7 +17,7 @@
 		$templates = array('archive.twig', 'index.twig');
 
 		$data = Timber::get_context();
-
+			
 		$data['title'] = 'Archive';
 		if (is_day()){
 			$data['title'] = 'Archive: '.get_the_date( 'D M Y' );
@@ -27,14 +27,23 @@
 			$data['title'] = 'Archive: '.get_the_date( 'Y' );
 		} else if (is_tag()){
 			$data['title'] = single_tag_title('', false);
+		} else if (is_author()) {
+			$data['title'] = 'Author Archive for <em>' . get_the_author().'</em>';
+			if (isset($query_vars['author'])){
+				$author = new TimberUser($wp_query->query_vars['author']);
+				$data['author'] = $author;
+				$data['title'] = 'Author Archives: ' . $author->name();
+			}
 		} else if (is_category()){
-			$data['title'] = single_cat_title('', false);
+			$data['title'] = 'Category Archive for <em>' . single_cat_title('', false) .'</em>';
 			array_unshift($templates, 'archive-'.get_query_var('cat').'.twig');
 		} else if (is_post_type_archive()){
 			$data['title'] = post_type_archive_title('', false);
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
-		}
+		}	
 
 		$data['posts'] = Timber::get_posts();
+
+		$data['pagination'] = Timber::get_pagination();
 
 		Timber::render($templates, $data);
