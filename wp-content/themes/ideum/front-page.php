@@ -13,7 +13,12 @@
  */
 
 $context = Timber::get_context();
+
 $post = new TimberPost();
 $context['post'] = $post;
+
 Timber::render(array('front-page.twig'), $context);
+
+$context['featured-projects'] = Timber::get_sidebar('featured-projects', $sidebar_context);
+
 $context['acf'] = get_field_objects($data['post']->ID);
