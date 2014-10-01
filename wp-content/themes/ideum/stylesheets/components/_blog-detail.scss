@@ -4,7 +4,7 @@
   }
 }
 
-.blog-post-detail {
+.blog-post-detail, .project-post-detail {
   @include span-columns(12);
   @include omega;
 
@@ -16,8 +16,8 @@
     .pull-quote {
       @include span-columns(12);
       @include omega;
-
       background-color: $vv-light-blue;
+      position: relative;
       
       @include media($medium-screen-up) {
         display: flex;
@@ -59,7 +59,7 @@
               height: auto;
               min-height: 105%;
               max-width: initial;
-              min-width: 105%;
+              //min-width: 105%;
               width: auto;
               position: relative;
                 right: 50%;
@@ -140,6 +140,10 @@
           @include omega;
         }
 
+        h1.alternative-title {
+          margin-top:0;
+        }
+
         img {
           height: auto !important;
           margin: $gutter 0;
@@ -150,13 +154,20 @@
           max-width: 100%;
         }
 
-        .back-to-blog a {
-          color: $very-dark-gray;
-          font-weight: $bold;
-          text-transform: uppercase;
-          &:hover {
-            border-bottom:1px dotted $very-dark-gray;
+        .back-to-blog, .back-to-projects {          
+          margin-top: $large-gutter;
+
+          a {
+            color: $very-dark-gray;
+            font-weight: $bold;
+            text-transform: uppercase;
+
+            &:hover {
+              border-bottom:1px dotted $very-dark-gray;
+            }
+
           }
+
         }
 
       }
@@ -178,7 +189,7 @@
           text-align: left;
         }
         
-        p.author-img {
+        p.author-img, p.company-icon {
           a {
             &:hover {
               opacity: 0.6;
@@ -186,13 +197,13 @@
           }
         }
 
-        p.author-position { 
+        p.author-position, p.project-company-name { 
           margin-bottom: 0;
           color: $light-medium-gray;
           font-style: italic;
         }
 
-        h4.author-name {
+        h4.author-name, h4.project-sidebar-title {
           color: $very-dark-gray;
           font-weight:700;
           margin-bottom: $gutter * .7;
