@@ -1,33 +1,11 @@
 {% extends "base.twig" %}
 
 {% block header_image %}
-  <div class="home">
-
-    <div class="page-intro">
-
-      <div class="page-intro-inner">
-
-          <h1>
-              <a href="">Visit Indy 3D <br>Interactive Exhibit</a>
-          </h1>
-
-          <h2>
-              Discover attraction in Indianapolis through a multitouch 3D model of the city.
-          </h2>
-
-          <footer class="footer">
-            <a class="read" href="#FIXME">View Project</a>
-            <a class="share" href="#FIXME">Share This</a>
-          </footer>
-
-      </div>
-
-    </div>
-
-  </div>
+  
 {% endblock %}
 
 {% block content %}
+
   <section class="our-creative-services">
 
     <div class="section-info">
@@ -37,7 +15,7 @@
     {% endif %}
 
       <h1>
-        Our Creative Services
+        <a href="/ideum_project/">Our Creative Services</a>
       </h1>
 
       <p>
@@ -56,11 +34,15 @@
 
     </div>
 
-    <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveThreeUp()">
+    <ul class="slider project-wrap" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveThreeUp()">
 
-      <li class="slide">
+      <li class="slide project-item">
 
-        <img src="{{theme.link}}/images/placeholder-science-project-1.jpg">
+        <div class="overlay">
+
+          <img src="{{theme.link}}/images/placeholder-science-project-0.jpg">
+
+        </div>
 
         <div class="content">
 
@@ -86,7 +68,11 @@
 
       <li class="slide">
 
-        <img src="{{theme.link}}/images/placeholder-science-project-2.jpg">
+        <div class="overlay">
+
+          <img src="{{theme.link}}/images/placeholder-science-project-1.jpg">
+
+        </div>
 
         <div class="content">
 
@@ -102,14 +88,16 @@
 
           </header>
 
-          <p></p>
-
         </div>
       </li>
 
       <li class="slide">
 
-        <img src="{{theme.link}}/images/placeholder-science-project-3.jpg">
+        <div class="overlay">
+
+          <img src="{{theme.link}}/images/placeholder-science-project-2.jpg">
+
+        </div>
 
         <div class="content">
 
@@ -306,22 +294,22 @@
     <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveFourUp()" rn-carousel-index="clientSliderIndex">
 
       <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==1}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==2}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==3}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==4}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==5}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png"></a>
       </li>
 
     </ul>
@@ -344,22 +332,22 @@
 
     <ul class="other-cnp">
       <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png"></a>
       </li>
       <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png"></a>
       </li>
       <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png"></a>
       </li>
       <li class="crystalbridges">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png"></a>
       </li>
       <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png"></a>
       </li>
       <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png"></a>
       </li>
     </ul>
 
@@ -486,4 +474,5 @@
     </div>
 
   </section>
+
 {% endblock %}
