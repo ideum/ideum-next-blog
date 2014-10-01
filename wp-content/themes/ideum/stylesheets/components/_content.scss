@@ -322,6 +322,33 @@
 
   }
 
+  .project-slider {
+    background-color: $vv-light-gray;
+
+    .project.item {
+      /* no op */
+
+      article {
+        /* no op */
+
+        img {
+          width: 100%;
+        }
+
+      }
+
+      .one-column-text, .two-colum-text {
+        padding: 5% 0;
+
+        h2 {
+          text-align:center;
+        }
+      }
+
+    }
+
+  }
+
   .facilities.item {
     /* no op */
     article {
