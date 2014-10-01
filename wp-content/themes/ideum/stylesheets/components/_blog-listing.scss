@@ -37,7 +37,7 @@
     }
 
     &:nth-child(3n) {
-      
+
       @include media($large-screen-up) { 
         border-right: 0px;
       }
@@ -82,7 +82,7 @@
         @include media($large-screen-up) {
           min-height: 100%;
         }
-
+  
       }
     
     }
