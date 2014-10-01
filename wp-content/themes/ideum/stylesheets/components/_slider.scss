@@ -83,10 +83,17 @@
 }
 // the slider pips
 .rn-carousel-indicator {
+  @include pad(default 0);
+
   // Remove default background
   background: transparent;
   box-sizing: content-box;
-  @include pad(default 0);
+
+  display: none;
+
+  @include media($medium-screen-up) { 
+    display: inline-block;
+  }
 
   span {
     @include size(14px);
