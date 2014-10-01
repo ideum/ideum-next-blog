@@ -52,13 +52,39 @@
 
       </div>
 
-      <div class="section-info">
+      <div class="tool-pagination">
 
-        <p>&nbsp;<!-- randowm spacing differences specific to context - yeah its ugly --></p>
+      <div class="pagination-interior-wrap">
+
+        {% if pagination.prev %}
+          <a href="{{pagination.prev.link}}" alt="Previous" title="Previous" class="prev arrow arrow-left {{pagination.prev.link|length ? '' : 'invisible'}}"></a>
+        {% endif %}
+        <ul class="pages">
+          {% for page in pagination.pages %}
+            <li>
+              {% if page.link %}
+                <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+              {% else %}
+                <span class="{{page.class}}">{{page.title}}</span>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+        {% if pagination.next %}
+          <a href="{{pagination.next.link}}" alt="Next" title="Next" class="next arrow arrow-right {{pagination.next.link|length ? '' : 'invisible'}}"></a>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+      <!-- <div class="section-info">
+
+        <p>&nbsp;</p>
 
         <p class=""><a href="#FIXME" class="button active">View All</a></p>
 
-      </div>
+      </div> -->
 
     </section>
 
@@ -66,7 +92,9 @@
 
     <div class="section-info">
 
-      <h1>Clients &amp; Partners</h1>
+      <h1>
+         <a href="/client-list/">Clients &amp; Partners</a>
+      </h1>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae autem dicta eaque, deleniti hic cum. Dolores minima, beatae a explicabo, doloremque debitis deserunt alias quam nam veritatis atque! Sit, voluptas.
@@ -77,22 +105,22 @@
     <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveFourUp()" rn-carousel-index="clientSliderIndex">
 
       <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==1}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==2}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==3}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==4}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png"></a>
       </li>
       <li class="client-slide" ng-class="{active: clientSliderIndex==5}">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
+        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png"></a>
       </li>
 
     </ul>
@@ -108,7 +136,7 @@
       </ol>
 
       <p>
-        <a href="#FIXME" class="button active">View Client List</a>
+        <a href="/client-list/" class="button active">View Client List</a>
       </p>
 
     </div>
