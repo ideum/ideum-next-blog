@@ -1,0 +1,154 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{% for post in posts %}
+
+<div class="project-post-detail">
+
+  <div class="content-wrapper">
+
+    <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+
+      <section class="pull-quote">
+
+        <div class="pull-quote-img">
+
+          {% if post.get_thumbnail %}
+          <a href="{{post.link}}"><img 
+          src="{{post.thumbnail.src}}" 
+          alt="Image for the post: '{{post.title}}'" 
+          title="Image for the post: '{{post.title}}'"/></a>
+          {% else %}
+          <a href="{{post.link}}"><img 
+          src="{{theme.link}}/images/blog-post-img-placeholders-{{ random(2) }}.jpg" 
+          alt="Placeholder image for the post: '{{post.title}}'" 
+          title="Placeholder image for the post: '{{post.title}}'"/></a>
+          {% endif %}
+
+        </div>
+
+        <div class="pull-quote-txt">
+
+          <h2>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+            Ut wisi enim adi 175 char max.
+          </h2>
+
+        </div>
+
+      </section>
+
+      <section class="article-content">
+
+        <div class="article-body">
+
+          {% if post.alternative_main_content_area_title %}
+          <h1 class="alternative-title">
+            {{ post.alternative_main_content_area_title }}
+          </h1>
+          {% endif %}
+
+          {{ post.content }}
+
+          <p class="back-to-projects">
+            <a href="/ideum_projects/">Back To Projects</a>
+          </p>
+
+        </div>
+
+        {% if sidebar %}
+
+        <aside class="sidebar-post-meta layout-sidebar">
+          <!-- {{sidebar}} #FIXME - couldn't get variables into sidebar -->
+          
+          {% if post.client_sidebar_icon %}
+          <p class="project-company-img">
+            <img alt="Company Icon for {{ post.client_company_name }}" src="{{TimberImage(post.get_field('client_sidebar_icon')).src}}" title="COmpany Icon for {{ post.client_company_name }}"/>
+          </p><!-- Ben - #FIXME - {{theme.link}} doesn't work in link when included as sidebar, only when included in code of single-Ideum-project.twig directly -->
+          {% endif %}
+          
+          {% if post.client_company_name %}
+          <p class="project-company-name">
+            {{ post.client_company_name }}
+          </p>
+          {% endif %}
+          
+          {% if post.project_sidebar_title %}
+          <h4 class="project-sidebar-title">
+            {{ post.project_sidebar_title }}
+          </h4>
+          {% endif %}
+          
+          {% if post.post_date %}
+          <p class="post-date">
+            <span class="label">Year: </span>{{ post.post_date|date('Y')}}
+          </p>
+          {% endif %}
+
+          <p class="post-category">
+            <span class="label">Category: </span>
+            {% if post.terms('category') %}
+            {% for term in post.terms('category') %}
+            <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %},{% else %}.{% endif %}
+            {% endfor %}
+            {% endif %}
+          </p>
+
+          <p class="sidebar-share-button">
+            <a href="#FIXME" class="button active">Share</a>
+          </p>
+
+          <p class="sidebar-link-button">
+            <a href="" class="button active">Link Here</a>
+          </p>
+
+        </aside>
+
+        <section class="bottombar-related layout-bottombar">
+        {{bottombar}}
+        </section>
+
+        {% endif %}
+
+        <div class="section-info">
+
+          <p>&nbsp;<!-- randowm spacing differences specific to context - yeah its ugly --></p>
+
+          <p class=""><a href="#FIXME" class="button active">View All</a></p><!-- where is this even supposed to go -->
+
+        </div>
+
+      </section>
+
+      <!-- 
+      <section class="comments">
+
+        <div class="respond">
+
+          <h3 class="h2">Comments</h3>
+            {{ comment_form }}
+          </div>
+
+          <div class="responses">
+
+            {% for cmt in post.get_comments() %}
+            {% include "comment.twig" with {comment:cmt} %}
+            {% endfor %}
+
+          </div>
+            
+        </div>
+
+      </section> 
+      -->
+
+    </article>
+
+  </div>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

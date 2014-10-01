@@ -1,0 +1,143 @@
+{% extends "base.twig" %}
+
+{% block header_image %}
+  
+{% endblock %}
+
+{% block content %}
+
+<section class="article-content">
+
+  <div class="article-body">
+
+    <section class="our-creative-services">
+
+      <div class="section-info">
+
+        {% if post.can_edit %}
+        <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+        {% endif %}
+
+        <h1>
+          Our Creative Services
+        </h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
+          ipsum aperiam, non nihil voluptate eligendi, quas obcaecati voluptatum
+          unde voluptas iusto optio omnis possimus? Placeat accusantium
+          reprehenderit dicta rem? Illo!
+        </p>
+
+        <div class="select-box-wrap">
+
+          <select ui-select2 ng-model="projectType" data-placeholder="Browse By Type">
+            <option value=""></option>
+          </select>
+          <select ui-select2 ng-model="projectTopic" data-placeholder="Browse By Topic">
+            <option value=""></option>
+          </select>
+
+        </div>
+
+        <!-- Ben, I won't build the rest of this section out until everything actually works and the functionality is set in stone and complete. Also, remember, you said you were going to integrate the select box replacement script. When you do I will style. There is just no point until that is done. -->
+
+      </div>
+
+      <div class="custom-project-listing">
+
+        {% for post in posts %}
+        {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+        {% endfor %}
+
+      </div>
+
+      <div class="section-info">
+
+        <p>&nbsp;<!-- randowm spacing differences specific to context - yeah its ugly --></p>
+
+        <p class=""><a href="#FIXME" class="button active">View All</a></p>
+
+      </div>
+
+    </section>
+
+    <section class="clients-n-partners" ng-init="clientSliderIndex = 0">
+
+    <div class="section-info">
+
+      <h1>Clients &amp; Partners</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae autem dicta eaque, deleniti hic cum. Dolores minima, beatae a explicabo, doloremque debitis deserunt alias quam nam veritatis atque! Sit, voluptas.
+      </p>
+
+    </div>
+
+    <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveFourUp()" rn-carousel-index="clientSliderIndex">
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==1}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==2}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==3}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==4}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
+      </li>
+      <li class="client-slide" ng-class="{active: clientSliderIndex==5}">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
+      </li>
+
+    </ul>
+
+    <div class="section-info">
+
+      <ol class="slider-controls">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+
+      <p>
+        <a href="#FIXME" class="button active">View Client List</a>
+      </p>
+
+    </div>
+
+    <ul class="other-cnp">
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
+      </li>
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
+      </li>
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
+      </li>
+      <li class="crystalbridges">
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
+      </li>
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
+      </li>
+      <li>
+        <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
+      </li>
+    </ul>
+
+  </section>
+
+  </div>
+
+</section>
+
+{% endblock %}
