@@ -1,4 +1,6 @@
-<section class="blog-post-listing">
+<!-- begin bottombar-related.twig -->
+
+<div class="blog-post-listing">
 
   <header class="single-post-header">
 
@@ -8,7 +10,7 @@
 
   {% for post in related %}
 
-  <div class="tease">
+  <article class="tease">
 
     <div class="post-img-wrap">
 
@@ -39,8 +41,10 @@
 
     </div>
 
-  </div>
+  </article>
 
   {% endfor %}
 
-</section>
+</div>
+
+<!-- end bottombar-related.twig -->
