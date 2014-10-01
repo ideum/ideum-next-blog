@@ -21,8 +21,9 @@
 
   .chat { 
     @include banner('patterns/hex.svg');
-    padding: $gutter inherit;
+    clear: both;
     height: auto;
+    padding: $gutter inherit;
     
     @include media($medium-screen-up) {
       max-height: $footer-overlap-height;
@@ -31,13 +32,94 @@
 
   }
 
+  
+  .select2-container {        
+    background: #424c5a;
+    height: 60px;
+    margin: 10px 2%;
+    max-width: 80%;
+    min-width: 40%;
+
+    @include media($small-screen-up) {
+      clear: both;
+      width: 80%;
+
+      &:last-of-type {
+        margin-bottom: $medium-gutter;
+      }
+
+    }
+
+    @include media($medium-screen-up) {
+      clear: none;
+      float: left;
+      width: 46%;
+    }
+
+    @include media($large-screen-up) {
+      min-width: 240px;
+    }
+
+
+    a.select2-choice {
+      background: #424c5a;
+      border: none;
+      height: 60px;
+      padding: 18px;
+      text-align: left;
+
+      .select2-chosen {
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .select2-arrow  {
+        background: none;
+        border: none;
+        width: 60px;
+
+        b {
+          background: none;
+          padding: 14px;
+          text-align: center;
+
+          &:after {
+            content: '\002b'; // replace with a new bg img
+            color: $white;
+
+            font-weight: $bold;
+            font-size: 2.5em;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
   .section-info {
     clear: both;
     margin:0 auto;
     text-align: center;
+    width: 80%;
+
     @include media($medium-screen-up) {
-      width: 70%;
+      width: 75%;
     }
+
+    h1 a {
+      color: $very-dark-gray;
+
+      &:hover {
+        color: lighten($very-dark-gray, 15)
+      }
+
+    }
+
   }
 
   .social-media-feed {
