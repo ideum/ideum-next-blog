@@ -1,0 +1,59 @@
+
+<!-- begin bottombar-related-projects.twig -->
+
+<div class="custom-project-listing">
+
+  <header class="single-post-header">
+
+    <h1 class="article-h1">Related Projects</h1>
+
+  </header>
+
+  <ul class="project-wrap">
+
+    {% for post in related %}
+
+    <li class="slide project-item">
+        
+      {% if post.get_thumbnail %}
+      <img src="{{post.thumbnail.src}}" alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/>
+      {% else %}
+      <img src="/wp-content/themes/ideum/images/placeholder-science-project-{{ random(2) }}.jpg" alt="Placeholder image for the post: '{{post.title}}'" 
+      title="Placeholder image for the post: '{{post.title}}'"/>
+      {% endif %}
+
+      <div class="overlay"></div>
+
+      <div class="content-wrap"><a href="{{post.link}}"></a></div>
+
+      <div class="content">
+
+        <header>
+
+          <h2 class="category">
+            {{ post.get_category }}
+          </h2>
+
+          <h1 class="title">
+            <a href="{{post.link}}">{{ post.title }}</a>
+          </h1>
+
+        </header>
+
+        {% if post.get_preview %}
+        <p>
+          {{ post.get_preview(10) }}
+        </p>
+        {% endif %}
+
+      </div>
+
+    </li>
+
+    {% endfor %}
+
+  </ul>
+
+</div>
+
+<!-- end bottombar-related-projects.twig -->
