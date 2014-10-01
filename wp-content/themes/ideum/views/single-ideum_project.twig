@@ -10,32 +10,65 @@
 
     <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 
-      <section class="pull-quote">
+      <section class="project-slider">
 
-        <div class="pull-quote-img">
+        <ul rn-carousel rn-carousel-control rn-carousel-indicator>
 
-          {% if post.get_thumbnail %}
-          <a href="{{post.link}}"><img 
-          src="{{post.thumbnail.src}}" 
-          alt="Image for the post: '{{post.title}}'" 
-          title="Image for the post: '{{post.title}}'"/></a>
-          {% else %}
-          <a href="{{post.link}}"><img 
-          src="{{theme.link}}/images/blog-post-img-placeholders-{{ random(2) }}.jpg" 
-          alt="Placeholder image for the post: '{{post.title}}'" 
-          title="Placeholder image for the post: '{{post.title}}'"/></a>
-          {% endif %}
+          <li class="project item">
 
-        </div>
+            <article>
 
-        <div class="pull-quote-txt">
+              <img src="{{TimberImage(post.get_field('first_slide_image')).src}}">
 
-          <h2>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-            Ut wisi enim adi 175 char max.
-          </h2>
+              <div class="one-column-text"><!-- choose either 'one-column-text' or 'two-column-text' for class -->
 
-        </div>
+                <h2>
+                  {{ post.first_slide_text }}
+                </h2>
+
+              </div>
+
+            </article>
+
+          </li>
+
+          <li class="facilities item">
+
+            <article>
+
+              <img src="{{TimberImage(post.get_field('second_slide_image')).src}}">
+
+              <div class="one-column-text">
+
+                <h2>
+                {{ post.second_slide_text }}
+                </h2>
+      
+              </div>
+
+            </article>
+
+          </li>
+
+          <li class="facilities item">
+
+            <article>
+
+              <img src="{{TimberImage(post.get_field('third_slide_image')).src}}">
+
+              <div class="one-column-text">
+
+                <h2>
+                {{ post.third_slide_text }}
+                </h2>
+      
+              </div>
+
+            </article>
+
+          </li>
+
+        </ul>
 
       </section>
 
@@ -99,9 +132,9 @@
             <a href="#FIXME" class="button active">Share</a>
           </p>
 
-          <p class="sidebar-link-button">
+          <!-- <p class="sidebar-link-button">
             <a href="" class="button active">Link Here</a>
-          </p>
+          </p> -->
 
         </aside>
 
@@ -115,7 +148,7 @@
 
           <p>&nbsp;<!-- randowm spacing differences specific to context - yeah its ugly --></p>
 
-          <p class=""><a href="#FIXME" class="button active">View All</a></p><!-- where is this even supposed to go -->
+          <p class=""><a href="/ideum_project/" class="button active">View All</a></p><!-- where is this even supposed to go -->
 
         </div>
 
