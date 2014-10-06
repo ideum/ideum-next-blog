@@ -22,11 +22,12 @@ nav.sub-nav {
     padding: 0 5% ;
 
     @include media($medium-screen-up) { 
-      padding: 0 initial;
+      padding: 0 5%;
     }
   
     @include media($large-screen-up) {  
       margin-top: 0;
+      padding: 0;
     }
 
     li {
@@ -35,8 +36,11 @@ nav.sub-nav {
       float:left;
 
       @include media($medium-screen-up) {
-        float: none;
         margin: 0 2em 0 0;
+      }
+
+      @include media($large-screen-up) {
+        float: none;
       }
 
       &:last-child {
