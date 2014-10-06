@@ -62,3 +62,4 @@ require('./animations');
 require('./header');
 require('./footer');
 require('./expander');
+require('./colorbox');
