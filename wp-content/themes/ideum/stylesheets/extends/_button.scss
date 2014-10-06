@@ -8,8 +8,8 @@
   font-size: $base-font-size;
   font-weight: $bold;
   line-height: 1;
-  margin: .5em;
-  padding: rem(20) 2em;
+  //margin: .5em;
+  padding: rem(20) .8em;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -17,6 +17,10 @@
     background-color $base-animation-speed $base-animation-easing,
     color $base-animation-speed $base-animation-easing
   );
+
+  @include media($medium-screen-up) {
+    padding: rem(20) 2em;
+  }
 
   &.pointer:after{
     content: "";
