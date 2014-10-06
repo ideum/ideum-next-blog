@@ -14,6 +14,9 @@ $post = new TimberPost();
 
 $context['title'] = $post->title();
 
+//$post_cat = $post->get_terms('category');
+//$post_cat = $post_cat[0]->ID;
+
 $context['acf'] = get_field_objects($data['post']->ID); 
 
 $sidebar_context = array();
