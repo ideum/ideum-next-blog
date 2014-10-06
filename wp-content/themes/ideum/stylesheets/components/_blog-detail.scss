@@ -133,11 +133,12 @@
         @include shift(1);
         float: left;
         padding-bottom: $large-gutter;
+        position: relative;
         
         @include media($medium-screen-up) {
           @include span-columns(8, block-collapse);
-          @include shift(.5);
-          @include omega;
+          @include shift(1);
+          
         }
 
         h1.alternative-title {
@@ -170,6 +171,22 @@
 
         }
 
+        .edit-link {
+          background-color: $very-light-gray;
+          border: 4px solid $very-light-gray;
+          border-radius: 50%;
+          color: $very-dark-gray;
+          position: absolute;
+          right: 0px; top: -35px;   
+
+          &:hover {
+            color: $white;
+            background-color: $very-dark-gray;
+            border: 4px solid $very-dark-gray;
+          } 
+
+        }
+
       }
 
       .layout-sidebar {
@@ -181,10 +198,10 @@
         border-top: 1px solid $vv-light-gray;
 
         @include media($medium-screen-up) {
-          @include span-columns(3, block-collapse);
+          @include span-columns(2, block-collapse);
           @include omega;
           border: 0px;
-          float: right;
+          float: left;
           padding: 0 $gutter $gutter;
           text-align: left;
         }
@@ -286,4 +303,8 @@
 
   }
 
+}
+
+.project-post-detail .content-wrapper .article-content .article-body + h1 {
+  margin-bottom: $large-gutter;
 }
