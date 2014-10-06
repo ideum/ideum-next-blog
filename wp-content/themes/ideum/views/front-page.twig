@@ -10,19 +10,12 @@
 
     <div class="section-info">
 
-      {% if post.can_edit %}
-    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
-    {% endif %}
-
       <h1>
         <a href="/ideum_project/">Our Creative Services</a>
       </h1>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
-        ipsum aperiam, non nihil voluptate eligendi, quas obcaecati voluptatum
-        unde voluptas iusto optio omnis possimus? Placeat accusantium
-        reprehenderit dicta rem? Illo!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ipsum aperiam, non nihil voluptate eligendi, quas obcaecati voluptatum unde voluptas iusto optio omnis possimus? Placeat accusantium reprehenderit dicta rem? Illo!
       </p>
 
       <select ui-select2 ng-model="projectType" data-placeholder="Browse By Type">
@@ -38,13 +31,13 @@
 
       <li class="slide project-item">
 
-        <div class="overlay">
+        <img src="{{theme.link}}/images/placeholder-science-project-0.jpg">
 
-          <img src="{{theme.link}}/images/placeholder-science-project-0.jpg">
+        <div class="overlay"></div>
 
-        </div>
+        <div class="content-wrap"><a href="{{post.link}}"></a></div>
 
-        <div class="content">
+        <a href="{{post.link}}"><div class="content">
 
           <header>
 
@@ -62,19 +55,19 @@
             Limited to 70 characters dolor sit amet, consectetuer adipiscing.
           </p>
 
-        </div>
+        </div></a>
 
       </li>
 
-      <li class="slide">
+      <li class="slide project-item">
 
-        <div class="overlay">
+        <img src="{{theme.link}}/images/placeholder-science-project-1.jpg">
 
-          <img src="{{theme.link}}/images/placeholder-science-project-1.jpg">
+        <div class="overlay"></div>
 
-        </div>
+        <div class="content-wrap"><a href="{{post.link}}"></a></div>
 
-        <div class="content">
+        <a href="{{post.link}}"><div class="content">
 
           <header>
 
@@ -88,18 +81,19 @@
 
           </header>
 
-        </div>
+        </div></a>
+
       </li>
 
-      <li class="slide">
+      <li class="slide project-item">
 
-        <div class="overlay">
+        <img src="{{theme.link}}/images/placeholder-science-project-2.jpg">
 
-          <img src="{{theme.link}}/images/placeholder-science-project-2.jpg">
+        <div class="overlay"></div>
 
-        </div>
+        <div class="content-wrap"><a href="{{post.link}}"></a></div>
 
-        <div class="content">
+        <a href="{{post.link}}"><div class="content">
 
           <header>
             <h2 class="category">
@@ -114,7 +108,7 @@
             Ideum celebrates The World Cup adding additional levels of engagement.
           </p>
 
-        </div>
+        </div></a>
 
       </li>
 
@@ -138,39 +132,58 @@
 
   </section>
 
+  
   <section class="featured-blog-post post-style img-left">
 
-    <article class="content">
+  <article class="content">
 
-      <div class="img-wrap">
+    <div class="img-wrap">
 
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-blog-post-image.jpg"></a>
+      <a href="#FIXME"><img src="/wp-content/uploads/2014/10/how-many-points-685x428.jpg"></a>
 
+    </div>
+
+    <div class="txt-wrap">
+
+      <time class="time">August 27<sup>th</sup></time>
+      <a class="view" href="/blog/">View All</a>
+
+      <h1>
+        <a href="/how-many-touchpoints-are-necessary/">How Many Touchpoints Are Necessary?<!-- with a Long Double Line Title --></A>
+      </h1>
+
+      <p>
+        <!-- Limited to 160 characters, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit... -->Multitouch is a method of input that gives you the ability to use two or more fingers at one time on a touchscreen.
+      </p>
+
+      <!-- begin hidden content for featured-blogpost-share -->
+      <div style='display:none'>
+        <div id='featured-blogpost-share' style='padding:10px; background:#fff;'>
+          <!-- Facebook -->
+          <a href="http://www.facebook.com/sharer.php?u=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
+          <!-- Twitter -->
+          <a href="http://twitter.com/share?url=http://m.ideum.com/&amp;text=Ideum - Exhibit Design + Multitouch Software and Hardware" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
+          <!-- Google+ -->
+          <a href="https://plus.google.com/share?url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
+          <!-- LinkedIn -->
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
+          <!-- Pinterest -->
+          <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
+        </div>
       </div>
+      <!-- end hidden content for featured-blogpost-share - revealed when user clicks 'Share This' link (below)-->
 
-      <div class="txt-wrap">
+      <footer class="footer">
+        <a class="read" href="/how-many-touchpoints-are-necessary/">Read More</a>
+        <a class="share inline" href="#featured-blogpost-share">Share This</a>
+      </footer>
 
-        <time class="time">July 30<sup>th</sup></time>
-        <a class="view" href="#FIXME">View All</a>
+    </div>
 
-        <h1>
-          <a href="#FIXME">Blog Post<!-- with a Long Double Line Title --></A>
-        </h1>
+  </article>
 
-        <p>
-          Limited to 160 characters, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
-        </p>
-
-        <footer class="footer">
-          <a class="read" href="#FIXME">Read More</a>
-          <a class="share" href="#FIXME">Share This</a>
-        </footer>
-
-      </div>
-
-    </article>
-
-  </section>
+</section>
+  
 
   {# `productSliderIndex` is used to track the status of the product slider
    # contained within.  It must be initialized to zero (the first slide) before the
@@ -218,9 +231,26 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi explicabo id ut ipsum saepe nemo voluptates natus cumque cupiditate similique esse perferendis illum blanditiis quas odio nobis officiis placeat, hic!
               </p>
 
+              <!-- begin hidden content for featured-product-1-share -->
+              <div style="display:none">
+                <div id="multitouchtouch-tables-share" style="padding:10px; background:#fff;">
+                  <!-- Facebook -->
+                  <a href="http://www.facebook.com/sharer.php?u=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
+                  <!-- Twitter -->
+                  <a href="http://twitter.com/share?url=http://m.ideum.com/&amp;text=Ideum - Exhibit Design + Multitouch Software and Hardware" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
+                  <!-- Google+ -->
+                  <a href="https://plus.google.com/share?url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
+                  <!-- LinkedIn -->
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
+                  <!-- Pinterest -->
+                  <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
+                </div>
+              </div>
+              <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
+
               <footer class="footer">
                 <a class="read" href="/touch-table/">View Selection</a>
-                <a class="share" href="#FIXME">Share This</a>
+                <a class="share inline" href="#multitouchtouch-tables-share">Share This</a>
               </footer>
 
             </div>
@@ -247,15 +277,32 @@
 
               <h1>
                 <a href="/touch-walls/">Touch Walls</a>
-              </h1>
+              </h1> 
 
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi explicabo id ut ipsum saepe nemo voluptates natus cumque cupiditate similique esse perferendis illum blanditiis quas odio nobis officiis placeat, hic!
               </p>
 
+              <!-- begin hidden content for featured-product-2-share -->
+              <div style='display:none'>
+                <div id='touch-walls-share' style='padding:10px; background:#fff;'>
+                  <!-- Facebook -->
+                  <a href="http://www.facebook.com/sharer.php?u=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
+                  <!-- Twitter -->
+                  <a href="http://twitter.com/share?url=http://m.ideum.com/&amp;text=Ideum - Exhibit Design + Multitouch Software and Hardware" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
+                  <!-- Google+ -->
+                  <a href="https://plus.google.com/share?url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
+                  <!-- LinkedIn -->
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
+                  <!-- Pinterest -->
+                  <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
+                </div>
+              </div>
+              <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
+
               <footer class="footer">
                 <a class="read" href="/touch-walls/">View Selection</a>
-                <a class="share" href="#FIXME">Share This</a>
+                <a class="share inline" href="#touch-walls-share">Share This</a>
               </footer>
 
             </div>
@@ -372,9 +419,26 @@
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit.
         </p>
 
+        <!-- begin hidden content for featured-product-2-share -->
+        <div style='display:none'>
+          <div id='software-initiatives-share' style='padding:10px; background:#fff;'>
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
+            <!-- Twitter -->
+            <a href="http://twitter.com/share?url=http://m.ideum.com/&amp;text=Ideum - Exhibit Design + Multitouch Software and Hardware" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
+            <!-- Google+ -->
+            <a href="https://plus.google.com/share?url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
+            <!-- Pinterest -->
+            <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
+          </div>
+        </div>
+        <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
+
         <footer class="footer">
           <a class="read" href="/our-story/software-initiatives/">View Initiatives</a>
-          <a class="share" href="#FIXME">Share This</a>
+          <a class="share inline" href="#software-initiatives-share">Share This</a>
         </footer>
 
       </div>
@@ -394,9 +458,26 @@
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit.
         </p>
 
+        <!-- begin hidden content for featured-product-2-share -->
+        <div style='display:none'>
+          <div id='team-share' style='padding:10px; background:#fff;'>
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
+            <!-- Twitter -->
+            <a href="http://twitter.com/share?url=http://m.ideum.com/&amp;text=Ideum - Exhibit Design + Multitouch Software and Hardware" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
+            <!-- Google+ -->
+            <a href="https://plus.google.com/share?url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
+            <!-- Pinterest -->
+            <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
+          </div>
+        </div>
+        <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
+
         <footer class="footer">
           <a class="read" href="/our-story/team/">View Team</a>
-          <a class="share" href="#FIXME">Share This</a>
+          <a class="share inline" href="#team-share">Share This</a>
         </footer>
 
       </div>
