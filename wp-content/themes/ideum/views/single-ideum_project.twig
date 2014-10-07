@@ -95,7 +95,7 @@
 
           {{ post.content }}
 
-          <div class="secondary-images">
+          <!-- <div class="secondary-images">
             <h2>
               More Slides
             </h2>
@@ -112,7 +112,7 @@
             {% endif %}
             <ul>
             {% endif %}
-          </div>
+          </div> -->
 
           <p class="back-to-projects">
             <a href="/ideum_projects/">Back To Projects</a>
@@ -158,8 +158,25 @@
             {% endif %}
           </p>
 
+          <!-- begin hidden content for featured-blogpost-share -->
+          <div style='display:none'>
+            <div id='single-project-share' style='padding:10px; background:#fff;'>
+              <!-- Facebook -->
+              <a href="http://www.facebook.com/sharer.php?u={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+              <!-- Twitter -->
+              <a href="http://twitter.com/share?url={{post.link}}&amp;text={{post.title}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+              <!-- Google+ -->
+              <a href="https://plus.google.com/share?url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+              <!-- LinkedIn -->
+              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+              <!-- Pinterest -->
+              <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>               
+            </div>
+          </div>
+          <!-- end hidden content for featured-blogpost-share - revealed when user clicks 'Share This' link (below)-->
+
           <p class="sidebar-share-button">
-            <a href="#FIXME" class="button active">Share</a>
+            <a href="#single-project-share" class="button active inline">Share</a>
           </p>
 
           <!-- <p class="sidebar-link-button">
@@ -168,7 +185,7 @@
 
         </aside>
 
-        <section class="bottombar-related layout-bottombar">
+        <section class="bar-related layout-bottombar">
         {{bottombar}}
         </section>
 
