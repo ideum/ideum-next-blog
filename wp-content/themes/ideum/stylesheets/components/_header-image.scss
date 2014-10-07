@@ -11,17 +11,16 @@
   // directory and must both be JPEGs.  Note that if an image is not found, the
   // compiler will throw an error and refuse to continue.
   //
-  // FIXME: duplicate record added so SASS will recognize this is a list of
-  // lists.  Remove duplicate after a second real item is added.
-  @each $class, $color, $image, $width, $offset, $bgvert, $bghoriz, $bgheight in ( 
-    ('home',                  #62A6E7, 'home-pseudo-header-bg',                 800px,  200px, center, center,  800px),
-    ('our-story',             #b8b8b8, 'our-story-pseudo-header-bg',            1100px, 180px, center, 0px,     1000px),
-    ('mission',               #b8b8b8, 'mission-pseudo-header-bg',              800px,  100px, center, -75px,   460px),
-    ('facilities',            #b8b8b8, 'facilities-pseudo-header-bg',           800px,  100px, center, -235px,  460px),
-    ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg', 800px,  100px, center, -315px,  460px),
-    ('team',                  #9e9e9d, 'team-pseudo-header-bg',                 600px,  100px, center, top,     550px),
-    ('services',              #2c2c2d, 'services-pseudo-header-bg',             600px,  100px, center, top,     550px),
-    ('blog',                  #2c2c2d, 'blog-pseudo-header-bg',                 600px,  100px, center, top,     550px)
+  @each $class, $color, $image, $width, $offset, $bgvert, $bghoriz, $bgheight, $txtorient in ( 
+    ('home',                  #62A6E7, 'home-pseudo-header-bg',                 800px,  200px, center, center,  800px,  left),
+    ('our-story',             #b8b8b8, 'our-story-pseudo-header-bg',            1100px, 180px, center, 0px,     1000px, left),
+    ('mission',               #b8b8b8, 'mission-pseudo-header-bg',              800px,  100px, center, -75px,   460px,  left),
+    ('facilities',            #b8b8b8, 'facilities-pseudo-header-bg',           800px,  100px, center, -235px,  460px,  left),
+    ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg', 800px,  100px, center, -315px,  460px,  left),
+    ('team',                  #9e9e9d, 'team-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
+    ('services',              #2c2c2d, 'services-pseudo-header-bg',             600px,  100px, center, top,     550px,  left),
+    ('blog',                  #2c2c2d, 'blog-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
+    ('creative-services',     #2c2c2d, 'worldcup-project-pseudo-header-bg',     800px,  200px, center, center,  800px,  left)
   ) {
     .#{$class} {
       background: $color url("images/#{$image}-phone.jpg") no-repeat bottom right;
@@ -33,19 +32,39 @@
         height: $bgheight;
         margin-bottom: -$offset;
       }
+
+      .page-intro {
+        .page-intro-inner {
+          float: $txtorient !important;
+        }
+      }
     }
   }
 
   .page-intro {
     @include outer-container;
+    height: 100%;
+
+    @include media($medium-screen-up) {
+      top: -25%;
+      position: relative;
+    }
 
     .page-intro-inner {
       @include span-columns(10);
       @include shift(1);
 
       @include media($medium-screen-up) {
+        @include span-columns(7);
+        //padding-top: 125px;
+        position: absolute;
+          top: 40%;
+      }
+
+      @include media($large-screen-up) {
         @include span-columns(5);
-        padding-top: 165px;
+        //padding-top: 165px;
+ 
       }
 
       h1 a, a.view, a.share, a.read {
@@ -67,7 +86,9 @@
       }
 
       .footer {
+        font-size:1em;
         margin: $medium-gutter 0;
+        text-transform: uppercase;
 
         a {
 
@@ -89,9 +110,9 @@
     &.centered-intro {
       display: flex;
       align-items: center;
-      height: 100%;
+      height: 100% !Important;
       justify-content: center;
-
+  
     @include media($medium-screen-up) {
       height: auto;
     }
@@ -103,7 +124,8 @@
       .page-intro-inner {
         @include span-columns(10);
         @include shift(1);
-        height: auto;
+        height: auto;        
+        position: relative;
         text-align: center;
         
         @include media($medium-screen-up) {
