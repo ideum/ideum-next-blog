@@ -6,6 +6,8 @@ $header-main-bar-height: rem(117);
 
   .social-media-links {
     display: none;
+    position: relative;
+    z-index: 400;
     @include media($medium-screen-up) {
       @include display(flex);
     }
@@ -113,6 +115,8 @@ $header-main-bar-height: rem(117);
     @include align-items(center);
     @include justify-content(center);
     @include outer-container;
+    position: relative;
+    z-index: 400;
   }
 
   .logo {
@@ -124,8 +128,10 @@ $header-main-bar-height: rem(117);
     a {
       display: inline-block;
       @include hide-text;
-      background: url("images/logo.png") no-repeat center center;
       @include size(129px 50px);
+      background: url("images/logo.png") no-repeat center center;      
+      position: relative;
+      z-index: 200;
     }
   }
 
