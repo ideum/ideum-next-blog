@@ -36,15 +36,28 @@
         @include justify-content(center);
 
         h1 {
-          @include span-columns(6);
+          @include span-columns(7);
           color:$white;
           margin-bottom: $gutter;
-          text-align: center;
+
+          @include media($medium-screen-up) {
+            @include span-columns(6);
+            text-align: center;
+          }
+
         }
 
         button {
           @include transform(rotate(0));
           @include transition(transform 0.5s ease);
+          background: none;
+          border: 0;
+          color: #fff;        
+          float: right;
+          font-size: 1.75em;
+          outline: none;
+          position: relative;
+          right: -15%;
         }
       }
 
@@ -74,6 +87,14 @@
     &.open {
       header button {
         @include transform(rotate(180deg));
+        background: none;
+        border: 0;
+        color: #fff;        
+        float: right;
+        font-size: 1.75em;
+        outline: none;
+        position: relative;
+        right: -15%;
       }
 
       .item-content {
