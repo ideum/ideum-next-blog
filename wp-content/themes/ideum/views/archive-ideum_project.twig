@@ -1,9 +1,5 @@
 {% extends "base.twig" %}
 
-{% block header_image %}
-  
-{% endblock %}
-
 {% block content %}
 
 <section class="article-content">
@@ -78,22 +74,22 @@
 
     </div>
 
-      <!-- <div class="section-info">
+    <!-- <div class="section-info">
 
-        <p>&nbsp;</p>
+      <p>&nbsp;</p>
 
-        <p class=""><a href="#FIXME" class="button active">View All</a></p>
+      <p class=""><a href="#FIXME" class="button active">View All</a></p>
 
-      </div> -->
+    </div> -->
 
-    </section>
+  </section>
 
-    <section class="clients-n-partners" ng-init="clientSliderIndex = 0">
+  <section class="clients-n-partners" ng-init="clientSliderIndex = 0">
 
     <div class="section-info">
 
       <h1>
-         <a href="/client-list/">Clients &amp; Partners</a>
+        <a href="/client-list/">Clients &amp; Partners</a>
       </h1>
 
       <p>
@@ -102,7 +98,7 @@
 
     </div>
 
-    <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveFourUp()" rn-carousel-index="clientSliderIndex">
+    <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveFourUp()" >
 
       <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
         <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png"></a>
@@ -126,14 +122,6 @@
     </ul>
 
     <div class="section-info">
-
-      <ol class="slider-controls">
-        <li class="active"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
 
       <p>
         <a href="/client-list/" class="button active">View Client List</a>
