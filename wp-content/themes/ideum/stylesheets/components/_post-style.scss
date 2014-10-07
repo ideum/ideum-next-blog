@@ -13,6 +13,10 @@
       @include span-columns(6);
     }
     
+    a img:hover {
+      opacity: 0.6;
+    }
+
     img {
       display: block;
       float: left;
@@ -84,7 +88,7 @@
       color: $very-dark-gray;
 
       &:hover {
-        color: lighten($very-dark-gray, 15);
+        color: $medium-gray;
       }
 
     }
