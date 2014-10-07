@@ -50,9 +50,13 @@
 
   <div class="header-image">
 
-    <div class="{{ post.slug }}">
+    <div class="{% if custom_slug %}{{custom_slug}}{% else %}{{ post.slug }}{% endif %}">
 
+      {% if custom_header %}
+      {{ custom_header }}
+      {% else %}
       {{post.get_field('header_image_text_content')}}
+      {% endif %}
 
     </div>
 
