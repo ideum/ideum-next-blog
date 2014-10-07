@@ -42,6 +42,11 @@
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
 		}	
 
+		if ($post_type == 'ideum_project') {
+			$data['custom_slug'] = 'creative-services';
+			$data['custom_header'] = get_field('header_image_text_content', 11803);			
+		}
+
 		$data['posts'] = Timber::get_posts();
 
 		$data['pagination'] = Timber::get_pagination();
