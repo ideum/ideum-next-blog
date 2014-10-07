@@ -23,8 +23,8 @@
       	<div class="pull-quote-img">
 
         	{% if post.get_thumbnail %}
-				  <a href="{{post.link}}"><img 
-				  src="{{post.thumbnail.src}}" 
+				  <a href="{{post.thumbnail.src}}"><img 
+				  src="{{post.thumbnail.src|resize(640, 400)}}" 
 				  alt="Image for the post: '{{post.title}}'" 
 				  title="Image for the post: '{{post.title}}'"/></a>
 				  {% else %}
