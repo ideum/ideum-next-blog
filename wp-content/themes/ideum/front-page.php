@@ -13,15 +13,19 @@
  */
 
 $context = Timber::get_context();
-
 $post = new TimberPost();
+
+$post = Timber::query_post();
+
+$post_cat = $post->get_terms('category');
+
 $context['post'] = $post;
 
-Timber::render(array('front-page.twig'), $context);
+$context['acf'] = get_field_objects($data['post']->ID);
 
 $sidebar_context = array();
-$sidebar_context['featured-projects'] = Timber::get_posts('post_type=ideum_project&cat=posts_per_page=3');
+$sidebar_context['featured'] = Timber::get_posts('cat=592&posts_per_page=1');
 
-$context['featured-projects'] = Timber::get_sidebar('featured-projects', $sidebar_context);
+$context['blogbar'] = Timber::get_sidebar('bar-featured-post.twig', $sidebar_context);
 
-$context['acf'] = get_field_objects($data['post']->ID);
+Timber::render(array('front-page.twig'), $context);
