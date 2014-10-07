@@ -1,0 +1,67 @@
+<!-- begin bar-related.twig -->
+
+<div class="blog-post-listing">
+
+  <header class="single-post-header">
+
+    <h1 class="article-h1">Related Posts</h1>
+
+  </header>
+
+  {% for post in related %}
+
+  <article class="tease">
+
+    <div class="post-img-wrap">
+
+      {% if post.get_thumbnail %}
+      <a href="{{post.link}}"><img src="{{post.thumbnail.src}}" alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/></a>
+      {% else %}
+      <a href="{{post.link}}"><img src="/wp-content/themes/ideum/images/blog-post-img-placeholders-{{ random(2) }}.jpg" alt="Placeholder image for the post: '{{post.title}}'" 
+      title="Placeholder image for the post: '{{post.title}}'"/></a>
+      <!-- Ben - #FIXME - {{theme.link}} doesn't work in link when included as sidebar, only when included in code of single.twig directly -->
+      {% endif %}
+
+    </div>
+
+    <div class="post-txt-wrap">
+
+      <time class="time">{{post.post_date|date('F j, Y')}}</time>
+
+      <h2 class="h2">
+        <a href="{{post.link}}">{{post.title}}</a>
+      </h2>
+
+      <p>{{post.get_preview(34, 'true', '', 'true')}}</p>
+
+      <!-- begin hidden content for related-blogpost-share -->
+      <div style='display:none'>
+        <div id='related-blogpost-share-{{post.ID}}' style='padding:10px; background:#fff;'>
+          <!-- Facebook -->
+          <a href="http://www.facebook.com/sharer.php?u={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+          <!-- Twitter -->
+          <a href="http://twitter.com/share?url={{post.link}}&amp;text={{post.title}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+          <!-- Google+ -->
+          <a href="https://plus.google.com/share?url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+          <!-- LinkedIn -->
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+          <!-- Pinterest -->
+          <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>               
+        </div>
+      </div>
+      <!-- end hidden content for related-blogpost-share - revealed when user clicks 'Share This' link (below)-->
+
+      <footer class="footer">
+        <a class="read read-more" href="{{post.link}}">Read More</a>
+        <a class="share inline" href="#related-blogpost-share-{{post.ID}}">Share This</a>
+      </footer>
+
+    </div>
+
+  </article>
+
+  {% endfor %}
+
+</div>
+
+<!-- end bar-related.twig -->
