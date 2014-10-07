@@ -521,13 +521,13 @@
           margin: 0;          
           padding: 5%;
           max-height: 98%;
-          min-height: 90%;
+          min-height: 98%;
           width:100%;
           object-fit: fill;
 
           @include media($medium-screen-up) {
-            min-height: 88%;
-
+            max-height: 160px;
+            min-height: 160px;
           }
         }
 
