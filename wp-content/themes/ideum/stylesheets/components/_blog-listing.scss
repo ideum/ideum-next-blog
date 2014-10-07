@@ -67,6 +67,10 @@
         max-height: 266px;
       }
 
+      a img:hover {
+        opacity: 0.6;
+      }
+
       img {
         height: auto;
         max-width: initial;
@@ -101,7 +105,7 @@
         margin: 10px 0;
 
         &:hover {
-          color: lighten($very-dark-gray, 15);
+          color: $medium-gray;
         }
 
       }
