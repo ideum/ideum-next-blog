@@ -14,15 +14,16 @@ $post = new TimberPost();
 
 $context['title'] = $post->title();
 
-//$post_cat = $post->get_terms('category');
-//$post_cat = $post_cat[0]->ID;
+$args = array('fields'=>'ids');
+$post_cats = $post->get_terms('category', $args);
 
 $context['acf'] = get_field_objects($data['post']->ID); 
 
 $sidebar_context = array();
-$sidebar_context['related'] = Timber::get_posts('post_type=ideum_project&cat='.$post_cat.'&posts_per_page=3');
+$sidebar_context['related_projects'] = Timber::get_posts('post_type=ideum_project&cat='.$post_cats.'&posts_per_page=3'); //FIXME - don't know if this works
+$sidebar_context['thisproject'] = Timber::get_post($post->ID);
 
-$context['bottombar'] = Timber::get_sidebar('bar-related-projects.twig', $sidebar_context);
-$context['sidebar'] = Timber::get_sidebar('sidebar.twig', $sidebar_context);
+$context['related_projects'] = Timber::get_sidebar('bar-related-projects.twig', $sidebar_context);
+$context['sidebar_project'] = Timber::get_sidebar('sidebar-project.twig', $sidebar_context);
 
 Timber::render(array('single-ideum_project.twig'),  $context);

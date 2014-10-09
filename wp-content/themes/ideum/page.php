@@ -34,4 +34,8 @@ echo '<li><a href="'.$parent_permalink.'">'.$parent_title.'</a></li>';
 wp_list_pages("title_li=&child_of=".$post->post_parent."");
 $context['parent_menu'] = ob_get_clean();
 
+
+$context['follow_dialog'] = Timber::render('follow.twig', $data);
+$context['share_dialog'] = Timber::render('share.twig', $data);
+
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
