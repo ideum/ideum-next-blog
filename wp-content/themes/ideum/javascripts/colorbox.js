@@ -17,6 +17,7 @@ $(document).ready(function(){
   $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
   $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
   $(".inline").colorbox({inline:true, width:"50%"});
+  $(".inline-share").colorbox({inline:true, width:"550px"});
   $(".callbacks").colorbox({
     onOpen:function(){ alert('onOpen: colorbox is about to open'); },
     onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
