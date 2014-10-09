@@ -104,6 +104,7 @@
   .section-info {
     clear: both;
     margin:0 auto;
+    padding-bottom: 30px;
     text-align: center;
     width: 80%;
 
@@ -283,7 +284,8 @@
   .highlight-text.child-page {
     border-top: 1px solid $vv-light-gray;
     @include highlight-text($white, $vv-dark-gray, $vv-dark-gray, $light-medium-gray);
-    font-size: 1em;    
+    font-size: 1em;
+    padding:40px 0;
     position: relative;
 
     a {
@@ -374,38 +376,49 @@
 
   }
 
-  .facilities.item {
-    /* no op */
-    article {
+  .facilities {
+
+    &.item {
       /* no op */
-      img {
-        width: 100%;
+
+      article {
+        /* no op */
+
+        img {
+          width: 100%;
+        }
+
       }
-    }
-  }
-
-  .one-column-text {
-    @include span-columns(10);
-    @include shift(1);
-
-    padding:0 0 $gutter;
-    text-align: justify;
-  }
-
-  .two-column-text {
-    @include span-columns(10);
-    @include shift(1);
-
-    @include media($medium-screen-up) {
-      @include column-count(2);
-      @include column-gap(40px); // this should be 1 coulmn gutter, but how?
+      
     }
 
-    padding:0 0 $gutter;
-    text-align: justify;
+    &.rn-carousel-slide {
+      height: initial;
+    }
+
+    .one-column-text {
+      @include span-columns(10);
+      @include shift(1);
+
+      padding:0 0 $gutter;
+      text-align: justify;
+    }
+
+    .two-column-text {
+      @include span-columns(10);
+      @include shift(1);
+
+      @include media($medium-screen-up) {
+        @include column-count(2);
+        @include column-gap(40px); // this should be 1 coulmn gutter, but how?
+      }
+
+      padding:0 0 $gutter;
+      text-align: justify;
+    }
+
   }
 
-// end content
 }
 
 .edit-link {
@@ -434,6 +447,20 @@
 
 #services {
   /* no op */
+
+  .button.dark {      
+    background-color: $vv-dark-gray;
+    border-color: $vv-dark-gray;
+    font-size: 1.75em;
+    font-weight: 400;
+
+    &:hover {
+      background-color: lighten($base-button-color, 15);
+      border-color: $hover-button-color;
+      color: $base-background-color;
+    }
+  }
+
   .button {      
     background-color: $dark-teal;
     border-color: $dark-teal;
@@ -537,4 +564,34 @@
 
   }
 
+}
+
+.teamgrid {
+  padding: 0 0 $gutter; 
+}
+
+.accordion-wrap {
+  padding: 0 0 $gutter; 
+}
+
+#follow-dialog  {
+  height:250px;
+  padding:20px;
+  text-align:center;
+}
+
+.follow-share {
+  /* no op */
+  #ideum-icon {
+    margin-bottom: 16px;
+  }
+  
+  p {
+    margin-bottom: 24px;
+  }
+
+  .sharing-icon {
+    margin:0 17px;
+    width: 44px;
+  }
 }
