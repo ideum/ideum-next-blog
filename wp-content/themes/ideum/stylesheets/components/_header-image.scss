@@ -20,7 +20,7 @@
     ('team',                  #9e9e9d, 'team-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
     ('services',              #2c2c2d, 'services-pseudo-header-bg',             600px,  100px, center, top,     550px,  left),
     ('blog',                  #2c2c2d, 'blog-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
-    ('creative-services',     #2c2c2d, 'worldcup-project-pseudo-header-bg',     800px,  200px, center, center,  800px,  left)
+    ('creative-services',     #2c2c2d, 'worldcup-project-pseudo-header-bg',     800px,  200px, center, center,  800px,  left),
   ) {
     .#{$class} {
       background: $color url("images/#{$image}-phone.jpg") no-repeat bottom right;
@@ -35,7 +35,21 @@
 
       .page-intro {
         .page-intro-inner {
-          float: $txtorient !important;
+          padding-left: 10%;
+          padding-right: 0;
+
+          @include media($medium-screen-up) {
+
+            @if $txtorient == right {
+              padding-left: 0;
+              padding-right: 5%;
+              right: 0;
+            } @else {
+              padding-left: 5%;
+              left: 0;
+            }
+          }
+
         }
       }
     }
@@ -52,7 +66,7 @@
 
     .page-intro-inner {
       @include span-columns(10);
-      @include shift(1);
+ 
 
       @include media($medium-screen-up) {
         @include span-columns(7);
@@ -123,7 +137,7 @@
 
       .page-intro-inner {
         @include span-columns(10);
-        @include shift(1);
+        
         height: auto;        
         position: relative;
         text-align: center;
