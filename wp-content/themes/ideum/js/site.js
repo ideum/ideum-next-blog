@@ -7,9 +7,10 @@ var App = module.exports =  angular.module('ideum', [
 
   // Third-party libraries
   'angular-carousel',
-  'ui.select2'
+  'ui.select2',
 
   // Project code
+  'ideum.video'
 ]);
 
 App.factory('screenSize', function ($window) {
@@ -63,8 +64,9 @@ require('./animations');
 require('./header');
 require('./footer');
 require('./expander');
+require('./touch-tables');
 
-},{"./animations":2,"./expander":3,"./footer":4,"./header":5}],2:[function(require,module,exports){
+},{"./animations":2,"./expander":3,"./footer":4,"./header":5,"./touch-tables":6}],2:[function(require,module,exports){
 'use strict';
 
 var App = angular.module('ideum');
@@ -219,5 +221,24 @@ App.controller('headerCtrl', ['$scope', function ($scope) {
     $scope.$emit('toggleMobileSlideoutMenu');
   };
 }]);
+
+},{}],6:[function(require,module,exports){
+'use strict';
+
+var App = angular.module('ideum.video', []);
+
+App.directive('idAutoplay', function () {
+  return {
+    link: function (scope, element) {
+      var video = element.find('video')[0];
+
+      element.hover(function () {
+        video.play();
+      }, function () {
+        video.pause();
+      });
+    }
+  };
+});
 
 },{}]},{},[1]);

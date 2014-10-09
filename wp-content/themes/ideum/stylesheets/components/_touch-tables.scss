@@ -1,0 +1,92 @@
+@import "bourbon/dist/bourbon";
+
+$touchtable-content-color: rgba(255,255,255,0.7);
+$touchtable-transition-time: 0.25s;
+$touchtable-description-margin: 25px;
+
+.product-category {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  max-width: 1280px;
+  color: white;
+
+  video {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .overlay{
+    @include transition (all $touchtable-transition-time);
+    @include position(absolute, 0 0 0 0);
+    background-color: rgba(0,0,0,0.25);
+    width: 100%;
+    height: 100%;
+
+    .content {
+      @include position(absolute, 0 0 0 0);
+      @include display(flex);
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(center);
+      text-align: center;
+      color: $touchtable-content-color;
+
+      h2,p,a{
+        @include transition (all $touchtable-transition-time);
+      }
+
+      h2{
+        color: $touchtable-content-color;
+        font-weight: $bold;
+      }
+
+      p{
+        max-width: 640px;
+        display: none;
+        margin: $touchtable-description-margin auto 0;
+
+        @include media($medium-screen-up){
+          display: block;
+        }
+      }
+
+      a{
+        color: $touchtable-content-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: $bold;
+        margin: $touchtable-description-margin auto 0;
+        padding: 15px 35px;
+        display: inline-table;
+        background-color: transparent;
+        border: 3px solid $touchtable-content-color;
+        border-radius: 3px;
+      }
+
+      //TODO: variablize the color as a class.
+      a:hover{
+        color: white;
+        background-color: orange;
+        border-color: orange !important;
+      }
+    }
+  }
+
+  .overlay:hover{
+    background-color: rgba(0,0,0,0);
+
+    .content{
+      h2,p,a {
+        color: white;
+      }
+
+      a{
+        border-color: white;
+      }
+    }
+  }
+}

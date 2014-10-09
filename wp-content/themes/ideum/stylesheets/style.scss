@@ -27,8 +27,8 @@
 
 // Mixins
 @import "mixins/banner";
-@import "mixins/navi-effect";
 @import "mixins/highlight-text";
+@import "mixins/navi-effect";
 
 // Extends
 @import 'extends/button';
@@ -36,34 +36,35 @@
 @import 'extends/hide-text';
 
 // Typography and Elements
-@import 'layout';
-@import 'typography';
-@import 'forms';
-@import 'tables';
-@import 'lists';
 @import 'buttons';
+@import 'forms';
 @import 'icons';
+@import 'layout';
+@import 'lists';
+@import 'tables';
+@import 'typography';
 
 // Page Components
+@import 'components/accordions';
+@import 'components/blog-detail';
+@import 'components/blog-listing';
+@import 'components/clients-n-partners';
+@import 'components/content';
+@import 'components/featured-pages';
+@import 'components/footer';
 @import 'components/header';
 @import 'components/header-image';
-@import 'components/content';
-@import 'components/footer';
-@import 'components/slider';
-@import 'components/our-creative-services';
 @import 'components/mobile-slideout-menu';
-@import 'components/social-media-feed';
-@import 'components/post-style';
+@import 'components/our-creative-services';
 @import 'components/our-products';
-@import 'components/featured-pages';
-@import 'components/clients-n-partners';
+@import 'components/our-team';
+@import 'components/pagination';
+@import 'components/post-style';
+@import 'components/slider';
+@import 'components/social-media-feed';
 @import 'components/sub-nav';
 @import 'components/talking-points';
-@import 'components/our-team';
-@import 'components/accordions';
-@import 'components/blog-listing';
-@import 'components/pagination';
-@import 'components/blog-detail';
+@import 'components/touch-tables';
 
 // Necessary to avoid flash of unrendered angular templates
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {

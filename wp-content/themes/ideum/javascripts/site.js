@@ -6,9 +6,10 @@ var App = module.exports =  angular.module('ideum', [
 
   // Third-party libraries
   'angular-carousel',
-  'ui.select2'
+  'ui.select2',
 
   // Project code
+  'ideum.video'
 ]);
 
 App.factory('screenSize', function ($window) {
@@ -62,3 +63,4 @@ require('./animations');
 require('./header');
 require('./footer');
 require('./expander');
+require('./touch-tables');
