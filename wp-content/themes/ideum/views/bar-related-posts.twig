@@ -1,4 +1,4 @@
-<!-- begin bar-related.twig -->
+<!-- begin bar-related-posts.twig -->
 
 <div class="blog-post-listing">
 
@@ -8,14 +8,14 @@
 
   </header>
 
-  {% for post in related %}
+  {% for post in related_posts %}
 
   <article class="tease">
 
     <div class="post-img-wrap">
 
       {% if post.get_thumbnail %}
-      <a href="{{post.link}}"><img src="{{post.thumbnail.src}}" alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/></a>
+      <a href="{{post.link}}"><img src="{{post.thumbnail.src|resize(600)}}" alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/></a>
       {% else %}
       <a href="{{post.link}}"><img src="/wp-content/themes/ideum/images/blog-post-img-placeholders-{{ random(2) }}.jpg" alt="Placeholder image for the post: '{{post.title}}'" 
       title="Placeholder image for the post: '{{post.title}}'"/></a>
@@ -36,7 +36,9 @@
 
       <!-- begin hidden content for related-blogpost-share -->
       <div style='display:none'>
-        <div id='related-blogpost-share-{{post.ID}}' style='padding:10px; background:#fff;'>
+        <div id='related-blogpost-share-{{post.ID}}' style="padding:20px;height:190px;text-align:center;">
+          <img src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+          <p>Like what you see? Share this.</p>
           <!-- Facebook -->
           <a href="http://www.facebook.com/sharer.php?u={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
           <!-- Twitter -->
@@ -64,4 +66,4 @@
 
 </div>
 
-<!-- end bar-related.twig -->
+<!-- end bar-related-posts.twig -->
