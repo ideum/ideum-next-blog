@@ -7,7 +7,7 @@
 <div class="post-img-wrap">
 
   {% if post.get_thumbnail %}
-  <a href="{{post.link}}"><img src="{{post.thumbnail.src|resize(426, 266)}}" alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/></a>
+  <a href="{{post.link}}"><img src="{{post.thumbnail.src|resize(600)}}" alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/></a>
   {% else %}
   <a href="{{post.link}}"><img src="{{theme.link}}/images/blog-post-img-placeholders-{{ random(2) }}.jpg" alt="Placeholder image for the post: '{{post.title}}'" 
   title="Placeholder image for the post: '{{post.title}}'"/></a>
