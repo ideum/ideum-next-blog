@@ -16,7 +16,7 @@
     position: relative;
     width: 100%;
     
-    @include media($medium-screen-up) {
+    @include media($medium-screen-up) { 
       min-height: 380px;
     }
 
