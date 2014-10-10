@@ -242,13 +242,19 @@
 
     .highlight-text {
       @include highlight-text($dark-teal, $white, $white, $white);
+      position: relative;
     }
 
     .button {      
       background-color: $dark-teal;
       border-color: $dark-teal;
-      font-size: 34px;
+      font-size: 1.75em;
       font-weight: 400;
+
+      @include media($medium-screen-up) {
+        font-size: 2.45em;
+      }
+
       &:hover {
         color: $very-dark-gray;
       }
@@ -261,6 +267,8 @@
         color: $vv-dark-gray;
         font-size: .75em;
         border-bottom:1px dotted $vv-dark-gray;
+        position: absolute;
+          top:10px;
 
         &:hover {
           color: $white;
@@ -275,20 +283,8 @@
   .highlight-text.child-page {
     border-top: 1px solid $vv-light-gray;
     @include highlight-text($white, $vv-dark-gray, $vv-dark-gray, $light-medium-gray);
-    font-size: 1em;
-  }
-
-  #facilities {
-
-    .button {      
-      background-color: $dark-teal;
-      border-color: $dark-teal;
-      font-size: 34px;
-      font-weight: 400;
-      &:hover {
-        color: $very-dark-gray;
-      }
-    }
+    font-size: 1em;    
+    position: relative;
 
     a {
       /* no op */
@@ -297,11 +293,34 @@
         color: $vv-dark-gray;
         font-size: .75em;
         border-bottom:1px dotted $vv-dark-gray;
+        position: absolute;
+          top:10px;
 
         &:hover {
-          color: $white;
+          color: $medium-gray;
           border-bottom: none;
         }
+
+      }
+
+    }
+
+  }
+
+  #facilities {
+
+    .button {      
+      background-color: $dark-teal;
+      border-color: $dark-teal;
+      font-size: 1.75em;
+      font-weight: 400;
+
+      @include media($medium-screen-up) {
+        font-size: 2.45em;
+      }
+
+      &:hover {
+        color: $very-dark-gray;
       }
 
     }
@@ -313,11 +332,17 @@
     .button {      
       background-color: $dark-teal;
       border-color: $dark-teal;
-      font-size: 34px;
+      font-size: 1.75em;
       font-weight: 400;
+
+      @include media($medium-screen-up) {
+        font-size: 2.45em;
+      }
+
       &:hover {
         color: $very-dark-gray;
       }
+
     }
 
   }
@@ -337,7 +362,7 @@
 
       }
 
-      .one-column-text, .two-colum-text {
+      .one-column-text, .two-column-text {
         padding: 5% 0;
 
         h2 {
@@ -389,27 +414,127 @@
 }
 
 #team {
-
+  /* no op */
   .button {      
     background-color: $dark-teal;
     border-color: $dark-teal;
-    font-size: 34px;
+    font-size: 1.75em;
     font-weight: 400;
+
+    @include media($medium-screen-up) {
+      font-size: 2.45em;
+    }
+
+    &:hover {
+      color: $very-dark-gray;
+    }
+
+  }
+}
+
+#services {
+  /* no op */
+  .button {      
+    background-color: $dark-teal;
+    border-color: $dark-teal;
+    font-size: 1.75em;
+    font-weight: 400;
+
+    @include media($medium-screen-up) {
+      font-size: 2.45em;
+    }
+
     &:hover {
       color: $very-dark-gray;
     }
   }
 }
 
-#services {
+.single-ideum_project {
+  /* no op */
+  #content {
+    padding-top:0;
 
-  .button {      
-    background-color: $dark-teal;
-    border-color: $dark-teal;
-    font-size: 34px;
-    font-weight: 400;
-    &:hover {
-      color: $very-dark-gray;
+    .project-slider {
+      background-color: $off-vv-light-gray;
+
+      &.no-slide {
+        background-color: $white;
+      }
+
+      img.primary-image {
+        width:100%;
+      }
+
+      .video-wrapper { position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;}
+      .video-wrapper object, .video-wrapper embed,  { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+
     }
+
+    .secondary-images {
+      @include span-columns(12);
+      @include omega;
+      @include clearfix;
+      margin:$medium-gutter 0;
+
+      h2 {
+        margin-bottom: $small-gutter;
+      }
+
+      
+
+      li {
+        background-color: $off-vv-light-gray;
+        border:1px solid $vv-light-gray;
+        float:left;
+        margin: 0 1% 10px; 
+        min-height: 90px;
+        max-height: 90px;
+        overflow: hidden;
+
+        width: 31%;
+        
+        object-fit: contain;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        @include media($medium-screen-up) {
+          max-height: 160px;
+          min-height: 160px;
+        }
+
+        a {
+          @include clearfix;
+        }
+
+        img {
+          margin: 0;          
+          padding: 5%;
+          max-height: 98%;
+          min-height: 98%;
+          width:100%;
+          object-fit: fill;
+
+          @include media($medium-screen-up) {
+            max-height: 160px;
+            min-height: 160px;
+          }
+        }
+
+      }
+
+    }
+
   }
+
 }

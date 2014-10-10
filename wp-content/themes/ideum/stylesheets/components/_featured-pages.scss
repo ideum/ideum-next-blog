@@ -65,6 +65,8 @@
 
       a.read, a.share {
         color: $white;
+        display: block;
+        float: left;
         font-weight: 700;
         text-transform: uppercase;
 

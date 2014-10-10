@@ -118,3 +118,10 @@
     }
   }
 }
+#creative-services, #facilities, #our-story, #services, .home {
+  .rn-carousel-indicator {
+    clear: both;
+    display: block;
+    padding-top: rem(10);
+  }
+}

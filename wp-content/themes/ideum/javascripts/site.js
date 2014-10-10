@@ -64,3 +64,4 @@ require('./header');
 require('./footer');
 require('./expander');
 require('./touch-tables');
+require('./colorbox');

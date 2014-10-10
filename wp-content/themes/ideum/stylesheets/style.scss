@@ -65,6 +65,8 @@
 @import 'components/sub-nav';
 @import 'components/talking-points';
 @import 'components/touch-tables';
+@import 'components/blog-detail';
+@import 'components/colorbox';
 
 // Necessary to avoid flash of unrendered angular templates
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {

@@ -10,7 +10,9 @@
 
     <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 
-      <section class="project-slider">
+      <section class="project-slider{% if post.first_slide_image %}{% else %} no-slide{% endif %}">
+
+        {% if post.first_slide_image %}
 
         <ul rn-carousel rn-carousel-control rn-carousel-indicator>
 
@@ -32,7 +34,7 @@
 
           </li>
 
-          <li class="facilities item">
+          <li class="project item">
 
             <article>
 
@@ -50,7 +52,7 @@
 
           </li>
 
-          <li class="facilities item">
+          <li class="project item">
 
             <article>
 
@@ -70,7 +72,16 @@
 
         </ul>
 
+        {% elseif post.primary_video %}
+        <div class="video-wrapper">
+          {{ post.primary_video }}
+        </div>
+        {% elseif post.primary_image %}
+        <img class="primary-image" alt="{{ post.title }}" src="{{TimberImage(post.get_field('primary_image')).src}}" title="{{ post.title }}"/>
+        {% endif %}
+
       </section>
+      
 
       <section class="article-content">
 
@@ -84,6 +95,25 @@
 
           {{ post.content }}
 
+          <!-- <div class="secondary-images">
+            <h2>
+              More Slides
+            </h2>
+            {% if post.first_secondary_image or post.second_secondary_image or post.third_secondary_image %}
+            <ul>
+            {% if post.first_secondary_image %}
+            <li><a class="project-secondary-group" href="{{TimberImage(post.get_field('first_secondary_image')).src}}"><img alt="Another Image for {{ post.title }}" src="{{TimberImage(post.get_field('first_secondary_image')).src}}" title="Another Image for {{ post.title }}"/></a></li>
+            {% endif %}
+            {% if post.second_secondary_image %}
+            <li><a class="project-secondary-group" href="{{TimberImage(post.get_field('second_secondary_image')).src}}"><img alt="Another Image for {{ post.title }}" src="{{TimberImage(post.get_field('second_secondary_image')).src}}" title="Another Image for {{ post.title }}"/></a></li>
+            {% endif %}
+            {% if post.third_secondary_image %}
+            <li><a class="project-secondary-group" href="{{TimberImage(post.get_field('third_secondary_image')).src}}"><img alt="Another Image for {{ post.title }}" src="{{TimberImage(post.get_field('third_secondary_image')).src}}" title="Another Image for {{ post.title }}"/></a></li>
+            {% endif %}
+            <ul>
+            {% endif %}
+          </div> -->
+
           <p class="back-to-projects">
             <a href="/ideum_projects/">Back To Projects</a>
           </p>
@@ -93,7 +123,7 @@
         {% if sidebar %}
 
         <aside class="sidebar-post-meta layout-sidebar">
-          <!-- {{sidebar}} #FIXME - couldn't get variables into sidebar -->
+          <!-- {{sidebar}} #FIXME - couldn't get post variables to work in sidebar.twig -->
           
           {% if post.client_sidebar_icon %}
           <p class="project-company-img">
@@ -123,13 +153,30 @@
             <span class="label">Category: </span>
             {% if post.terms('category') %}
             {% for term in post.terms('category') %}
-            <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %},{% else %}.{% endif %}
+            <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %} / {% else %}.{% endif %}
             {% endfor %}
             {% endif %}
           </p>
 
+          <!-- begin hidden content for featured-blogpost-share -->
+          <div style='display:none'>
+            <div id='single-project-share' style='padding:10px; background:#fff;'>
+              <!-- Facebook -->
+              <a href="http://www.facebook.com/sharer.php?u={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+              <!-- Twitter -->
+              <a href="http://twitter.com/share?url={{post.link}}&amp;text={{post.title}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+              <!-- Google+ -->
+              <a href="https://plus.google.com/share?url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+              <!-- LinkedIn -->
+              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+              <!-- Pinterest -->
+              <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>               
+            </div>
+          </div>
+          <!-- end hidden content for featured-blogpost-share - revealed when user clicks 'Share This' link (below)-->
+
           <p class="sidebar-share-button">
-            <a href="#FIXME" class="button active">Share</a>
+            <a href="#single-project-share" class="button active inline">Share</a>
           </p>
 
           <!-- <p class="sidebar-link-button">
@@ -138,7 +185,7 @@
 
         </aside>
 
-        <section class="bottombar-related layout-bottombar">
+        <section class="bar-related layout-bottombar">
         {{bottombar}}
         </section>
 
