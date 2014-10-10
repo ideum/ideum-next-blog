@@ -7,6 +7,10 @@
   &.ng-hide-remove        { @include transform(translateX(100%)) }
   &.ng-hide-remove-active { @include transform(translateX(0))    }
 
+  @include media($medium-screen-up) {
+    display: none;
+  }
+
   background-color: $white;
   overflow-y: scroll;
   height: 100%;
