@@ -7,17 +7,25 @@
     position: relative;
     text-align: center;
     width: 100%;
+
+    a.member-dialog {
+      height: 100%;
+      position: absolute;      
+        left: 0;
+      width: 100%;
+      z-index: 400;
+    }
     
     @include media($small-screen-up) { 
       border-bottom: 2px solid $white; 
 
       img { 
-        margin-top: 13px;         
+        /*margin-top: 13px;*/
       }
 
       &:last-of-type {
         border: none;
-        img { margin-top: 15px; }
+        /*img { margin-top: 15px; }*/
       }
       
     }
@@ -33,10 +41,45 @@
 
       width: (100% / 3); 
     }
-    @include media($large-screen-up)  { width: (100% / 4); }
 
-    .data-wrap {
-      display:none;
+    @include media($large-screen-up) { 
+      width: (100% / 4); 
+    }
+
+    @include media($small-screen-up) {
+      .data-wrap {
+        background: transparent url('images/team-hover-overlay') repeat 0 0;
+        color: $white;
+        display: block;
+        padding-top: $small-gutter;
+        position: absolute;
+          bottom: 0; 
+        text-align: left;
+        width: 100%;
+      }
+
+      p {
+        margin: 0;
+        padding: 0 10%;
+        text-shadow: 0px 1px 2px #777;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        color: $white;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        font-weight: 900;
+        margin: 0 0 .75em 0;
+        padding: 0 10%;
+        text-shadow: 0px 1px 2px #777;
+      }
+    }
+
+    @include media($medium-screen-up) {
+      .data-wrap {
+        display:none;
+      }
     }
 
     &:hover, &.active {
@@ -49,12 +92,12 @@
         position: absolute;
           bottom: 0; 
         text-align: left;
-        width:100%;
+        width: 100%;
       }
 
       p {
-        margin:0;
-        padding:0 10%;
+        margin: 0;
+        padding: 0 10%;
         text-shadow: 0px 1px 2px #777;
         text-transform: uppercase;
       }
@@ -65,7 +108,7 @@
         line-height: 1.5em;
         font-weight: 900;
         margin: 0 0 .75em 0;
-        padding:0 10%;
+        padding: 0 10%;
         text-shadow: 0px 1px 2px #777;
       }
     }
