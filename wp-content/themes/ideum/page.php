@@ -26,7 +26,9 @@ $post = new TimberPost();
 $context['acf'] = get_field_objects($data['post']->ID);
 $context['slug'] = $slug; 
 $context['post'] = $post;
+
 $context['post_parent'] = $post_parent;
+
 ob_start();
 $parent_permalink = get_permalink($post->post_parent); 
 $parent_title= get_the_title($post->post_parent); 
@@ -34,8 +36,12 @@ echo '<li><a href="'.$parent_permalink.'">'.$parent_title.'</a></li>';
 wp_list_pages("title_li=&child_of=".$post->post_parent."");
 $context['parent_menu'] = ob_get_clean();
 
-
 $context['follow_dialog'] = Timber::render('follow.twig', $data);
 $context['share_dialog'] = Timber::render('share.twig', $data);
+
+if (is_page('11825')){
+  $context['team'] = Timber::get_posts('post_type=ideum_employee&post_status=publish&exclude=2655&order=asc&img=team_user_image&posts_per_page=-1'); 
+  
+}
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
