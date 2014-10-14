@@ -61,7 +61,8 @@
   }
 }
 .rn-carousel-container {
-  width:100% !important; // temporary hack to fix twoup slider miswidth in medium size
+  clear: left;
+  width:100% !important; // temporary hack to fix two-up slider width in medium size
 }
 // the slider pips
 .rn-carousel-indicator {
