@@ -18,6 +18,7 @@ $(document).ready(function(){
   $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
   $(".inline").colorbox({inline:true, width:"50%"});
   $(".inline-share").colorbox({inline:true, width:"550px"});
+  $(".member-dialog").colorbox({inline:true, width:"60%", height:"auto"});
   $(".callbacks").colorbox({
     onOpen:function(){ alert('onOpen: colorbox is about to open'); },
     onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
