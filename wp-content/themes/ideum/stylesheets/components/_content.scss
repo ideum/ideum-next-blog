@@ -574,13 +574,82 @@
   padding: 0 0 $gutter; 
 }
 
-#follow-dialog  {
+#follow-dialog, .share-dialog {
   height:250px;
   padding:20px;
   text-align:center;
 }
 
-.follow-share {
+.member-details {
+  padding:5%;
+  text-align:center;
+  
+  .img-circular {
+    border: 3px solid #f6f6f6;
+    margin:20px auto;
+  }
+
+  @each $person in ( 
+    ('jim-spadaccini'),
+    ('paul-lacey'),
+    ('miles-washington'),
+    ('john-butler'),
+    ('glass-cartwright'),
+    ('chris-steinmetz'),
+    ('rita-sanchez'),
+    ('shaun-marsh'),
+    ('angela-arzave'),
+    ('ben-cates'),
+    ('maddy-minnis'),
+    ('darold-ross'),
+    ('jesse-jackson'),
+    ('curtis-bennet'),
+    ('jeanette-ely'),
+    ('tristan-wright'),
+    ('steven-prior'),
+    ('robert-demsey'),
+    ('john-mark-collins'),
+    ('allen-colmenares'),
+    ('jacob-mccullough'),
+    ('drew-sands'),
+    ('kyle-fitzpatrick'),
+    ('rafael-picco'),
+    ('alicia-broadhurst'),
+    ('amy-reynaud'),
+    ('kayla-gilmore'),
+    ('matthew-gallegos'),
+    ('john-erickson'),
+  ) {
+    .#{$person} {
+      @include cameo('/wp-content/uploads/2014/10/#{$person}-team.png');
+    }
+  }
+
+  ul.social-icons {
+    margin: $gutter auto $large-gutter;
+    li {
+      display: inline-block;
+      padding-right: 2%;
+      a {
+        height: 24px;
+        width: 24px;
+        background: white;
+        border: 1px solid #c7c7c7;
+        border-radius: 12px;
+        color: #c7c7c7;
+        display: inline-block;
+        font-size: 11px;
+        line-height: 21px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
+  }
+
+}
+
+.follow-share, .social-share {
   /* no op */
   #ideum-icon {
     margin-bottom: 16px;
@@ -593,6 +662,10 @@
   .sharing-icon {
     margin:0 17px;
     width: 44px;
+
+    &:hover {
+      opacity:0.7;
+    }
   }
 }
 
