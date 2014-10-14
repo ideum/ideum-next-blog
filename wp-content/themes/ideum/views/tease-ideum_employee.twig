@@ -1,0 +1,57 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+
+<!-- begin tease-ideum_employee.twig -->
+
+<article class="team-member aquamarine">
+
+  <a class="member-dialog" href="#team_member-share-{{ member.ID }}"><img src="{{ member.get_field('team_user_image') }}"></a> 
+
+  <div class="data-wrap">
+
+    <p>{{ member.profile_title_position }}</p>
+
+    <h1>{{ member.title }}</h1>
+
+  </div>
+
+</article>
+
+<!-- begin hidden content for member-dialog -->
+<div style='display:none'>
+  <div id='team_member-share-{{ member.ID }}' class="member-details">
+    <div class="img-circular {{ member.slug }}">
+    </div>
+    <h1>
+      {{ member.title }} / {{ member.profile_title_position }}
+    </h1>
+    <!-- Facebook -->
+    <ul class="social-icons">
+      {% if member.get_field('email') %}
+      <li><a href="mailto:{{ member.get_field('email') }}" target="_blank"><i class="icon-email"></i></a></li>
+      {% endif %}
+      {% if member.get_field('linkedin_profile_url') %}
+      <li><a href="{{ member.get_field('linkedin_profile_url') }}" target="_blank"><i class="icon-linkedin"></i></a></li>
+      {% endif %}
+      {% if member.get_field('twitter_profile_url') %}
+      <li><a href="{{ member.get_field('twitter_profile_url') }}" target="_blank"><i class="icon-twitter"></i></a></li>
+      {% endif %}
+      {% if member.get_field('google_plus_url') %}
+      <li><a href="{{ member.get_field('google_plus_url') }}" target="_blank"><i class="icon-gplus"></i></a></li>
+      {% endif %}
+      {% if member.get_field('dribbble_designer_url') %}
+      <li><a href="{{ member.get_field('dribbble_designer_url') }}" target="_blank"><i class="icon-dribbble"></i></a></li>
+      {% endif %}
+      {% if member.get_field('behance_portfolio_url') %}
+      <li><a href="{{ member.get_field('behance_portfolio_url') }}" target="_blank"><i class="icon-behance"></i></a></li>
+      {% endif %}
+    </ul>
+    {{ member.content }}
+  </div>
+</div>
+<!-- end hidden content for member-dialog -->
+
+<!-- end tease-ideum_employee.twig -->
+
+{% endblock %}
