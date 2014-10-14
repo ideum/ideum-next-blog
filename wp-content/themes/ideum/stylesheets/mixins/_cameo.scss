@@ -1,0 +1,10 @@
+@mixin cameo($background-file) {
+  background: transparent url("#{$background-file}") no-repeat center center;
+  background-size: cover;
+  border-radius: 43px;
+    -webkit-border-radius: 43px;
+    -moz-border-radius: 43px; 
+  display: block;  
+  height: 86px; 
+  width: 86px;
+}
