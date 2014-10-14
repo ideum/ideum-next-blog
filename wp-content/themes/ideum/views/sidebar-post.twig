@@ -1,14 +1,14 @@
 
-<aside class="sidebar-post-meta layout-sidebar">
+<aside class="sidebar-post-meta layout-sidebar member-details">
   <!-- {{sidebar}} #FIXME - couldn't get variables into sidebar -->
-  {% if thispost.author.author_icon %}
-  <p class="author-img">
+  <!-- { //if thispost.author.author_icon } -->
+  <!-- <p class="author-img">
     <a href="{{thispost.author.path}}"><img alt="{{ thispost.author }}" src="{{ thispost.author.author_icon }}" title="{{ thispost.author }}"></a>
-  </p><!-- Ben - #FIXME - {{theme.link}} doesn't work in link when included as sidebar, only when included in code of single.twig directly -->
-  {% endif %}
-
+  </p> --><!-- Ben - #FIXME - {{theme.link}} doesn't work in link when included as sidebar, only when included in code of single.twig directly -->
+  <!-- { //endif } -->
   {% if acf_author_image %}
-  <img alt="{{ thispost.author }}" src="{{ acf_author_image }}" title="{{ thispost.author }}">
+  <div class="img-circular {{ thispost.author.slug }} tablet-n-desktop"> </div>
+  <img class="phone-only" alt="{{ thispost.author }}" src="{{ acf_author_image }}" title="{{ thispost.author }}">
   {% endif %}
   
   {% if thispost.author.profile_title_position %}
