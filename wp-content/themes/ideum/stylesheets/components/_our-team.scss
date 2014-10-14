@@ -10,23 +10,30 @@
     
     @include media($small-screen-up) { 
       border-bottom: 2px solid $white; 
-      img { margin-top: 13px; }
+
+      img { 
+        margin-top: 13px;         
+      }
+
       &:last-of-type {
         border: none;
         img { margin-top: 15px; }
       }
+      
     }
 
     @include media($medium-screen-up) { 
       border-bottom: 0px;
-      img { margin-top: 15px; }
+
+      img { 
+        margin-top: 15px; 
+        position: absolute;
+          bottom: 0; left: 0; right: 0
+      }
+
       width: (100% / 3); 
     }
     @include media($large-screen-up)  { width: (100% / 4); }
-    
-   
-
-    
 
     .data-wrap {
       display:none;
@@ -35,8 +42,10 @@
     &:hover, &.active {
 
       .data-wrap {
+        background: transparent url('images/team-hover-overlay') repeat 0 0;
         color: $white;
         display: block;
+        padding-top: $small-gutter;
         position: absolute;
           bottom: 0; 
         text-align: left;
@@ -63,40 +72,74 @@
     
     // temporarily just made active states background-color darker so we can see it - dont know what treatment you will use ultimately
     // also color classes will need to be added to team-member article when iterating and it will neeed to be absed on screen size and to adjust dynamically
+    
+    background-image: url('images/team-item-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     &.aquamarine {
-      background-color: $dark-teal;
       &.active { 
-        background-color: darken($dark-teal, 15);
+        background-image: none;
+        background-color: $dark-teal;
+      }
+      &:hover {
+        background-image: none;
+        background-color: $dark-teal;
       }
     }
     &.gold {
-      background-color: $medium-orange;
       &.active {
-        background-color: darken($medium-orange, 15);
+        background-image: none;
+        background-color: $medium-orange;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-orange;
       }
     }
     &.blue {
-      background-color: $medium-blue;
       &.active {
-        background-color: darken($medium-blue, 15);
+        background-image: none;
+        background-color: $medium-blue;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-blue;
       }
     }
     &.red {
-      background-color: $very-dark-red;
       &.active {
-        background-color: darken($very-dark-red, 15);
+        background-image: none;
+        background-color: $medium-red;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-red;
       }
     }
     &.purple {
-      background-color: $medium-purple;
       &.active {
-        background-color: darken($medium-purple, 15);
+        background-image: none;
+        background-color: $medium-purple;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-purple;
       }
     }
     &.green {
-      background-color: $dark-green;
       &.active {
-        background-color: darken($dark-green, 15);
+        background-image: none;
+        background-color: $medium-green;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-green;
       }
     }
     
