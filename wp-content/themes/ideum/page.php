@@ -23,6 +23,7 @@
 
 $context = Timber::get_context();
 $post = new TimberPost();
+
 $context['acf'] = get_field_objects($data['post']->ID);
 $context['slug'] = $slug; 
 $context['post'] = $post;
@@ -36,8 +37,9 @@ echo '<li><a href="'.$parent_permalink.'">'.$parent_title.'</a></li>';
 wp_list_pages("title_li=&child_of=".$post->post_parent."");
 $context['parent_menu'] = ob_get_clean();
 
-$context['follow_dialog'] = Timber::render('follow.twig', $data);
+//#FIXME - this renders above the document and removes doctype - this will fail in IE most likely
 $context['share_dialog'] = Timber::render('share.twig', $data);
+$context['follow_dialog'] = Timber::render('follow.twig', $data);
 
 if (is_page('11825')){
   $context['team'] = Timber::get_posts('post_type=ideum_employee&post_status=publish&exclude=2655&order=asc&img=team_user_image&posts_per_page=-1'); 
