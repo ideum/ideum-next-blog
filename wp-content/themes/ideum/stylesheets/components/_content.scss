@@ -603,14 +603,14 @@
     ('maddy-minnis'),
     ('darold-ross'),
     ('jesse-jackson'),
-    ('curtis-bennet'),
+    ('curtis-bennett'),
     ('jeanette-ely'),
     ('tristan-wright'),
     ('steven-prior'),
     ('robert-demsey'),
     ('john-mark-collins'),
     ('allen-colmenares'),
-    ('jacob-mccullough'),
+    ('jake-mccullough'),
     ('drew-sands'),
     ('kyle-fitzpatrick'),
     ('rafael-picco'),
@@ -626,7 +626,7 @@
   }
 
   ul.social-icons {
-    margin: $gutter auto $large-gutter;
+    margin: $medium-gutter auto;
     li {
       display: inline-block;
       padding-right: 2%;
@@ -686,3 +686,25 @@
   text-align: justify;
 
 }
+
+.error-page {
+  border:2px solid $very-dark-red;
+  margin-top:-30px;
+  position:relative;
+  
+  h1, h2, h3, h4, p { 
+    margin-bottom:20px;
+  }
+
+  h1 { 
+    color: $very-dark-red; 
+  }
+
+  ul {
+    li {
+      margin-bottom:12px;
+    }
+  }
+
+}
+
