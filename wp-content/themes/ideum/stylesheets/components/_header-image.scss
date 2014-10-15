@@ -20,14 +20,14 @@
     ('team',                  #9e9e9d, 'team-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
     ('services',              #2c2c2d, 'services-pseudo-header-bg',             600px,  100px, center, top,     550px,  left),
     ('blog',                  #2c2c2d, 'blog-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
-    ('creative-services',     #2c2c2d, 'worldcup-project-pseudo-header-bg',     800px,  200px, center, center,  800px,  left),
+    ('creative-services',     #2c2c2d, 'cs-worldcup-project-pseudo-header-bg',     800px,  200px, center, center,  800px,  left),
   ) {
     .#{$class} {
-      background: $color url("images/#{$image}-phone.jpg") no-repeat bottom right;
+      background: $color url("images/header-images/#{$image}-phone.jpg") no-repeat bottom right;
       height: 460px;
 
       @include media($medium-screen-up) {
-        background: $color url("images/#{$image}.jpg") no-repeat $bgvert $bghoriz;
+        background: $color url("images/header-images/#{$image}.jpg") no-repeat $bgvert $bghoriz;
         background-size: auto $width;
         height: $bgheight;
         margin-bottom: -$offset;
