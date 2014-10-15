@@ -4,7 +4,7 @@
 
 <!-- begin tease-ideum_employee.twig -->
 
-<article class="team-member aquamarine">
+<article class="team-member {% if member.get_field('email') %}{{ member.get_field('custom_color') }}{% else %}aquamarine {% endif %}">
 
   <a class="member-dialog" href="#team_member-share-{{ member.ID }}"></a>
 
