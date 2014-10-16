@@ -25,7 +25,9 @@
       ('team', cover, 'placeholder-featured-pages-team.jpg', bottom, right),
       ('products', cover, 'placeholder-featured-pages-products.jpg', bottom, right),
       ('projects', cover, 'placeholder-featured-pages-projects.jpg', bottom, right),
-      ('team-n-clients', cover, 'placeholder-featured-pages-team-n-clients.jpg', top, right)
+      ('team-n-clients', cover, 'placeholder-featured-pages-team-n-clients.jpg', top, right),
+      ('direct-sales', cover, 'placeholder-featured-pages-direct-sales.jpg', top, right),
+      ('rentals', cover, 'placeholder-featured-pages-rentals.jpg', top, right)
     ) {
       &.#{$class} {
         background: url("images/#{$image}") no-repeat $bgposvert $bgposhorz;
