@@ -37,9 +37,11 @@ echo '<li><a href="'.$parent_permalink.'">'.$parent_title.'</a></li>';
 wp_list_pages("title_li=&child_of=".$post->post_parent."");
 $context['parent_menu'] = ob_get_clean();
 
-//#FIXME - this renders above the document and removes doctype - this will fail in IE most likely
-$context['share_dialog'] = Timber::render('share.twig', $data);
-$context['follow_dialog'] = Timber::render('follow.twig', $data);
+$context['share_dialog'] = Timber::compile('share.twig', $data);
+$context['follow_dialog'] = Timber::compile('follow.twig', $data);
+$context['featured_pages_contact'] = Timber::compile('featured-pages-contact.twig', $data);
+
+$context['sidebar_contact'] = Timber::get_sidebar('sidebar-contact.twig', $sidebar_context);
 
 if (is_page('11825')){
   $context['team'] = Timber::get_posts('post_type=ideum_employee&post_status=publish&exclude=2655&order=asc&img=team_user_image&posts_per_page=-1'); 
