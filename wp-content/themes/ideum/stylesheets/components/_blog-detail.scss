@@ -137,8 +137,7 @@
         
         @include media($medium-screen-up) {
           @include span-columns(8, block-collapse);
-          @include shift(1);
-          
+          @include shift(1);          
         }
 
         h1.alternative-title {
