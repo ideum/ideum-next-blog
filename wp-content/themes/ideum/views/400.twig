@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="content-wrapper error-page" style="border:2px solid #CC2025;position:relative; margin-top:-30px;">
+  <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+    <section class="article-content">
+      <!-- <h1 class="article-h1">HTTP Error 404</h1> -->
+      <div class="article-body">
+        <section class="error-display">
+          <div class="section-info" style="text-align:left;">
+
+            <h1 class="article-h1">
+              HTTP Error 400
+            </h1>
+
+            <p>
+              <strong>Bad Request</strong>  - the request could not be understood by the server due to malformed syntax. 
+            </p>
+
+            <h4>
+              Please try one or more of the following:
+            </h4>
+
+            <ul>
+              <li>If you typed the address directly, please make sure it is correct.</li>
+              <li>Go to the <a href="/">Home page</a> and look for links that lead to the desired resource.</li>
+              <li>Return to the <a href="javascript:history.go(-1)">last page</a> you were on and try again.</li>
+              <li>Report the issue (with all pertinent contextual details, please) through the form on the <a href="/contact/">Contact page</a></li>
+            </ul>
+
+          </div>
+        </section>
+      </div>
+    </section>
+  </article>
+</div> <!-- /content-wrapper -->
+
+{% endblock %}
