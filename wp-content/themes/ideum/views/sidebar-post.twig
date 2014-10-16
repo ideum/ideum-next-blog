@@ -1,10 +1,9 @@
 
 <aside class="sidebar-post-meta layout-sidebar member-details">
-  <!-- {{sidebar}} #FIXME - couldn't get variables into sidebar -->
   <!-- { //if thispost.author.author_icon } -->
   <!-- <p class="author-img">
     <a href="{{thispost.author.path}}"><img alt="{{ thispost.author }}" src="{{ thispost.author.author_icon }}" title="{{ thispost.author }}"></a>
-  </p> --><!-- Ben - #FIXME - {{theme.link}} doesn't work in link when included as sidebar, only when included in code of single.twig directly -->
+  </p> -->
   <!-- { //endif } -->
   {% if acf_author_image %}
   <div class="img-circular {{ thispost.author.slug }} tablet-n-desktop"> </div>
@@ -40,17 +39,24 @@
 
   <!-- begin hidden content for featured-product-2-share -->
   <div style='display:none'>
-    <div id='blog-post-share' style='padding:10px; background:#fff;'>
+    <div id='blog-post-share' class="share-dialog">
+      <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+      <p>Like what you see? Share this.</p>
       <!-- Facebook -->
-      <a href="http://www.facebook.com/sharer.php?u={{thispost.link|url_encode}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+      <a href="http://www.facebook.com/sharer.php?u={{thispost.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
       <!-- Twitter -->
-      <a href="http://twitter.com/share?url={{thispost.link}}&amp;text={{thispost.title}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+      <a href="http://twitter.com/share?url={{thispost.link}}&amp;text={{thispost.title}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
       <!-- Google+ -->
-      <a href="https://plus.google.com/share?url={{thispost.link|url_encode}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
+      <a href="https://plus.google.com/share?url={{thispost.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
       <!-- LinkedIn -->
-      <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{thispost.link|url_encode}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+      <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{thispost.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
       <!-- Pinterest -->
-      <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>               
+      <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>               
     </div>
   </div>
   <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
