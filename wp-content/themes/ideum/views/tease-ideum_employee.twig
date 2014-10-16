@@ -4,7 +4,7 @@
 
 <!-- begin tease-ideum_employee.twig -->
 
-<article class="team-member {% if member.get_field('email') %}{{ member.get_field('custom_color') }}{% else %}aquamarine {% endif %}">
+<article class="team-member {% if member.get_field('email') %}{{ member.get_field('custom_color') }}{% else %}aquamarine {% endif %}" title="Click to view my bio.">
 
   <a class="member-dialog" href="#team_member-share-{{ member.ID }}"></a>
 
@@ -23,7 +23,7 @@
 <!-- begin hidden content for member-dialog -->
 <div style='display:none'>
   <div id='team_member-share-{{ member.ID }}' class="member-details">
-    <div class="img-circular {{ member.slug }}"> </div>
+    <div class="img-circular {{ member.slug }}" title="Hello. I'm {{ member.title }}, {{ member.profile_title_position }} at Ideum"> </div>
     <h1>
       {{ member.title }} / {{ member.profile_title_position }}
     </h1>
