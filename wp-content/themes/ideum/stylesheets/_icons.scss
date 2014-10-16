@@ -27,7 +27,8 @@ $icons: (
   arrow-down-left:  '\e813',
   arrow-left:       '\e814',
   menu:             '\e815',
-  close:            '\e816'
+  close:            '\e816',
+  empty:            '\000A0'
 );
 
 @include font-face(ideum-icons, 'fonts/ideum-icons');
