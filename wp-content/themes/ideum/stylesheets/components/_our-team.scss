@@ -120,7 +120,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     
-    &.aquamarine {
+    &.Aquamarine, &.aquamarine {
       &.active { 
         background-image: none;
         background-color: $dark-teal;
@@ -130,7 +130,7 @@
         background-color: $dark-teal;
       }
     }
-    &.gold {
+    &.Gold, &.gold {
       &.active {
         background-image: none;
         background-color: $medium-orange;
@@ -141,7 +141,7 @@
         background-color: $medium-orange;
       }
     }
-    &.blue {
+    &.Blue, &.blue{
       &.active {
         background-image: none;
         background-color: $medium-blue;
@@ -152,7 +152,7 @@
         background-color: $medium-blue;
       }
     }
-    &.red {
+    &.Red, &.red {
       &.active {
         background-image: none;
         background-color: $medium-red;
@@ -163,7 +163,7 @@
         background-color: $medium-red;
       }
     }
-    &.purple {
+    &.Purple, &.purple {
       &.active {
         background-image: none;
         background-color: $medium-purple;
@@ -174,7 +174,7 @@
         background-color: $medium-purple;
       }
     }
-    &.green {
+    &.Green, &.green {
       &.active {
         background-image: none;
         background-color: $medium-green;
@@ -185,7 +185,75 @@
         background-color: $medium-green;
       }
     }
-    
+
+  }
+
+}
+
+.member-details {
+  padding:5%;
+  text-align:center;
+  
+  .img-circular {
+    border: 3px solid #f6f6f6;
+    margin:20px auto;
+  }
+
+  @each $person in ( 
+    ('jim-spadaccini'),
+    ('paul-lacey'),
+    ('miles-washington'),
+    ('john-butler'),
+    ('glass-cartwright'),
+    ('chris-steinmetz'),
+    ('rita-sanchez'),
+    ('shaun-marsh'),
+    ('angela-arzave'),
+    ('ben-cates'),
+    ('maddy-minnis'),
+    ('darold-ross'),
+    ('jesse-jackson'),
+    ('curtis-bennett'),
+    ('jeanette-ely'),
+    ('tristan-wright'),
+    ('steven-prior'),
+    ('robert-demsey'),
+    ('john-mark-collins'),
+    ('allen-colmenares'),
+    ('jake-mccullough'),
+    ('drew-sands'),
+    ('kyle-fitzpatrick'),
+    ('rafael-picco'),
+    ('alicia-broadhurst'),
+    ('amy-reynaud'),
+    ('kayla-gilmore'),
+    ('matthew-gallegos'),
+    ('john-erickson'),
+  ) {
+    .#{$person} {
+      @include cameo('/wp-content/uploads/2014/10/#{$person}-team.png');
+    }
+  }
+
+  ul.social-icons {
+    margin: $medium-gutter auto;
+    li {
+      display: inline-block;
+      padding-right: 2%;
+      a {
+        height: 24px;
+        width: 24px;
+        background: white;
+        border: 1px solid #c7c7c7;
+        border-radius: 12px;
+        color: #c7c7c7;
+        display: inline-block;
+        font-size: 11px;
+        line-height: 21px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
 
   }
 
