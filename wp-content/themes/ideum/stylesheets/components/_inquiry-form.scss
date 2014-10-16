@@ -1,0 +1,204 @@
+.contact-content {
+  @include span-columns(12);
+  display: inline-block;
+  padding: $large-gutter 0 0;
+
+  .inquiry-form {
+    @include span-columns(10);
+    @include shift(1);
+    float: left;
+    padding-bottom: $large-gutter;
+    position: relative;
+    
+    @include media($medium-screen-up) {
+      @include span-columns(7.5, block-collapse);
+      @include shift(1);    
+    }
+
+    .inquiry-content {
+      padding-bottom: $large-gutter;
+      position: relative;
+
+      form {
+        
+        label, .faux-label{
+          font-weight: $bold;
+          text-transform: uppercase;
+
+          &.light {
+            color: $very-light-gray;
+            font-size: 1em;
+            margin-bottom: 0px; 
+          }
+
+          &.dark {
+            color: $vv-dark-gray;
+            font-size: 1em;
+            margin-bottom: 0px;
+          }
+
+        }
+
+        .fieldset-label {
+          margin-bottom: $gutter !Important;
+        }
+
+        textarea {
+          border-left: 0px; border-right: 0px; border-top: 0px;
+        }
+
+        input[type="email"], input[type="tel"], input[type="text"] {
+          background-color: inherit;
+          border-left: 0px; border-right: 0px; border-top: 0px;
+          box-shadow: none;
+          color: $vv-dark-gray;
+          margin: -3px 0 $medium-gutter 0;
+          padding: ($base-line-height / 3) 0;
+        }
+        
+        input[type="checkbox"],input[type="radio"] {
+          font-size: 24px;
+        }
+
+        .left-radio, .left-checkbox {
+          float: left;
+        }
+
+        .two-thirds-label {
+          width: 60%;
+        }
+
+        .left-label {
+          float: left;
+          margin-right: 9%;
+        }
+
+        .right-label {
+          float: left;
+          margin-left: 3%;
+          margin-top: -5px;
+
+          @include media($medium-screen-up) {
+            float: none;
+          }
+        }
+
+        .products {
+          margin-bottom: $medium-gutter;
+        }
+
+        .third-input {
+          width: 30%;
+        }
+
+        .right-input {
+          float: right;
+        }
+
+        .full-box {
+          clear: left;
+          float: left;
+          margin: 0;
+          padding: ($base-line-height / 4) 0;
+          width: 100%;
+
+          input[type="email"], input[type="tel"], input[type="text"] {
+            margin: -6px 0 0 0;
+          }
+
+          .half-box {
+
+            &:first-of-type {
+              margin-right: 0;
+              width:100%;
+
+              @include media($medium-screen-up) {
+                margin-right: 5%;
+                width: 45%;
+              }
+            }
+
+            &:last-of-type {
+              margin-left: 0;
+              width: 100%;
+
+              @include media($medium-screen-up) {
+                margin-left: 5%;
+                width: 45%;
+              }
+
+            }
+
+            input[type="email"], input[type="tel"], input[type="text"] {
+              margin-bottom: $base-line-height / 2;
+            }
+
+          }
+
+        }
+
+        .half-box {
+          clear: both;
+          width: 100%;
+
+          @include media($medium-screen-up) {
+            clear: none;
+            float: left;
+            margin: 0;
+            padding: ($base-line-height / 4) 0;
+            width: 50%;
+          }
+
+        }
+
+        fieldset {
+          background: $off-vv-light-gray;
+          border: 0px;
+          margin: 0 0 ($base-line-height / 2) 0;
+          padding: $base-line-height;
+
+          hr {
+            background-color: $vv-light-gray;
+            border: 0px;
+            display: inline-block;
+            height: 3px;
+            margin: $gutter 0;
+            width: 100%;
+          }
+
+        }
+
+        .contact {
+          margin: $medium-gutter 0;
+        }
+
+        .required-note {
+          margin-bottom: $medium-gutter;
+        }
+
+      }
+
+    }
+
+  }
+
+  .layout-sidebar {
+    @include span-columns(12);
+    margin: 0 auto;
+    text-align: center;
+
+    padding: $gutter;
+    border-top: 1px solid $vv-light-gray;
+
+    @include media($medium-screen-up) {
+      @include span-columns(3, block-collapse);
+      @include omega;
+      border: 0px;
+      float: left;
+      padding: 0 0 $gutter $gutter;
+      text-align: left;
+    }
+
+  }
+
+}
