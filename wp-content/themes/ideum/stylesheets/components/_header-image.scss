@@ -20,7 +20,8 @@
     ('team',                  #9e9e9d, 'team-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
     ('services',              #2c2c2d, 'services-pseudo-header-bg',             600px,  100px, center, top,     550px,  left),
     ('blog',                  #2c2c2d, 'blog-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
-    ('creative-services',     #2c2c2d, 'cs-worldcup-project-pseudo-header-bg',     800px,  200px, center, center,  800px,  left),
+    ('creative-services',     #2c2c2d, 'cs-worldcup-project-pseudo-header-bg',  800px,  200px, center, center,  800px,  left),
+    ('contact',               #2c2c2d, 'contact-pseudo-header-bg',              800px,  200px, center, center,  800px,  left),
   ) {
     .#{$class} {
       background: $color url("images/header-images/#{$image}-phone.jpg") no-repeat bottom right;
