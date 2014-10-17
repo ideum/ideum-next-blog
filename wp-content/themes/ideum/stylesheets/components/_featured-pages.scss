@@ -54,6 +54,12 @@
           color: darken($white, 15);
         }
 
+        &.no-hover {
+          &:hover {
+            color: $white;
+          }
+        }
+
       }
 
       p {
