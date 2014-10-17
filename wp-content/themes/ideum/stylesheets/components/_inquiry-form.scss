@@ -74,12 +74,15 @@
         }
 
         .right-label {
-          float: left;
+          
           margin-left: 3%;
-          margin-top: -5px;
+          position: relative;
+            top: -5px;
 
           @include media($medium-screen-up) {
             float: none;
+            margin-top: -5px;
+            top: initial;
           }
         }
 
@@ -176,6 +179,15 @@
           margin-bottom: $medium-gutter;
         }
 
+        .submit-wrap {
+          text-align: center;
+
+          @include media($medium-screen-up) {
+            text-align: left;
+          }
+
+        }
+
       }
 
     }
@@ -197,6 +209,22 @@
       float: left;
       padding: 0 0 $gutter $gutter;
       text-align: left;
+    }
+
+    &.contact-details {
+      /* no op */
+      h3 {
+        margin: 40px 0 10px 0;
+
+        &:first-of-type, .contactSidebarHeader {
+          margin: 0 0 10px 0;
+        }
+
+      }
+
+      .directions-link {
+        padding: 0;
+      }
     }
 
   }
