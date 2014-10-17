@@ -23,7 +23,8 @@
 <!-- begin hidden content for member-dialog -->
 <div style='display:none'>
   <div id='team_member-share-{{ member.ID }}' class="member-details">
-    <div class="img-circular {{ member.slug }}" title="Hello. I'm {{ member.title }}, {{ member.profile_title_position }} at Ideum"> </div>
+    <div class="img-circular {{ member.slug }}" title="Hello. I'm {{ member.title }}, {{ member.profile_title_position }} at Ideum"
+      style="background-image: url({{ member.get_field('team_user_image') }})"> </div>
     <h1>
       {{ member.title }} / {{ member.profile_title_position }}
     </h1>
