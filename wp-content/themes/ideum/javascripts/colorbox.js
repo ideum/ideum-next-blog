@@ -18,6 +18,9 @@ $(document).ready(function(){
   $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
   $(".inline").colorbox({inline:true, width:"60%", height:"auto"});
   $(".inline-share").colorbox({inline:true, width:"60%", height:"auto"});
+  $(".follow-share-phone").colorbox({inline:true, width:330, height:400});
+  $(".follow-share").colorbox({inline:true, width:600, height:325});
+  $(".directions-dialog").colorbox({inline:true, width:330, height:350});
   $(".member-dialog").colorbox({inline:true, width:"60%", height:"auto"});
   $(".share-dialog").colorbox({inline:true, width:"60%", height:"auto"});
   $(".callbacks").colorbox({
