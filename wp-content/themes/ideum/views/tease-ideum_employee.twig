@@ -29,9 +29,9 @@
     </h1>
     <!-- Facebook -->
     <ul class="social-icons">
-      {% if member.get_field('email') %}
+      <!-- {if member.get_field('email') }
       <li><a href="mailto:{{ member.get_field('email') }}" target="_blank"><i class="icon-email"></i></a></li>
-      {% endif %}
+      { endif } -->
       {% if member.get_field('linkedin_profile_url') %}
       <li><a href="{{ member.get_field('linkedin_profile_url') }}" target="_blank"><i class="icon-linkedin"></i></a></li>
       {% endif %}
