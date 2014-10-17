@@ -4,7 +4,7 @@
 
 <!-- begin tease-ideum_employee.twig -->
 
-<article class="team-member {% if member.get_field('email') %}{{ member.get_field('custom_color') }}{% else %}aquamarine {% endif %}" title="Click to view my bio.">
+<article class="team-member {% if member.get_field('custom_color') %}{{ member.get_field('custom_color') }}{% else %}aquamarine {% endif %}" title="Click to view my bio.">
 
   <a class="member-dialog" href="#team_member-share-{{ member.ID }}"></a>
 
@@ -30,8 +30,11 @@
     <!-- Facebook -->
     <ul class="social-icons">
       <!-- {if member.get_field('email') }
-      <li><a href="mailto:{{ member.get_field('email') }}" target="_blank"><i class="icon-email"></i></a></li>
+      <li><a href="mailto:" target="_blank"><i class="icon-email"></i></a></li>
       { endif } -->
+      {% if member.get_field('github_profile_url') %}
+      <li><a href="{{ member.get_field('github_profile_url') }}" target="_blank"><i class="icon-github"></i></a></li>
+      {% endif %}
       {% if member.get_field('linkedin_profile_url') %}
       <li><a href="{{ member.get_field('linkedin_profile_url') }}" target="_blank"><i class="icon-linkedin"></i></a></li>
       {% endif %}
