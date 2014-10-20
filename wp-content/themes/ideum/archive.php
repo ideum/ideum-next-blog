@@ -26,7 +26,7 @@
 		} else if (is_year()){
 			$data['title'] = 'Archive: '.get_the_date( 'Y' );
 		} else if (is_tag()){
-			$data['title'] = single_tag_title('', false);
+			$data['title'] = 'Tag Archive for <em>' . single_tag_title('', false) .'</em>';
 		} else if (is_author()) {
 			$data['title'] = 'Author Archive for <em>' . get_the_author().'</em>';
 			if (isset($query_vars['author'])){
