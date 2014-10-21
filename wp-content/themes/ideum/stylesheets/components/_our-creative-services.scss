@@ -46,9 +46,13 @@
       vertical-align:top;
       width: auto;
     }
+    
+    a.content-wrap-faux {
+      height: 100%;
+      width: 100%;
+    }
 
     .content {
-      
       width:80%;
       position: absolute;
         bottom: $gutter; left: 10%; right: 10%;
