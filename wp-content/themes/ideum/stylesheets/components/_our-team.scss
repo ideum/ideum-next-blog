@@ -9,8 +9,33 @@
     /* background image set inline in template */
   }
 
+  h1.member-title {
+    @include media($small-screen-up) {
+      font-size: 1.5em;
+      margin: ($gutter /2) 0;
+    }
+    @include media($medium-screen-up) {
+      font-size: rem(34);
+      margin: rem(30) 0 rem(16);
+    }
+  }
+
+  p {
+    @include media($small-screen-up) {
+      font-size: .9em;
+    }
+    @include media($medium-screen-up) {
+      font-size: initial;
+    }
+  }
+
   ul.social-icons {
-    margin: $medium-gutter auto;
+    margin: $gutter auto;
+    
+    @include media($medium-screen-up) {
+      margin: $medium-gutter auto;
+    }
+
     li {
       display: inline-block;
       padding-right: 2%;
@@ -43,7 +68,7 @@
     text-align: center;
     width: 100%;
 
-    a.member-dialog {
+    a.member-dialog, a.member-dialog-phone {
       height: 100%;
       position: absolute;      
         left: 0;
