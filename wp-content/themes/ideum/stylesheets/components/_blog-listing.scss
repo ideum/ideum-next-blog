@@ -59,17 +59,30 @@
       min-width: 100%;
       overflow: hidden;
       
+      background-position: center;        
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 256px;
+      min-width:220px;
+
       @include media($medium-screen-up) {
-        max-height: 256px;
-        min-width:220px;
+        height: 256px;
       }
 
-      @include media($large-screen-up) {
-        max-height: 266px;
-      }
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
 
-      a img:hover {
-        opacity: 0.6;
+        img {
+          visibility: hidden;        
+
+          &:hover {
+            opacity: 0.6;
+          }
+
+        }
+
       }
 
       img {
