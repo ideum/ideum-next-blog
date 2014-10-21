@@ -138,6 +138,7 @@
 
     .article-content {
       display: inline-block;
+      max-width: 100%;
       padding: $large-gutter 0 0;
 
       .article-body {
