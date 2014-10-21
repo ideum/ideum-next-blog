@@ -304,9 +304,13 @@
   }
 
   .one-column-text.slider, .slider-two-column-text.slider {
-    margin: -50px auto 0;
+    margin: -0px auto 0;
     max-width: 80%;
     padding: 5% 0;
+    
+    @include media($medium-screen-up) {
+      margin: -50px auto 0;
+    }
 
     h2 {
       text-align:center;
@@ -574,7 +578,6 @@
 }
 
 #follow-dialog, .share-dialog {
-  height:250px;
   padding:20px;
   text-align:center;
 }
