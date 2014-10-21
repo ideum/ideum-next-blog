@@ -149,6 +149,11 @@
         position: relative;
         
         @include media($medium-screen-up) {
+          @include span-columns(7.5, block-collapse);
+          @include shift(.5);          
+        }
+
+        @include media($large-screen-up) {
           @include span-columns(8, block-collapse);
           @include shift(1);          
         }
@@ -210,6 +215,15 @@
         border-top: 1px solid $vv-light-gray;
 
         @include media($medium-screen-up) {
+          @include span-columns(3, block-collapse);
+          @include omega;
+          border: 0px;
+          float: left;
+          padding: 0 $gutter $gutter;
+          text-align: left;
+        }
+
+        @include media($large-screen-up) {
           @include span-columns(2, block-collapse);
           @include omega;
           border: 0px;
@@ -266,12 +280,23 @@
           margin-bottom: $medium-gutter;;
         }
 
-        p.sidebar-share-button, p.sidebar-link-button {
+        p.sidebar-share-button, p.sidebar-link-button {          
+            position: relative;
           a.button {
             margin:0 0 10px 0;
             text-align: center;
             width: 130px;
+          
+            &.share-dialog-phone {
+              position: absolute;
+              top: -0px;
+              left: -0px;
+              right: -0px;
+              margin: 0 auto;
+            }
+
           }
+
         }
 
       }
