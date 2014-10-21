@@ -1,13 +1,14 @@
 
 <aside class="sidebar-post-meta layout-sidebar member-details">
-  <!-- { //if thispost.author.author_icon } -->
-  <!-- <p class="author-img">
-    <a href="{{thispost.author.path}}"><img alt="{{ thispost.author }}" src="{{ thispost.author.author_icon }}" title="{{ thispost.author }}"></a>
-  </p> -->
+  
   <!-- { //endif } -->
   {% if acf_author_image %}
-  <div class="img-circular {{ thispost.author.slug }} tablet-n-desktop"> </div>
+  <div class="img-circular {{ thispost.author.slug }} tablet-n-desktop" style="background-image: url({{ acf_author_image }})"> </div>
   <img class="phone-only" alt="{{ thispost.author }}" src="{{ acf_author_image }}" title="{{ thispost.author }}">
+  {% elseif thispost.author.author_icon %}
+  <p class="author-img">
+    <a href="{{thispost.author.path}}"><img alt="{{ thispost.author }}" src="{{ thispost.author.author_icon }}" title="{{ thispost.author }}"></a>
+  </p> 
   {% endif %}
   
   {% if thispost.author.profile_title_position %}
@@ -64,14 +65,16 @@
       <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{thispost.link|url_encode}}" target="_blank"><img class="sharing-icon" 
       src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
       <!-- Pinterest -->
-      <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" 
-      src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>               
+      <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a> -->
+      <a href="//www.pinterest.com/pin/create/button/url?={{thispost.link|url_encode}}&amp;media={{site.url}}{{thispost.thumbnail.src|resize(640, 400)}}&amp;description={{thispost.title}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>              
     </div>
   </div>
   <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
 
-  <p class="sidebar-share-button">
-    <a href="#blog-post-share" class="button active inline">Share</a>
+  <p class="sidebar-share-button">   
+    <a class="button active tablet-n-desktop inline-share" href="#blog-post-share">Share This</a>
+    <a class="button active phone-only share-dialog-phone" href="#blog-post-share">Share This</a>
   </p>
 
   <!-- <p class="sidebar-link-button">
