@@ -21,8 +21,10 @@ $(document).ready(function(){
   $(".follow-share-phone").colorbox({inline:true, width:330, height:400});
   $(".follow-share").colorbox({inline:true, width:600, height:325});
   $(".directions-dialog").colorbox({inline:true, width:330, height:350});
-  $(".member-dialog").colorbox({inline:true, width:"60%", height:"auto"});
-  $(".share-dialog").colorbox({inline:true, width:"60%", height:"auto"});
+  $(".member-dialog-phone").colorbox({inline:true, width:"90%", height:"auto"});
+  $(".member-dialog").colorbox({inline:true, width:"65%", height:"auto"});
+  $(".share-dialog").colorbox({inline:true, width:"60%", height:325});
+  $(".share-dialog-phone").colorbox({inline:true, width:"90%", height:"auto"});
   $(".callbacks").colorbox({
     onOpen:function(){ alert('onOpen: colorbox is about to open'); },
     onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
