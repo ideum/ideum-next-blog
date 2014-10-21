@@ -30,6 +30,8 @@
         float: left;
         margin: 0; 
         width: 100%;
+        // new - delete if reverting to old styles
+        height:380px;
 
         @include media($medium-screen-up) {
           display: flex;
@@ -43,11 +45,13 @@
         }
 
         a { 
+            height: 100%;
           
           @include media($medium-screen-up) {
-            float: left;
+            //old - reinstate if reverting to old styles
+            /*float: left;
             position: relative;
-              left: 50%;
+              left: 50%;*/
           }
 
           img {
@@ -61,8 +65,9 @@
               max-width: initial;
               min-width: 105%;
               width: auto;
-              position: relative;
-                right: 50%;
+              //old - reinstate if reverting to old styles
+              /*position: relative;
+                right: 50%;*/
             }
           }
 
@@ -84,7 +89,14 @@
           flex-grow: 1;
           flex-shrink: 1;
           justify-content: center;
+          padding: 0 6%;
           width: 50%;
+          // new - delete if reverting to old styles
+          height:380px;
+        }
+
+        @include media($large-screen-up) {
+          padding: 0 9%;
         }
 
         h2 {
