@@ -12,65 +12,48 @@
 
       <section class="project-slider{% if post.first_slide_image %}{% else %} no-slide{% endif %}">
 
-        {% if post.first_slide_image %}
-
+        {% if post.slides %}
         <ul rn-carousel rn-carousel-control rn-carousel-indicator>
 
-          <li class="project item">
+          {% for item in post.get_field('slides') %}
 
-            <article>
+            <li class="project item">
 
-              <img src="{{TimberImage(post.get_field('first_slide_image')).src}}">
+              <article class="project-item-article">
 
-              <div class="one-column-text"><!-- choose either 'one-column-text' or 'two-column-text' for class -->
+                <img src="{{TimberImage(item.slide_image).src}}">
 
-                <h2>
-                  {{ post.first_slide_text }}
-                </h2>
+                <div class="slide-text-wrap">
 
-              </div>
+                  <div class="slide-text-content">
 
-            </article>
+                    <h1 style="font-size: 3.5vw;color: #fff;">
+                      {{item.slide_title}}
+                    </h1>
 
-          </li>
+                    <p style="color:#fff; font-size: 2.5vw; line-height: 3.5vw; max-width:40%;">
+                      {{item.slide_text}}
+                    </p>
 
-          <li class="project item">
+                  </div>
 
-            <article>
+                </div>
 
-              <img src="{{TimberImage(post.get_field('second_slide_image')).src}}">
+              </article>
 
-              <div class="one-column-text">
+            </li>
 
-                <h2>
-                {{ post.second_slide_text }}
-                </h2>
-      
-              </div>
-
-            </article>
-
-          </li>
-
-          <li class="project item">
-
-            <article>
-
-              <img src="{{TimberImage(post.get_field('third_slide_image')).src}}">
-
-              <div class="one-column-text">
-
-                <h2>
-                {{ post.third_slide_text }}
-                </h2>
-      
-              </div>
-
-            </article>
-
-          </li>
+          {% endfor %}
 
         </ul>
+
+        <div class="one-column-text slider">
+
+          <h2>
+              Visitors to the Coca-Cola VIP lounge explore "The World's Cup" map and play a digital foosball game
+          </h2>
+
+        </div>
 
         {% elseif post.primary_video %}
         <div class="video-wrapper">
