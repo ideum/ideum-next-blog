@@ -1,0 +1,533 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div id="client-list" class="sub-page-wrap">
+
+  <section class="highlight-text child-page">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% endif %}
+
+    <h1>
+      Selected Touch Hardware Clients
+    </h1>
+
+    <p>
+      {{post.content}}
+    </p>
+
+  </section>
+
+  <div class="accordion-wrap" id-expander>
+
+    <section class="item-wrap red only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Aerospace / Training / Government
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text no-justification">
+
+              <ul>
+                <li>Boeing</li>
+                <li>Canadian Armed Forces</li>
+                <li>Canadian Space Agency</li>
+                <li>City of Chandler</li>
+                <li>FERMI Research Alliance</li>
+                <li>Landmark Aviation</li>
+                <li>Lockheed Martin</li>
+                <li>Minnesota Department of Natural Resources</li>
+                <li>National Park Service</li>
+                <li>Northrop Grumman</li>
+                <li>Regina Fire &amp; Protective Services (Canada)</li>
+                <li>Sandia National Labs</li>
+                <li>State of Hawaii</li>
+                <li>State of Nevada Department of Transportation</li>
+                <li>United States Air Force</li>
+                <li>United States Army</li>
+                <li>United States Coast Guard</li>
+                <li>Northrop Grumman</li>
+                <li>Regina Fire &amp; Protective Services (Canada)</li>
+                <li>Sandia National Labs</li>
+                <li>State of Hawaii</li>
+                <li>State of Nevada Department of Transportation</li>
+                <li>United States Air Force</li>
+                <li>United States Army</li>
+                <li>United States Coast Guard</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap red only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Design &amp; Technology Firms
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+
+              <ul>
+                <li>15 Letters</li>
+                <li>Aerian Studios</li>
+                <li>Applied Art</li>
+                <li>Black Rocket Interactive</li>
+                <li>Blue Cadet</li>
+                <li>Bohemia Interactive</li>
+                <li>Claron Technology Inc.</li>
+                <li>CompView Inc.</li>
+                <li>Corlido</li>
+                <li>Elead1</li>
+                <li>ET Group</li>
+                <li>FPT Information Systems Company</li>
+                <li>Geisler Young</li>
+                <li>i3 ICS, LLC</li>
+                <li>Imagimedia</li>
+                <li>Lynch Exhibits</li>
+                <li>Magian Studio</li>
+                <li>Maltbie</li>
+                <li>Mechdyne</li>
+                <li>MediaMation</li>
+                <li>NGX Interactive (Canada)</li>
+                <li>NorCal Structural</li>
+                <li>Northern Light Productions</li>
+                <li>Pacific Group (Canada)</li>
+                <li>Radiant Technologies (Greece)</li>
+                <li>RATIO Architects</li>
+                <li>Red the Agency</li>
+                <li>SAP</li>
+                <li>Somerset Group</li>
+                <li>SHI International</li>
+                <li>Unified Field</li>
+                <li>Washington Professional Systems</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap red only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Corporate &amp; Retail
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+
+              <ul>
+                <li>Affinity Fidelis Consulting and Technologies LLC.</li>
+                <li>Axon Sports</li>
+                <li>Biogen Idec</li>
+                <li>Booz Allen Hamilton</li>
+                <li>Caesars Entertainment</li>
+                <li>Carolina Premier Bank</li>
+                <li>Caterpillar</li>
+                <li>Four Seasons Orlando</li>
+                <li>globalX</li>
+                <li>Kongsberg Seatex</li>
+                <li>Lockton Companies</li>
+                <li>Marriott Vacation Club</li>
+                <li>NBC Universal</li>
+                <li>Post Properties</li>
+                <li>St. Landry Parish Tourist Commission</li>
+                <li>Siemens</li>
+                <li>Sierra Nevada Corporation</li>
+                <li>Stamm Media</li>
+                <li>Rio Tinto</li>
+                <li>Veridian Connections</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap red only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Museums  &amp; Exhibits
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+
+              <ul>
+                <li>Adler Planetarium</li>
+                <li>Almond Valley Heritage Trust (Scotland)</li>
+                <li>Anchorage Museum</li>
+                <li>Arizona Capitol Museum</li>
+                <li>Australian National Maritime Museum</li>
+                <li>Balboa Park Online Collaborative</li>
+                <li>Beavertail Lighthouse Museum Association (Rhode Island)</li>
+                <li>Birmingham Museum of Art</li>
+                <li>California Science Center</li>
+                <li>Children’s Discovery Museum of San Jose</li>
+                <li>Coastal Discovery Centre (BC, Canada)</li>
+                <li>Computer History Museum</li>
+                <li>Crystal Bridges Museum of Art</li>
+                <li>Don Harrington Discovery Center</li>
+                <li>Exploratorium</li>
+                <li>The Field Museum</li>
+                <li>The Getty</li>
+                <li>Hyperion Waste Treatment Plant Environmental Learning Center (El Segundo, CA)</li>
+                <li>Imagine Museum​</li>
+                <li>Indian Pueblo Cultural Center</li>
+                <li>Koch Family Children's Museum</li>
+                <li>Liberty Science Center</li>
+                <li>Maxwell Museum of Anthropology</li>
+                <li>Museum of Cycladic Art (Athens, Greece)</li>
+                <li>Museum of History &amp; Industry</li>
+                <li>Museum of Science and Industry Chicago</li>
+                <li>NASA Kennedy Space Center</li>
+                <li>NASA Wallops Flight Facility</li>
+                <li>NASA Goddard Space Flight Center</li>
+                <li>National Museum of Nuclear Science &amp; History</li>
+                <li>National Space Centre (UK)</li>
+                <li>Nevada Discovery Museum</li>
+                <li>New England Aquarium</li>
+                <li>New Mexico Museum of Natural History</li>
+                <li>Oakland Museum of California</li>
+                <li>Pacific Science Center</li>
+                <li>Parris Island Museum</li></li>
+                <li>Petrosains, The Discovery Centre (Malaysia)</li>
+                <li>Reynolds-Alberta Museum</li>
+                <li>Science Museum of Minnesota</li>
+                <li>Santa Barbara History Museum</li>
+                <li>State Historical Society of North Dakota</li>
+                <li>Toledo Museum of Art</li>
+                <li>Union Pacific Railroad Museum</li>
+                <li>Utah Museum of Natural History</li>
+                <li>Vancouver Aquarium</li>
+                <li>Walker Art Center (Minneapolis)</li>
+                <li>Minneapolis Institute of Arts</li>
+                <li>Wisconsin Veterans Museum</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap red only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Hospitals
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+
+              <ul>
+                <li>Army Institute of Pathology</li>
+                <li>BroadReach Healthcare</li>
+                <li>Joslin Diabetes Center (Harvard University)</li>
+                <li>Madison River Oaks Medical Center</li>
+                <li>Medical Center of Southeastern Oklahoma</li>
+                <li>Pasco Regional Medical Center</li>
+                <li>River Oaks Hospital</li>
+                <li>Walton Regional Medical Center</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap red only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Non-Profits
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+
+              <ul>
+                <li>K-12 Teachers Alliance</li>
+                <li>Mission of Morocco</li>
+                <li>Southern Poverty Law Center</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap red only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Research Labs
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+
+              <ul>
+                <li>Fermilab</li>
+                <li>FX Palo Alto Laboratory, Inc.</li>
+                <li>John Hopkins University Applied Physics Laboratory</li>
+                <li>Pacific Northwest National Laboratories</li>
+                <li>Sandia Laboratories (Albuquerque, NM)</li>
+                <li>Sandia Laboratories (Livermore, CA)</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap red only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Universities, Schools &amp; Libraries
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+
+              <ul>
+                <li>Affinity Fidelis Consulting and Technologies LLC.</li>
+                <li>Axon Sports</li>
+                <li>Biogen Idec</li>
+                <li>Booz Allen Hamilton</li>
+                <li>Caesars Entertainment</li>
+                <li>Carolina Premier Bank</li>
+                <li>Caterpillar</li>
+                <li>Four Seasons Orlando</li>
+                <li>globalX</li>
+                <li>Kongsberg Seatex</li>
+                <li>Lockton Companies</li>
+                <li>Marriott Vacation Club</li>
+                <li>NBC Universal</li>
+                <li>Post Properties</li>
+                <li>St. Landry Parish Tourist Commission</li>
+                <li>Siemens</li>
+                <li>Sierra Nevada Corporation</li>
+                <li>Stamm Media</li>
+                <li>Rio Tinto</li>
+                <li>Veridian Connections</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap red only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Partners
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+
+              <p>
+                Jim is producing this content.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    {{follow_dialog}}
+
+  </div>
+
+  {% include 'client-slider.twig' %}
+  
+
+  <section class="featured-pages">
+    <article class="content direct-sales">
+      <div class="txt-wrap">
+        <h1>
+          Direct Sales
+        </h1>
+        <p>
+          Please contact us at (505) 792-1110 ext.1 or toll free in the US and Canada (855) 989-6824, use our online inquiry form, or emails us at sales@ideum.com. Our multitouch tables are sold domestically and internationally and are only available direct from Ideum.
+        </p>
+        <!-- 
+        <footer class="footer">
+          <a class="read" href="#FIXME">View Our Products</a>
+          <a class="share" href="#FIXME">Share This</a>
+        </footer>
+        -->
+      </div>
+    </article>
+
+    <article class="content rentals">
+      <div class="txt-wrap">
+        <h1>
+          Multitouch Rentals
+        </h1>
+        <p>
+          Ideum's 46" Platform, 55" 4k Drafting table, and 46" and 32" Coffee Tables are available for rent for tradeshows and special events. Learn more about Multitouch table rentals.
+        </p>
+        <!-- 
+        <footer class="footer">
+          <a class="read" href="#FIXME">View Our Projects</a>
+          <a class="share" href="#FIXME">Share This</a>
+        </footer>
+        -->
+      </div>
+    </article>
+  </section>
+
+  {% include 'follow-us-button.twig' %}
+
+</div>
+
+{% endblock %}
