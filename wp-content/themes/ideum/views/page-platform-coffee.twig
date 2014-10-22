@@ -1,0 +1,199 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<main class="productOuterWrapper">
+  <header>
+    <h1>Platform Coffee Table</h1>
+    <img src="{{theme.link}}/images/products/platform-coffee/header.png">
+  </header>
+  <main class="productInnerWrapper">
+    <div ng-app="ideum.tabs">
+      <!-- Tabs -->
+      <div tabs>
+        <!-- PLATFORM TAB -->
+        <div pane title="Platform Coffee Table 46">
+          <header>
+            <h1>Platform Coffee Table 46</h1>
+            <h2>Not Your Average Cup of Joe</h2>
+          </header>
+          <div ng-app="productDetails">
+            <section class="x-ray platform" ng-controller="xRayCtrl">
+              <section class="overlay platform" ng-style="overlayStyle">
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()">&uarr;</button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()">&darr;</button>
+              </section>
+            </section>
+          </div>
+
+        </div> 
+      </div>
+    </div> <!-- Close tabs -->
+
+    <section class="productSection">
+      <img class="left" src="{{theme.link}}/images/products/platform-coffee/01_the-platfom-coffee-table.jpg">
+      <div class="productText">
+        <h2>The Platform Coffee Table</h2>
+        <p> 
+          The Platform Multitouch Coffee Tables can ship with either the Windows 7, Windows 8 or Android 4.4 KitKat OS installed which means you have access to virtually any Windows or Android app. For more versatility, the Platform Multitouch Coffee Tables are even available with upgrades for dual boot systems.
+        </p>
+      </div>
+    </section>
+
+    <section class="productSection">
+      <img class="full" src="{{theme.link}}/images/products/platform-coffee/02_smarter-coffee-table.jpg">
+      <div class="productText fullRight">
+        <h2>A Smarter Coffee Table</h2>
+        <p> 
+          The projected capacitive multitouch technology featured in the Platform Coffee Tables is the same type of reliable touch technology that is used in smartphones and tablets. This touch technology is impervious to light interference and provides superior responsiveness and accuracy.
+        </p>
+      </div>
+    </section>
+
+    <section class="productSection platform-coffee">
+      <img class="full" src="{{theme.link}}/images/products/platform-coffee/03_il-pacchetto.jpg">
+      <div class="productText white fullLeft">
+        <h2>Il Pacchetto Perfetto</h2> <!-- Does the average person know what this means?? -->
+        <p> 
+          This fully integrated and turnkey solution has single push button operation and lockable access ports. There are no installation technicians, nor any special set-up or requirements. The table arrives fully assembled. You unpack it, plug it in, and press the button and get started.
+        </p>
+      </div>
+    </section>
+
+    <h1>Key Features</h1>
+    <ul
+      class="slider platform-coffee"
+      ng-init="clientSliderIndex = 0"
+      rn-carousel
+      rn-carousel-control
+      rn-carousel-indicator
+      rn-carousel-width="responsiveTwoUp()"
+      rn-carousel-index="clientSliderIndex"
+    >
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/widi.svg' %}
+        </div>
+        <h3>WiDi Ready</h3>
+        <p>
+          Use the integrated Intel Wireless Display (WiDi) to share your touch table content on any HDMI compatible display. Expand collaborative work options and presentations by using the touch table and an HD screen to include more participants. A WiDi receiver is available as an optional upgrade.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/armed.svg' %}
+        </div>
+        <h3>Armed &amp; Hyperthready</h3>
+        <p>
+          The integrated computer is a powerhouse. It includes an Intel® Quad Core i7 4770s® (3.1GHz) with Hyperthreading®, 8MB cache computer with 8 GB of RAM, and a 500 GB HDD.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/demanding.svg' %}
+        </div>
+        <h3>demanding.svg</h3>
+        <p>
+          We left this table with a pack of neraged burmese tigers fed on destruction. They left in frustration. This table is as durable as it gets.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/gestureworks.svg' %}
+        </div>
+        <h3>Armed &amp; Hyperthready</h3>
+        <p>
+          Want the table to do multitouch? Don't want to write your own multitouch drivers and software? GestureWorks is built in for you developer's convenience!
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/graphically.svg' %}
+        </div>
+        <h3>Graphically Speaking</h3>
+        <p>
+          These tables are packed with the best and latest graphics. If you were to line a room with the Platform Coffee Table. You'd end up with a techno-bubble not dissimilar from the holodeck in Star Trek or the nursery from Ray Bradbury's short story "The Veldt".
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/reach.svg' %}
+        </div>
+        <h3>Reach Out and Touch</h3>
+        <p>
+          The table is capacitive, so are you fingers.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/windows.svg' %}
+        </div>
+        <h3>Windows</h3>
+        <p>
+          Something something something. Microsoft, Bill Gates, 1990&apos;s antitrust suit.
+        </p>
+      </li>
+    </ul>
+
+    <button class="very-dark-gray-button">Download Spec Sheet</button>
+
+    <section class="productSection plain">
+      <img class="full" src="{{theme.link}}/images/products/platform-coffee/04_upgrades.jpg">
+      <div class="productText white fullLeft">
+        <h2>Upgrades</h2>
+        <p> 
+          There are a variety of upgrades and add-ons for sharing and portability.
+          <div class="specs">
+            <ul class="specList">
+              <li>512GB SSD</li>
+              <li>2GB 256 bit DDR5 graphics card</li>
+              <li>WiDi Receiver</li>
+            </ul>
+
+            <ul class="specList column2">
+              <li>16GB DDR3-1333 RAM</li>
+              <li>6RFID Reader</li>
+              <li>WiDi Receiver</li>
+              <li>ATA Travel Case</li>
+            </ul>
+          </div>
+        </p>
+      </div>
+    </section>
+
+    <section class="productSection">
+      <img class="left" src="{{theme.link}}/images/products/platform-coffee/06_direct-sales.jpg">
+      <div class="productText">
+        <h2>Direct Sales <br> &amp; Rentals</h2> <!-- Does the average person know what this means?? -->
+        <p> 
+          Please contact us at (505) 792-1110 ext.1 or toll free in the US and Canada (855) 898-6824, use our online inquiry form, or email us at sales@ideum.com. The Platform Coffee Tables are sold domestically and internationally and are only available direct from Ideum. We also rent the Platform Coffee Tables in the US and Canada.
+        </p>
+      </div>
+    </section>
+  </main>
+</main>
+{% endblock %}

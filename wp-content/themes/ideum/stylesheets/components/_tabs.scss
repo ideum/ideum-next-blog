@@ -1,0 +1,51 @@
+.tabs-table{
+	margin: 0 auto;
+	width: 100%;
+}
+
+.tabs-nav{
+	margin: 0px auto;
+	text-align: center;
+
+	li{
+		display: inline-block;
+		padding: 0;
+		a, a:visited{
+			text-transform: uppercase;
+			text-decoration: none;
+			font-weight: $bold;
+			background-color: orange;
+			color: $white;
+			padding: 2.4em 0;
+			width: 240px;
+			display: block;
+		}
+	}
+	li.ng-scope.active > a{
+		background-color: $white;
+		color: $vv-dark-gray;
+	}
+}
+
+.tab-content{
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: $vv-light-gray;
+	background-color: $white;
+	position: relative;
+
+	min-height: 130px;
+	@include media($large-screen-up){
+    	min-height: 760px;
+  	}
+
+	header{
+		text-align: center;
+
+		> h2 {
+			@include media($large-screen-up){
+    			margin-bottom: 1em;
+  			}
+		}
+	}
+}

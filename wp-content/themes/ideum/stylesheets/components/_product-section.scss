@@ -1,0 +1,220 @@
+
+$product-section-height: 480px;
+$product-setcion-width: 960px;
+
+$product-spec-list-width: 150px;
+$product-spec-list-left-margin: 15px;
+
+.productOuterWrapper{
+	background-color: $base-background-color;
+
+	> header{
+
+		> h1{
+			text-align: center;
+			position: absolute;
+			margin-top: 15%;
+			width: 100%;
+			color: $white;
+		}
+
+		> img{
+			width: 100%;
+			margin: 0px auto;
+		}
+	}
+}
+
+.productInnerWrapper{
+	max-width: $product-setcion-width;
+	margin: -30% auto 0 auto;
+	z-index: 999;
+	position: relative;
+
+	> h1, h2{
+		text-align: center;
+	}
+
+	> h1{
+		margin: 0;
+		padding: 1.4em;
+		background-color: $white;
+	}
+
+	ul.slider{
+		background-color: $base-background-color;
+		li.client-slide.rn-carousel-slide{
+			text-align: center;
+			width: 37%;
+			height: auto;
+			margin: 0 6%;
+
+			.svgHolder{
+				padding: 30px 35px;
+				margin: 45px auto;
+				width: 160px;
+				height: 160px;
+				border-radius: 100px;
+				background-color: #FFF;
+			}
+
+			.svgHolder > svg{
+				fill: black;
+			}
+		}
+	}
+
+	ul.slider.platform-coffee li.client-slide.rn-carousel-slide .svgHolder > svg{
+		fill: $platform-coffee-color;
+	}
+
+	ul.slider.platform-drafting li.client-slide.rn-carousel-slide .svgHolder > svg{
+		fill: $platform-drafting-color;
+	}
+
+	ul.slider.platform li.client-slide.rn-carousel-slide .svgHolder > svg{
+		fill: $platform-color;
+	}
+
+	ul.slider.pro li.client-slide.rn-carousel-slide .svgHolder > svg{
+		fill: $pro-color;
+	}
+
+	ul.slider.pano li.client-slide.rn-carousel-slide .svgHolder > svg{
+		fill: $pano-color;
+	}
+}
+
+.productSection{
+	background-color: $white;
+	width: 100%;
+
+	@include media($medium-screen-up){
+		height: $product-section-height;
+	}
+
+	>img{
+		width: 50%;
+	}
+
+	> .productText{
+		@include display(flex);
+      	@include flex-direction(column);
+      	@include align-items(center);
+      	@include justify-content(center);
+      	padding: 0 4em;
+      	height: $product-section-height;
+
+      	&.white{
+      		color: $white;
+
+      		h2{
+      			color: $white;
+      		}
+      	}
+
+      	h2{
+      		width: 100%;
+      		font-weight: $bold;
+      		font-size: 2em;
+      		text-align: left;
+      		padding-bottom: 1em;
+      	}
+
+      	p{
+      		text-align: left;
+      	}
+
+      	.specs{
+      		margin-left: 66px;
+	      	ul.specList{
+	      		width: 150px;
+	      		float: left;
+	      		height: auto;
+				margin-left: 15px;
+	      		li{
+	      			list-style-type: disc;
+	      			margin-left: 5px;
+	      		}
+
+	      		li.listHeader{
+	      			font-weight: $bold;
+	      			list-style-type: none;
+	      			margin-left: -10px;
+	      		}
+	      	}
+
+	      	ul.column2{
+	      		@include media($medium-screen-up){
+	    	  		margin-left: $product-spec-list-width + 100px;
+	      			float: none;
+		  		}
+	      	}
+	    }
+	}
+
+	// for productText, when there is a full section image, and the text is on the Left
+	> .fullLeft, > .fullRight{
+		@include media($medium-screen-up){
+			width: 50%;
+			position: absolute;
+  		}
+	}
+
+	// " ... when text is on the right
+	> .fullRight{
+		left: 50%;
+	}
+
+	//for images when the section image is half width, text on right
+	> .full {
+		width: 100%;
+		@include media($medium-screen-up){
+			float: left;
+			width: auto;
+  		}
+	}
+
+	> .left{
+    	width: 100%;
+		@include media($medium-screen-up){
+			float: left;
+			width: 50%;
+  		}
+	}
+
+	// text on left
+	> .right{
+		width: 100%;
+		@include media($medium-screen-up){
+			float: right;
+			width: auto;
+  		}
+	}
+}
+
+.productSection.plain{
+	background-color: $base-background-color;
+}
+
+.productSection.platform-coffee{
+	background-color: $platform-coffee-color;
+}
+
+.productSection.platform-drafting{
+	background-color: $platform-drafting-color;
+}
+
+.productSection.platform{
+	background-color: $platform-color;
+}
+
+.productSection.pro{
+	background-color: $pro-color;
+}
+
+.productSection.pano{
+	background-color: $pano-color;
+}
+
+

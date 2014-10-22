@@ -1,0 +1,147 @@
+$productpage-circle-arrow-buttons-diameter: 40px;
+$productpage-lightgray: #f7f7f7;
+$productpage-text-color: #333;
+
+body {
+  background: #f0f0f0;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $productpage-text-color;
+}
+
+.x-ray {
+  @include size(960px 760px);
+  margin: 0 auto;
+  position: relative;
+  display: none;
+
+  @include media($large-screen-up){
+    display: block;
+  }
+
+  &.platform{
+    background-image: url("images/x-rays/platform.png");
+  }
+}
+
+.overlay {
+  @include position(absolute, 0 0 null 0);
+  height: 260px;
+  border: 1px solid gray;
+
+  @include transition(
+    top 0.8s ease,
+    height 0.8s ease,
+    background-position 0.8s ease
+  );
+
+  &.platform{
+    background-image: url("images/x-rays/platform-outline.png");
+  }
+
+  nav {
+    background: $productpage-lightgray;
+    line-height: 28px;
+    text-align: center;
+
+    a {
+      color: #3e4857;
+      @include transition(color 0.4s ease-in);
+      font: { size: 9px; weight: 500; }
+      text: { transform: uppercase; decoration: none; }
+
+      padding-right: 2em;
+      &:last-child { padding-right: 0 }
+
+      &.active { color: #f4c057 }
+    }
+  }
+
+  .content {
+    @include position(absolute, 40px 120px 0px 120px);
+    text-align: center;
+
+    @extend %hide-and-show;
+
+    .body {
+      @extend %hide-and-show;
+    }
+
+    //show content button
+    > button {
+      @include position(absolute, null 0px 40px 0px);
+      margin: { left: auto; right: auto; }
+      padding: 20px 5px;
+      width: 300px;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 4px; 
+      border: none;
+      background-color: $very-dark-gray;
+      @extend %hide-and-show;
+    }
+
+    button:active, > button:focus {
+      outline-style:none
+    }
+
+    button:hover{
+
+    }
+  }
+
+  //next and previous buttons
+  > button {
+    position: absolute;
+    right: 70px;
+    height: $productpage-circle-arrow-buttons-diameter;
+    width: $productpage-circle-arrow-buttons-diameter;
+    border-radius: $productpage-circle-arrow-buttons-diameter/2;
+    padding: 0;
+    border: none;
+    background-color: $productpage-lightgray;
+    &.prev { top: 70px;  @include transition(all .25s);}
+    &.next { top: 181px; @include transition(all .25s);}
+
+    @include transition(opacity 0.4s ease);
+    &.ng-hide-remove {
+      opacity: 0;
+      &-active { opacity: 1 }
+    }
+    &.ng-hide-add {
+      opacity: 1;
+      &-active { opacity: 0 }
+    }
+  }
+
+  > button:active, > button:focus {
+    outline-style:none
+  }
+
+  > button[disabled=disabled], button:disabled{
+    color: lighten($productpage-text-color, 50%);
+  }
+
+  > button:enabled:hover{
+    background-color: $medium-dark-orange;
+    color: white;
+  }
+
+
+}
+
+%hide-and-show {
+  @include transition(opacity 0.3s ease);
+
+  &.ng-hide-remove {
+    opacity: 0;
+    @include transition-delay(0.5s);
+    &-active { opacity: 1 }
+  }
+  &.ng-hide-add {
+    opacity: 1;
+    &-active { opacity: 0 }
+  }
+}
