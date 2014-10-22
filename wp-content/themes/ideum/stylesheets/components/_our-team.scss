@@ -94,12 +94,12 @@
       border-bottom: 0px;
 
       img { 
-        margin-top: 15px; 
+        margin: 15px auto 0; 
         position: absolute;
           bottom: 0; left: 0; right: 0
       }
 
-      width: (100% / 3); 
+      width: (100% / 2); 
     }
 
     @include media($large-screen-up) { 
