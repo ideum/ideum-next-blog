@@ -8,3 +8,19 @@ a.button {
   vertical-align: middle;
   white-space: nowrap;
 }
+
+//these are on the product pages mostly.
+button.very-dark-gray-button{
+	background-color: $very-dark-gray;
+	padding: 20px 5px;
+	margin: 1em auto;
+	width: 300px;
+	color: $white;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1rem;
+	border-radius: 4px; 
+	border: none;
+	display: block;
+}

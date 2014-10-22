@@ -527,6 +527,21 @@ a.button {
   white-space: nowrap;
 }
 
+button.very-dark-gray-button {
+  background-color: #3d4757;
+  padding: 20px 5px;
+  margin: 1em auto;
+  width: 300px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  display: block;
+}
+
 fieldset {
   background: #e0e0e0;
   border: 1px solid #c7c7c7;
@@ -4633,7 +4648,7 @@ nav.sub-nav a:hover {
   display: none;
   margin: 25px auto 0;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 960px) {
   .product-category .overlay .content p {
     display: block;
   }
@@ -4968,6 +4983,426 @@ nav.sub-nav a:hover {
 
 .project-post-detail .content-wrapper .article-content .article-body + h1 {
   margin-bottom: 50px;
+}
+
+body {
+  background: #f0f0f0;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+.x-ray {
+  height: 760px;
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .x-ray {
+    display: block;
+  }
+}
+.x-ray.platform {
+  background-image: url("images/x-rays/platform.png");
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 260px;
+  border: 1px solid gray;
+  -webkit-transition: top 0.8s ease, height 0.8s ease, background-position 0.8s ease;
+  -moz-transition: top 0.8s ease, height 0.8s ease, background-position 0.8s ease;
+  transition: top 0.8s ease, height 0.8s ease, background-position 0.8s ease;
+}
+.overlay.platform {
+  background-image: url("images/x-rays/platform-outline.png");
+}
+.overlay nav {
+  background: #f7f7f7;
+  line-height: 28px;
+  text-align: center;
+}
+.overlay nav a {
+  color: #3e4857;
+  -webkit-transition: color 0.4s ease-in;
+  -moz-transition: color 0.4s ease-in;
+  transition: color 0.4s ease-in;
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-right: 2em;
+}
+.overlay nav a:last-child {
+  padding-right: 0;
+}
+.overlay nav a.active {
+  color: #f4c057;
+}
+.overlay .content {
+  position: absolute;
+  top: 40px;
+  right: 120px;
+  bottom: 0px;
+  left: 120px;
+  text-align: center;
+}
+.overlay .content > button {
+  position: absolute;
+  right: 0px;
+  bottom: 40px;
+  left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 5px;
+  width: 300px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #3d4757;
+}
+.overlay .content button:active, .overlay .content > button:focus {
+  outline-style: none;
+}
+.overlay > button {
+  position: absolute;
+  right: 70px;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  padding: 0;
+  border: none;
+  background-color: #f7f7f7;
+  -webkit-transition: opacity 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+.overlay > button.prev {
+  top: 70px;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.overlay > button.next {
+  top: 181px;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.overlay > button.ng-hide-remove {
+  opacity: 0;
+}
+.overlay > button.ng-hide-remove-active {
+  opacity: 1;
+}
+.overlay > button.ng-hide-add {
+  opacity: 1;
+}
+.overlay > button.ng-hide-add-active {
+  opacity: 0;
+}
+.overlay > button:active, .overlay > button:focus {
+  outline-style: none;
+}
+.overlay > button[disabled=disabled], .overlay button:disabled {
+  color: #b3b3b3;
+}
+.overlay > button:enabled:hover {
+  background-color: #ffa94d;
+  color: white;
+}
+
+.overlay .content, .overlay .content .body, .overlay .content > button {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.overlay .ng-hide-remove.content, .overlay .content .ng-hide-remove.body, .overlay .content > button.ng-hide-remove {
+  opacity: 0;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.overlay .ng-hide-remove-active.content, .overlay .content .ng-hide-remove-active.body, .overlay .content > button.ng-hide-remove-active {
+  opacity: 1;
+}
+.overlay .ng-hide-add.content, .overlay .content .ng-hide-add.body, .overlay .content > button.ng-hide-add {
+  opacity: 1;
+}
+.overlay .ng-hide-add-active.content, .overlay .content .ng-hide-add-active.body, .overlay .content > button.ng-hide-add-active {
+  opacity: 0;
+}
+
+.productOuterWrapper {
+  background-color: #f0f0f0;
+}
+.productOuterWrapper > header > h1 {
+  text-align: center;
+  position: absolute;
+  margin-top: 15%;
+  width: 100%;
+  color: white;
+}
+.productOuterWrapper > header > img {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.productInnerWrapper {
+  max-width: 960px;
+  margin: -30% auto 0 auto;
+  z-index: 999;
+  position: relative;
+}
+.productInnerWrapper > h1, .productInnerWrapper h2 {
+  text-align: center;
+}
+.productInnerWrapper > h1 {
+  margin: 0;
+  padding: 1.4em;
+  background-color: white;
+}
+.productInnerWrapper ul.slider {
+  background-color: #f0f0f0;
+}
+.productInnerWrapper ul.slider li.client-slide.rn-carousel-slide {
+  text-align: center;
+  width: 37%;
+  height: auto;
+  margin: 0 6%;
+}
+.productInnerWrapper ul.slider li.client-slide.rn-carousel-slide .svgHolder {
+  padding: 30px 35px;
+  margin: 45px auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 100px;
+  background-color: #FFF;
+}
+.productInnerWrapper ul.slider li.client-slide.rn-carousel-slide .svgHolder > svg {
+  fill: black;
+}
+.productInnerWrapper ul.slider.platform-coffee li.client-slide.rn-carousel-slide .svgHolder > svg {
+  fill: #f6c863;
+}
+.productInnerWrapper ul.slider.platform-drafting li.client-slide.rn-carousel-slide .svgHolder > svg {
+  fill: #5cb8e6;
+}
+.productInnerWrapper ul.slider.platform li.client-slide.rn-carousel-slide .svgHolder > svg {
+  fill: #ff7065;
+}
+.productInnerWrapper ul.slider.pro li.client-slide.rn-carousel-slide .svgHolder > svg {
+  fill: #9c8cd8;
+}
+.productInnerWrapper ul.slider.pano li.client-slide.rn-carousel-slide .svgHolder > svg {
+  fill: #65cf89;
+}
+
+.productSection {
+  background-color: white;
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .productSection {
+    height: 480px;
+  }
+}
+.productSection > img {
+  width: 50%;
+}
+.productSection > .productText {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 0 4em;
+  height: 480px;
+}
+.productSection > .productText.white {
+  color: white;
+}
+.productSection > .productText.white h2 {
+  color: white;
+}
+.productSection > .productText h2 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: left;
+  padding-bottom: 1em;
+}
+.productSection > .productText p {
+  text-align: left;
+}
+.productSection > .productText .specs {
+  margin-left: 66px;
+}
+.productSection > .productText .specs ul.specList {
+  width: 150px;
+  float: left;
+  height: auto;
+  margin-left: 15px;
+}
+.productSection > .productText .specs ul.specList li {
+  list-style-type: disc;
+  margin-left: 5px;
+}
+.productSection > .productText .specs ul.specList li.listHeader {
+  font-weight: 700;
+  list-style-type: none;
+  margin-left: -10px;
+}
+@media screen and (min-width: 640px) {
+  .productSection > .productText .specs ul.column2 {
+    margin-left: 250px;
+    float: none;
+  }
+}
+@media screen and (min-width: 640px) {
+  .productSection > .fullLeft, .productSection > .fullRight {
+    width: 50%;
+    position: absolute;
+  }
+}
+.productSection > .fullRight {
+  left: 50%;
+}
+.productSection > .full {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .productSection > .full {
+    float: left;
+    width: auto;
+  }
+}
+.productSection > .left {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .productSection > .left {
+    float: left;
+    width: 50%;
+  }
+}
+.productSection > .right {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .productSection > .right {
+    float: right;
+    width: auto;
+  }
+}
+
+.productSection.plain {
+  background-color: #f0f0f0;
+}
+
+.productSection.platform-coffee {
+  background-color: #f6c863;
+}
+
+.productSection.platform-drafting {
+  background-color: #5cb8e6;
+}
+
+.productSection.platform {
+  background-color: #ff7065;
+}
+
+.productSection.pro {
+  background-color: #9c8cd8;
+}
+
+.productSection.pano {
+  background-color: #65cf89;
+}
+
+.tabs-table {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tabs-nav {
+  margin: 0px auto;
+  text-align: center;
+}
+.tabs-nav li {
+  display: inline-block;
+  padding: 0;
+}
+.tabs-nav li a, .tabs-nav li a:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: orange;
+  color: white;
+  padding: 2.4em 0;
+  width: 240px;
+  display: block;
+}
+.tabs-nav li.ng-scope.active > a {
+  background-color: white;
+  color: #343e4b;
+}
+
+.tab-content {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #f0f0f0;
+  background-color: white;
+  position: relative;
+  min-height: 130px;
+}
+@media screen and (min-width: 960px) {
+  .tab-content {
+    min-height: 760px;
+  }
+}
+.tab-content header {
+  text-align: center;
+}
+@media screen and (min-width: 960px) {
+  .tab-content header > h2 {
+    margin-bottom: 1em;
+  }
 }
 
 /*

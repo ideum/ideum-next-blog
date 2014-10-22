@@ -10,6 +10,8 @@ var App = module.exports =  angular.module('ideum', [
   'ui.select2',
 
   // Project code
+  'ideum.productDetails',
+  'ideum.tabs',
   'ideum.video'
 ]);
 
@@ -64,10 +66,12 @@ require('./animations');
 require('./header');
 require('./footer');
 require('./expander');
+require('./product-details');
+require('./tabs');
 require('./touch-tables');
 require('./colorbox');
 
-},{"./animations":2,"./colorbox":3,"./expander":4,"./footer":5,"./header":6,"./touch-tables":7}],2:[function(require,module,exports){
+},{"./animations":2,"./colorbox":3,"./expander":4,"./footer":5,"./header":6,"./product-details":7,"./tabs":8,"./touch-tables":9}],2:[function(require,module,exports){
 'use strict';
 
 var App = angular.module('ideum');
@@ -1350,6 +1354,141 @@ App.controller('headerCtrl', ['$scope', function ($scope) {
 }]);
 
 },{}],7:[function(require,module,exports){
+'use strict';
+
+var App = angular.module('ideum.productDetails', ['ngAnimate']);
+
+App.factory('ProductDetails', function ($http, $sce, $q) {
+  return {
+    get: function () {
+      // return $http.get('/js/data/product_details.json').then(function (response) {
+      //   var details = response.data;
+
+      //   angular.forEach(details, function (detail) {
+      //     detail.content = $sce.trustAsHtml(detail.content);
+      //   });
+
+      //   return details;
+      // });
+      
+      var deferred = $q.defer();
+      angular.forEach(IDEUM_SITE.product_details, function (detail) {
+        detail.content = $sce.trustAsHtml(detail.content);
+      });
+      deferred.resolve(IDEUM_SITE.product_details);
+      return deferred.promise;
+    }
+  };
+});
+
+App.controller('xRayCtrl', function ($scope, ProductDetails) {
+  $scope.productDetails = [];
+  $scope.detailOpen = false;
+
+  $scope.overlayStyle = {};
+
+  ProductDetails.get().then(function (data) {
+    $scope.productDetails = data;
+    $scope.currentDetail = 0;
+  });
+
+  $scope.goToDetail = function (idx) {
+    var offset = 500 / ($scope.productDetails.length - 1);
+
+    $scope.currentDetail = idx;
+    if ($scope.detailOpen) {
+      $scope.overlayStyle = {
+        top: 0,
+        height: '100%'
+      };
+    } else {
+      $scope.overlayStyle = {
+        top: (offset * idx) + 'px',
+        backgroundPosition: 'center ' + (-offset * idx) + 'px'
+      };
+    }
+  };
+
+  $scope.hasPrev = function () {
+    return $scope.currentDetail > 0;
+  };
+
+  $scope.hasNext = function () {
+    return $scope.currentDetail < ($scope.productDetails.length - 1);
+  };
+
+  $scope.prev = function () {
+    if ($scope.hasPrev()) {
+      $scope.goToDetail($scope.currentDetail - 1);
+    }
+  };
+
+  $scope.next = function () {
+    if ($scope.hasNext()) {
+      $scope.goToDetail($scope.currentDetail + 1);
+    }
+  };
+
+  $scope.openDetail = function (isOpen) {
+    $scope.detailOpen = isOpen;
+    $scope.goToDetail($scope.currentDetail);
+  };
+});
+
+},{}],8:[function(require,module,exports){
+'use strict'
+
+var app = angular.module('ideum.tabs', []);
+
+app.directive('tabs', function() {
+  return {
+    restrict: 'A',
+    transclude: true,
+    scope: {},
+    controller: function($scope) {
+      var panes = $scope.panes = [];
+
+      $scope.select = function(pane) {
+        angular.forEach(panes, function(pane) {
+          pane.selected = false;
+        });
+        pane.selected = true;
+      };
+
+      this.addPane = function(pane) {
+        if (panes.length === 0) {
+          $scope.select(pane);
+        }
+        panes.push(pane);
+      };
+    },
+    template: 
+      '<div class="tabs-table">' +
+          '<ul class="tabs-nav">' +
+            '<li ng-repeat="pane in panes" ng-class="{active:pane.selected}">' +
+              '<a href="" ng-click="select(pane)">{{pane.title}}</a>' +
+            '</li>' +
+          '</ul>' +
+        '<div class="tab-content" ng-transclude></div>' +
+      '</div>'
+  };
+});
+
+app.directive('pane', function() {
+  return {
+    require: '^tabs',
+    restrict: 'A',
+    transclude: true,
+    scope: {
+      title: '@'
+    },
+    link: function(scope, element, attrs, tabsCtrl) {
+      tabsCtrl.addPane(scope);
+    },
+    template: '<div class="tab-pane" ng-show="selected" ng-transclude> </div>'
+  };
+});
+},{}],9:[function(require,module,exports){
 'use strict';
 
 var App = angular.module('ideum.video', []);

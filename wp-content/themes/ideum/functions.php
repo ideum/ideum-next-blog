@@ -17,7 +17,8 @@
 			add_filter('get_twig', array($this, 'add_to_twig'));
 			add_action('init', array($this, 'register_post_types'));
 			add_action('init', array($this, 'register_taxonomies'));
-      add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
+			add_action('init', array($this, 'register_scripts'));
+			add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
 			$this->register_field_groups();
 			parent::__construct();
 		}
@@ -29,7 +30,7 @@
 					'singular_name' => __( 'Employee' )
 				),
 				'public' => true,
-				'has_archive' => true,
+				'has_archive' => true
 			));
 			register_post_type( 'ideum_project', array(
 				'labels' => array(
@@ -38,8 +39,18 @@
 				),
 				'taxonomies' => array('category'), // added to provide categories for custom post types - or we could register a custom taxonomy for this
 				'public' => true,
-				'has_archive' => true,
+				'has_archive' => true
 			));
+			// register_post_type( 'ideum_prod_details', array(
+			// 	'labels' => array(
+			// 		'name' => __( 'Product-Details' ),
+			// 		'singular_name' => __( 'Product-Details' )
+			// 	),
+			// 	'public' => true,
+			// 	'has_archive' => false,
+			// 	'can_export' => true,
+			// 	'exclude_from_search' => false
+			// ));
 		}
 
 		function register_taxonomies(){
@@ -107,14 +118,21 @@
 			return $twig;
 		}
 
-    function enqueue_scripts(){
-      wp_register_script('ideum-vendor', get_template_directory_uri() . '/js/vendor.js', array(), null, true);
-      wp_enqueue_script('ideum-site', get_template_directory_uri() . '/js/site.js', array('ideum-vendor'), null, true);
+		function register_scripts(){
+			wp_register_script('ideum-vendor', get_template_directory_uri() . '/js/vendor.js', array(), null, true);
+			wp_register_script('ideum-site', get_template_directory_uri() . '/js/site.js', array('ideum-vendor'), null, true);
 
-      wp_register_style('select2', get_template_directory_uri() . '/bower_components/select2/select2.css');
-      wp_register_style('angular-carousel', get_template_directory_uri() . '/bower_components/ideum-angular-carousel/dist/angular-carousel.css');
-      wp_enqueue_style('ideum-site', get_template_directory_uri() . '/style.css', array('select2', 'angular-carousel'));
-    }
+			wp_register_style('select2', get_template_directory_uri() . '/bower_components/select2/select2.css');
+			wp_register_style('angular-carousel', get_template_directory_uri() . '/bower_components/ideum-angular-carousel/dist/angular-carousel.css');
+			wp_register_style('ideum-site', get_template_directory_uri() . '/style.css', array('select2', 'angular-carousel'));
+
+		}
+
+		function enqueue_scripts(){
+			wp_enqueue_script('ideum-site');
+
+			wp_enqueue_style('ideum-site');
+		}
 
 	}
 

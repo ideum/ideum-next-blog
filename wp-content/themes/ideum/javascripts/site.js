@@ -9,6 +9,8 @@ var App = module.exports =  angular.module('ideum', [
   'ui.select2',
 
   // Project code
+  'ideum.productDetails',
+  'ideum.tabs',
   'ideum.video'
 ]);
 
@@ -63,5 +65,7 @@ require('./animations');
 require('./header');
 require('./footer');
 require('./expander');
+require('./product-details');
+require('./tabs');
 require('./touch-tables');
 require('./colorbox');

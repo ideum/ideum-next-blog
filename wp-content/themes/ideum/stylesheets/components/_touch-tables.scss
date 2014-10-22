@@ -49,7 +49,7 @@ $touchtable-description-margin: 25px;
         display: none;
         margin: $touchtable-description-margin auto 0;
 
-        @include media($medium-screen-up){
+        @include media($large-screen-up){
           display: block;
         }
       }
