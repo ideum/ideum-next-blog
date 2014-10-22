@@ -40,17 +40,17 @@
   }
   .phone-n-tablet {
     visibility: visible !Important;
-    position: initial;
+    position: initial !Important;
       left: initial; top: initial;
   }
   .tablet-only {
     visibility: visible !Important;
-    position: initial;
+    position: initial !Important;
       left: initial; top: initial;
   }
   .tablet-n-desktop {
     visibility: visible !Important;
-    position: initial;
+    position: initial !Important;
       left: initial; top: initial;
   }
   .desktop-only {
@@ -78,12 +78,12 @@
   }
   .tablet-n-desktop {
     visibility: visible !Important;
-    position: initial;
+    position: initial !Important;
       left: initial; top: initial;
   }
   .desktop-only {
     visibility: visible !Important;
-    position: initial;
+    position: initial !Important;
       left: initial; top: initial;
   }
 }
