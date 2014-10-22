@@ -22,8 +22,10 @@ $post_cat = $post->get_terms('category');
 $context['post'] = $post;
 
 $context['acf'] = get_field_objects($data['post']->ID);
+$context['site_url'] = get_bloginfo('url');
 
-$sidebar_context = array();
+$sidebar_context = Timber::get_context();
+$sidebar_context['site_url'] = get_bloginfo('url');
 $sidebar_context['featured_post'] = Timber::get_posts('cat=592&numberposts=1&posts_per_page=1');
 $sidebar_context['featured_projects'] = Timber::get_posts('post_type=ideum_project&numberposts=6&posts_per_page=6'); 
 
