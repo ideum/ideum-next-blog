@@ -3,11 +3,11 @@
   
   <!-- { //endif } -->
   {% if acf_author_image %}
-  <div class="img-circular {{ thispost.author.slug }} tablet-n-desktop" style="background-image: url({{ acf_author_image }})"> </div>
+  <div class="img-circular {{ thispost.author.slug }} tablet-n-desktop" style="background-image: url({{ acf_author_image }})" title="{{ thispost.author }} - Click here to view this author's post archive."> </div>
   <img class="phone-only" alt="{{ thispost.author }}" src="{{ acf_author_image }}" title="{{ thispost.author }}">
   {% elseif thispost.author.author_icon %}
   <p class="author-img">
-    <a href="{{thispost.author.path}}"><img alt="{{ thispost.author }}" src="{{ thispost.author.author_icon }}" title="{{ thispost.author }}"></a>
+    <a href="{{thispost.author.path}}"><img alt="{{ thispost.author }} - Click here to view this author's post archive." src="{{ thispost.author.author_icon }}" title="{{ thispost.author }} - Click here to view this author's post archive."></a>
   </p> 
   {% endif %}
   
