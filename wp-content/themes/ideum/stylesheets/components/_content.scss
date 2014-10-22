@@ -112,6 +112,19 @@
       width: 75%;
     }
 
+    .follow-button-wrap {
+      position: relative;
+      a.button.phone-only {
+        @include media($small-screen-up) {
+          position: absolute;
+          top: -0px;
+          left: -0px;
+          right: -0px;
+          margin: 0 auto;
+        }
+      }
+    }
+
     h1 a {
       color: $very-dark-gray;
 
@@ -448,7 +461,7 @@
   }
 }
 
-#services {
+#services, #touch-tables, #touch-walls {
   /* no op */
 
   .button.dark {      
@@ -629,6 +642,10 @@
 
   padding:0 0 $gutter;
   text-align: justify;
+
+  &.no-justification {
+    text-align: left;
+  }
 
 }
 
