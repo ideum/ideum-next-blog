@@ -22,6 +22,7 @@
     ('blog',                  #2c2c2d, 'blog-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
     ('creative-services',     #2c2c2d, 'cs-worldcup-project-pseudo-header-bg',  800px,  200px, center, center,  800px,  left),
     ('contact',               #2c2c2d, 'contact-pseudo-header-bg',              800px,  200px, center, center,  800px,  left),
+    ('client-list',           #ef6c6c, '',                                      800px,  250px, center, center,  460px,  left),
   ) {
     .#{$class} {
       background: $color url("images/header-images/#{$image}-phone.jpg") no-repeat bottom right;
@@ -127,6 +128,10 @@
       align-items: center;
       height: 100% !Important;
       justify-content: center;
+
+      &.no-image {
+        align-items: initial;
+      }
   
     @include media($medium-screen-up) {
       height: auto;
