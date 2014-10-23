@@ -147,6 +147,14 @@
 
   .featured-blog-post {
     background-color: $off-vv-light-gray;
+    width:100%;
+
+    @include media($small-screen-up) {
+      .img-wrap {
+        background-size: cover;
+        height: 35%;
+      }
+    }
 
     @include media($medium-screen-up) {
 
@@ -159,22 +167,35 @@
 
       .img-wrap {
         position: relative;
+        background-position: center;
+        background-repeat: no-repeat;        
+        background-size: cover;
+        height: 52%;
+        width: 50%;
         
         a {
           float: left;
-          position: relative;
-            left: 50%;
+          /*position: relative;
+            left: 50%;*/
+          display: block;
+          height: 100%;
+          width: 100%;
 
           img {
             display: block;
             float: left;
+            height: 50%;
             max-width: initial;
-            position: relative;
+            /*position: relative;
               right: 50%;
+            */
           }
         }
       }
     }
+
+    
+
   }
 
   .featured-video {
@@ -442,26 +463,9 @@
     right: 30px;
 }
 
-#team, #our-story, #facilities, #mission, #contact {
-  /* no op */
-  .button {      
-    background-color: $dark-teal;
-    border-color: $dark-teal;
-    font-size: 1.75em;
-    font-weight: 400;
 
-    @include media($medium-screen-up) {
-      font-size: 2.45em;
-    }
 
-    &:hover {
-      color: $very-dark-gray;
-    }
-
-  }
-}
-
-#services, #touch-tables, #touch-walls {
+#services, #touch-tables, #touch-walls, #client-list, #team, #our-story, #facilities, #mission, #contact  {
   /* no op */
 
   .button.dark {      
@@ -675,3 +679,4 @@
   text-decoration: none;
 }
 
+.hidden {visibility: hidden;}
