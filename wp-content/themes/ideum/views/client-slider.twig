@@ -1,72 +1,77 @@
 
 <!-- begin client-slider.twig -->
 
-<section class="clients-n-partners" ng-init="clientSliderIndex = 0">
+<ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveFourUp()" >
 
-    <div class="section-info">
+  <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+    <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png"></a>
+  </li>
+  <li class="client-slide" ng-class="{active: clientSliderIndex==1}">
+    <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png"></a>
+  </li>
+  <li class="client-slide" ng-class="{active: clientSliderIndex==2}">
+    <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png"></a>
+  </li>
+  <li class="client-slide" ng-class="{active: clientSliderIndex==3}">
+    <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png"></a>
+  </li>
+  <li class="client-slide" ng-class="{active: clientSliderIndex==4}">
+    <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png"></a>
+  </li>
+  <li class="client-slide" ng-class="{active: clientSliderIndex==5}">
+    <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png"></a>
+  </li>
 
-      <h1>
-        <a href="/client-list/">Clients &amp; Partners</a>
-      </h1>
+</ul>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae autem dicta eaque, deleniti hic cum. Dolores minima, beatae a explicabo, doloremque debitis deserunt alias quam nam veritatis atque! Sit, voluptas.
-      </p>
+<div class="section-info">
 
-    </div>
+  <p>
+    <a href="/client-list/" class="button dark active">View Client List</a>
+  </p>
 
-    <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveFourUp()" >
+</div>
 
-      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==1}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==2}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==3}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==4}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==5}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png"></a>
-      </li>
+<ul class="other-cnp">
 
-    </ul>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
+  </li>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
+  </li>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-hyundai.png">
+  </li>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-intel.png">
+  </li>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-lg.png">
+  </li>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-pqlabs.png">
+  </li>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-samsung.png">
+  </li>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-zytronic.png">
+  </li>
+  <!-- 
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
+  </li>
+  <li class="crystalbridges">
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
+  </li>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
+  </li>
+  <li>
+    <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
+  </li>
+  -->
+</ul>
 
-    <div class="section-info">
-
-      <p>
-        <a href="/client-list/" class="button dark active">View Client List</a>
-      </p>
-
-    </div>
-
-    <ul class="other-cnp">
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
-      </li>
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
-      </li>
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
-      </li>
-      <li class="crystalbridges">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
-      </li>
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
-      </li>
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
-      </li>
-    </ul>
-
-  </section>
-
-  <!-- end client-slider.twig -->
+<!-- end client-slider.twig -->
