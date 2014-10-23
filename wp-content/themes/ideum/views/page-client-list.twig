@@ -101,7 +101,6 @@
             <div class="two-column-text">
 
               <ul>
-                <li>15 Letters</li>
                 <li>Aerian Studios</li>
                 <li>Applied Art</li>
                 <li>Black Rocket Interactive</li>
@@ -111,11 +110,13 @@
                 <li>CompView Inc.</li>
                 <li>Corlido</li>
                 <li>Elead1</li>
+                <li>Electrosonic</li>
                 <li>ET Group</li>
                 <li>FPT Information Systems Company</li>
                 <li>Geisler Young</li>
                 <li>i3 ICS, LLC</li>
                 <li>Imagimedia</li>
+                <li>Lexington Exhibits</li>
                 <li>Lynch Exhibits</li>
                 <li>Magian Studio</li>
                 <li>Maltbie</li>
@@ -131,6 +132,7 @@
                 <li>SAP</li>
                 <li>Somerset Group</li>
                 <li>SHI International</li>
+                <li>Stamm Media</li>
                 <li>Unified Field</li>
                 <li>Washington Professional Systems</li>
               </ul>
@@ -183,7 +185,6 @@
                 <li>St. Landry Parish Tourist Commission</li>
                 <li>Siemens</li>
                 <li>Sierra Nevada Corporation</li>
-                <li>Stamm Media</li>
                 <li>Rio Tinto</li>
                 <li>Veridian Connections</li>
               </ul>
@@ -225,7 +226,7 @@
                 <li>Arizona Capitol Museum</li>
                 <li>Australian National Maritime Museum</li>
                 <li>Balboa Park Online Collaborative</li>
-                <li>Beavertail Lighthouse Museum Association (Rhode Island)</li>
+                <li>Beavertail Lighthouse Museum Association</li>
                 <li>Birmingham Museum of Art</li>
                 <li>California Science Center</li>
                 <li>Children’s Discovery Museum of San Jose</li>
@@ -236,7 +237,7 @@
                 <li>Exploratorium</li>
                 <li>The Field Museum</li>
                 <li>The Getty</li>
-                <li>Hyperion Waste Treatment Plant Environmental Learning Center (El Segundo, CA)</li>
+                <li>Hyperion Waste Treatment Plant Environmental Learning Center</li>
                 <li>Imagine Museum​</li>
                 <li>Indian Pueblo Cultural Center</li>
                 <li>Koch Family Children's Museum</li>
@@ -470,7 +471,9 @@
             <div class="two-column-text">
 
               <p>
-                Jim is producing this content.
+                Ideum works closely with museums, technology companies, and other creative organizations. We think the company you keep says a lot about who you are.  We have great respect our partners and we are proud to work with them.
+                <br><br>
+                We have a formal partnership with RATIO architects as we look to blend technology and architecture to enhance the visitor experience. Please see the Architecture Connected website to learn more. 
               </p>
 
             </div>
@@ -483,12 +486,31 @@
 
     </section>
 
-    {{follow_dialog}}
-
   </div>
-
-  {% include 'client-slider.twig' %}
   
+  <section class="clients-n-partners" ng-init="clientSliderIndex=0">
+    
+    <div class="section-info">
+
+      <h1>
+        <a href="/client-list/">Our Partners</a>
+      </h1>
+
+      <div class="two-column-text"><!-- option: one-column-text -->
+
+        <p>
+          Ideum works closely with museums, technology companies, and other creative organizations. We think the company you keep says a lot about who you are.  We have great respect our partners and we are proud to work with them.
+          <br><br>
+          We have a formal partnership with RATIO architects as we look to blend technology and architecture to enhance the visitor experience. Please see the <a href="http://architectureconnected.com" target="_blank" title="External link to the Architecture Connected website">Architecture Connected</a> website to learn more. 
+        </p>
+
+      </div>
+
+    </div>    
+
+    {% include 'client-slider.twig' %}
+
+  </section>  
 
   <section class="featured-pages">
     <article class="content direct-sales">
@@ -525,6 +547,8 @@
       </div>
     </article>
   </section>
+
+  {{follow_dialog}}
 
   {% include 'follow-us-button.twig' %}
 
