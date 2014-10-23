@@ -1,107 +1,151 @@
 .our-products { 
-    /* no op */
+  /* no op */
 
-    .section-info {
-      padding-bottom: $medium-gutter;
+  .section-info {
+    padding-bottom: $medium-gutter;
+  }
+
+  .product-item {
+    background-color: $dark-red;
+    @include media($medium-screen-up) {
+      min-height: 380px;
+    }
+    position: relative;
+
+    .content {
+      /* no op */
+
+      .img-wrap {
+        display: none;
+
+        @include media($medium-screen-up) {
+          display: block;
+        }
+
+        img {
+          display: block;
+          position: absolute;
+            bottom: 0;             
+          width: 50%;
+        }
+
+      }
+
+      .txt-wrap {
+        padding: 0 0 $medium-gutter 0;
+
+        @include media($medium-screen-up) {
+          padding: ($gutter / 2) 0;
+        }
+
+        @include media($large-screen-up) {
+          padding: $medium-gutter 0;
+        }
+
+        h1, h1 a {
+          color: $white;
+
+          &:hover {
+            color: darken($white, 15);
+          }
+
+        }
+
+        p {
+          color: $white;
+        }
+
+        .read, .share {
+          float: initial;
+          margin-right: 1em;
+        }
+
+        a.read, a.share {
+          color: $white;
+
+          &:hover {
+            color: darken($white, 15);
+          }
+        }
+      }
     }
 
-    .product-item {
-      background-color: $dark-red;
-      @include media($medium-screen-up) {
-        min-height: 380px;
-      }
-      position: relative;
-
-      .content {
-        /* no op */
-
-        .img-wrap {
-          display: none;
-
-          @include media($medium-screen-up) {
-            display: block;
-          }
+    @include media($medium-screen-up) {
+          
+      &.img-left { 
+        
+        .img-wrap{ 
+          float: left;
 
           img {
-            display: block;
+            left: 0;
+          }
+
+        }
+        .txt-wrap{ 
+          float: right; 
+          @include span-columns(5);
+          @include shift(6.5);
+        }
+
+      }
+      
+      &.img-right {
+
+        .img-wrap{ 
+          float: right;
+
+          img {
             position: absolute;
-              bottom: 0;             
-            width: 50%;
-          }
-
-        }
-
-        .txt-wrap {
-          padding: 0 0 $medium-gutter 0;
-
-          @include media($medium-screen-up) {
-            padding: $medium-gutter 0;
-          }
-
-          h1, h1 a {
-            color: $white;
-
-            &:hover {
-              color: darken($white, 15);
-            }
-
-          }
-
-          p {
-            color: $white;
-          }
-
-          .read, .share {
-            float: initial;
-            margin-right: 1em;
-          }
-
-          a.read, a.share {
-            color: $white;
-
-            &:hover {
-              color: darken($white, 15);
-            }
+              right: 0; 
           }
         }
+        .txt-wrap{ 
+          float: left; 
+        }
+
+      }
+    }
+
+  }
+
+  .post-style {
+
+    &.img-right {
+      /* no op */
+
+      .txt-wrap {
+        @include span-columns(10);
+        @include shift(1);
+
+        @include media($medium-screen-up) {
+          @include span-columns(6);
+          @include shift(1);
+        }
+
+        @include media($large-screen-up) {
+          @include span-columns(4);
+          @include shift(1);
+        }
+
       }
 
-      @include media($medium-screen-up) {
-            
-        &.img-left { 
-          
-          .img-wrap{ 
-            float: left;
-
-            img {
-              left: 0;
-            }
-
-          }
-          .txt-wrap{ 
-            float: right; 
-            @include span-columns(4);
-            @include shift(7);
-          }
-
+      .footer {
+        @include media($medium-screen-up) {
+          @include span-columns(5);
         }
-        
-        &.img-right {
-
-          .img-wrap{ 
-            float: right;
-
-            img {
-              position: absolute;
-                right: 0; 
-            }
-          }
-          .txt-wrap{ 
-            float: left; 
-          }
-
+        @include media($large-screen-up) {
+          @include span-columns(4);
         }
+
       }
 
     }
+
+    
+
+    
+
   }
+
+}  

@@ -7,11 +7,10 @@
 
   <article class="content">
 
-    <div class="img-wrap">
+    <div class="img-wrap" style="background-image:url({{post.thumbnail.src|resize(640, 400)}});">
 
-      <a href="{{post.link}}"><img src="{{post.thumbnail.src|resize(640, 400)}}" 
-      alt="Image for the post: '{{post.title}}'" 
-      title="Image for the post: '{{post.title}}'"></a>
+      <a href="{{post.link}}"><img class="hidden" src="{{post.thumbnail.src|resize(640, 400)}}" 
+      alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"></a>
 
     </div>
 

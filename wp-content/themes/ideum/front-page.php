@@ -35,6 +35,6 @@ $context['related_posts'] = Timber::get_sidebar('bar-related-posts.twig', $sideb
 $context['featured_post'] = Timber::get_sidebar('bar-featured-post.twig', $sidebar_context);
 
 $data['share_dialog'] = get_option('share_dialog');
-Timber::render('share-post.twig', $data);
+Timber::compile('share-post.twig', $data);
 
 Timber::render(array('front-page.twig'), $context);

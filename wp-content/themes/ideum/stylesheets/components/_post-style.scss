@@ -103,6 +103,14 @@
       padding: $gutter 0 0 0;
 
       @include media($medium-screen-up) {
+        @include span-columns(4.5);
+        height: 4em;
+        padding: 0 0 $large-gutter + $gutter;        
+        position: absolute;
+          bottom: 0;
+      }
+
+      @include media($large-screen-up) {
         @include span-columns(4);
         height: 4em;
         padding: 0 0 $large-gutter + $gutter;        
