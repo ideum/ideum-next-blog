@@ -12,65 +12,48 @@
 
       <section class="project-slider{% if post.first_slide_image %}{% else %} no-slide{% endif %}">
 
-        {% if post.first_slide_image %}
-
+        {% if post.slides %}
         <ul rn-carousel rn-carousel-control rn-carousel-indicator>
 
-          <li class="project item">
+          {% for item in post.get_field('slides') %}
 
-            <article>
+            <li class="project item">
 
-              <img src="{{TimberImage(post.get_field('first_slide_image')).src}}">
+              <article class="project-item-article">
 
-              <div class="one-column-text"><!-- choose either 'one-column-text' or 'two-column-text' for class -->
+                <img src="{{TimberImage(item.slide_image).src}}">
 
-                <h2>
-                  {{ post.first_slide_text }}
-                </h2>
+                <div class="slide-text-wrap">
 
-              </div>
+                  <div class="slide-text-content">
 
-            </article>
+                    <h1 style="font-size: 3.5vw;color: #fff;">
+                      {{item.slide_title}}
+                    </h1>
 
-          </li>
+                    <p style="color:#fff; font-size: 2.5vw; line-height: 3.5vw; max-width:40%;">
+                      {{item.slide_text}}
+                    </p>
 
-          <li class="project item">
+                  </div>
 
-            <article>
+                </div>
 
-              <img src="{{TimberImage(post.get_field('second_slide_image')).src}}">
+              </article>
 
-              <div class="one-column-text">
+            </li>
 
-                <h2>
-                {{ post.second_slide_text }}
-                </h2>
-      
-              </div>
-
-            </article>
-
-          </li>
-
-          <li class="project item">
-
-            <article>
-
-              <img src="{{TimberImage(post.get_field('third_slide_image')).src}}">
-
-              <div class="one-column-text">
-
-                <h2>
-                {{ post.third_slide_text }}
-                </h2>
-      
-              </div>
-
-            </article>
-
-          </li>
+          {% endfor %}
 
         </ul>
+
+        <div class="one-column-text slider">
+
+          <h2>
+              Visitors to the Coca-Cola VIP lounge explore "The World's Cup" map and play a digital foosball game
+          </h2>
+
+        </div>
 
         {% elseif post.primary_video %}
         <div class="video-wrapper">
@@ -119,77 +102,10 @@
           </p>
 
         </div>
-
-        {% if sidebar %}
-
-        <aside class="sidebar-post-meta layout-sidebar">
-          <!-- {{sidebar}} #FIXME - couldn't get post variables to work in sidebar.twig -->
-          
-          {% if post.client_sidebar_icon %}
-          <p class="project-company-img">
-            <img alt="Company Icon for {{ post.client_company_name }}" src="{{TimberImage(post.get_field('client_sidebar_icon')).src}}" title="COmpany Icon for {{ post.client_company_name }}"/>
-          </p><!-- Ben - #FIXME - {{theme.link}} doesn't work in link when included as sidebar, only when included in code of single-Ideum-project.twig directly -->
-          {% endif %}
-          
-          {% if post.client_company_name %}
-          <p class="project-company-name">
-            {{ post.client_company_name }}
-          </p>
-          {% endif %}
-          
-          {% if post.project_sidebar_title %}
-          <h4 class="project-sidebar-title">
-            {{ post.project_sidebar_title }}
-          </h4>
-          {% endif %}
-          
-          {% if post.post_date %}
-          <p class="post-date">
-            <span class="label">Year: </span>{{ post.post_date|date('Y')}}
-          </p>
-          {% endif %}
-
-          <p class="post-category">
-            <span class="label">Category: </span>
-            {% if post.terms('category') %}
-            {% for term in post.terms('category') %}
-            <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %} / {% else %}.{% endif %}
-            {% endfor %}
-            {% endif %}
-          </p>
-
-          <!-- begin hidden content for featured-blogpost-share -->
-          <div style='display:none'>
-            <div id='single-project-share' style='padding:10px; background:#fff;'>
-              <!-- Facebook -->
-              <a href="http://www.facebook.com/sharer.php?u={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
-              <!-- Twitter -->
-              <a href="http://twitter.com/share?url={{post.link}}&amp;text={{post.title}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
-              <!-- Google+ -->
-              <a href="https://plus.google.com/share?url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
-              <!-- LinkedIn -->
-              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
-              <!-- Pinterest -->
-              <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>               
-            </div>
-          </div>
-          <!-- end hidden content for featured-blogpost-share - revealed when user clicks 'Share This' link (below)-->
-
-          <p class="sidebar-share-button">
-            <a href="#single-project-share" class="button active inline">Share</a>
-          </p>
-
-          <!-- <p class="sidebar-link-button">
-            <a href="" class="button active">Link Here</a>
-          </p> -->
-
-        </aside>
-
-        <section class="bar-related layout-bottombar">
-        {{bottombar}}
-        </section>
-
-        {% endif %}
+        
+        {{sidebar_project}}        
+        
+        {{related_projects}}        
 
         <div class="section-info">
 

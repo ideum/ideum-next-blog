@@ -11,7 +11,7 @@
 
   <ul class="project-wrap">
 
-    {% for post in related %}
+    {% for post in related_projects %}
 
     <li class="slide project-item">
         
@@ -26,7 +26,7 @@
 
       <div class="content-wrap"><a href="{{post.link}}"></a></div>
 
-      <a href="{{post.link}}"><div class="content">
+      <a class="content-wrap-faux" href="{{post.link}}"><div class="content">
 
         <header>
 

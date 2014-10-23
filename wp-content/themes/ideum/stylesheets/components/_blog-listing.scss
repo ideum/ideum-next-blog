@@ -4,6 +4,7 @@
   @include display(flex);
   @include flex-wrap(wrap);
   justify-content: space-between;
+  padding-bottom: $medium-gutter;
   
   .tease {
     padding-bottom: $medium-gutter * 2;
@@ -53,22 +54,35 @@
     float: left;
   
     .post-img-wrap {
-      height:100%;
+      /*height:100%;*/
       margin: 0;
       min-width: 100%;
       overflow: hidden;
       
+      background-position: center;        
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 256px;
+      min-width:220px;
+
       @include media($medium-screen-up) {
-        max-height: 256px;
-        min-width:220px;
+        height: 256px;
       }
 
-      @include media($large-screen-up) {
-        max-height: 266px;
-      }
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
 
-      a img:hover {
-        opacity: 0.6;
+        img {
+          visibility: hidden;        
+
+          &:hover {
+            opacity: 0.6;
+          }
+
+        }
+
       }
 
       img {
@@ -77,10 +91,8 @@
         width: 100%;
         
         @include media($medium-screen-up) {
-          height: 100%;
           min-height: 100%;
           min-width: 100%;
-          width: auto;
         }
 
         @include media($large-screen-up) {

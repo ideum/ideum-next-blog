@@ -15,7 +15,7 @@
       </h1>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ipsum aperiam, non nihil voluptate eligendi, quas obcaecati voluptatum unde voluptas iusto optio omnis possimus? Placeat accusantium reprehenderit dicta rem? Illo!
+        Ideum has excelled in creating compelling interactive experiences. We are pioneers in the multitouch and multiuser space, and have produced groundbreaking applications for clients as diverse as aquariums, a cultural center for the Kingdom of Saudi Arabia, the ArcelorMittal and Spinnaker towers in England, as well as Fortune 500 companies like Coca-Cola.
       </p>
 
       <select ui-select2 ng-model="projectType" data-placeholder="Browse By Type">
@@ -29,88 +29,7 @@
 
     <ul class="slider project-wrap" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveThreeUp()">
 
-      <li class="slide project-item">
-
-        <img src="{{theme.link}}/images/placeholder-science-project-0.jpg">
-
-        <div class="overlay"></div>
-
-        <div class="content-wrap"><a href="{{post.link}}"></a></div>
-
-        <a href="{{post.link}}"><div class="content">
-
-          <header>
-
-            <h2 class="category">
-              Science
-            </h2>
-
-            <h1 class="title">
-              Beyond Rubik’s Cube and Groovik’s Cube Traveling Exhibit
-            </h1>
-
-          </header>
-
-          <p>
-            Limited to 70 characters dolor sit amet, consectetuer adipiscing.
-          </p>
-
-        </div></a>
-
-      </li>
-
-      <li class="slide project-item">
-
-        <img src="{{theme.link}}/images/placeholder-science-project-1.jpg">
-
-        <div class="overlay"></div>
-
-        <div class="content-wrap"><a href="{{post.link}}"></a></div>
-
-        <a href="{{post.link}}"><div class="content">
-
-          <header>
-
-            <h2 class="category">
-              Science
-            </h2>
-
-            <h1 class="title">
-              Explore the natural resources of New Mexico with a new approach to multiuser interaction.
-            </h1>
-
-          </header>
-
-        </div></a>
-
-      </li>
-
-      <li class="slide project-item">
-
-        <img src="{{theme.link}}/images/placeholder-science-project-2.jpg">
-
-        <div class="overlay"></div>
-
-        <div class="content-wrap"><a href="{{post.link}}"></a></div>
-
-        <a href="{{post.link}}"><div class="content">
-
-          <header>
-            <h2 class="category">
-              Science
-            </h2>
-            <h1 class="title">
-              Discover The World Cup
-            </h1>
-          </header>
-
-          <p>
-            Ideum celebrates The World Cup adding additional levels of engagement.
-          </p>
-
-        </div></a>
-
-      </li>
+      {{featured_projects}}
 
     </ul>
 
@@ -124,7 +43,10 @@
 
   </section>
 
-  {{blogbar}}  
+  {{featured_post}}
+
+  {# the Our Products section (below) needs to be made dynamic - but there was 
+  no way to do so before launch as Products Functionality not built in time #}
 
   {# `productSliderIndex` is used to track the status of the product slider
    # contained within.  It must be initialized to zero (the first slide) before the
@@ -138,7 +60,7 @@
       </h1>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae autem dicta eaque, deleniti hic cum. Dolores minima, beatae a explicabo, doloremque debitis deserunt alias quam nam veritatis atque! Sit, voluptas.
+        Innovation and user-experience drives the design process for all our products. We are meticulous in how we build our products and look to produce the best quality hardware and software. If something goes wrong, we take responsibility, provide timely support and service. The same people who build our products support and service them.
       </p>
 
       <button class="pointer" ng-class="{active: productSliderIndex == 0}"
@@ -173,25 +95,33 @@
               </p>
 
               <!-- begin hidden content for featured-product-1-share -->
-              <div style="display:none">
-                <div id="multitouchtouch-tables-share" style="padding:10px; background:#fff;">
+              <div style="display:none;">
+                <div id="multitouch-tables-share" class="share-dialog">
+                  <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+                  <p>Like what you see? Share this.</p>
                   <!-- Facebook -->
-                  <a href="http://www.facebook.com/sharer.php?u=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
+                  <a href="http://www.facebook.com/sharer.php?u={{site.url}}/touch-tables/" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
                   <!-- Twitter -->
-                  <a href="http://twitter.com/share?url=http://m.ideum.com/&amp;text=Ideum - Exhibit Design + Multitouch Software and Hardware" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
+                  <a href="http://twitter.com/share?url={{site.url}}/touch-tables/&amp;text=Ideum builds reliable, hardened touch tables with the best available components and exemplary service." target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
                   <!-- Google+ -->
-                  <a href="https://plus.google.com/share?url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
+                  <a href="https://plus.google.com/share?url={{site.url}}/touch-tables/" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
                   <!-- LinkedIn -->
-                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}/touch-tables/" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
                   <!-- Pinterest -->
-                  <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
+                  <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a> -->
+                  <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}/touch-tables/&amp;media={{site_url}}{{theme.link}}/images/product-touch-table.jpg&amp;description=Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi explicabo id ut ipsum saepe nemo voluptates natus cumque cupiditate similique esse perferendis illum blanditiis quas odio nobis officiis placeat, hic!" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
                 </div>
               </div>
               <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
 
               <footer class="footer">
                 <a class="read" href="/touch-table/">View Selection</a>
-                <a class="share inline" href="#multitouchtouch-tables-share">Share This</a>
+                <a class="tablet-n-desktop share share-dialog-tab-desk" href="#multitouch-tables-share">Share This</a>
+                <a class="phone-only share share-dialog-phone" href="#multitouch-tables-share">Share This</a>
               </footer>
 
             </div>
@@ -226,24 +156,32 @@
 
               <!-- begin hidden content for featured-product-2-share -->
               <div style='display:none'>
-                <div id='touch-walls-share' style='padding:10px; background:#fff;'>
+                <div id='touch-walls-share' class="share-dialog">
+                  <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+                  <p>Like what you see? Share this.</p>
                   <!-- Facebook -->
-                  <a href="http://www.facebook.com/sharer.php?u=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
+                  <a href="http://www.facebook.com/sharer.php?u={{site.url}}/touch-walls/" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
                   <!-- Twitter -->
-                  <a href="http://twitter.com/share?url=http://m.ideum.com/&amp;text=Ideum - Exhibit Design + Multitouch Software and Hardware" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
+                  <a href="http://twitter.com/share?url={{site.url}}/touch-walls/&amp;text=Ideum builds reliable, hardened touch walls with the best available components and exemplary service." target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
                   <!-- Google+ -->
-                  <a href="https://plus.google.com/share?url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
+                  <a href="https://plus.google.com/share?url={{site.url}}/touch-walls/" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
                   <!-- LinkedIn -->
-                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}/touch-walls/" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
                   <!-- Pinterest -->
-                  <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
+                  <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a> -->
+                  <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}/touch-walls/&amp;media={{site_url}}{{theme.link}}/images/product-touch-table.jpg&amp;description=Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi explicabo id ut ipsum saepe nemo voluptates natus cumque cupiditate similique esse perferendis illum blanditiis quas odio nobis officiis placeat, hic!" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>              
                 </div>
               </div>
               <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
 
               <footer class="footer">
                 <a class="read" href="/touch-walls/">View Selection</a>
-                <a class="share inline" href="#touch-walls-share">Share This</a>
+                <a class="tablet-n-desktop share inline" href="#touch-walls-share">Share This</a>
+                <a class="phone-only share share-dialog-phone" href="#touch-walls-share">Share This</a>
               </footer>
 
             </div>
@@ -258,6 +196,7 @@
 
   </section>
 
+  <!-- 
   <section class="chat">
 
     <div class="button">
@@ -267,75 +206,10 @@
     </div>
 
   </section>
+  -->
 
 
-  <section class="clients-n-partners" ng-init="clientSliderIndex = 0">
-
-    <div class="section-info">
-
-      <h1>
-        <a href="/client-list/">Clients &amp; Partners</a>
-      </h1>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae autem dicta eaque, deleniti hic cum. Dolores minima, beatae a explicabo, doloremque debitis deserunt alias quam nam veritatis atque! Sit, voluptas.
-      </p>
-
-    </div>
-
-    <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveFourUp()" >
-
-      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==1}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==2}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==3}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==4}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png"></a>
-      </li>
-      <li class="client-slide" ng-class="{active: clientSliderIndex==5}">
-        <a href="#FIXME"><img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png"></a>
-      </li>
-
-    </ul>
-
-    <div class="section-info">
-
-      <p>
-        <a href="/client-list/" class="button active">View Client List</a>
-      </p>
-
-    </div>
-
-    <ul class="other-cnp">
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-3m.png">
-      </li>
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-hp.png">
-      </li>
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-exploratorium.png">
-      </li>
-      <li class="crystalbridges">
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-crystalbridges.png">
-      </li>
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something1.png">
-      </li>
-      <li>
-        <img src="{{theme.link}}/images/placeholder-client-n-partner-something2.png">
-      </li>
-    </ul>
-
-  </section>
+  {% include 'client-slider.twig' %}
 
 
   <section class="featured-pages">
@@ -353,25 +227,32 @@
         </p>
 
         <!-- begin hidden content for featured-product-2-share -->
-        <div style='display:none'>
-          <div id='software-initiatives-share' style='padding:10px; background:#fff;'>
+        <div style="display:none">
+          <div id="software-initiatives-share" class="share-dialog">
+            <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+            <p>Like what you see? Share this.</p>
             <!-- Facebook -->
-            <a href="http://www.facebook.com/sharer.php?u=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
+            <a href="http://www.facebook.com/sharer.php?u={{site_url}}/our-story/software-initiatives/" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
             <!-- Twitter -->
-            <a href="http://twitter.com/share?url=http://m.ideum.com/&amp;text=Ideum - Exhibit Design + Multitouch Software and Hardware" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
+            <a href="http://twitter.com/share?url={{site_url}}/our-story/software-initiatives/&amp;text=Software Initiatives - We are passionate about the projects that we take on." target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
             <!-- Google+ -->
-            <a href="https://plus.google.com/share?url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
+            <a href="https://plus.google.com/share?url={{site_url}}/our-story/software-initiatives/" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
             <!-- LinkedIn -->
-            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site_url}}/our-story/software-initiatives/" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
             <!-- Pinterest -->
-            <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
+            <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a> -->
+            <a href="//www.pinterest.com/pin/create/button/?url={{site_url}}/our-story/software-initiatives/&amp;media={{site_url}}/wp-content/themes/ideum/images/header-images/software-initiatives-pseudo-header-bg.jpg&amp;description=Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi explicabo id ut ipsum saepe nemo voluptates natus cumque cupiditate similique esse perferendis illum blanditiis quas odio nobis officiis placeat, hic!" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
           </div>
         </div>
         <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
 
         <footer class="footer">
           <a class="read" href="/our-story/software-initiatives/">View Initiatives</a>
-          <a class="share inline" href="#software-initiatives-share">Share This</a>
+          <a class="tablet-n-desktop share inline" href="#software-initiatives-share">Share This</a>
+          <a class="phone-only share share-dialog-phone" href="#software-initiatives-share">Share This</a>
         </footer>
 
       </div>
@@ -392,25 +273,33 @@
         </p>
 
         <!-- begin hidden content for featured-product-2-share -->
-        <div style='display:none'>
-          <div id='team-share' style='padding:10px; background:#fff;'>
+        <div style="display:none">
+          <div id="team-share" class="share-dialog">
+            <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+            <p>Like what you see? Share this.</p>
             <!-- Facebook -->
-            <a href="http://www.facebook.com/sharer.php?u=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
+            <a href="http://www.facebook.com/sharer.php?u={{site_url}}/our-story/team/" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
             <!-- Twitter -->
-            <a href="http://twitter.com/share?url=http://m.ideum.com/&amp;text=Ideum - Exhibit Design + Multitouch Software and Hardware" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
+            <a href="http://twitter.com/share?url={{site_url}}/our-story/team/&amp;text=Software Initiatives - We are passionate about the projects that we take on." target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
             <!-- Google+ -->
-            <a href="https://plus.google.com/share?url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
+            <a href="https://plus.google.com/share?url={{site_url}}/our-story/team/" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
             <!-- LinkedIn -->
-            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://m.ideum.com/" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site_url}}/our-story/team/" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
             <!-- Pinterest -->
-            <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
+            <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a> -->
+            <a href="//www.pinterest.com/pin/create/button/?url={{site_url}}/our-story/team/&amp;media={{site_url}}/wp-content/themes/ideum/images/header-images/team-pseudo-header-bg.jpg&amp;description=Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi explicabo id ut ipsum saepe nemo voluptates natus cumque cupiditate similique esse perferendis illum blanditiis quas odio nobis officiis placeat, hic!" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
           </div>
         </div>
         <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
 
         <footer class="footer">
           <a class="read" href="/our-story/team/">View Team</a>
-          <a class="share inline" href="#team-share">Share This</a>
+          <a class="tablet-n-desktop share inline" href="#team-share">Share This</a>
+          <a class="phone-only share share-dialog-phone" href="#team-share">Share This</a>
         </footer>
 
       </div>
@@ -430,6 +319,9 @@
       <select><option>Browse By Media Type</option></select>
 
     </div>
+
+    {# the social media slider (below) needs to be made dynamic - but there was no way to 
+    do so before launch as the social media feed Functionality was not built in time #}
 
     <div class="social-media-feed-slider">
 
@@ -476,14 +368,6 @@
     </div>
 
     <div class="section-info">
-
-      <ol class="slider-controls">
-        <li class="active"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ol>
 
       <p>
         <a href="/social-media-feed/" class="button active">View All</a>

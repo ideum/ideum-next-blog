@@ -1,3 +1,63 @@
+.member-details {
+  padding:5%;
+  text-align:center;
+  
+  .img-circular {
+    border: 3px solid #f6f6f6;
+    margin:20px auto;
+    @include cameo;
+    /* background image set inline in template */
+  }
+
+  h1.member-title {
+    @include media($small-screen-up) {
+      font-size: 1.5em;
+      margin: ($gutter /2) 0;
+    }
+    @include media($medium-screen-up) {
+      font-size: rem(34);
+      margin: rem(30) 0 rem(16);
+    }
+  }
+
+  p {
+    @include media($small-screen-up) {
+      font-size: .9em;
+    }
+    @include media($medium-screen-up) {
+      font-size: initial;
+    }
+  }
+
+  ul.social-icons {
+    margin: $gutter auto;
+    
+    @include media($medium-screen-up) {
+      margin: $medium-gutter auto;
+    }
+
+    li {
+      display: inline-block;
+      padding-right: 2%;
+      a {
+        height: 24px;
+        width: 24px;
+        background: white;
+        border: 1px solid #c7c7c7;
+        border-radius: 12px;
+        color: #c7c7c7;
+        display: inline-block;
+        font-size: 11px;
+        line-height: 21px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
+  }
+
+}
+
 .teamgrid {
   @include span-columns(12);
   
@@ -7,45 +67,60 @@
     position: relative;
     text-align: center;
     width: 100%;
+
+    a.member-dialog, a.member-dialog-phone {
+      height: 100%;
+      position: absolute;      
+        left: 0;
+      width: 100%;
+      z-index: 400;
+    }
     
     @include media($small-screen-up) { 
       border-bottom: 2px solid $white; 
-      img { margin-top: 13px; }
+
+      img { 
+        /*margin-top: 13px;*/
+      }
+
       &:last-of-type {
         border: none;
-        img { margin-top: 15px; }
+        /*img { margin-top: 15px; }*/
       }
+      
     }
 
     @include media($medium-screen-up) { 
       border-bottom: 0px;
-      img { margin-top: 15px; }
-      width: (100% / 3); 
-    }
-    @include media($large-screen-up)  { width: (100% / 4); }
-    
-   
 
-    
+      img { 
+        margin: 15px auto 0; 
+        position: absolute;
+          bottom: 0; left: 0; right: 0
+      }
 
-    .data-wrap {
-      display:none;
+      width: (100% / 2); 
     }
 
-    &:hover, &.active {
+    @include media($large-screen-up) { 
+      width: (100% / 4); 
+    }
 
+    @include media($small-screen-up) {
       .data-wrap {
+        background: transparent url('images/team-hover-overlay') repeat 0 0;
         color: $white;
         display: block;
+        padding-top: $small-gutter;
         position: absolute;
           bottom: 0; 
         text-align: left;
-        width:100%;
+        width: 100%;
       }
 
       p {
-        margin:0;
-        padding:0 10%;
+        margin: 0;
+        padding: 0 10%;
         text-shadow: 0px 1px 2px #777;
         text-transform: uppercase;
       }
@@ -56,50 +131,120 @@
         line-height: 1.5em;
         font-weight: 900;
         margin: 0 0 .75em 0;
-        padding:0 10%;
+        padding: 0 10%;
+        text-shadow: 0px 1px 2px #777;
+      }
+    }
+
+    @include media($medium-screen-up) {
+      .data-wrap {
+        display:none;
+      }
+    }
+
+    &:hover, &.active {
+
+      .data-wrap {
+        background: transparent url('images/team-hover-overlay') repeat 0 0;
+        color: $white;
+        display: block;
+        padding-top: $small-gutter;
+        position: absolute;
+          bottom: 0; 
+        text-align: left;
+        width: 100%;
+      }
+
+      p {
+        margin: 0;
+        padding: 0 10%;
+        text-shadow: 0px 1px 2px #777;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        color: $white;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        font-weight: 900;
+        margin: 0 0 .75em 0;
+        padding: 0 10%;
         text-shadow: 0px 1px 2px #777;
       }
     }
     
     // temporarily just made active states background-color darker so we can see it - dont know what treatment you will use ultimately
     // also color classes will need to be added to team-member article when iterating and it will neeed to be absed on screen size and to adjust dynamically
-    &.aquamarine {
-      background-color: $dark-teal;
-      &.active { 
-        background-color: darken($dark-teal, 15);
-      }
-    }
-    &.gold {
-      background-color: $medium-orange;
-      &.active {
-        background-color: darken($medium-orange, 15);
-      }
-    }
-    &.blue {
-      background-color: $medium-blue;
-      &.active {
-        background-color: darken($medium-blue, 15);
-      }
-    }
-    &.red {
-      background-color: $very-dark-red;
-      &.active {
-        background-color: darken($very-dark-red, 15);
-      }
-    }
-    &.purple {
-      background-color: $medium-purple;
-      &.active {
-        background-color: darken($medium-purple, 15);
-      }
-    }
-    &.green {
-      background-color: $dark-green;
-      &.active {
-        background-color: darken($dark-green, 15);
-      }
-    }
     
+    background-image: url('images/team-item-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &.Aquamarine, &.aquamarine {
+      &.active { 
+        background-image: none;
+        background-color: $dark-teal;
+      }
+      &:hover {
+        background-image: none;
+        background-color: $dark-teal;
+      }
+    }
+    &.Gold, &.gold {
+      &.active {
+        background-image: none;
+        background-color: $medium-orange;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-orange;
+      }
+    }
+    &.Blue, &.blue{
+      &.active {
+        background-image: none;
+        background-color: $medium-blue;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-blue;
+      }
+    }
+    &.Red, &.red {
+      &.active {
+        background-image: none;
+        background-color: $medium-red;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-red;
+      }
+    }
+    &.Purple, &.purple {
+      &.active {
+        background-image: none;
+        background-color: $medium-purple;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-purple;
+      }
+    }
+    &.Green, &.green {
+      &.active {
+        background-image: none;
+        background-color: $medium-green;
+      }
+
+      &:hover {
+        background-image: none;
+        background-color: $medium-green;
+      }
+    }
 
   }
 

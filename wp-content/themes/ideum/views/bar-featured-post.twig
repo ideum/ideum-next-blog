@@ -1,5 +1,7 @@
 
-{% for post in featured %}
+<!-- begin bar-featured-post.twig -->
+
+{% for post in featured_post %}
 
 <section class="featured-blog-post post-style img-left">
 
@@ -32,25 +34,33 @@
       </p>
 
       <!-- begin hidden content for featured-blogpost-share -->
-      <div style='display:none'>
-        <div id='featured-blogpost-share' style='padding:10px; background:#fff;'>
+      <div style="display:none;">
+        <div id="featured-blogpost-share" class="share-dialog">
+          <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+          <p>Like what you see? Share this.</p>
           <!-- Facebook -->
-          <a href="http://www.facebook.com/sharer.php?u={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+          <a href="http://www.facebook.com/sharer.php?u={{post.link}}" target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/facebook.png" alt="Share on Facebook" title="Share on Facebook"></a>
           <!-- Twitter -->
-          <a href="http://twitter.com/share?url={{post.link}}&amp;text={{post.title}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+          <a href="http://twitter.com/share?url={{post.link}}&amp;text={{post.title}}" target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/twitter.png" alt="Tweet on Twitter" title="Tweet on Twitter"></a>
           <!-- Google+ -->
-          <a href="https://plus.google.com/share?url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+          <a href="https://plus.google.com/share?url={{post.link}}" target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/google.png" alt="Share on Google+" title="Share on Google+"></a>               
           <!-- LinkedIn -->
-          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link}}" target="_blank"><img src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link}}" target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/linkedin.png" alt="Share on LinkedIn" title="Share on LinkedIn"></a>
           <!-- Pinterest -->
-          <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>               
+          <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pin on Pinterest" title="Pin on Pinterest"></a> -->
+          <a href="//www.pinterest.com/pin/create/button/?url={{thispost.link|url_encode}}&amp;media={{site_url}}{{post.thumbnail.src|resize(640, 400)}}&amp;description={{post.title}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
         </div>
       </div>
       <!-- end hidden content for featured-blogpost-share - revealed when user clicks 'Share This' link (below)-->
 
       <footer class="footer">
         <a class="read" href="{{post.link}}">Read More</a>
-        <a class="share inline" href="#featured-blogpost-share">Share This</a>
+        <a class="tablet-n-desktop share inline" href="#featured-blogpost-share">Share This</a>
+        <a class="phone-only share share-dialog-phone" href="#featured-blogpost-share">Share This</a>
       </footer>
 
     </div>
@@ -60,3 +70,6 @@
 </section>
 
 {% endfor %}
+
+<!-- end bar-featured-post.twig -->
+

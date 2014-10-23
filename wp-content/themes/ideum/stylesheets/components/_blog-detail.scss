@@ -30,6 +30,8 @@
         float: left;
         margin: 0; 
         width: 100%;
+        // new - delete if reverting to old styles
+        height:380px;
 
         @include media($medium-screen-up) {
           display: flex;
@@ -43,11 +45,13 @@
         }
 
         a { 
+            height: 100%;
           
           @include media($medium-screen-up) {
-            float: left;
+            //old - reinstate if reverting to old styles
+            /*float: left;
             position: relative;
-              left: 50%;
+              left: 50%;*/
           }
 
           img {
@@ -59,10 +63,11 @@
               height: auto;
               min-height: 105%;
               max-width: initial;
-              //min-width: 105%;
+              min-width: 105%;
               width: auto;
-              position: relative;
-                right: 50%;
+              //old - reinstate if reverting to old styles
+              /*position: relative;
+                right: 50%;*/
             }
           }
 
@@ -84,7 +89,14 @@
           flex-grow: 1;
           flex-shrink: 1;
           justify-content: center;
+          padding: 0 6%;
           width: 50%;
+          // new - delete if reverting to old styles
+          height:380px;
+        }
+
+        @include media($large-screen-up) {
+          padding: 0 9%;
         }
 
         h2 {
@@ -126,6 +138,7 @@
 
     .article-content {
       display: inline-block;
+      max-width: 100%;
       padding: $large-gutter 0 0;
 
       .article-body {
@@ -136,9 +149,13 @@
         position: relative;
         
         @include media($medium-screen-up) {
+          @include span-columns(7.5, block-collapse);
+          @include shift(.5);          
+        }
+
+        @include media($large-screen-up) {
           @include span-columns(8, block-collapse);
-          @include shift(1);
-          
+          @include shift(1);          
         }
 
         h1.alternative-title {
@@ -198,6 +215,15 @@
         border-top: 1px solid $vv-light-gray;
 
         @include media($medium-screen-up) {
+          @include span-columns(3, block-collapse);
+          @include omega;
+          border: 0px;
+          float: left;
+          padding: 0 $gutter $gutter;
+          text-align: left;
+        }
+
+        @include media($large-screen-up) {
           @include span-columns(2, block-collapse);
           @include omega;
           border: 0px;
@@ -254,12 +280,23 @@
           margin-bottom: $medium-gutter;;
         }
 
-        p.sidebar-share-button, p.sidebar-link-button {
+        p.sidebar-share-button, p.sidebar-link-button {          
+            position: relative;
           a.button {
             margin:0 0 10px 0;
             text-align: center;
             width: 130px;
+          
+            &.share-dialog-phone {
+              position: absolute;
+              top: -0px;
+              left: -0px;
+              right: -0px;
+              margin: 0 auto;
+            }
+
           }
+
         }
 
       }

@@ -1,0 +1,63 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+
+<!-- begin tease-ideum_employee.twig -->
+
+<article class="team-member {% if member.get_field('custom_color') %}{{ member.get_field('custom_color') }}{% else %}aquamarine {% endif %}" title="Click to view my bio.">
+
+  <a class="member-dialog tablet-n-desktop" href="#team_member-share-{{ member.ID }}"></a>
+  <a class="phone-only member-dialog-phone" href="#team_member-share-{{ member.ID }}"></a>
+
+  <img src="{{ member.get_field('team_user_image') }}">
+
+  <div class="data-wrap">
+
+    <p>{{ member.profile_title_position }}</p>
+
+    <h1>{{ member.title }}</h1>
+
+  </div>
+
+</article>
+
+<!-- begin hidden content for member-dialog -->
+<div style='display:none'>
+  <div id='team_member-share-{{ member.ID }}' class="member-details">
+    <div class="img-circular {{ member.slug }}" title="Hello. I'm {{ member.title }}, {{ member.profile_title_position }} at Ideum"
+      style="background-image: url({{ member.get_field('team_user_image') }})"> </div>
+    <h1 class="member-title">
+      {{ member.title }} / {{ member.profile_title_position }}
+    </h1>
+    <!-- Facebook -->
+    <ul class="social-icons">
+      <!-- {if member.get_field('email') }
+      <li><a href="mailto:" target="_blank"><i class="icon-email"></i></a></li>
+      { endif } -->
+      {% if member.get_field('github_profile_url') %}
+      <li><a href="{{ member.get_field('github_profile_url') }}" target="_blank"><i class="icon-github"></i></a></li>
+      {% endif %}
+      {% if member.get_field('linkedin_profile_url') %}
+      <li><a href="{{ member.get_field('linkedin_profile_url') }}" target="_blank"><i class="icon-linkedin"></i></a></li>
+      {% endif %}
+      {% if member.get_field('twitter_profile_url') %}
+      <li><a href="{{ member.get_field('twitter_profile_url') }}" target="_blank"><i class="icon-twitter"></i></a></li>
+      {% endif %}
+      {% if member.get_field('google_plus_url') %}
+      <li><a href="{{ member.get_field('google_plus_url') }}" target="_blank"><i class="icon-gplus"></i></a></li>
+      {% endif %}
+      {% if member.get_field('dribbble_designer_url') %}
+      <li><a href="{{ member.get_field('dribbble_designer_url') }}" target="_blank"><i class="icon-dribbble"></i></a></li>
+      {% endif %}
+      {% if member.get_field('behance_portfolio_url') %}
+      <li><a href="{{ member.get_field('behance_portfolio_url') }}" target="_blank"><i class="icon-behance"></i></a></li>
+      {% endif %}
+    </ul>
+    {{ member.content }}
+  </div>
+</div>
+<!-- end hidden content for member-dialog -->
+
+<!-- end tease-ideum_employee.twig -->
+
+{% endblock %}

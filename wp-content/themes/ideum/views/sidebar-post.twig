@@ -1,0 +1,84 @@
+
+<aside class="sidebar-post-meta layout-sidebar member-details">
+  
+  <!-- { //endif } -->
+  {% if acf_author_image %}
+  <div class="img-circular {{ thispost.author.slug }} tablet-n-desktop" style="background-image: url({{ acf_author_image }})" title="{{ thispost.author }} - Click here to view this author's post archive."> </div>
+  <img class="phone-only" alt="{{ thispost.author }}" src="{{ acf_author_image }}" title="{{ thispost.author }}">
+  {% elseif thispost.author.author_icon %}
+  <p class="author-img">
+    <a href="{{thispost.author.path}}"><img alt="{{ thispost.author }} - Click here to view this author's post archive." src="{{ thispost.author.author_icon }}" title="{{ thispost.author }} - Click here to view this author's post archive."></a>
+  </p> 
+  {% endif %}
+  
+  {% if thispost.author.profile_title_position %}
+  <p class="author-position">
+    {{ thispost.author.profile_title_position }}
+  </p>
+  {% endif %}
+  
+  {% if thispost.author %}
+  <h4 class="author-name">
+    <a href="{{thispost.author.path}}">{{ thispost.author }}</a>
+  </h4>
+  {% endif %}
+  
+  {% if thispost.post_date %}
+  <p class="post-date">
+    <span class="label">Date: </span>{{ thispost.post_date|date }}
+  </p>
+  {% endif %}
+
+  <p class="post-category">
+    <span class="label">Category: </span>
+    {% if thispost.terms('category') %}
+    {% for term in thispost.terms('category') %}
+    <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %},{% else %}.{% endif %}
+    {% endfor %}
+    {% endif %}
+
+    <br><br>
+  
+    <span class="label">Tags: </span>
+    {% if thispost.terms('tag') %}
+    {% for term in thispost.terms('tag') %}
+    <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %},{% else %}.{% endif %}
+    {% endfor %}
+    {% endif %}
+  </p>
+
+  <!-- begin hidden content for featured-product-2-share -->
+  <div style='display:none'>
+    <div id='blog-post-share' class="share-dialog">
+      <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+      <p>Like what you see? Share this.</p>
+      <!-- Facebook -->
+      <a href="http://www.facebook.com/sharer.php?u={{thispost.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+      <!-- Twitter -->
+      <a href="http://twitter.com/share?url={{thispost.link}}&amp;text={{thispost.title}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+      <!-- Google+ -->
+      <a href="https://plus.google.com/share?url={{thispost.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
+      <!-- LinkedIn -->
+      <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{thispost.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+      <!-- Pinterest -->
+      <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a> -->
+      <a href="//www.pinterest.com/pin/create/button/?url={{thispost.link|url_encode}}&amp;media={{site.url}}{{thispost.thumbnail.src|resize(640, 400)}}&amp;description={{thispost.title}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>              
+    </div>
+  </div>
+  <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
+
+  <p class="sidebar-share-button">   
+    <a class="button active tablet-n-desktop inline-share" href="#blog-post-share">Share This</a>
+    <a class="button active phone-only share-dialog-phone" href="#blog-post-share">Share This</a>
+  </p>
+
+  <!-- <p class="sidebar-link-button">
+    <a href="" class="button active">Link Here</a>
+  </p> -->
+
+</aside>

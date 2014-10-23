@@ -10,13 +10,23 @@
       background-color: $dark-teal;
     }
     &.gold {
-      background-color: $medium-orange;
+      background-color: $light-medium-orange;
     }
     &.blue {
       background-color: $medium-blue;
     }
     &.red {
       background-color: $very-dark-red;
+      &.only-open {
+        background-color: $white;
+        border-bottom:1px solid $very-light-gray;
+        &:first-of-type {
+          border-top:1px solid $very-light-gray;
+        }
+        &.open {
+          background-color: $very-dark-red;
+        }
+      }
     }
     &.purple {
       background-color: $medium-purple;
@@ -34,6 +44,7 @@
         @include display(flex);
         @include align-items(center);
         @include justify-content(center);
+        position: relative;
 
         h1 {
           @include span-columns(7);
@@ -41,7 +52,8 @@
           margin-bottom: $gutter;
 
           @include media($medium-screen-up) {
-            @include span-columns(6);
+            @include span-columns(8);
+            @include shift(1.5);
             text-align: center;
           }
 
@@ -57,7 +69,12 @@
           font-size: 1.75em;
           outline: none;
           position: relative;
-          right: -15%;
+            right: -10%;
+
+          @include media($medium-screen-up) {
+            right: 0;
+          }
+
         }
       }
 
@@ -66,14 +83,46 @@
 
         .accordion-sub-header {
           @include span-columns(8);
-          @include shift(2);
+          @include shift(1.5);
           padding: $gutter 0;
+
+          @include media($medium-screen-up) {
+            @include shift(2);
+          }
 
           p {
             color:$white;
-            text-align: center;
+            text-align: left;
+
+            @include media($medium-screen-up) {
+              text-align: center;
+            }
           }
 
+        }
+
+        .text-container {
+          @include span-columns(12);
+          @include omega;
+          background-color: $content-background-color;
+          padding-top: $medium-gutter;
+
+          .img-row {
+
+            display:none;
+
+            @include media($medium-screen-up) {
+              @include span-columns(10);
+              @include shift(1);
+              margin-bottom: $medium-gutter;
+              margin-top: $gutter;
+              text-align:center;
+            }
+
+            img {
+              width: calc((100% - 4%) / 5);              
+            }
+          }
         }
 
         footer {
@@ -94,13 +143,37 @@
         font-size: 1.75em;
         outline: none;
         position: relative;
-        right: -15%;
+        right: -10%;
+
+        @include media($medium-screen-up) {
+          right: 0;
+        }
+
       }
 
       .item-content {
       }
     }
 
+    &.only-open {
+      h1 {
+        color: $vv-dark-gray;
+      }
+      article header button {
+        color: $vv-dark-gray;
+      }
+      &.open {
+        h1 {
+          color: $white;
+        }
+        article header button {
+        color: $white;
+      }
+      }
+    }
+
   }
 
 }
+
+

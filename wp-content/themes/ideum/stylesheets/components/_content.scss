@@ -104,11 +104,25 @@
   .section-info {
     clear: both;
     margin:0 auto;
+    padding-bottom: 30px;
     text-align: center;
     width: 80%;
 
     @include media($medium-screen-up) {
       width: 75%;
+    }
+
+    .follow-button-wrap {
+      position: relative;
+      a.button.phone-only {
+        @include media($small-screen-up) {
+          position: absolute;
+          top: -0px;
+          left: -0px;
+          right: -0px;
+          margin: 0 auto;
+        }
+      }
     }
 
     h1 a {
@@ -238,26 +252,20 @@
     }
   }
 
+  #contact {
+
+    .highlight-text {
+       @include highlight-text($vv-dark-gray, $white, $white, $white);
+      position: relative;
+    }
+
+  }
+
   #our-story {
 
     .highlight-text {
       @include highlight-text($dark-teal, $white, $white, $white);
       position: relative;
-    }
-
-    .button {      
-      background-color: $dark-teal;
-      border-color: $dark-teal;
-      font-size: 1.75em;
-      font-weight: 400;
-
-      @include media($medium-screen-up) {
-        font-size: 2.45em;
-      }
-
-      &:hover {
-        color: $very-dark-gray;
-      }
     }
 
     a {
@@ -283,7 +291,8 @@
   .highlight-text.child-page {
     border-top: 1px solid $vv-light-gray;
     @include highlight-text($white, $vv-dark-gray, $vv-dark-gray, $light-medium-gray);
-    font-size: 1em;    
+    font-size: 1em;
+    padding:40px 0;
     position: relative;
 
     a {
@@ -307,54 +316,63 @@
 
   }
 
-  #facilities {
-
-    .button {      
-      background-color: $dark-teal;
-      border-color: $dark-teal;
-      font-size: 1.75em;
-      font-weight: 400;
-
-      @include media($medium-screen-up) {
-        font-size: 2.45em;
-      }
-
-      &:hover {
-        color: $very-dark-gray;
-      }
-
+  .one-column-text.slider, .slider-two-column-text.slider {
+    margin: -0px auto 0;
+    max-width: 80%;
+    padding: 5% 0;
+    
+    @include media($medium-screen-up) {
+      margin: -50px auto 0;
     }
 
-  }
-
-  #mission {
-
-    .button {      
-      background-color: $dark-teal;
-      border-color: $dark-teal;
-      font-size: 1.75em;
-      font-weight: 400;
-
-      @include media($medium-screen-up) {
-        font-size: 2.45em;
-      }
-
-      &:hover {
-        color: $very-dark-gray;
-      }
-
+    h2 {
+      text-align:center;
     }
-
   }
 
   .project-slider {
     background-color: $vv-light-gray;
 
+    .rn-carousel-indicator span {
+      position: relative;
+        top: -90px;
+    }
+
     .project.item {
       /* no op */
 
       article {
-        /* no op */
+        position: relative;
+
+        .slide-text-wrap {
+          height: 100%;
+          position: absolute;
+            left: 50%; top: -50%;
+          width: 100%;
+
+          .slide-text-content {
+            height: 100%;
+            position: absolute;
+              bottom: -83%; right: 50%;
+            text-align: center;
+            width: 100%;
+
+            h1 { 
+              color: #fff;
+              font-size: 3.5vw;
+            }   
+
+            p {
+              color:#fff; 
+              font-size: 2.5vw; 
+              line-height: 3.5vw; 
+              margin:0 auto;
+              max-width:40%;
+            }
+
+          }
+
+        }
 
         img {
           width: 100%;
@@ -374,38 +392,49 @@
 
   }
 
-  .facilities.item {
-    /* no op */
-    article {
+  .facilities {
+
+    &.item {
       /* no op */
-      img {
-        width: 100%;
+
+      article {
+        /* no op */
+
+        img {
+          width: 100%;
+        }
+
       }
-    }
-  }
-
-  .one-column-text {
-    @include span-columns(10);
-    @include shift(1);
-
-    padding:0 0 $gutter;
-    text-align: justify;
-  }
-
-  .two-column-text {
-    @include span-columns(10);
-    @include shift(1);
-
-    @include media($medium-screen-up) {
-      @include column-count(2);
-      @include column-gap(40px); // this should be 1 coulmn gutter, but how?
+      
     }
 
-    padding:0 0 $gutter;
-    text-align: justify;
+    &.rn-carousel-slide {
+      height: initial;
+    }
+
+    .one-column-text {
+      @include span-columns(10);
+      @include shift(1);
+
+      padding:0 0 $gutter;
+      text-align: justify;
+    }
+
+    .two-column-text {
+      @include span-columns(10);
+      @include shift(1);
+
+      @include media($medium-screen-up) {
+        @include column-count(2);
+        @include column-gap(40px); // this should be 1 coulmn gutter, but how?
+      }
+
+      padding:0 0 $gutter;
+      text-align: justify;
+    }
+
   }
 
-// end content
 }
 
 .edit-link {
@@ -413,7 +442,7 @@
     right: 30px;
 }
 
-#team {
+#team, #our-story, #facilities, #mission, #contact {
   /* no op */
   .button {      
     background-color: $dark-teal;
@@ -432,8 +461,22 @@
   }
 }
 
-#services {
+#services, #touch-tables, #touch-walls {
   /* no op */
+
+  .button.dark {      
+    background-color: $vv-dark-gray;
+    border-color: $vv-dark-gray;
+    font-size: 1.75em;
+    font-weight: 400;
+
+    &:hover {
+      background-color: lighten($base-button-color, 15);
+      border-color: $hover-button-color;
+      color: $base-background-color;
+    }
+  }
+
   .button {      
     background-color: $dark-teal;
     border-color: $dark-teal;
@@ -467,7 +510,7 @@
       }
 
       .video-wrapper { position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;}
-      .video-wrapper object, .video-wrapper embed,  { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+      .video-wrapper object, .video-wrapper embed, .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 
       iframe {
         width: 100%;
@@ -538,3 +581,97 @@
   }
 
 }
+
+.teamgrid {
+  padding: 0 0 $gutter; 
+}
+
+.accordion-wrap {
+  padding: 0 0 $gutter; 
+}
+
+#follow-dialog, .share-dialog {
+  padding:20px;
+  text-align:center;
+}
+
+#directions-dialog {
+  padding:20px;
+  text-align:center;
+}
+
+.layout-sidebar.member-details .img-circular {
+  margin: 0 0 20px 0;
+}
+
+.follow-share, .social-share, #directions-dialog {
+  /* no op */
+  #ideum-icon {
+    margin-bottom: 16px;
+  }
+  
+  p {
+    margin-bottom: 24px;
+  }
+
+  .sharing-icon {
+    margin:0 17px;
+    width: 44px;
+
+    &:hover {
+      opacity:0.7;
+    }
+
+  }
+
+  input {
+    margin:0 auto $gutter;
+    max-width: 300px;
+  }
+
+}
+
+.two-column-text {
+  @include span-columns(10);
+  @include shift(1);
+
+  @include media($medium-screen-up) {
+    @include column-count(2);
+    @include column-gap(40px); // this should be 1 column gutter, but how?
+  }
+
+  padding:0 0 $gutter;
+  text-align: justify;
+
+  &.no-justification {
+    text-align: left;
+  }
+
+}
+
+.error-page {
+  border:2px solid $very-dark-red;
+  margin-top:-30px;
+  position:relative;
+  
+  h1, h2, h3, h4, p { 
+    margin-bottom:20px;
+  }
+
+  h1 { 
+    color: $very-dark-red; 
+  }
+
+  ul {
+    li {
+      margin-bottom:12px;
+    }
+  }
+
+}
+
+.faux-link {
+  color: $base-link-color;
+  text-decoration: none;
+}
+

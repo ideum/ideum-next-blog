@@ -20,19 +20,22 @@
 
 			<section class="pull-quote">
 
-      	<div class="pull-quote-img">
+      	<div class="pull-quote-img" style="background:url('{{post.thumbnail.src|resize(640, 400)}}') no-repeat center center;">
 
-        	{% if post.get_thumbnail %}
+        	<!-- old - reinstate if reverting to old version; the above background img is new - remove if reverting; see blog-detail styles for more changes
+        	{ if post.get_thumbnail }
 				  <a href="{{post.thumbnail.src}}"><img 
 				  src="{{post.thumbnail.src|resize(640, 400)}}" 
 				  alt="Image for the post: '{{post.title}}'" 
 				  title="Image for the post: '{{post.title}}'"/></a>
-				  {% else %}
+				  { else }
 				  <a href="{{post.link}}"><img 
 				  src="{{theme.link}}/images/blog-post-img-placeholders-{{ random(2) }}.jpg" 
 				  alt="Placeholder image for the post: '{{post.title}}'" 
 				  title="Placeholder image for the post: '{{post.title}}'"/></a>
-				  {% endif %}
+				  { endif }
+				  -->
+				  <a href="{{post.thumbnail.src}}"><!-- faux link to full size img --></a>
 
       	</div>
 
@@ -67,76 +70,15 @@
 
 				</div>
 
-				{% if sidebar %}
+				{{sidebar_post}}
+	      
+	      {{related_posts}}
 
-				<aside class="sidebar-post-meta layout-sidebar">
-		    	<!-- {{sidebar}} #FIXME - couldn't get variables into sidebar -->
+	      <div class="section-info">
 
-					{% if post.author.author_icon %}
-					<p class="author-img">
-					  <a href="{{post.author.path}}"><img alt="{{ post.author }}" src="{{ post.author.author_icon }}" title="{{ post.author }}"></a>
-					</p><!-- Ben - #FIXME - {{theme.link}} doesn't work in link when included as sidebar, only when included in code of single.twig directly -->
-					{% endif %}
-					
-					{% if post.author.profile_title_position %}
-					<p class="author-position">
-					  {{ post.author.profile_title_position }}
-					</p>
-					{% endif %}
-					
-					{% if post.author %}
-					<h4 class="author-name">
-					  <a href="{{post.author.path}}">{{ post.author }}</a>
-					</h4>
-					{% endif %}
-					
-					{% if post.post_date %}
-					<p class="post-date">
-					  <span class="label">Date: </span>{{ post.post_date|date }}
-					</p>
-					{% endif %}
+          <p class=""><a href="/blog/" class="button active">View All</a></p><!-- where is this even supposed to go -->
 
-					<p class="post-category">
-					  <span class="label">Category: </span>
-					  {% if post.terms('category') %}
-						{% for term in post.terms('category') %}
-					  <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %},{% else %}.{% endif %}
-					  {% endfor %}
-						{% endif %}
-					</p>
-
-					<!-- begin hidden content for featured-product-2-share -->
-	        <div style='display:none'>
-	          <div id='blog-post-share' style='padding:10px; background:#fff;'>
-	            <!-- Facebook -->
-	            <a href="http://www.facebook.com/sharer.php?u={{post.link|url_encode}}" target="_blank"><img src="http://m.ideum.com/img/social/facebook.png" alt="Facebook"></a>
-	            <!-- Twitter -->
-	            <a href="http://twitter.com/share?url={{post.link}}&amp;text={{site.name}} | Blog | {{post.title}}" target="_blank"><img src="http://m.ideum.com/img/social/twitter.png" alt="Twitter"></a>
-	            <!-- Google+ -->
-	            <a href="https://plus.google.com/share?url={{post.link|url_encode}}" target="_blank"><img src="http://m.ideum.com/img/social/google.png" alt="Google"></a>               
-	            <!-- LinkedIn -->
-	            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link|url_encode}}" target="_blank"><img src="http://m.ideum.com/img/social/linkedin.png" alt="LinkedIn"></a>
-	            <!-- Pinterest -->
-	            <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a>               
-	          </div>
-	        </div>
-	        <!-- end hidden content for featured-product-2-share - revealed when user clicks 'Share This' link (below)-->
-
-					<p class="sidebar-share-button">
-					  <a href="#blog-post-share" class="button active inline">Share</a>
-					</p>
-
-					<!-- <p class="sidebar-link-button">
-					  <a href="" class="button active">Link Here</a>
-					</p> -->
-
-	      </aside>
-
-	      <section class="bar-related layout-bottombar">
-	      {{bottombar}}
-	      </section>
-
-	      {% endif %}
+        </div>
 
 			</section>
 

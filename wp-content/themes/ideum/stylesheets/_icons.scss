@@ -26,7 +26,15 @@ $icons: (
   arrow-down-left:  '\e813',
   arrow-left:       '\e814',
   menu:             '\e815',
-  close:            '\e816'
+  close:            '\e816',
+  empty:            '\000a0',
+  dribbble:         '\e817',
+  phone:            '\e818',
+  phone-ring:       '\e819',
+  location-pin:     '\e81a',
+  online:          '\e81b',
+  email:            '\e81c',
+  behance:          '\e81d'
 );
 
 @include font-face(ideum-icons, 'fonts/ideum-icons');

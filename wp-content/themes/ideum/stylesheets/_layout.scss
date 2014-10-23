@@ -6,54 +6,84 @@
 
 @include media($small-screen-up) {
   .phone-only {
-    display: block;
+    visibility: visible !Important;
+    position: initial;
+      left: initial; top: initial;
   }
   .phone-n-tablet {
-    display: block;
+    visibility: visible !Important;
+    position: initial;
+      left: initial; top: initial;
   }
   .tablet-only {
-    display: none;
+    visibility: hidden !Important;
+    position: absolute;
+      left: -4000px; top:-4000px;
   }
   .tablet-n-desktop {
-    display: none;
+    visibility: hidden !Important;
+    position: absolute;
+      left: -4000px; top:-4000px;
   }
   .desktop-only {
-    display: none;
+    visibility: hidden !Important;
+    position: absolute;
+      left: -4000px; top:-4000px;
   }
 }
 
 @include media($medium-screen-up) {
   .phone-only {
-    display: none;
+    visibility: hidden !Important;
+    position: absolute !Important;
+      left: -4000px; top:-4000px;
   }
   .phone-n-tablet {
-    display: block;
+    visibility: visible !Important;
+    position: initial !Important;
+      left: initial; top: initial;
   }
   .tablet-only {
-    display: block;
+    visibility: visible !Important;
+    position: initial !Important;
+      left: initial; top: initial;
   }
   .tablet-n-desktop {
-    display: block;
+    visibility: visible !Important;
+    position: initial !Important;
+      left: initial; top: initial;
   }
   .desktop-only {
-    display: block;
+    visibility: hidden !Important;
+    position: absolute !Important;
+      left: -4000px; top:-4000px;
   }
 }
 
 @include media($large-screen-up) {
   .phone-only {
-    display: none;
+    visibility: hidden !Important;
+    position: absolute !Important;
+      left: -4000px; top:-4000px;
   }
   .phone-n-tablet {
-    display: none;
+    visibility: hidden !Important;
+    position: absolute !Important;
+      left: -4000px; top:-4000px;
   }
   .tablet-only {
-    display: none;
+    visibility: hidden !Important;
+    position: absolute !Important;
+      left: -4000px; top:-4000px;
   }
   .tablet-n-desktop {
-    display: block;
+    visibility: visible !Important;
+    position: initial !Important;
+      left: initial; top: initial;
   }
   .desktop-only {
-    display: block;
+    visibility: visible !Important;
+    position: initial !Important;
+      left: initial; top: initial;
   }
 }

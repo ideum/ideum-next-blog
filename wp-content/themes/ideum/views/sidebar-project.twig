@@ -1,0 +1,69 @@
+<aside class="sidebar-post-meta layout-sidebar">
+  <!-- {{sidebar}} #FIXME - couldn't get post variables to work in sidebar.twig -->
+  
+  {% if thisproject.client_sidebar_icon %}
+  <p class="project-company-img">
+    <img alt="Company Icon for {{ thisproject.client_company_name }}" src="{{TimberImage(thisproject.get_field('client_sidebar_icon')).src}}" title="Company Icon for {{ thisproject.client_company_name }}"/>
+  </p><!-- Ben - #FIXME - {{theme.link}} doesn't work in link when included as sidebar, only when included in code of single-Ideum-project.twig directly -->
+  {% endif %}
+  
+  {% if thisproject.client_company_name %}
+  <p class="project-company-name">
+    {{ thisproject.client_company_name }}
+  </p>
+  {% endif %}
+  
+  {% if thisproject.project_sidebar_title %}
+  <h4 class="project-sidebar-title">
+    {{ thisproject.project_sidebar_title }}
+  </h4>
+  {% endif %}
+  
+  {% if thisproject.post_date %}
+  <p class="post-date">
+    <span class="label">Year: </span>{{ thisproject.post_date|date('Y')}}
+  </p>
+  {% endif %}
+
+  <p class="post-category">
+    <span class="label">Category: </span>
+    {% if thisproject.terms('category') %}
+    {% for term in thisproject.terms('category') %}
+    <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %} / {% else %}.{% endif %}
+    {% endfor %}
+    {% endif %}
+  </p>
+
+  <!-- begin hidden content for featured-blogpost-share -->
+  <div style="display:none;">
+    <div id="single-project-share" class="share-dialog">
+      <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+      <p>Like what you see? Share this.</p>
+      <!-- Facebook -->
+      <a href="http://www.facebook.com/sharer.php?u={{thisproject.link}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+      <!-- Twitter -->
+      <a href="http://twitter.com/share?url={{thisproject.link}}&amp;text={{thisproject.title}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+      <!-- Google+ -->
+      <a href="https://plus.google.com/share?url={{thisproject.link}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+      <!-- LinkedIn -->
+      <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{thisproject.link}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a> 
+      <!-- Pinterest -->  
+      <a href="//www.pinterest.com/pin/create/button/?url={{thisproject.link|url_encode}}&amp;media={{site.url}}{{TimberImage(thisproject.get_field('primary_image')).src}}&amp;description={{thisproject.title}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>            
+    </div>
+  </div>
+  <!-- end hidden content for featured-blogpost-share - revealed when user clicks 'Share This' link (below)-->
+
+  <p class="sidebar-share-button">
+    <a class="button active tablet-n-desktop inline-share" href="#single-project-share">Share This</a>
+    <a class="button active phone-only share-dialog-phone" href="#single-project-share">Share This</a>
+  </p>
+
+  <!-- <p class="sidebar-link-button">
+    <a href="" class="button active">Link Here</a>
+  </p> -->
+
+</aside>

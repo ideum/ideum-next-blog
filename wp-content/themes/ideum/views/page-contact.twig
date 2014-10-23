@@ -1,0 +1,47 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div id="contact" class="sub-page-wrap">
+
+  <section class="highlight-text">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% endif %}
+
+    <h1>
+      Services
+    </h1>
+
+    <p>
+      {{post.content}}
+    </p>
+
+  </section>
+
+  <div class="contact-content">
+
+    <section class="inquiry-form">
+      
+      {{ '[ideum-inquiries-form]' | shortcodes }}
+
+    </section>
+
+    {{sidebar_contact}}
+
+  </div>
+    
+  {{featured_pages_contact}}
+
+  <section>
+
+    {{follow_dialog}}
+
+    {% include 'follow-us-button.twig' %}
+
+  </section>
+  
+</div>
+
+{% endblock %}

@@ -1,6 +1,6 @@
 .slider {
   .rn-carousel-slide {
-    height: 100%;
+    height: initial;
     width: 100%;
 
     @include media($medium-screen-up) { width: (100% / 2); }
@@ -31,27 +31,9 @@
       @include media($large-screen-up)  { width: (100% / 4); }
     }
    
-
-  // button.previous {
-    // display: none;
-    // @include media($medium-screen-up) { 
-      // @include position(absolute, 0 null 0 0);
-      // display: block;
-      // height: rem(50);
-      // margin: auto;
-    // }
   }
+
 }
-
-
-  //button.next {
-    //display: none;
-    //@include media($medium-screen-up) { 
-      //@include position(absolute, 0 0 0 null);
-      //display: block;
-      //height: rem(50);
-      //margin: auto;
-    //}
 
 .rn-carousel-controls {
   .rn-carousel-control {
@@ -79,7 +61,8 @@
   }
 }
 .rn-carousel-container {
-  width:100% !important; // temporary hack to fix twoup slider miswidth in medium size
+  clear: left;
+  width:100% !important; // temporary hack to fix two-up slider width in medium size
 }
 // the slider pips
 .rn-carousel-indicator {
