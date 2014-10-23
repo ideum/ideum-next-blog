@@ -4,6 +4,11 @@ $touchtable-content-color: rgba(255,255,255,0.7);
 $touchtable-transition-time: 0.25s;
 $touchtable-description-margin: 25px;
 
+@mixin bgAndBorderColor($color){
+  background-color: $color;
+  border-color: $color !important; 
+}
+
 .product-category {
   margin: 0 auto;
   display: block;
@@ -72,6 +77,26 @@ $touchtable-description-margin: 25px;
         color: white;
         background-color: orange;
         border-color: orange !important;
+      }
+
+      a.coffee:hover{
+        @include bgAndBorderColor($platform-coffee-color);
+      }
+
+      a.drafting:hover{
+        @include bgAndBorderColor($platform-drafting-color);
+      }
+
+      a.platform:hover{
+        @include bgAndBorderColor($platform-color);
+      }
+
+      a.pro:hover{
+        @include bgAndBorderColor($pro-color);
+      }
+
+      a.pano:hover{
+        @include bgAndBorderColor($pano-color);
       }
     }
   }

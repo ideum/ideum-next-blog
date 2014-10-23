@@ -5297,6 +5297,26 @@ nav.sub-nav a:hover {
   background-color: orange;
   border-color: orange !important;
 }
+.product-category .overlay .content a.coffee:hover {
+  background-color: #f6c863;
+  border-color: #f6c863 !important;
+}
+.product-category .overlay .content a.drafting:hover {
+  background-color: #5cb8e6;
+  border-color: #5cb8e6 !important;
+}
+.product-category .overlay .content a.platform:hover {
+  background-color: #ff7065;
+  border-color: #ff7065 !important;
+}
+.product-category .overlay .content a.pro:hover {
+  background-color: #9c8cd8;
+  border-color: #9c8cd8 !important;
+}
+.product-category .overlay .content a.pano:hover {
+  background-color: #65cf89;
+  border-color: #65cf89 !important;
+}
 .product-category .overlay:hover {
   background-color: transparent;
 }
