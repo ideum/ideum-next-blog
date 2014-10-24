@@ -14,17 +14,37 @@
 			text-transform: uppercase;
 			text-decoration: none;
 			font-weight: $bold;
-			background-color: orange;
 			color: $white;
 			padding: 2.4em 0;
 			width: 240px;
 			display: block;
+		}
+		a::after {
+			@extend %icon;
+			@extend .icon-caret-down:before;
+			margin-left: 2em;
 		}
 	}
 	li.ng-scope.active > a{
 		background-color: $white;
 		color: $vv-dark-gray;
 	}
+}
+
+.platform-coffee .tabs-nav a{
+	background-color: darken($platform-coffee-color, 12%);
+}
+.platform-drafting .tabs-nav a{
+	background-color: darken($platform-drafting-color, 12%);
+}
+.platform .tabs-nav a{
+	background-color: darken($platform-color, 20%);
+}
+.pro .tabs-nav a{
+	background-color: darken($pro-color, 12%);
+}
+.pano .tabs-nav a{
+	background-color: darken($pano-color, 12%);
 }
 
 .tab-content{

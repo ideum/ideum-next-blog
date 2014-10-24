@@ -33,7 +33,7 @@ $(document).ready(function(){
     onClosed:function(){ alert('onClosed: colorbox has completely closed'); } 
   });
 
-  $('.non-retina').colorbox({rel:'group5', transition:'none'})
+  $('.non-retina').colorbox({rel:'group5', transition:'none'});
   $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
   
   //Example of preserving a JavaScript event for inline calls.

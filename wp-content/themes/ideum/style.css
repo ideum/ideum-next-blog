@@ -641,7 +641,7 @@ select {
   src: url("fonts/ideum-icons.eot");
   src: url("fonts/ideum-icons.eot?#iefix") format("embedded-opentype"), url("fonts/ideum-icons.woff") format("woff"), url("fonts/ideum-icons.ttf") format("truetype"), url("fonts/ideum-icons.svg#ideum-icons") format("svg");
 }
-.icon-gplus, .icon-flickr, .icon-rss, .icon-linkedin, .icon-twitter, .icon-youtube, .icon-vimeo, .icon-facebook, .icon-pinterest, .icon-caret-up, .icon-caret-right, .icon-caret-down, .icon-caret-left, .icon-arrow-up-left, .icon-arrow-up, .icon-arrow-up-right, .icon-arrow-right, .rn-carousel-controls .rn-carousel-control-next, .icon-arrow-down-right, .icon-arrow-down, .icon-arrow-down-left, .icon-arrow-left, .rn-carousel-controls .rn-carousel-control-prev, .icon-menu, .icon-close, .icon-empty, .icon-dribbble, .icon-phone, .icon-phone-ring, .icon-location-pin, .icon-online, .icon-email, .icon-behance {
+.icon-gplus, .icon-flickr, .icon-rss, .icon-linkedin, .icon-twitter, .icon-youtube, .icon-vimeo, .icon-facebook, .icon-pinterest, .icon-caret-up, .overlay > button.prev, .icon-caret-right, .icon-caret-down, .overlay > button.next, .icon-caret-left, .icon-arrow-up-left, .icon-arrow-up, .icon-arrow-up-right, .icon-arrow-right, .rn-carousel-controls .rn-carousel-control-next, .icon-arrow-down-right, .icon-arrow-down, .icon-arrow-down-left, .icon-arrow-left, .rn-carousel-controls .rn-carousel-control-prev, .icon-menu, .icon-close, .icon-empty, .icon-dribbble, .icon-phone, .icon-phone-ring, .icon-location-pin, .icon-online, .icon-email, .icon-behance, .tabs-nav li a::after {
   font-family: icons;
   font-family: ideum-icons;
   font-style: normal;
@@ -687,7 +687,7 @@ select {
   content: "\e808";
 }
 
-.icon-caret-up:before {
+.icon-caret-up:before, .overlay > button.prev:before {
   content: "\e809";
 }
 
@@ -695,7 +695,7 @@ select {
   content: "\e80a";
 }
 
-.icon-caret-down:before {
+.icon-caret-down:before, .overlay > button.next:before, .tabs-nav li a::after {
   content: "\e80b";
 }
 
@@ -5815,7 +5815,7 @@ body {
   background-image: url("images/x-rays/platform55-outline.png");
 }
 .overlay nav {
-  background: #f7f7f7;
+  background: #f4f4f4;
   line-height: 28px;
   text-align: center;
 }
@@ -5832,9 +5832,6 @@ body {
 }
 .overlay nav a:last-child {
   padding-right: 0;
-}
-.overlay nav a.active {
-  color: #f4c057;
 }
 .overlay .content {
   position: absolute;
@@ -5868,27 +5865,34 @@ body {
 .overlay > button {
   position: absolute;
   right: 70px;
+  padding: 0;
   height: 40px;
   width: 40px;
   border-radius: 20px;
-  padding: 0;
   border: none;
-  background-color: #f7f7f7;
+  background-color: #f4f4f4;
+  color: #c7c7c7;
+  font-size: 16px;
   -webkit-transition: opacity 0.4s ease;
   -moz-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
-.overlay > button.prev {
-  top: 70px;
+.overlay > button.prev, .overlay > button.next {
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   transition: all 0.25s;
+  font-family: ideum-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  speak: none;
+  text-transform: none;
+}
+.overlay > button.prev {
+  top: 70px;
 }
 .overlay > button.next {
   top: 181px;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  transition: all 0.25s;
 }
 .overlay > button.ng-hide-remove {
   opacity: 0;
@@ -5909,8 +5913,39 @@ body {
   color: #b3b3b3;
 }
 .overlay > button:enabled:hover {
-  background-color: #ffa94d;
   color: white;
+}
+
+.overlay.platform-coffee nav a.active {
+  color: #f6c863;
+}
+.overlay.platform-drafting nav a.active {
+  color: #5cb8e6;
+}
+.overlay.platform nav a.active {
+  color: #ff7065;
+}
+.overlay.pro nav a.active {
+  color: #9c8cd8;
+}
+.overlay.pano nav a.active {
+  color: #65cf89;
+}
+
+.overlay.platform-coffee > button:enabled:hover {
+  background-color: #f6c863;
+}
+.overlay.platform-drafting > button:enabled:hover {
+  background-color: #5cb8e6;
+}
+.overlay.platform > button:enabled:hover {
+  background-color: #ff7065;
+}
+.overlay.pro > button:enabled:hover {
+  background-color: #9c8cd8;
+}
+.overlay.pano > button:enabled:hover {
+  background-color: #65cf89;
 }
 
 .overlay .content, .overlay .content .body, .overlay .content > button {
@@ -6165,15 +6200,37 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
-  background-color: orange;
   color: white;
   padding: 2.4em 0;
   width: 240px;
   display: block;
 }
+.tabs-nav li a::after {
+  margin-left: 2em;
+}
 .tabs-nav li.ng-scope.active > a {
   background-color: white;
   color: #343e4b;
+}
+
+.platform-coffee .tabs-nav a {
+  background-color: #f3b429;
+}
+
+.platform-drafting .tabs-nav a {
+  background-color: #27a1de;
+}
+
+.platform .tabs-nav a {
+  background-color: #fe1200;
+}
+
+.pro .tabs-nav a {
+  background-color: #755ec9;
+}
+
+.pano .tabs-nav a {
+  background-color: #3bbc67;
 }
 
 .tab-content {
