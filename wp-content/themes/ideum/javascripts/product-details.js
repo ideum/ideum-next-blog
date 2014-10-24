@@ -4,7 +4,7 @@ var App = angular.module('ideum.productDetails', ['ngAnimate']);
 
 App.factory('ProductDetails', function ($http, $sce, $q) {
   return {
-    get: function () {
+    get: function (index) {
       // return $http.get('/js/data/product_details.json').then(function (response) {
       //   var details = response.data;
 
@@ -14,18 +14,21 @@ App.factory('ProductDetails', function ($http, $sce, $q) {
 
       //   return details;
       // });
-
+      console.log(index);
       var deferred = $q.defer();
-      angular.forEach(IDEUM_SITE.product_details, function (detail) {
-        //checks if the data has already been trusted for html
-        try{
-          $sce.getTrustedHtml(detail.content);
-        }
-        catch (e){
-          detail.content = $sce.trustAsHtml(detail.content);
-        } 
+      angular.forEach(IDEUM_SITE.product_details, function (tab_set) {
+        angular.forEach(tab_set, function(detail){
+          //checks if the data has already been trusted for html
+          try{
+            $sce.getTrustedHtml(detail.content);
+          }
+          catch (e){
+            detail.content = $sce.trustAsHtml(detail.content);
+          }
+        });
       });
-      deferred.resolve(IDEUM_SITE.product_details);
+
+      deferred.resolve(IDEUM_SITE.product_details[index]);
       return deferred.promise;
     }
   };
@@ -34,12 +37,13 @@ App.factory('ProductDetails', function ($http, $sce, $q) {
 App.controller('xRayCtrl', function ($scope, ProductDetails) {
   $scope.productDetails = [];
   $scope.detailOpen = false;
-
   $scope.overlayStyle = {};
 
-  ProductDetails.get().then(function (data) {
-    $scope.productDetails = data;
-    $scope.currentDetail = 0;
+  $scope.$watch('dataIndex', function(){
+    ProductDetails.get($scope.dataIndex).then(function (data) {
+      $scope.productDetails = data;
+      $scope.currentDetail = 0;
+    });
   });
 
   $scope.goToDetail = function (idx) {

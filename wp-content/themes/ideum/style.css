@@ -5812,13 +5812,13 @@ body {
   }
 }
 .x-ray.platform-coffee {
-  background-image: url("images/x-rays/platform-coffee.png");
+  background-image: url("images/x-rays/platform46-full.png");
 }
 .x-ray.platform46 {
-  background-image: url("images/x-rays/platform46.png");
+  background-image: url("images/x-rays/platform46-full.png");
 }
 .x-ray.platform55 {
-  background-image: url("images/x-rays/platform55.png");
+  background-image: url("images/x-rays/platform46-full.png");
 }
 
 .overlay {
@@ -5833,13 +5833,13 @@ body {
   transition: top 0.8s ease, height 0.8s ease, background-position 0.8s ease;
 }
 .overlay.platform-coffee {
-  background-image: url("images/x-rays/platform-coffee-outline.png");
+  background-image: url("images/x-rays/platform46-outline.png");
 }
 .overlay.platform46 {
   background-image: url("images/x-rays/platform46-outline.png");
 }
 .overlay.platform55 {
-  background-image: url("images/x-rays/platform55-outline.png");
+  background-image: url("images/x-rays/platform46-outline.png");
 }
 .overlay nav {
   background: #f4f4f4;
