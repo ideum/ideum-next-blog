@@ -1,0 +1,181 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<main class="productOuterWrapper">
+  <header>
+    <h1>Platform</h1>
+    <img src="{{theme.link}}/images/products/pro/header.png">
+  </header>
+  <main class="productInnerWrapper">
+    <div ng-app="ideum.tabs">
+      <!-- Tabs -->
+      <div tabs class="pro">
+        <!-- PLATFORM TAB -->
+        <div pane title="Pro">
+          <header>
+            <h1>Pano</h1>
+            <h2>Twice the Size. Singular Experience.</h2>
+          </header>
+          <div ng-app="productDetails">
+            <section class="x-ray platform46" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+              <section class="overlay pro platform46" ng-style="overlayStyle">
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+              </section>
+            </section>
+          </div>       
+        </div>
+
+    </div> <!-- Close tabs -->
+
+    <section class="productSection pro">
+      <img class="left" src="{{theme.link}}/images/products/platform/01.png">
+      <div class="productText white">
+        <h2>The Pano</h2>
+        <p> 
+          The Pano has a 100" of multitouch surface - dual 55" HD or 4K / UHD screens with a contiguous glass touch surface supporting over 40+ touch points. It can be customized or ordered with a standard, turnkey workstation configuration.
+        </p>
+      </div>
+    </section>
+
+    <section class="productSection">
+      <img class="left" src="{{theme.link}}/images/products/platform/02.png">
+      <div class="productText">
+        <h2>Powerful, Tough and Secure</h2>
+        <p> 
+          The Pano is the first-of-its-kind multiuser, multitouch collaborative technology experience. Originally custom designed for interactive exhibits in museum settings, the Pano has exceptional build quality and is engineered for high traffic public spaces. The 100" screen, with 40+ touch points, can effortlessly accommodate up to eight simultaneous users for memorable interaction and information sharing.
+        </p>
+      </div>
+    </section>
+
+    <section class="productSection pano">
+      <img class="full" src="{{theme.link}}/images/products/platform/03.png">
+      <div class="productText white fullLeft">
+        <h2>Open Minded</h2>
+        <p> 
+          The Pano comes standard as an integrated unit with its own computer workstation, audio with Yamaha speakers, and a UPS. It can also be configured for a control room set up with rack-mountable hardware.
+        </p>
+      </div>
+    </section>
+
+    <h1>Key Features</h1>
+    <ul
+      class="slider pano"
+      ng-init="clientSliderIndex = 0"
+      rn-carousel
+      rn-carousel-control
+      rn-carousel-indicator
+      rn-carousel-width="responsiveTwoUp()"
+      rn-carousel-index="clientSliderIndex"
+    >
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/armed.svg' %}
+        </div>
+        <h3>Armed &amp; Hyperthready</h3>
+        <p>
+          The integrated computer is a powerhouse.  It includes an Intel® Quad Core i7 4770® (3.4GHz) with Hyperthreading®, 4MB cache computer with 16 GB of RAM, and a 500 GB HDD.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/reach.svg' %}
+        </div>
+        <h3>Reach Out and Touch</h3>
+        <p>
+          Along with an industry-leading 40 touch points, the touch surface on the Pano has palm rejection, bright HD or 4K / UHD resolution screens, and up to a 60hz refresh rate.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/widi.svg' %}
+        </div>
+        <h3>Full Intensity Workstation</h3>
+        <p>
+          The Pano comes with a full, expandable workstation computer that makes it create for processor-intensive tasks.  Whether you are running cutting-edge multiuser museum exhibits, complex visualizations, or games—the Pano can handle just about any application you might run.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/demanding.svg' %}
+        </div>
+        <h3>Built for Demanding Spaces</h3>
+        <p>
+          The Pano multitouch table has a chemically strengthened glass top and the chassis is made out of aircraft-grade aluminum.  We are proud to say that the Pano table has exceptional build-quality and are perfect for public spaces and other demanding environments.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/gestureworks.svg' %}
+        </div>
+        <h3>Creation by Intelligent Design</h3>
+        <p>
+          The Pano comes with a lifetime license for GestureWorks Core (C++, C# / .NET, Java, Python, and HTML5 / JavaScript) and Open Exhibits (ActionScript). The license includes ticketed, timely support and free upgrades for life.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/graphically.svg' %}
+        </div>
+        <h3>Graphically Speaking</h3>
+        <p>
+          The Pano multitouch table come with powerful graphics cards with an emphasis on performance.  A standard 16 GB of RAM ensures that the Pano multitouch tables can handle any application thrown at them.
+        </p>
+      </li>
+    </ul>
+
+    <button class="very-dark-gray-button">Download Spec Sheet</button>
+
+    <section class="productSection plain">
+      <img class="full" src="{{theme.link}}/images/products/platform/04.png">
+      <div class="productText white fullLeft">
+        <h2>Upgrades</h2>
+        <p> 
+          There are a variety of upgrades and add-ons for sharing and portability.
+          <div class="specs">
+            <ul class="specList">
+              <li>Windows 7 Ultimate</li>
+              <li>Blu-ray Writer</li>
+              <li>Dual 1 TB 7,200 RPM Hard Disk Drives</li>
+              <li>Dual 128 or 256 GB Solid State Drives</li>
+            </ul>
+          </div>
+        </p>
+      </div>
+    </section>
+
+    <section class="productSection">
+      <img class="left" src="{{theme.link}}/images/products/platform/06.jpg">
+      <div class="productText">
+        <h2>Direct Sales <br> &amp; Rentals</h2> <!-- Does the average person know what this means?? -->
+        <p> 
+          Please contact us at (505) 791-1110 ext. 1 or toll free in the US and Canada (855) 898-6824, use our online inquiry form, or email us at sales@ideum.com.  Panos are sold domestically and internationally and are only available direct from Ideum.
+        </p>
+      </div>
+    </section>
+  </main>
+</main>
+{% endblock %} 

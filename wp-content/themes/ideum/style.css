@@ -6150,6 +6150,12 @@ body {
   }
 }
 @media screen and (min-width: 640px) {
+  .productSection > .productText .specs ul.column3 {
+    margin-left: 350px;
+    float: none;
+  }
+}
+@media screen and (min-width: 640px) {
   .productSection > .fullLeft, .productSection > .fullRight {
     width: 50%;
     position: absolute;
