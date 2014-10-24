@@ -680,3 +680,12 @@
 }
 
 .hidden {visibility: hidden;}
+
+.download-open-exhibits {
+  @include media($small-screen-up) {
+    display: none !Important;
+  }
+  @include media($large-screen-up) {
+    display: inline-block !Important;
+  }
+}
