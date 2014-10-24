@@ -1,0 +1,78 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="article-content">
+
+  <div class="article-body">
+
+    <ul class="social-media-feed">
+      {% for social_post in social_media_feed %}
+        <li class="item {{social_post.source}}">
+
+          {% if social_post.image %}
+            <img src="{{social_post.image}}">
+          {% endif %}
+
+          <div class="content">
+
+            {% if social_post.text %}
+              <p>{{social_post.text}}</p>
+            {% endif %}
+
+            <footer class="footer">
+              <a class="share" href="{{social_post.url}}">View</a>
+            </footer>
+
+          </div>
+
+          <i class="social-icon icon-{{social_post.source}}"></i>
+
+        </li>
+      {% endfor %}
+
+<--
+      <li class="youtube social-medi-slide item rn-carousel-slide cboxElement">
+
+        <video controls="" style="width:100%;height:375px;" poster="/wp-content/themes/ideum/images/placeholder-buzz-feed-1.jpg">
+        </video>
+
+        <i class="social-icon icon-youtube"></i>
+
+      </li>
+
+      <li class="twitter social-medi-slide item rn-carousel-slide">
+
+        <div class="content">
+
+          <p>
+            Ideum Daily is out! http://paper.li/ideum/1406302985 … Stories via @mdscaff @ntcoding @NeinQuarterly
+          </p>
+
+          <footer class="footer">
+            <a class="read" href="#FIXME">Retweet</a>
+            <a class="share" href="#FIXME">View</a>
+          </footer>
+
+        </div>
+
+        <i class="social-icon icon-twitter"></i>
+
+      </li>
+
+      <li class="flickr social-medi-slide item rn-carousel-slide">
+
+        <img src="/wp-content/themes/ideum/images/placeholder-buzz-feed-2.jpg">
+
+        <i class="social-icon icon-flickr"></i>
+
+      </li>
+-->
+
+    </ul>
+
+  </div>
+
+</div> <!-- /article-content -->
+
+{% endblock %}

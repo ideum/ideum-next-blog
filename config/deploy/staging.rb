@@ -1,6 +1,6 @@
 set :stage, :staging
 
-server '54.203.255.211',
+server '54.68.178.198',
     user: 'ubuntu',
     roles: %w{web app db}
 

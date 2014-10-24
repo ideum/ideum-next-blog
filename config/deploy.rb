@@ -5,6 +5,7 @@ set :repo_url, 'ssh://git@github.com/ideum/ideum-next-blog.git'
 
 set :deploy_to, '/var/www/ideum-next-blog'
 set :scm, :git
+set :branch, 'wip-integration'
 
 # set :format, :pretty
 # set :log_level, :debug
