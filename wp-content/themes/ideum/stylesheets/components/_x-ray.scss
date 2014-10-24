@@ -18,8 +18,17 @@ body {
     display: block;
   }
 
-  &.platform{
-    background-image: url("images/x-rays/platform.png");
+  //solid images
+  &.platform-coffee{
+    background-image: url("images/x-rays/platform-coffee.png");
+  }
+
+  &.platform46{
+    background-image: url("images/x-rays/platform46.png");
+  }
+
+  &.platform55{
+    background-image: url("images/x-rays/platform55.png");
   }
 }
 
@@ -34,9 +43,19 @@ body {
     background-position 0.8s ease
   );
 
-  &.platform{
-    background-image: url("images/x-rays/platform-outline.png");
+  //outline "x-ray" images
+  &.platform-coffee{
+    background-image: url("images/x-rays/platform-coffee-outline.png");
   }
+
+  &.platform46{
+    background-image: url("images/x-rays/platform46-outline.png");
+  }
+
+  &.platform55{
+    background-image: url("images/x-rays/platform55-outline.png");
+  }
+
 
   nav {
     background: $productpage-lightgray;

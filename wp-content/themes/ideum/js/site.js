@@ -1378,10 +1378,16 @@ App.factory('ProductDetails', function ($http, $sce, $q) {
 
       //   return details;
       // });
-      
+
       var deferred = $q.defer();
       angular.forEach(IDEUM_SITE.product_details, function (detail) {
-        detail.content = $sce.trustAsHtml(detail.content);
+        //checks if the data has already been trusted for html
+        try{
+          $sce.getTrustedHtml(detail.content);
+        }
+        catch (e){
+          detail.content = $sce.trustAsHtml(detail.content);
+        } 
       });
       deferred.resolve(IDEUM_SITE.product_details);
       return deferred.promise;
