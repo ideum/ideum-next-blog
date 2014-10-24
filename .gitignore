@@ -8,8 +8,6 @@ bower_components/
 .vagrant/
 .sass-cache/
 
-wp-content/plugins/ideum-inquiries/
-
 wp-content/themes/ideum/js/vendor.js
 
 wp-content/themes/ideum/style.css.map
