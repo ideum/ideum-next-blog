@@ -5,11 +5,10 @@
 
 <li class="slide project-item">
     
-  {% if post.get_thumbnail %}
-  <img src="{{post.thumbnail.src}}" alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/>
+  {% if post.get_field('landing_page_image') %}
+  <img src="{{ post.get_field('landing_page_image') }}" alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post. title}}'"/>
   {% else %}
-  <img src="/wp-content/themes/ideum/images/placeholder-science-project-{{ random(2) }}.jpg" alt="Placeholder image for the post: '{{post.title}}'" 
-  title="Placeholder image for the post: '{{post.title}}'"/>
+  <img src="/wp-content/themes/ideum/images/placeholder-science-project-{{ random(2) }}.jpg" alt="Placeholder image for the post: '{{post.title}}'" title="Placeholder image for the post: '{{post.title}}'"/>
   {% endif %}
 
   <div class="content-wrap"><a href="{{post.link}}"></a></div>
