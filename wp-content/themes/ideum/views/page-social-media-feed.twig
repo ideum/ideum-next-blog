@@ -6,12 +6,15 @@
 
   <div class="article-body">
 
+  <!-- Ben, you do realize that there is different html based on which media outlet the item is fed from, right? -->
+
     <ul class="social-media-feed">
       {% for social_post in social_media_feed %}
-        <li class="item {{social_post.source}}">
+        <li class="item {{social_post.source}}" 
+        {% if social_post.source == 'flickr' %} style="background-image:url('{{social_post.image}}');"{% endif %}>
 
-          {% if social_post.image %}
-            <img src="{{social_post.image}}">
+          {% if social_post.source == 'facebook' or social_post.source == 'youtube' %}
+          <a class="view" href="{{social_post.url}}"><img src="{{social_post.image}}"></a>
           {% endif %}
 
           <div class="content">
@@ -21,7 +24,7 @@
             {% endif %}
 
             <footer class="footer">
-              <a class="share" href="{{social_post.url}}">View</a>
+              <a class="view" href="{{social_post.url}}">View on {{social_post.source}}</a>
             </footer>
 
           </div>
@@ -31,7 +34,7 @@
         </li>
       {% endfor %}
 
-<--
+<!--
       <li class="youtube social-medi-slide item rn-carousel-slide cboxElement">
 
         <video controls="" style="width:100%;height:375px;" poster="/wp-content/themes/ideum/images/placeholder-buzz-feed-1.jpg">
