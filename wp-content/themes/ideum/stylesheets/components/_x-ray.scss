@@ -2,6 +2,24 @@ $productpage-circle-arrow-buttons-diameter: 40px;
 $productpage-lightgray: #f4f4f4;
 $productpage-text-color: #333;
 
+@mixin x-ray-image($image){
+  > .overlay{
+    background-image: url($image);
+    background-color: white;
+  }
+}
+
+@mixin navAndButtonColors($color){
+  > .overlay {
+    nav a.active{
+      color: $color;
+    }
+    > button:enabled:hover{
+      background-color: $color;
+    }
+  }
+}
+
 body {
   background: #f0f0f0;
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -20,15 +38,57 @@ body {
 
   //solid images
   &.platform-coffee{
-    background-image: url("images/x-rays/platform46-full.png");
+    background-image: url("images/x-rays/platform-coffee-img.png");
+    @include x-ray-image("images/x-rays/platform-coffee-outline.png");
+    @include navAndButtonColors($platform-coffee-color);
   }
 
   &.platform46{
-    background-image: url("images/x-rays/platform46-full.png");
+    background-image: url("images/x-rays/platform46-img.png");
+    @include x-ray-image("images/x-rays/platform46-outline.png");
+    @include navAndButtonColors($platform-color);
   }
 
   &.platform55{
-    background-image: url("images/x-rays/platform46-full.png");
+    background-image: url("images/x-rays/platform55-img.png");
+    @include x-ray-image("images/x-rays/platform55-outline.png");
+    @include navAndButtonColors($platform-color);
+  }
+
+  &.platform-drafting-46{
+    background-image: url("images/x-rays/platform-drafting46-img.png");
+    @include x-ray-image("images/x-rays/platform-drafting46-outline.png");
+    @include navAndButtonColors($platform-drafting-color);
+  }
+
+  &.platform-drafting-55{
+    background-image: url("images/x-rays/platform-drafting55-img.png");
+    @include x-ray-image("images/x-rays/platform-drafting55-outline.png");
+    @include navAndButtonColors($platform-drafting-color);
+  }
+  
+  &.platform-drafting-65{
+    background-image: url("images/x-rays/platform-drafting65-img.png");
+    @include x-ray-image("images/x-rays/platform-drafting65-outline.png");
+    @include navAndButtonColors($platform-drafting-color);
+  }
+
+  &.pro{
+    background-image: url("images/x-rays/pro-img.png");
+    @include x-ray-image("images/x-rays/pro-outline.png");
+    @include navAndButtonColors($pro-color);
+  }
+
+  &.pro-lab{
+    background-image: url("images/x-rays/pro-lab-img.png");
+    @include x-ray-image("images/x-rays/pro-lab-outline.png");
+    @include navAndButtonColors($pro-color);
+  }
+
+  &.pano{
+    background-image: url("images/x-rays/pano-img.png");
+    @include x-ray-image("images/x-rays/pano-outline.png");
+    @include navAndButtonColors($pano-color);
   }
 }
 
@@ -42,20 +102,6 @@ body {
     height 0.8s ease,
     background-position 0.8s ease
   );
-
-  //outline "x-ray" images
-  &.platform-coffee{
-    background-image: url("images/x-rays/platform46-outline.png");
-  }
-
-  &.platform46{
-    background-image: url("images/x-rays/platform46-outline.png");
-  }
-
-  &.platform55{
-    background-image: url("images/x-rays/platform46-outline.png");
-  }
-
 
   nav {
     background: $productpage-lightgray;
@@ -161,42 +207,6 @@ body {
 
   > button:enabled:hover{
     color: white;
-  }
-}
-
-.overlay{
-  &.platform-coffee nav a.active{
-    color: $platform-coffee-color;
-  }
-  &.platform-drafting nav a.active{
-    color: $platform-drafting-color;
-  }
-  &.platform nav a.active{
-    color: $platform-color;
-  }
-  &.pro nav a.active{
-    color: $pro-color;
-  }
-  &.pano nav a.active{
-    color: $pano-color;
-  }
-}
-
-.overlay{
-  &.platform-coffee > button:enabled:hover{
-    background-color: $platform-coffee-color;
-  }
-  &.platform-drafting > button:enabled:hover{
-    background-color: $platform-drafting-color;
-  }
-  &.platform > button:enabled:hover{
-    background-color: $platform-color;
-  }
-  &.pro > button:enabled:hover{
-    background-color: $pro-color;
-  }
-  &.pano > button:enabled:hover{
-    background-color: $pano-color;
   }
 }
 
