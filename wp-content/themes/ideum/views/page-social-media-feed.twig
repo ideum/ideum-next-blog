@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="article-content">
+<div class="article-content social-media-feed">
 
   <div class="article-body">
 
@@ -11,16 +11,18 @@
     <ul class="social-media-feed">
       {% for social_post in social_media_feed %}
         <li class="item {{social_post.source}}" 
-        {% if social_post.source == 'flickr' %} style="background-image:url('{{social_post.image}}');"{% endif %}>
+        {% if social_post.source == 'flickr' %} style="background:url('{{social_post.image}}');"{% endif %}>
 
-          {% if social_post.source == 'facebook' or social_post.source == 'youtube' %}
-          <a class="view" href="{{social_post.url}}"><img src="{{social_post.image}}"></a>
+          {% if social_post.source == 'youtube' or social_post.source == 'facebook' %}
+          <a class="view" href="{{social_post.url}}"><img class="img-circular" src="{{social_post.image}}"></a>
           {% endif %}
 
           <div class="content">
-
+            
+            {% if social_post.source != 'flickr' %}
             {% if social_post.text %}
               <p>{{social_post.text}}</p>
+            {% endif %}
             {% endif %}
 
             <footer class="footer">

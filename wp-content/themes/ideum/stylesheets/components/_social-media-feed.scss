@@ -9,6 +9,7 @@
     .item {
       float: none;
     }
+
   }
 
   .item {
@@ -55,6 +56,16 @@
       float:right;
       position: absolute;
         right: 10%; top: 6%;
+
+      &.img-circular {
+        width: 100px;
+        height: 100px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        border-radius: 100px;
+      }
     }
 
     .content {
@@ -113,7 +124,7 @@
 
         p {
           color: $white;
-          font-size: 1.4em;
+          font-size: 1em;
           text-align: left;
           word-wrap: break-word;
         }
@@ -193,6 +204,6 @@
 
     }
 
-}
+  }
 
 }
