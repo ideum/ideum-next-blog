@@ -1,5 +1,5 @@
 $productpage-circle-arrow-buttons-diameter: 40px;
-$productpage-lightgray: #f7f7f7;
+$productpage-lightgray: #f4f4f4;
 $productpage-text-color: #333;
 
 body {
@@ -20,15 +20,15 @@ body {
 
   //solid images
   &.platform-coffee{
-    background-image: url("images/x-rays/platform-coffee.png");
+    background-image: url("images/x-rays/platform46-full.png");
   }
 
   &.platform46{
-    background-image: url("images/x-rays/platform46.png");
+    background-image: url("images/x-rays/platform46-full.png");
   }
 
   &.platform55{
-    background-image: url("images/x-rays/platform55.png");
+    background-image: url("images/x-rays/platform46-full.png");
   }
 }
 
@@ -45,7 +45,7 @@ body {
 
   //outline "x-ray" images
   &.platform-coffee{
-    background-image: url("images/x-rays/platform-coffee-outline.png");
+    background-image: url("images/x-rays/platform46-outline.png");
   }
 
   &.platform46{
@@ -53,7 +53,7 @@ body {
   }
 
   &.platform55{
-    background-image: url("images/x-rays/platform55-outline.png");
+    background-image: url("images/x-rays/platform46-outline.png");
   }
 
 
@@ -70,8 +70,6 @@ body {
 
       padding-right: 2em;
       &:last-child { padding-right: 0 }
-
-      &.active { color: #f4c057 }
     }
   }
 
@@ -115,14 +113,32 @@ body {
   > button {
     position: absolute;
     right: 70px;
+    padding: 0;
     height: $productpage-circle-arrow-buttons-diameter;
     width: $productpage-circle-arrow-buttons-diameter;
     border-radius: $productpage-circle-arrow-buttons-diameter/2;
-    padding: 0;
     border: none;
     background-color: $productpage-lightgray;
-    &.prev { top: 70px;  @include transition(all .25s);}
-    &.next { top: 181px; @include transition(all .25s);}
+    color: $light-gray;
+    font-size: 16px;
+
+    &.prev, &.next{
+      @include transition(all .25s);
+      font-family: ideum-icons;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      speak: none;
+      text-transform: none;
+    }
+    &.prev { 
+      top: 70px;
+      @extend .icon-caret-up;
+    }
+    &.next {
+      top: 181px; 
+      @extend .icon-caret-down;
+    }
 
     @include transition(opacity 0.4s ease);
     &.ng-hide-remove {
@@ -144,11 +160,44 @@ body {
   }
 
   > button:enabled:hover{
-    background-color: $medium-dark-orange;
     color: white;
   }
+}
 
+.overlay{
+  &.platform-coffee nav a.active{
+    color: $platform-coffee-color;
+  }
+  &.platform-drafting nav a.active{
+    color: $platform-drafting-color;
+  }
+  &.platform nav a.active{
+    color: $platform-color;
+  }
+  &.pro nav a.active{
+    color: $pro-color;
+  }
+  &.pano nav a.active{
+    color: $pano-color;
+  }
+}
 
+.overlay{
+  &.platform-coffee > button:enabled:hover{
+    background-color: $platform-coffee-color;
+  }
+  &.platform-drafting > button:enabled:hover{
+    background-color: $platform-drafting-color;
+  }
+  &.platform > button:enabled:hover{
+    background-color: $platform-color;
+  }
+  &.pro > button:enabled:hover{
+    background-color: $pro-color;
+  }
+  &.pano > button:enabled:hover{
+    background-color: $pano-color;
+  }
 }
 
 %hide-and-show {

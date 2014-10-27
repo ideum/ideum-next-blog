@@ -4,13 +4,13 @@
 
 <main class="productOuterWrapper">
   <header>
-    <h1>Platform Coffee Table</h1>
+    <h1>Platform</h1>
     <img src="{{theme.link}}/images/products/platform/header.png">
   </header>
   <main class="productInnerWrapper">
     <div ng-app="ideum.tabs">
       <!-- Tabs -->
-      <div tabs>
+      <div tabs class="platform">
         <!-- PLATFORM TAB -->
         <div pane title="Platform 46">
           <header>
@@ -18,8 +18,8 @@
             <h2>The Multitouch Table Redefined.</h2>
           </header>
           <div ng-app="productDetails">
-            <section class="x-ray platform46" ng-controller="xRayCtrl">
-              <section class="overlay platform46" ng-style="overlayStyle">
+            <section class="x-ray platform46" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+              <section class="overlay platform platform46" ng-style="overlayStyle">
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -37,8 +37,8 @@
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
                 </div>
 
-                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()">&uarr;</button>
-                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()">&darr;</button>
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
               </section>
             </section>
           </div>       
@@ -47,11 +47,11 @@
         <div pane title="Platform 55">
           <header>
             <h1>Platform 55</h1>
-            <h2>The Multitouch Table Redefined.</h2>
+            <h2>Iconic Design.  Built to Perform.</h2>
           </header>
           <div ng-app="productDetails">
-            <section class="x-ray platform55" ng-controller="xRayCtrl">
-              <section class="overlay platform55" ng-style="overlayStyle">
+            <section class="x-ray platform55" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
+              <section class="overlay platform platform55" ng-style="overlayStyle">
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -69,8 +69,8 @@
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
                 </div>
 
-                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()">&uarr;</button>
-                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()">&darr;</button>
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
               </section>
             </section>
           </div>
@@ -80,9 +80,9 @@
     <section class="productSection platform">
       <img class="left" src="{{theme.link}}/images/products/platform/01.png">
       <div class="productText white">
-        <h2>The Platform Coffee Table</h2>
+        <h2>The Perfect Package</h2>
         <p> 
-          The Platform Multitouch Coffee Tables can ship with either the Windows 7, Windows 8 or Android 4.4 KitKat OS installed which means you have access to virtually any Windows or Android app. For more versatility, the Platform Multitouch Coffee Tables are even available with upgrades for dual boot systems.
+          This fully integrated and turnkey solution has single push button operation and lockable access ports. There are no installation technicians, nor any special set-up or requirements. The table arrives fully assembled. You unpack it, plug it in, press the button and get started.
         </p>
       </div>
     </section>
@@ -90,9 +90,9 @@
     <section class="productSection">
       <img class="left" src="{{theme.link}}/images/products/platform/02.png">
       <div class="productText">
-        <h2>A Smarter Coffee Table</h2>
+        <h2>The Perfect Package</h2>
         <p> 
-          The projected capacitive multitouch technology featured in the Platform Coffee Tables is the same type of reliable touch technology that is used in smartphones and tablets. This touch technology is impervious to light interference and provides superior responsiveness and accuracy.
+          This fully integrated and turnkey solution has single push button operation and lockable access ports. There are no installation technicians, nor any special set-up or requirements. The table arrives fully assembled. You unpack it, plug it in, press the button and get started.
         </p>
       </div>
     </section>
@@ -117,6 +117,25 @@
       rn-carousel-width="responsiveTwoUp()"
       rn-carousel-index="clientSliderIndex"
     >
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/armed.svg' %}
+        </div>
+        <h3>Armed &amp; Hyperthready</h3>
+        <p>
+          The integrated computer is a powerhouse. It includes an Intel&reg; Quad Core i7 4770s&copy; (3.1GHz) with Hyperthreading&reg;, 8 MB cache computer with 8 GB of RAM, and a 500 GB HDD.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/reach.svg' %}
+        </div>
+        <h3>Reach Out and Touch</h3>
+        <p>
+          Along with an industry-leading 40+ touch points, the touch surface on the Platform multitouch tables has palm rejection, a bright HD resolution screen, and up to a 60hz refresh rate.
+        </p>
+      </li>
 
       <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
         <div class="svgHolder">
@@ -130,21 +149,21 @@
 
       <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
         <div class="svgHolder">
-          {% include '/images/products/svg/armed.svg' %}
+          {% include '/images/products/svg/demanding.svg' %}
         </div>
-        <h3>Armed &amp; Hyperthready</h3>
+        <h3>Built for Demanding Spaces</h3>
         <p>
-          The integrated computer is a powerhouse. It includes an Intel® Quad Core i7 4770s® (3.1GHz) with Hyperthreading®, 8MB cache computer with 8 GB of RAM, and a 500 GB HDD.
+          The tables have a chemically strengthened glass top and the chassis is made out of aircraft-grade aluminum. We are proud to say that the Platform 46 and 55 have exceptional build-quality and are perfect for public spaces and other demanding environments. The Platform multitouch tables can travel too. They can fit through standard doorways even when packed in a protective ATA case (upgrade option).
         </p>
       </li>
 
       <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
         <div class="svgHolder">
-          {% include '/images/products/svg/demanding.svg' %}
+          {% include '/images/products/svg/windows.svg' %}
         </div>
-        <h3>demanding.svg</h3>
+        <h3>Windows 8 &amp; Beyond</h3>
         <p>
-          We left this table with a pack of neraged burmese tigers fed on destruction. They left in frustration. This table is as durable as it gets.
+          The Platform ships with Windows 8 64-bit Professional installed. Thousands of touch-enabled apps for Windows 8 and 7 are now available, and there is even a Windows 7 / 8 dual boot system upgrade option.
         </p>
       </li>
 
@@ -152,9 +171,9 @@
         <div class="svgHolder">
           {% include '/images/products/svg/gestureworks.svg' %}
         </div>
-        <h3>Armed &amp; Hyperthready</h3>
+        <h3>Creation by Intelligent Design</h3>
         <p>
-          Want the table to do multitouch? Don't want to write your own multitouch drivers and software? GestureWorks is built in for you developer's convenience!
+          The Platform tables come with a lifetime license for GestureWorks Core (C++, C# / .NET, Java, Python, and HTML5 / JavaScript) and Open Exhibits (ActionScript). The license includes ticketed, timely support and free upgrades for life. GestureWorks Gameplay is also included: an innovative Windows 8 utility that lets you configure touch, motion and voice controls for your favorite PC games or applications.     
         </p>
       </li>
 
@@ -164,27 +183,11 @@
         </div>
         <h3>Graphically Speaking</h3>
         <p>
-          These tables are packed with the best and latest graphics. If you were to line a room with the Platform Coffee Table. You'd end up with a techno-bubble not dissimilar from the holodeck in Star Trek or the nursery from Ray Bradbury's short story "The Veldt".
-        </p>
-      </li>
-
-      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
-        <div class="svgHolder">
-          {% include '/images/products/svg/reach.svg' %}
-        </div>
-        <h3>Reach Out and Touch</h3>
-        <p>
-          The table is capacitive, so are you fingers.
-        </p>
-      </li>
-
-      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
-        <div class="svgHolder">
-          {% include '/images/products/svg/windows.svg' %}
-        </div>
-        <h3>Windows</h3>
-        <p>
-          Something something something. Microsoft, Bill Gates, 1990&apos;s antitrust suit.
+          The Platform 46 and 55 are available with powerful graphics performance upgrades. For faster processing of graphics intensive applications, trick out your Platform table with these high performing and efficient options.
+          <ul>
+            <li>2 GB 256 bit DDR5 graphics card</li>
+            <li>16 GB DDR3-1333 RAM</li>
+          </ul>
         </p>
       </li>
     </ul>
@@ -199,14 +202,21 @@
           There are a variety of upgrades and add-ons for sharing and portability.
           <div class="specs">
             <ul class="specList">
-              <li>512GB SSD</li>
-              <li>2GB 256 bit DDR5 graphics card</li>
-              <li>WiDi Receiver</li>
+              <li class="listHeader"> Platform 46</li>
+              <li> 512 GB Solid-State Drive</li>
+              <li> 16 GB DDR3-1333 RAM</li>
+              <li> 2 GB 256 bit DDR5 Graphics Card</li>
+              <li> RFID Reader</li>
+              <li> WiDi Receiver</li>
+              <li> ATA Travel Case</li>
             </ul>
 
             <ul class="specList column2">
-              <li>16GB DDR3-1333 RAM</li>
-              <li>6RFID Reader</li>
+              <li class="listHeader"> Platform 55</li>
+              <li>512 GB Solid-State Drive</li>
+              <li>16 GB DDR3-1333 RAM</li>
+              <li>2 GB 256 bit DDR5 Graphics Card</li>
+              <li>RFID Reader</li>
               <li>WiDi Receiver</li>
               <li>ATA Travel Case</li>
             </ul>
@@ -220,7 +230,7 @@
       <div class="productText">
         <h2>Direct Sales <br> &amp; Rentals</h2> <!-- Does the average person know what this means?? -->
         <p> 
-          Please contact us at (505) 792-1110 ext.1 or toll free in the US and Canada (855) 898-6824, use our online inquiry form, or email us at sales@ideum.com. The Platform Coffee Tables are sold domestically and internationally and are only available direct from Ideum. We also rent the Platform Coffee Tables in the US and Canada.
+          Please contact us at (505) 791-1110 ext. 1 or toll free in the US and Canada (855) 898-6824, use our online inquiry form, or email us at sales@ideum.com.  Platforms are sold domestically and internationally and are only available direct from Ideum.  We also rent the Platform in the US and Canada.
         </p>
       </div>
     </section>

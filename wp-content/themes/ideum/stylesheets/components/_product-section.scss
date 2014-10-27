@@ -150,6 +150,13 @@ $product-spec-list-left-margin: 15px;
 	      			float: none;
 		  		}
 	      	}
+
+	      	ul.column3{
+	      		@include media($medium-screen-up){
+	    	  		margin-left: $product-spec-list-width + 200px;
+	      			float: none;
+		  		}
+	      	}
 	    }
 	}
 
