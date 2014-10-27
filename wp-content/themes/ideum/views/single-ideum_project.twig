@@ -47,13 +47,15 @@
 
         </ul>
 
+        {% if post.descriptive_subtitle %}
         <div class="one-column-text slider">
 
           <h2>
-              Visitors to the Coca-Cola VIP lounge explore "The World's Cup" map and play a digital foosball game
+            {{ post.descriptive_subtitle }}
           </h2>
 
         </div>
+        {% endif %}
 
         {% elseif post.primary_video %}
         <div class="video-wrapper">

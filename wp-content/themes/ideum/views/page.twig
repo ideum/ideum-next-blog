@@ -2,15 +2,52 @@
 
 {% block content %}
 
-<div class="content-wrapper">
-	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		<section class="article-content">
-			<h1 class="article-h1">{{post.title}}</h1>
-			<div class="article-body">
-				{{post.content}}
-			</div>
-		</section>
-	</article>
-</div> <!-- /content-wrapper -->
+<!-- begin page.twig -->
+
+<div id="default-template" class="default-page-detail">
+
+  <div class="content-wrapper">
+
+    <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+
+      <header class="single-post-header">
+
+        <!-- <time class="post-time">{{ post.post_date|date}}</time> -->
+
+        <h1 class="article-h1">{{post.title}}</h1>
+
+      </header>
+
+      <section class="article-content">
+
+        <div class="article-body">
+
+          {% if post.can_edit %}
+          <a class="edit-link" href="{{post.edit_link}}" alt="Edit the ppost content." title="Edit the post content.">Edit!</a>
+          {% endif %}
+
+				  {{post.content}}
+
+        </div><!-- /.article-body -->
+
+        {{sidebar_contact}}
+
+      </section>
+
+    </article>
+
+  </div><!-- /.content-wrapper -->
+
+  <section>
+
+    {{follow_dialog}}
+
+    {% include 'follow-us-button.twig' %}
+
+  </section>
+
+</div><!-- /.default-page-detail -->
+
+<!-- begin page.twig -->
 
 {% endblock %}

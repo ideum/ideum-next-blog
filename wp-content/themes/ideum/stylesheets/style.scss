@@ -72,6 +72,8 @@
 @import 'components/tabs';
 @import 'components/colorbox';
 @import 'components/inquiry-form';
+@import 'components/page-layout-default';
+@import 'components/contact-sidebar';
 
 // Necessary to avoid flash of unrendered angular templates
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
