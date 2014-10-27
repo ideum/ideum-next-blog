@@ -1,4 +1,4 @@
-.page-template-basic-php, .page-template-jobs-landing-php  {
+.page-template-basic-php, .page-template-jobs-landing-php {
   @include span-columns(12);
   display: inline-block;
   padding: $large-gutter 0 0;
@@ -74,4 +74,10 @@
 
   }
 
+}
+
+.social-media-feed {
+  #content {
+    padding: 0;
+  }
 }
