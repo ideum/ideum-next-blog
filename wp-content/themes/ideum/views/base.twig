@@ -7,7 +7,7 @@
     {% endblock %}
   </head>
 
-  <body class="{{body_class}}" data-template="base.twig">
+  <body class="{{body_class}} {{post.slug}}" data-template="base.twig">
 
     <header id="header" ng-controller="headerCtrl">
       {% include 'header.twig' %}
@@ -46,7 +46,7 @@
       <div class="wrapper {{sidebar_class}}">
 
         {% block content %}
-            Sorry, no content
+          Sorry, no content
         {% endblock %}
 
         <section class="chat foot-chat">
