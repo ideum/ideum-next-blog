@@ -46,6 +46,9 @@
 .pano .tabs-nav a{
 	background-color: darken($pano-color, 12%);
 }
+.presenter .tabs-nav a{
+	background-color: darken($presenter-color, 12%);
+}
 
 .tab-content{
 	border-top-width: 1px;

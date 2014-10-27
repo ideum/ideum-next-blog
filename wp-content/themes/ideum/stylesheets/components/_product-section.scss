@@ -27,7 +27,7 @@ $product-spec-list-left-margin: 15px;
 
 .productInnerWrapper{
 	max-width: $product-setcion-width;
-	margin: -30% auto 0 auto;
+	margin: -20% auto 0 auto;
 	z-index: 999;
 	position: relative;
 
@@ -82,6 +82,10 @@ $product-spec-list-left-margin: 15px;
 
 	ul.slider.pano li.client-slide.rn-carousel-slide .svgHolder > svg{
 		fill: $pano-color;
+	}	
+
+	ul.slider.presenter li.client-slide.rn-carousel-slide .svgHolder > svg{
+		fill: $presenter-color;
 	}
 }
 
@@ -221,6 +225,10 @@ $product-spec-list-left-margin: 15px;
 }
 
 .productSection.pano{
+	background-color: $pano-color;
+}
+
+.productSection.presenter{
 	background-color: $pano-color;
 }
 
