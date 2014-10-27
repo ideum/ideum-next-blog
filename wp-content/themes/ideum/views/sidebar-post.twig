@@ -38,9 +38,9 @@
     {% endif %}
 
     <br><br>
-  
-    <span class="label">Tags: </span>
+
     {% if thispost.terms('tag') %}
+    <span class="label">Tags: </span>
     {% for term in thispost.terms('tag') %}
     <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %},{% else %}.{% endif %}
     {% endfor %}
