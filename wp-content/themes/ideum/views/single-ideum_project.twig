@@ -47,6 +47,14 @@
 
         </ul>
 
+        {% elseif post.primary_video %}
+        <div class="video-wrapper">
+          {{ post.primary_video }}
+        </div>
+        {% elseif post.primary_image %}
+        <img class="primary-image" alt="{{ post.title }}" src="{{TimberImage(post.get_field('primary_image')).src}}" title="{{ post.title }}"/>
+        {% endif %}
+
         {% if post.descriptive_subtitle %}
         <div class="one-column-text slider">
 
@@ -55,14 +63,6 @@
           </h2>
 
         </div>
-        {% endif %}
-
-        {% elseif post.primary_video %}
-        <div class="video-wrapper">
-          {{ post.primary_video }}
-        </div>
-        {% elseif post.primary_image %}
-        <img class="primary-image" alt="{{ post.title }}" src="{{TimberImage(post.get_field('primary_image')).src}}" title="{{ post.title }}"/>
         {% endif %}
 
       </section>
