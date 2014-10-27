@@ -37,6 +37,14 @@
     position: relative;
     float: left;
 
+    a.view {
+      display: block; 
+      height: 100%;
+      position: relative;
+      width: 100%;
+      z-index: 400;
+    }
+
     * { color: $vv-light-gray; }
 
     img {
@@ -51,7 +59,9 @@
 
     .content {
       @include pad;
+      opacity: .99;
       text-align: center;
+      z-index: 100;
     }
 
     .icon-youtube, .icon-twitter, .icon-flickr, .icon-facebook, .icon-linkedin {
