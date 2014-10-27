@@ -1,0 +1,18 @@
+{
+    "name": "ideum/wp-inquiries-form",
+    "description": "Wordpress inquiries form",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Ben Cates",
+            "email": "ben@ideum.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Ideum\\Inquiries\\": "src/"
+        }
+    }
+}

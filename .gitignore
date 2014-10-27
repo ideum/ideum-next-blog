@@ -8,8 +8,6 @@ bower_components/
 .vagrant/
 .sass-cache/
 
-wp-content/plugins/ideum-inquiries/
-
 wp-content/themes/ideum/js/vendor.js
 
 wp-content/themes/ideum/style.css.map
@@ -37,3 +35,15 @@ wp-content/plugins/ideum-social-feed/ideum-social-feed.php
 wp-content/themes/ideum/js/site.js
 
 wp-content/themes/ideum/js/site.js
+
+wp-content/themes/ideum/js/site.js
+
+wp-content/themes/ideum/style.css.map
+
+wp-content/themes/ideum/style.css.map
+
+wp-content/themes/ideum/style.css
+
+wp-content/themes/ideum/style.css.map
+
+wp-content/themes/ideum/style.css.map
