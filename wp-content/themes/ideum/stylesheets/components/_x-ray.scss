@@ -36,13 +36,19 @@ body {
     display: block;
   }
 
-  //solid images
+  /*
+  x-ray and overlay stylings fmt:
+  - background image for full image
+  - mixin for outline image
+  - mixin for nav styling and button hovers
+  */
   &.platform-coffee{
     background-image: url("images/x-rays/platform-coffee-img.png");
     @include x-ray-image("images/x-rays/platform-coffee-outline.png");
     @include navAndButtonColors($platform-coffee-color);
   }
 
+  //platform styles
   &.platform46{
     background-image: url("images/x-rays/platform46-img.png");
     @include x-ray-image("images/x-rays/platform46-outline.png");
@@ -55,6 +61,7 @@ body {
     @include navAndButtonColors($platform-color);
   }
 
+  //drafting table styles
   &.platform-drafting-46{
     background-image: url("images/x-rays/platform-drafting46-img.png");
     @include x-ray-image("images/x-rays/platform-drafting46-outline.png");
@@ -89,6 +96,25 @@ body {
     background-image: url("images/x-rays/pano-img.png");
     @include x-ray-image("images/x-rays/pano-outline.png");
     @include navAndButtonColors($pano-color);
+  }
+
+  //Presenter styles
+  &.presenter-46{
+    background-image: url("images/x-rays/presenter46-img.png");
+    @include x-ray-image("images/x-rays/presenter46-outline.png");
+    @include navAndButtonColors($presenter-color);
+  }
+
+  &.presenter-55{
+    background-image: url("images/x-rays/presenter55-img.png");
+    @include x-ray-image("images/x-rays/presenter55-outline.png");
+    @include navAndButtonColors($presenter-color);
+  }
+
+  &.presenter-65{
+    background-image: url("images/x-rays/presenter65-img.png");
+    @include x-ray-image("images/x-rays/presenter65-outline.png");
+    @include navAndButtonColors($presenter-color);
   }
 }
 

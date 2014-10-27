@@ -4,21 +4,21 @@
 
 <main class="productOuterWrapper">
   <header>
-    <h1>Platform</h1>
-    <img src="{{theme.link}}/images/products/platform/header.jpg">
+    <h1>Presenter</h1>
+    <img src="{{theme.link}}/images/products/presenter/header.jpg">
   </header>
   <main class="productInnerWrapper">
     <div ng-app="ideum.tabs">
       <!-- Tabs -->
-      <div tabs class="platform">
+      <div tabs class="presenter">
         <!-- PLATFORM TAB -->
-        <div pane title="Platform 46">
+        <div pane title="Presenter 46">
           <header>
-            <h1>Platform 46</h1>
-            <h2>The Multitouch Table Redefined.</h2>
+            <h1>Platform 46 Drafting Table</h1>
+            <h2>Ready for Work, Study, or Play</h2>
           </header>
           <div ng-app="productDetails">
-            <section class="x-ray platform46" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+            <section class="x-ray presenter-46" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
               <section class="overlay" ng-style="overlayStyle">
                 <nav>
                   <a href=""
@@ -44,13 +44,45 @@
           </div>       
         </div>
 
-        <div pane title="Platform 55">
+        <div pane title="Presenter 55">
           <header>
-            <h1>Platform 55</h1>
-            <h2>Iconic Design.  Built to Perform.</h2>
+            <h1>Platform 55 Drafting Table</h1>
+            <h2>Thirty Degrees of Versatility.</h2>
           </header>
           <div ng-app="productDetails">
-            <section class="x-ray platform55" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
+            <section class="x-ray presenter-55" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
+              <section class="overlay" ng-style="overlayStyle">
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+              </section>
+            </section>
+          </div>
+        </div>
+
+        <div pane title="Presenter 65">
+          <header>
+            <h1>Platform 65 Drafting Table</h1>
+            <h2>Maximum Fidelity for Exacting Detail.</h2>
+          </header>
+          <div ng-app="productDetails">
+            <section class="x-ray presenter-65" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
               <section class="overlay" ng-style="overlayStyle">
                 <nav>
                   <a href=""
@@ -77,30 +109,30 @@
         </div> 
     </div> <!-- Close tabs -->
 
-    <section class="productSection platform">
-      <img class="left" src="{{theme.link}}/images/products/platform/01.png">
+    <section class="productSection presenter">
+      <img class="left" src="{{theme.link}}/images/products/presenter/01.png">
       <div class="productText white">
-        <h2>The Perfect Package</h2>
+        <h2>Robust Options, Slim Figure</h2>
         <p> 
-          This fully integrated and turnkey solution has single push button operation and lockable access ports. There are no installation technicians, nor any special set-up or requirements. The table arrives fully assembled. You unpack it, plug it in, press the button and get started.
+          Don’t be fooled by its slim pedestal design, the Platform Drafting Multitouch Table comes complete with an integrated Intel Quad-Core i7 with 8 GB RAM (upgradeable to 16 GB) and it can even be purchased with a powerful, discrete graphics card. It has lockable access points and single push-button power. Platform Drafting Tables come fully assembled and ready to plug in and use.
         </p>
       </div>
     </section>
 
     <section class="productSection">
-      <img class="left" src="{{theme.link}}/images/products/platform/02.png">
+      <img class="left" src="{{theme.link}}/images/products/presenter/02.png">
       <div class="productText">
-        <h2>The Perfect Package</h2>
+        <h2>Well Connected</h2>
         <p> 
-          This fully integrated and turnkey solution has single push button operation and lockable access ports. There are no installation technicians, nor any special set-up or requirements. The table arrives fully assembled. You unpack it, plug it in, press the button and get started.
+          The Platform Drafting Multitouch Table comes complete with Ethernet, Wi-Fi, and Bluetooth connectivity. It also has an HDMI input and microphone/headphone output via a ⅛” mini jack. There is direct access via lockable USB ports. Each Platform comes with optional WiDi for wireless screen access. You can also order the optional RFID to extend the unit capabilities.
         </p>
       </div>
     </section>
 
-    <section class="productSection platform">
-      <img class="full" src="{{theme.link}}/images/products/platform/03.png">
+    <section class="productSection presenter">
+      <img class="full" src="{{theme.link}}/images/products/presenter/03.png">
       <div class="productText white fullLeft">
-        <h2>Il Pacchetto Perfetto<br><small>(The Perfect Package)</small></h2> <!-- Does the average person know what this means?? -->
+        <h2>Copy Title Here</h2>
         <p> 
           This fully integrated and turnkey solution has single push button operation and lockable access ports. There are no installation technicians, nor any special set-up or requirements. The table arrives fully assembled. You unpack it, plug it in, and press the button and get started.
         </p>
@@ -109,7 +141,7 @@
 
     <h1>Key Features</h1>
     <ul
-      class="slider platform"
+      class="slider presenter"
       ng-init="clientSliderIndex = 0"
       rn-carousel
       rn-carousel-control
@@ -123,7 +155,7 @@
         </div>
         <h3>Armed &amp; Hyperthready</h3>
         <p>
-          The integrated computer is a powerhouse. It includes an Intel&reg; Quad Core i7 4770s&copy; (3.1GHz) with Hyperthreading&reg;, 8 MB cache computer with 8 GB of RAM, and a 500 GB HDD.
+          The integrated computer is a powerhouse.  It includes an Intel® Quad Core i7 4770s&reg; (3.1GHz) with Hyperthreading&reg;, 8 MB cache computer with 8 GB of RAM, and a 500 GB HDD.
         </p>
       </li>
 
@@ -133,7 +165,7 @@
         </div>
         <h3>Reach Out and Touch</h3>
         <p>
-          Along with an industry-leading 40+ touch points, the touch surface on the Platform multitouch tables has palm rejection, a bright HD resolution screen, and up to a 60hz refresh rate.
+          Along with an industry-leading 40 to 60 touch points, the touch surface on the Platform Drafting Tables has palm rejection, a bright HD or 4K / UHD resolution screen, and up to a 60hz refresh rate.
         </p>
       </li>
 
@@ -153,7 +185,7 @@
         </div>
         <h3>Built for Demanding Spaces</h3>
         <p>
-          The tables have a chemically strengthened glass top and the chassis is made out of aircraft-grade aluminum. We are proud to say that the Platform 46 and 55 have exceptional build-quality and are perfect for public spaces and other demanding environments. The Platform multitouch tables can travel too. They can fit through standard doorways even when packed in a protective ATA case (upgrade option).
+          The drafting tables have a chemically strengthened glass top and the chassis is made out of aircraft-grade aluminum.  We are proud to say that the Platform Drafting Tables have exceptional build-quality and are perfect for public spaces and other demanding environments. The multitouch drafting tables can travel too. They can fit through standard doorways even when packed in a protective ATA case (upgrade option).
         </p>
       </li>
 
@@ -163,7 +195,7 @@
         </div>
         <h3>Windows 8 &amp; Beyond</h3>
         <p>
-          The Platform ships with Windows 8 64-bit Professional installed. Thousands of touch-enabled apps for Windows 8 and 7 are now available, and there is even a Windows 7 / 8 dual boot system upgrade option.
+          The Platform Drafting Table ships with either Windows 8 64-bit Professional (46) or Windows 7 Professional 64-bit (55 and 65) installed.  Thousands of touch-enabled apps for Windows 8 and 7 are now available, and there is even a Windows 7 / 8 dual boot system upgrade option.
         </p>
       </li>
 
@@ -173,7 +205,7 @@
         </div>
         <h3>Creation by Intelligent Design</h3>
         <p>
-          The Platform tables come with a lifetime license for GestureWorks Core (C++, C# / .NET, Java, Python, and HTML5 / JavaScript) and Open Exhibits (ActionScript). The license includes ticketed, timely support and free upgrades for life. GestureWorks Gameplay is also included: an innovative Windows 8 utility that lets you configure touch, motion and voice controls for your favorite PC games or applications.     
+          The Platform Drafting Tables come with a lifetime license for GestureWorks Core (C++, C# / .NET, Java, Python, and HTML5 / JavaScript) and Open Exhibits (ActionScript). The license includes ticketed, timely support and free upgrades for life. GestureWorks Gameplay is also included: an innovative Windows 8 utility that lets you configure touch, motion and voice controls for your favorite PC games or applications.  
         </p>
       </li>
 
@@ -181,13 +213,9 @@
         <div class="svgHolder">
           {% include '/images/products/svg/graphically.svg' %}
         </div>
-        <h3>Graphically Speaking</h3>
+        <h3>On the Road</h3>
         <p>
-          The Platform 46 and 55 are available with powerful graphics performance upgrades. For faster processing of graphics intensive applications, trick out your Platform table with these high performing and efficient options.
-          <ul>
-            <li>2 GB 256 bit DDR5 graphics card</li>
-            <li>16 GB DDR3-1333 RAM</li>
-          </ul>
+          The Platform Drafting Multitouch Table is ruggedized and easy to set up making it perfect for tradeshows, traveling exhibits and special events. You can purchase the table with an optional ATA flight case. You can also rent the Platform 46 Drafting and Platform 55 Drafting models directly from Ideum.
         </p>
       </li>
     </ul>
@@ -195,27 +223,20 @@
     <button class="very-dark-gray-button">Download Spec Sheet</button>
 
     <section class="productSection plain">
-      <img class="full" src="{{theme.link}}/images/products/platform/04.png">
+      <img class="full" src="{{theme.link}}/images/products/presenter/04.png">
       <div class="productText white fullLeft">
         <h2>Upgrades</h2>
         <p> 
           There are a variety of upgrades and add-ons for sharing and portability.
           <div class="specs">
             <ul class="specList">
-              <li class="listHeader"> Platform 46</li>
-              <li> 512 GB Solid-State Drive</li>
-              <li> 16 GB DDR3-1333 RAM</li>
-              <li> 2 GB 256 bit DDR5 Graphics Card</li>
-              <li> RFID Reader</li>
-              <li> WiDi Receiver</li>
-              <li> ATA Travel Case</li>
-            </ul>
-
-            <ul class="specList column2">
-              <li class="listHeader"> Platform 55</li>
+              <li class="listHeader">Platform 46 Drafting Table</li>
               <li>512 GB Solid-State Drive</li>
               <li>16 GB DDR3-1333 RAM</li>
               <li>2 GB 256 bit DDR5 Graphics Card</li>
+            </ul>
+            <ul class="specList column2">
+              <li>Windows 7 / Windows 8 Dual Boot</li>
               <li>RFID Reader</li>
               <li>WiDi Receiver</li>
               <li>ATA Travel Case</li>
@@ -226,14 +247,14 @@
     </section>
 
     <section class="productSection">
-      <img class="left" src="{{theme.link}}/images/products/platform/06.jpg">
+      <img class="left" src="{{theme.link}}/images/products/presenter/06.jpg">
       <div class="productText">
         <h2>Direct Sales <br> &amp; Rentals</h2> <!-- Does the average person know what this means?? -->
         <p> 
-          Please contact us at (505) 791-1110 ext. 1 or toll free in the US and Canada (855) 898-6824, use our online inquiry form, or email us at sales@ideum.com.  Platforms are sold domestically and internationally and are only available direct from Ideum.  We also rent the Platform in the US and Canada.
+          Please contact us at (505) 791-1110 ext. 1 or toll free in the US and Canada (855) 898-6824, use our online inquiry form, or email us at sales@ideum.com.  Platform Drafting Tables are sold domestically and internationally and are only available direct from Ideum.  We also rent the Platform Drafting Table in the US and Canada.
         </p>
       </div>
     </section>
   </main>
 </main>
-{% endblock %}
+{% endblock %} 
