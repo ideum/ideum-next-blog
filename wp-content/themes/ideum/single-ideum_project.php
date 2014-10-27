@@ -14,6 +14,8 @@ $post = new TimberPost();
 
 $context['title'] = $post->title();
 
+$context['post'] = $post;
+
 $args = array('fields'=>'ids');
 $post_cats = $post->get_terms('category', $args);
 
