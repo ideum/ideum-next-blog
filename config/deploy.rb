@@ -30,6 +30,23 @@ namespace :git do
   end
 end
 
+namespace :assets do
+  desc 'Build assets'
+  task :build do
+    on roles(:web) do
+      within release_path do
+        within 'wp-content/themes/ideum' do
+          execute :npm, :install
+          execute :bower, :install
+          execute :gulp
+        end
+      end
+    end
+  end
+end
+
+after 'deploy:updated', 'assets:build'
+
 namespace :deploy do
 
   desc 'Restart application'
