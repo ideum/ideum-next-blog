@@ -1,4 +1,4 @@
-.highlight-text {
+.highlight-text { /* also see _highlight-text.scss in mixins */
   @include span-columns(12);
   padding: $gutter 0;
 

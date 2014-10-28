@@ -275,8 +275,8 @@
 
   #contact {
 
-    .highlight-text {
-       @include highlight-text($vv-dark-gray, $white, $white, $white);
+    .highlight-text { /* also see _highlight-text.scss in mixins */
+      @include highlight-text($vv-dark-gray, $white, $white, $white);
       position: relative;
     }
 
@@ -284,7 +284,7 @@
 
   #our-story {
 
-    .highlight-text {
+    .highlight-text { /* also see _highlight-text.scss in mixins */
       @include highlight-text($dark-teal, $white, $white, $white);
       position: relative;
     }
@@ -309,7 +309,7 @@
 
   }
 
-  .highlight-text.child-page {
+  .highlight-text.child-page { /* also see _highlight-text.scss in mixins */
     border-top: 1px solid $vv-light-gray;
     @include highlight-text($white, $vv-dark-gray, $vv-dark-gray, $light-medium-gray);
     font-size: 1em;

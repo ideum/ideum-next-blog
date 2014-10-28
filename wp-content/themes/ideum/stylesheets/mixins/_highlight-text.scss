@@ -6,7 +6,8 @@
   h1 {
     @include span-columns(10);
     @include shift(1);
-    color: $h1-color;
+    color: $h1-color;    
+    font-weight: $bold;
     margin-top: 0;
     padding:0 3.9%;
     text-align: center;
