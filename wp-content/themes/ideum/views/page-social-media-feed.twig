@@ -11,11 +11,11 @@
     <ul class="social-media-feed">
       {% for social_post in social_media_feed %}
         <li class="item {{social_post.source}}" 
-        {% if social_post.source == 'flickr' %} style="background:url('{{social_post.image}}');"{% endif %}>
+          {% if social_post.source == 'flickr' %} style="background-image:url('{{social_post.image}}');"{% endif %}>
 
-          {% if social_post.source == 'youtube' or social_post.source == 'facebook' %}
-          <a class="view" href="{{social_post.url}}"><img class="img-circular" src="{{social_post.image}}"></a>
-          {% endif %}
+          <a class="view" href="{{social_post.url}}">
+          {% if social_post.source == 'youtube' or social_post.source == 'facebook' %}<img class="img-circular" src="{{social_post.image}}">{% endif %}
+          </a>
 
           <div class="content">
             
@@ -25,11 +25,14 @@
             {% endif %}
             {% endif %}
 
-            <footer class="footer">
-              <a class="view" href="{{social_post.url}}">View on {{social_post.source}}</a>
-            </footer>
-
           </div>
+
+          <footer class="footer">
+            {% if social_post.source == 'twitter' %}
+            <a class="read" href="http://twitter.com/home?status={{social_post.text}}">Retweet</a>
+            {% endif %}
+            <a class="share" href="{{social_post.url}}">View on {{social_post.source}}</a>
+          </footer>
 
           <i class="social-icon icon-{{social_post.source}}"></i>
 

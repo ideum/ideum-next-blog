@@ -69,10 +69,20 @@
     }
 
     .content {
-      @include pad;
       opacity: .99;
       text-align: center;
       z-index: 100;
+
+      .footer {
+        @include media($small-screen-up) { 
+          position: absolute;
+            left: 1%; bottom: 20px;
+        }
+        @include media($medium-screen-up) { 
+          position: inherit;
+            left: inherit; bottom: inherit;
+        }
+      }
     }
 
     .icon-youtube, .icon-twitter, .icon-flickr, .icon-facebook, .icon-linkedin {
@@ -98,13 +108,21 @@
 
       .content {
         margin:0 auto;
-        padding: ($large-gutter * 2) 0;
+        max-height: 85%;
+        overflow: hidden;
+        @include media($small-screen-up) { 
+          padding: ($large-gutter * 2.25) 0;
+        }
+        @include media($medium-screen-up) { 
+          padding: ($large-gutter * 1.75) 0;
+        }
         @include position(absolute, 0 0 0 0);
         width:80%;
 
         p {
           color: $white;
           font-size: 1.4em;
+          line-height:1.7em;
           text-align: left;
           word-wrap: break-word;
         }
@@ -178,10 +196,23 @@
 
     .footer {
       padding: $gutter 0 0 0;
+      z-index: 500;
+
+      @include media($small-screen-up) { 
+        padding: $gutter 10% 0;
+        position: absolute;
+          bottom: 20px;
+      }
+      @include media($medium-screen-up) { 
+        position: inherit;
+          left: inherit; bottom: inherit;
+      }
+      
 
       @include media($medium-screen-up) {
         height: 4em;
-        padding:0 0 $large-gutter + $gutter;
+        /*padding:0 0 $large-gutter + $gutter;*/
+        padding: 10px 10% $large-gutter;
         position: absolute;
         bottom: 0;
       }
