@@ -56,7 +56,8 @@ nav.sub-nav {
 
   a {
     text-transform: uppercase;
-    color: $light-gray; /* was $very-light-gray */
+    color: $dark-gray;
+    /*color: $light-gray;*/ /* was $very-light-gray */
     font-weight: bold;
     position: relative;
     &:hover {
