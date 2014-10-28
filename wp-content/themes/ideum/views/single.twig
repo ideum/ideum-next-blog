@@ -22,19 +22,6 @@
 
       	<div class="pull-quote-img" style="background-image:url('{{post.thumbnail.src|resize(640, 400)}}');">
 
-        	<!-- old - reinstate if reverting to old version; the above background img is new - remove if reverting; see blog-detail styles for more changes
-        	{ if post.get_thumbnail }
-				  <a href="{{post.thumbnail.src}}"><img 
-				  src="{{post.thumbnail.src|resize(640, 400)}}" 
-				  alt="Image for the post: '{{post.title}}'" 
-				  title="Image for the post: '{{post.title}}'"/></a>
-				  { else }
-				  <a href="{{post.link}}"><img 
-				  src="{{theme.link}}/images/blog-post-img-placeholders-{{ random(2) }}.jpg" 
-				  alt="Placeholder image for the post: '{{post.title}}'" 
-				  title="Placeholder image for the post: '{{post.title}}'"/></a>
-				  { endif }
-				  -->
 				  <a href="{{post.thumbnail.src}}"><!-- faux link to full size img --></a>
 
       	</div>
