@@ -5,7 +5,8 @@
 
 <title>{{wp_title}}</title>
 
-<meta name="description" content="{{site.description}}">
+{% if post.alternative_meta_keywords %}<meta name="keywords" content="{{ post.alternative_meta_keywords }}">{% endif %}
+<meta name="description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}">
 
 <meta property="og:site_url" content="{{site.url}}">
 <meta property="og:site_name" content="{{ site.title }}">
