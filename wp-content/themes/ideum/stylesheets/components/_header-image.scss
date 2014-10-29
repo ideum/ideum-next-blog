@@ -24,6 +24,7 @@
     ('contact',               #2c2c2d, 'contact-pseudo-header-bg',              800px,  200px, center, center,  800px,  left),
     ('client-list',           #ef6c6c, '',                                      800px,  250px, center, center,  460px,  left),
     ('customer-support',      #f4c057, '',                                      800px,  250px, center, center,  460px,  left),
+    ('legal',                 #3e4857, '',                                      800px,  250px, center, center,  460px,  left),
   ) {
     .#{$class} {
       background: $color url("images/header-images/#{$image}-phone.jpg") no-repeat bottom right;
@@ -55,6 +56,22 @@
 
         }
       }
+
+      &.no-image {
+        @include media($small-screen-up) {
+          height: auto;
+        }
+
+        @include media($medium-screen-up) {
+          height: 460px;
+        }
+        .page-intro {
+          .page-intro-inner {
+            padding-left: 0;
+          }
+        }
+      }
+
     }
   }
 

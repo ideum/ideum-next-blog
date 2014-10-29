@@ -50,7 +50,7 @@
 
   <div class="header-image">
 
-    <div class="{% if custom_slug %}{{custom_slug}}{% else %}{{ post.slug }}{% endif %}">
+    <div class="{% if custom_slug %}{{custom_slug}}{% else %}{{ post.slug }}{% endif %}{% if post.get_field('has_image') == 'No' %} no-image{% endif %}">
 
       {% if custom_header %}
       {{ custom_header }}
