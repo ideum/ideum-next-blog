@@ -1,0 +1,239 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div id="client-list" class="sub-page-wrap">
+
+  <section class="highlight-text child-page">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% endif %}
+
+    <h1>
+      Need some help? We got your back.
+    </h1>
+
+    <p>
+      {{post.content}}
+    </p>
+
+  </section>
+
+  <div class="accordion-wrap" id-expander>
+
+    <section class="item-wrap darkgold only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Hardware
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="accordion-internal no-justification">
+
+              <div class="left-cell" >
+
+                <img class="right" src="/wp-content/themes/ideum/images/support-table.jpg" alt="Multitouch Table and Touch Wall Support" Title="Multitouch Table and Touch Wall Support">
+
+              </div>
+
+              <div class="right-cell">
+
+                <h1 class="trueH1">Contact Us</h1>
+                <h2 class="subtitle">Multitouch Table and Touch Wall Support</h2>
+                <p>
+                  <i class="icon-online"></i>&nbsp; Web: <a href="/contact/">Inquiry Form</a><br>
+                  <i class="icon-email"></i>&nbsp; Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;</a><br>
+                  <i class="icon-phone"></i>&nbsp; Phone: <span class="faux-link">(505) 792-1110</span> ext 2
+                </p>                
+                <p>
+                  Support Hours: 9:00AM–5:00PM MST, <br class="desktop-only gone">Monday through Friday.<br>
+                  We respond to most requests within 24 hours.<br>
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap darkgold only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Software
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="accordion-internal no-justification">
+
+            <div class="left-cell">
+
+              <img class="right" src="/wp-content/themes/ideum/images/gw-atom.jpg" alt="GestureWorks, GestureKey, GestureWorks Flash and GestureWorks Core" Title="GestureWorks, GestureKey, GestureWorks Flash and GestureWorks Core">
+
+            </div>
+
+            <div class="right-cell">
+
+              <h1 class="trueH1">GestureWorks</h1>
+              <h2 class="subtitle">Communities for <a href="http://forums.gesturekey.com/forums">GestureKey</a>, <br>
+              <a href="http://forums-flash.gestureworks.com/home">GestureWorks Flash</a> &amp; 
+              <a href="http://forums-core.gestureworks.com/home">GestureWorks Core</a></h2>
+              <p>
+                With open forums maintained by our support team and user community, you’ll find answers to many of the questions you may have when working with multitouch gestures.
+              </p>
+              <p>
+                Visit the <a href="http://wiki.gestureworks.com/index.php/Main_Page">Community page</a>.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap darkgold only-open" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1>
+            Legacy
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="accordion-internal">
+
+            <h1 class="trueH1">We've still got your back!</h1>
+
+              <ul>
+                <li class="legacy-item">
+                  <a class="email-wrap gold" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;?subject=Support for MT-55"><i class="icon-email"></i></a>
+                  <a class="img-wrap-link" href=""><img alt="" class="item-img" src="/wp-content/themes/ideum/images/mt55-support.jpg"></a>
+                  <div class="legacy-details">
+                    <h2>Support for MT-55</h2>
+                    <p>Multitouch Multiuser</p>
+                  </div>
+                </li>
+                <li class="legacy-item">
+                  <a class="email-wrap gold" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;?subject=Support for Touchstands"><i class="icon-email"></i></a>
+                  <a class="img-wrap-link" href=""><img alt="" class="item-img" src="/wp-content/themes/ideum/images/touchstands-support.jpg"></a>
+                  <div class="legacy-details">
+                    <h2>Support for Touchstands</h2>
+                    <p>Ruggedized enclosures for touch</p>
+                  </div>
+                </li>
+                <li class="legacy-item">
+                  <a class="email-wrap gold" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;?subject=Support for MT-50"><i class="icon-email"></i></a>
+                  <a class="img-wrap-link" href=""><img alt="" class="item-img" src="/wp-content/themes/ideum/images/mt50-support.jpg"></a>
+                  <div class="legacy-details">
+                    <h2>Support for MT-50</h2>
+                    <p>Mt-50 Legacy Support</p>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </div> 
+
+  <section class="featured-pages">
+    <article class="content direct-sales">
+      <div class="txt-wrap">
+        <h1>
+          Software Support
+        </h1>
+        <p>
+          For GestureWorks, visit the <a href="http://forums-core.gestureworks.com/home">Community page</a>. 
+        </p>
+
+        <p>
+          For Open Exhibits support, visit the <a href="http://openexhibits.org/community/groups/oe-software-support/forum/">OE Support Forum</a>. Note: You will need to be a member of the Open Exhibits site to contribute, visit their <a href="http://openexhibits.org/community/">Community page</a>.
+        </p>
+
+        <footer class="footer">
+          {# <a class="read" href="#FIXME">Inquire about sales</a> #}
+          {# <a class="share" href="#FIXME">Share This</a> #}
+        </footer>
+
+      </div>
+    </article>
+
+    <article class="content rentals">
+      <div class="txt-wrap">
+        <h1>
+          Purchasing
+        </h1>
+        <p>
+          Interested in purchasing an Ideum Touch Table or Touch Wall? 
+        </p>
+
+        <p>
+          <i class="icon-email"></i>&nbsp; Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;</a><br>
+          <i class="icon-phone"></i>&nbsp; Phone: <span class="faux-link">(505) 792-1110 ext. 1</span><br>
+          <i class="icon-phone-ring"></i>&nbsp; or call toll free: <span class="faux-link">(855) 898-682</span>
+        </p>
+        
+        <footer class="footer">
+          <a class="read" href="/contact/">Inquire about Purchasing</a>
+          <!-- <a class="share" href="#FIXME">Share This</a> -->
+        </footer>
+
+      </div>
+    </article>
+  </section>
+
+  {{follow_dialog}}
+
+  {% include 'follow-us-button.twig' %}
+
+</div>
+
+{% endblock %}
