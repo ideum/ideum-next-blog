@@ -29,7 +29,13 @@
     visibility: hidden !Important;
     position: absolute;
       left: -4000px; top:-4000px;
+
+    &.gone {
+      display: none;
+    }
+
   }
+
 }
 
 @include media($medium-screen-up) {
@@ -57,6 +63,10 @@
     visibility: hidden !Important;
     position: absolute !Important;
       left: -4000px; top:-4000px;
+
+    &.gone {
+      display: none;
+    }
   }
 }
 
@@ -85,5 +95,10 @@
     visibility: visible !Important;
     position: initial;
       left: initial; top: initial;
+
+    &.gone {
+      display: block;
+    }
+    
   }
 }
