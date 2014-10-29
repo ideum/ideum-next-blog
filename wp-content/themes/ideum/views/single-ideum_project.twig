@@ -10,7 +10,7 @@
 
     <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 
-      <section class="project-slider{% if post.first_slide_image %}{% else %} no-slide{% endif %}">
+      <section class="project-slider{% if post.slides %}{% else %} no-slide{% endif %}">
 
         {% if post.slides %}
         <ul rn-carousel rn-carousel-control rn-carousel-indicator>
