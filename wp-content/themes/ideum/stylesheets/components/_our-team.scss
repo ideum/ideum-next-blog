@@ -108,7 +108,7 @@
 
     @include media($small-screen-up) {
       .data-wrap {
-        background: transparent url('images/team-hover-overlay.jpg') repeat 0 0;
+        background: transparent url('images/team-hover-overlay.png') repeat 0 0;
         color: $white;
         display: block;
         padding-top: $small-gutter;
@@ -145,7 +145,7 @@
     &:hover, &.active {
 
       .data-wrap {
-        background: transparent url('images/team-hover-overlay.jpg') repeat 0 0;
+        background: transparent url('images/team-hover-overlay.png') repeat 0 0;
         color: $white;
         display: block;
         padding-top: $small-gutter;
