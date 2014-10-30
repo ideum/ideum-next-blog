@@ -109,3 +109,21 @@
   }
   
 }
+
+#content {
+  .project-slider {
+    .rn-carousel-indicator {
+      @include media($small-screen-up) {
+        display: block;
+        position: absolute;
+        span {
+          position: relative;
+            top: -20px;
+        }
+      }
+      @include media($large-screen-up) {
+        position: absolute;
+      }
+    }
+  }
+}

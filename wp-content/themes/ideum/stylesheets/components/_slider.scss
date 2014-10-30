@@ -108,3 +108,12 @@
     padding-top: rem(10);
   }
 }
+
+.front-page-featured-projects {
+  .slider.project-wrap {
+    padding-bottom: $gutter * 1.5;
+  }
+  .section-info {
+    padding-bottom: 0px !important;
+  }
+}
