@@ -10,14 +10,14 @@
   }
 
   .sub-page-wrap { // removes content area padding so sub-nav flush top
-    @include media($medium-screen-up) {
+    /*@include media($medium-screen-up) {
       margin-top: rem(-30);
-    }
+    }*/
   }
   
-  @include media($medium-screen-up) {
+  /*@include media($medium-screen-up) {
     padding: rem(30) 0 0 0;
-  }
+  }*/
 
   .chat { 
     @include banner('patterns/hex.svg');
@@ -338,13 +338,14 @@
   }
 
   .one-column-text.slider, .slider-two-column-text.slider {
+    background-colr: $very-light-gray;
     margin: -0px auto 0;
     max-width: 80%;
     padding: 5% 0;
     
-    @include media($medium-screen-up) {
+    /*@include media($medium-screen-up) {
       margin: -50px auto 0;
-    }
+    }*/
 
     h2 {
       text-align:center;
@@ -374,9 +375,13 @@
           .slide-text-content {
             height: 100%;
             position: absolute;
-              bottom: -83%; right: 50%;
+              bottom: -73%; right: 50%;
             text-align: center;
             width: 100%;
+
+            @include media($medium-screen-up) {
+              bottom: -83%;
+            }
 
             h1 { 
               color: #fff;
@@ -506,7 +511,7 @@
       background-color: $off-vv-light-gray;
 
       &.no-slide {
-        background-color: $white;
+        /*background-color: $white;*/
       }
 
       img.primary-image {

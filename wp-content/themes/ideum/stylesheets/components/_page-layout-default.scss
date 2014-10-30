@@ -1,10 +1,9 @@
-.page-template-basic-php, .page-template-jobs-landing-php {
+.page-template-basic-php, .page-template-default, .page-template-jobs-landing-php {
   @include span-columns(12);
   display: inline-block;
   padding: 0;
 
   #content {
-    padding-top: 0;
 
     .default-page-detail {
 
@@ -76,8 +75,3 @@
 
 }
 
-.social-media-feed {
-  #content {
-    padding: 0;
-  }
-}
