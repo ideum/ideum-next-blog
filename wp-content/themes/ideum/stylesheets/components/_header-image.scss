@@ -13,11 +13,11 @@
   //
   @each $class, $color, $image, $width, $offset, $bgvert, $bghoriz, $bgheight, $txtorient in ( 
     ('home',                  #62A6E7, 'home-pseudo-header-bg',                 800px,  200px, center, center,  800px,  left),
-    ('our-story',             #b8b8b8, 'our-story-pseudo-header-bg',            1100px, 180px, center, 0px,     1000px, left),
-    ('mission',               #b8b8b8, 'mission-pseudo-header-bg',              800px,  100px, center, -75px,   460px,  left),
-    ('facilities',            #b8b8b8, 'facilities-pseudo-header-bg',           800px,  100px, center, -235px,  460px,  left),
-    ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg', 800px,  100px, center, -315px,  460px,  left),
-    ('team',                  #9e9e9d, 'team-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
+    ('our-story',             #352323, 'our-story-pseudo-header-bg-final',      600px,  100px, center, center,  460px,  center),
+    ('mission',               #211f20, 'mission-pseudo-header-bg-final',        600px,  100px, center, center,  460px,  center),
+    ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',     600px,  100px, center, center,  460px,  center),
+    ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg', 600px,  100px, center, top,     460px,  center),
+    ('team',                  #514748, 'team-pseudo-header-bg-final',           600px,  100px, center, top,     460px,  center),
     ('services',              #2c2c2d, 'services-pseudo-header-bg',             600px,  100px, center, top,     550px,  left),
     ('blog',                  #2c2c2d, 'blog-pseudo-header-bg',                 600px,  100px, center, top,     550px,  left),
     ('creative-services',     #2c2c2d, 'cs-worldcup-project-pseudo-header-bg',  800px,  200px, center, center,  800px,  left),
@@ -48,7 +48,10 @@
               padding-left: 0;
               padding-right: 5%;
               right: 0;
-            } @else {
+            } @elseif $txtorient == center {
+              padding-left: 0;
+            }
+            @else {
               padding-left: 5%;
               left: 0;
             }
