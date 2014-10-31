@@ -15,17 +15,21 @@
     }
 
     
-    $context = Timber::get_context();
+    $context = Timber::get_context();    
     $context['posts'] = Timber::get_posts();
+    
     $context['pagination'] = Timber::get_pagination();
-    $context['acf'] = get_field_objects($data['post']->ID); // #FIXME - need to be able to get acf value, does not work
+    $context['acf'] = get_field_objects($data['post']->ID); 
     $context['foo'] = 'bar';
     $context['post']['slug'] = 'blog';
-    $context['custom_header'] = get_field('header_image_text_content', 11864); 
 
-    // Custom queries for blog page go here
+    // values for dev site - delete eventually
+    //$context['blog'] = new TimberPost(12181);
+    //$context['custom_header'] = get_field('header_image_text_content', 12181);
+
+    // values for live site
+    $context['blog'] = new TimberPost(11864);
+    $context['custom_header'] = get_field('header_image_text_content', 11864);
 
     $templates = array('home.twig', 'index.twig');
     Timber::render($templates, $context);
-
-

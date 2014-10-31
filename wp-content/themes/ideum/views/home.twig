@@ -6,17 +6,11 @@
 
   <section class="highlight-text child-page">
 
-    {% if post.can_edit %}
-    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% if blog.can_edit %}
+    <a class="edit-link" href="{{blog.edit_link}}">[Edit me!]</a>
     {% endif %}
 
-    <h1>
-      The Latest From The Blog
-    </h1>
-
-    <p>
-      {{post.content}}
-    </p>
+    {{blog.content}}
 
   </section>
 
