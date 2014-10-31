@@ -2,6 +2,16 @@
 
 {% block content %}
 
+<section class="highlight-text child-page">
+
+  {% if post.can_edit %}
+  <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+  {% endif %}
+  
+  {{post.content}}
+
+</section>
+
 <div class="article-content social-media-feed">
 
   <div class="article-body">
