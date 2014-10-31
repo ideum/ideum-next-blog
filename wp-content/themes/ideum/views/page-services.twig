@@ -12,13 +12,7 @@
     <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
     {% endif %}
 
-    <h1>
-      Our {{post.title}}
-    </h1>
-
-    <p>
-      {{post.content}}
-    </p>
+    {{post.content}}
 
     <p>
       <a class="button active dark" href="/creative-services/">View Projects</a>
@@ -32,9 +26,9 @@
 
       <article>
 
-        <header>
+        <header class-"expander">
 
-          <h1>
+          <h1 id-expander-button>
             Custom Hardware Prototyping &amp; Product Design.
           </h1>
 
@@ -67,8 +61,11 @@
             <div class="two-column-text">
 
               <p>
-                Ideum has deep roots in user interface design (we’ve been designing exhibits and websites for 15 years). For the last six years, we’ve been at the cutting-edge in developing multitouch and multiuser interactives. More recently we’ve begun to extend our design expertise to include motion tracking, voice recognition, virtual reality and other emerging HCI (human computer interaction) technologies.<br>
-                We are interested in the next generation of multiuser and multimodial experiences. We believe that the best interactive exhibits for museums and public spaces have a strong social component and multi-sensory qualities. New and emerging technologies present new opportunities to illuminate, inspire and engage visitors.Our open and active development process ensures that the software we produce is intuitive. We also work hard to ensure the utmost quality in the code we produce. Our exhibits and websites are easy to update and maintain. Our programmers have experience in a wide-range of software languages. We work in C++, .NET / C#, Python, Java, ActionScript, and a variety of other Web-centric languages.
+                As an agile company, Ideum is able to quickly integrate the latest technology as it becomes available. We work with a variety of technology partners, including 3M, HP, Hyundai, Intel, LG, PQLabs, Samsung, Zytronic. We have built custom prototypes for cutting-edge museums and world-class technology companies. In many cases these prototypes have been first-of-their-kind, pushing the boundaries in resolution, touch technology, and integration with complementary technology such as RFID and NFC.
+              </p>
+
+              <p>
+                Our proven design methods and our ability to rapidly design in aluminum and steel, means that we can produce hardened interactive systems for demanding environments and public spaces. We’ve developed systems with a range of designs and have collaborated with other design firms, architects, and museums to develop custom systems that match the aesthetics of the spaces they are placed in. Along with unique form-factors, we have develop systems in an array of custom colors and textures. We’ve even developed custom etched and hydro-dipped exhibits.
               </p>
 
             </div>
@@ -85,9 +82,9 @@
 
       <article>
 
-        <header>
+        <header class-"expander">
 
-          <h1>
+          <h1 id-expander-button>
             Application &amp; Exhibit Software Development.
           </h1>
 
@@ -120,7 +117,15 @@
             <div class="two-column-text">
 
               <p>
-                As an agile company, Ideum is able to quickly integrate the latest technology as it becomes available. We work with a variety of technology partners, including 3M, HP, Hyundai, Intel, LG, PQLabs, Samsung, Zytronic. We have built custom prototypes for cutting-edge museums and world-class technology companies. In many cases these prototypes have been first-of-their-kind, pushing the boundaries in resolution, touch technology, and integration with complementary technology such as RFID and NFC. Our proven design methods and our ability to rapidly design in aluminum and steel, means that we can produce hardened interactive systems for demanding environments and public spaces. We’ve developed systems with a range of designs and have collaborated with other design firms, architects, and museums to develop custom systems that match the aesthetics of the spaces they are placed in. Along with unique form-factors, we have develop systems in an array of custom colors and textures. We’ve even developed custom etched and hydro-dipped exhibits.
+                Ideum has deep roots in user interface design (we’ve been designing exhibits and websites for 15 years). For the last six years, we’ve been at the cutting-edge in developing multitouch and multiuser interactives. More recently we’ve begun to extend our design expertise to include motion tracking, voice recognition, virtual reality and other emerging HCI (human computer interaction) technologies.
+              </p>
+
+              <p>
+                We are interested in the next generation of multiuser and multimodial experiences. We believe that the best interactive exhibits for museums and public spaces have a strong social component and multi-sensory qualities. New and emerging technologies present new opportunities to illuminate, inspire and engage visitors.
+              </p>
+
+              <p>
+                Our open and active development process ensures that the software we produce is intuitive. We also work hard to ensure the utmost quality in the code we produce. Our exhibits and websites are easy to update and maintain. Our programmers have experience in a wide-range of software languages. We work in C++, .NET / C#, Python, Java, ActionScript, and a variety of other Web-centric languages.
               </p>
 
             </div>
@@ -137,9 +142,9 @@
 
       <article>
 
-        <header>
+        <header class-"expander">
 
-          <h1>
+          <h1 id-expander-button>
             Responsive Web &amp; Mobile Design
           </h1>
 
@@ -172,8 +177,11 @@
             <div class="two-column-text">
 
               <p>
-                Ideum has deep roots in user interface design (we’ve been designing exhibits and websites for 15 years). For the last six years, we’ve been at the cutting-edge in developing multitouch and multiuser interactives. More recently we’ve begun to extend our design expertise to include motion tracking, voice recognition, virtual reality and other emerging HCI (human computer interaction) technologies.<br>
-                We are interested in the next generation of multiuser and multimodial experiences. We believe that the best interactive exhibits for museums and public spaces have a strong social component and multi-sensory qualities. New and emerging technologies present new opportunities to illuminate, inspire and engage visitors.Our open and active development process ensures that the software we produce is intuitive. We also work hard to ensure the utmost quality in the code we produce. Our exhibits and websites are easy to update and maintain. Our programmers have experience in a wide-range of software languages. We work in C++, .NET / C#, Python, Java, ActionScript, and a variety of other Web-centric languages.
+                Ideum’s approach to web and mobile interface design focuses on more than just aesthetics. We find the best way to engage users and encourage participation no matter what device or platform they are connecting from. Ideum's talented designers and developers work together to establish an approach based around usability and the visitor experience. We believe the most effective websites and mobile applications have strong design qualities and focus on functional details to ensure visitor interaction.
+              </p>
+
+              <p>
+                All of our web and mobile designs are built specifically with responsive design in mind. Whether users are visiting a site on a large, high resolution desktop computer or on a smartphone, Ideum aims to provide them with a beautiful, intuitive experience. Our developers are well-versed in HTML5, CSS3, JavaScript, a variety of web programming languages, and can develop native code for iOS and Android.
               </p>
 
             </div>
@@ -190,10 +198,10 @@
 
       <article>
 
-        <header>
+        <header class-"expander">
 
-          <h1>
-            Conceptual Design &amp; Usability Testing
+          <h1 id-expander-button>
+            Technology planning and conceptual design
           </h1>
 
           <button id-expander-button><i class="icon-caret-down"></i></button>
@@ -225,7 +233,8 @@
             <div class="two-column-text">
 
               <p>
-                Ideum has taken large roles in master planning for technology integration in major museums. In addition, Ideum has been engaged in conceptual design for a variety of interactive exhibitions and exhibits. While our expertise is in technology-based exhibits, we have collaborated in the planning of hands-on physical exhibits, collections, and museum experiences. We strongly believe that technology can create unique and engaging exhibits, but that many of the best exhibitions have a blend of high-tech and traditional experiences.</p>
+                Ideum has taken large roles in master planning for technology integration in major museums. In addition, Ideum has been engaged in conceptual design for a variety of interactive exhibitions and exhibits. While our expertise is in technology-based exhibits, we have collaborated in the planning of hands-on physical exhibits, collections, and museum experiences. We strongly believe that technology can create unique and engaging exhibits, but that many of the best exhibitions have a blend of high-tech and traditional experiences.
+              </p>
 
               <p>
                 We’ve worked with a wide-range of science museums, planetariums and aquariums, history and cultural institutions, art museums, nonprofits, and companies focused on a variety of topics. This experience, along with our continued work with cutting-edge hardware and modern software techniques, give us a unique perspective when planning for future exhibits and exhibitions.
@@ -234,34 +243,6 @@
             </div>
 
           </div>
-
-          <!-- <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveTwoUp()">
-
-            <li class="story-slide item">
-
-              <img src="{{theme.link}}/images/our-story-slides-1.jpg">
-
-            </li>
-
-            <li class="story-slide item">
-
-              <img src="{{theme.link}}/images/our-story-slides-2.jpg">
-
-            </li>
-
-            <li class="story-slide item">
-
-              <img src="{{theme.link}}/images/our-story-slides-1.jpg">
-
-            </li>
-
-            <li class="story-slide item">
-
-              <img src="{{theme.link}}/images/our-story-slides-2.jpg">
-
-            </li>
-
-          </ul> -->
 
         </div>
 
