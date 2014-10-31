@@ -84,7 +84,7 @@
 
       <p class="required-note">* - Required</p>
 
-      <p class="submit-wrap"><input class="button active" type="submit" value="Submit"></p>
+      <p class="submit-wrap"><input class="button dark active" type="submit" value="Submit"></p>
 
     </form>
 
