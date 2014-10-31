@@ -389,11 +389,25 @@
             }   
 
             p {
-              color:#fff; 
+              color: #fff; 
               font-size: 2.5vw; 
               line-height: 3.5vw; 
-              margin:0 auto;
-              max-width:40%;
+              margin: 0 auto;
+              max-width: 40%;
+            }
+
+            &.Left {
+              h1, p {
+                margin-left: 7.5%;
+                text-align: left;
+              }
+            }
+
+            &.Right {
+              h1, p {
+                margin-right: 7.5%;
+                text-align: right;
+              }
             }
 
           }
