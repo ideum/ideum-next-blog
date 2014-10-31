@@ -34,6 +34,8 @@ $context['related_posts'] = Timber::get_sidebar('bar-related-posts.twig', $sideb
 
 $context['featured_post'] = Timber::get_sidebar('bar-featured-post.twig', $sidebar_context);
 
+$context['social_media_feed'] = ideum_social_feed(6);
+
 $data['share_dialog'] = get_option('share_dialog');
 Timber::compile('share-post.twig', $data);
 

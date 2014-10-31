@@ -351,6 +351,39 @@
 
       <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveThreeUp()">
 
+        {% for social_post in social_media_feed %}
+
+        <li class="item {{social_post.source}}" 
+          {% if social_post.source == 'flickr' %} style="background-image:url('{{social_post.image}}');"{% endif %}>
+
+          <a class="view" href="{{social_post.url}}">
+          {% if social_post.source == 'youtube' or social_post.source == 'facebook' %}<img class="img-circular" src="{{social_post.image}}">{% endif %}
+          </a>
+
+          <div class="content">
+            
+            {% if social_post.source != 'flickr' %}
+            {% if social_post.text %}
+              <p>{{social_post.text}}</p>
+            {% endif %}
+            {% endif %}
+
+          </div>
+
+          <footer class="footer">
+            {% if social_post.source == 'twitter' %}
+            <a class="read" href="http://twitter.com/home?status={{social_post.text}}">Retweet</a>
+            {% endif %}
+            <a class="share" href="{{social_post.url}}">View on {{social_post.source}}</a>
+          </footer>
+
+          <i class="social-icon icon-{{social_post.source}}"></i>
+
+        </li>
+
+        {% endfor %}
+        
+        <!--
         <li class="youtube social-medi-slide item">
 
           <video controls style="width:100%;height:375px;" poster="{{theme.link}}/images/placeholder-buzz-feed-1.jpg">
@@ -386,6 +419,7 @@
           <i class="social-icon icon-flickr"></i>
 
         </li>
+        -->
 
       </ul>
 
