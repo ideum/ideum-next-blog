@@ -108,11 +108,13 @@
         @include align-items(center);
         @include justify-content(center);
         position: relative;
+        
 
         h1 {
           @include span-columns(7);
           color:$white;
           margin-bottom: $gutter;
+          cursor: pointer;
 
           @include media($medium-screen-up) {
             @include span-columns(8);
