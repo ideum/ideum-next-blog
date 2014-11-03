@@ -26,7 +26,7 @@ $context['site_url'] = get_bloginfo('url');
 
 $sidebar_context = Timber::get_context();
 $sidebar_context['site_url'] = get_bloginfo('url');
-$sidebar_context['featured_post'] = Timber::get_posts('cat=592&numberposts=1&posts_per_page=1');
+$sidebar_context['featured_post'] = Timber::get_posts('cat=592&numberposts=1&posts_per_page=1'); // cat = 592 for dev site, 604 for live site
 $sidebar_context['featured_projects'] = Timber::get_posts('post_type=ideum_project&numberposts=6&posts_per_page=6'); 
 
 $context['featured_projects'] = Timber::get_sidebar('bar-featured-projects.twig', $sidebar_context);
