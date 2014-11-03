@@ -1,0 +1,65 @@
+.featured-blog-post.post-style {
+  background-color: $off-vv-light-gray;
+  width:100%;
+
+  @include media($small-screen-up) {
+
+    .img-wrap {
+      background-size: cover;
+      height: 35%;
+    }
+
+    .txt-wrap {
+      @include media($medium-screen-up) {
+        padding-bottom: $gutter * 4;
+      }
+    }
+
+  }
+
+  @include media($medium-screen-up) {
+
+    &.img-left { /* no op */ 
+      
+
+    }
+
+    &.img-right {
+      .img-wrap{ @include shift(6); }
+      .txt-wrap{ @include shift(-11); 
+      }
+    }
+
+    .img-wrap {
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;        
+      background-size: cover;
+      height: 52%;
+      width: 50%;
+      
+      a {
+        float: left;
+        /*position: relative;
+          left: 50%;*/
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        img {
+          display: block;
+          float: left;
+          height: 75%;
+          max-width: initial;
+          /*position: relative;
+            right: 50%;
+          */
+        }
+
+      }
+
+    }
+
+  }
+
+}
