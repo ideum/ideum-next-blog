@@ -6,11 +6,18 @@
   }
 
   .product-item {
-    background-color: $dark-red;
     @include media($medium-screen-up) {
       min-height: 380px;
     }
     position: relative;
+
+    &.touch-tables {
+      background-color: $dark-red;
+    }
+
+    &.touch-walls {
+      background-color: $very-dark-teal;
+    }
 
     .content {
       /* no op */
@@ -140,11 +147,7 @@
 
       }
 
-    }
-
-    
-
-    
+    }    
 
   }
 
