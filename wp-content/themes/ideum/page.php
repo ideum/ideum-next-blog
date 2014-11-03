@@ -29,6 +29,7 @@ $context['slug'] = $slug;
 $context['post'] = $post;
 
 $context['post_parent'] = $post_parent;
+$context['site_url'] = get_bloginfo('url');
 
 ob_start();
 $parent_permalink = get_permalink($post->post_parent); 
