@@ -6,7 +6,7 @@
 
     .img-wrap {
       background-size: cover;
-      height: auto;
+      height: 32%;
     }
 
     .txt-wrap {
@@ -14,7 +14,7 @@
       @include media($medium-screen-up) {
         padding-bottom: $gutter * 4;
       }
-      
+
     }
 
   }
@@ -36,7 +36,7 @@
       background-position: top center;
       background-repeat: no-repeat;        
       background-size: cover;
-      height: auto;
+      height: 52%;
       width: 50%;
       
       a {
