@@ -4,6 +4,11 @@
   }
 }
 
+.full-size-share {
+  position: absolute;
+  left: -4000px; top: -4000px;
+}
+
 .blog-post-detail, .project-post-detail {
   @include span-columns(12);
   @include omega;
@@ -287,7 +292,7 @@
           a.button {
             margin:0 0 10px 0;
             text-align: center;
-            /*width: 130px;*/
+            /*width: 130px;*/ 
           
             &.share-dialog-phone {
               position: absolute;
