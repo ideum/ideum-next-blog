@@ -6,10 +6,9 @@ Author: Ben Cates <ben@ideum.com>
 Version: 0.1.0
 */
 
-function ideum_social_feed( ){
+function ideum_social_feed( $length = null ){
     $response = wp_remote_get( 'http://localhost:8888/' );
     if ( is_wp_error( $response ) ) {
-        var_dump($response); die();
         return array();
     }
 
@@ -18,10 +17,5 @@ function ideum_social_feed( ){
         return array();
     }
 
-    // echo "<code><pre>";
-    // var_dump($feed);
-    // echo "</pre></code>";
-    // die();
-
-    return $feed;
+    return array_slice( $feed, 0, $length );
 }
