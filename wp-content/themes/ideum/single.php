@@ -19,10 +19,10 @@ $post_cat = $post_cat[0]->ID;
 
 $context['post'] = $post;
 
-// this cluster not currently in use on this page - likely will be later
 $post_author_img_id = get_the_author_meta('team_user_image');
 $acf_author_img_url = wp_get_attachment_url( $post_author_img_id );
-$context['acf_author_image'] = $acf_author_img_url;
+
+$context['acf'] = get_field_objects($data['post']->ID);
 
 //$context['comment_form'] = TimberHelper::get_comment_form();
 
@@ -40,5 +40,3 @@ if (post_password_required($post->ID)){
 } else {
 	Timber::render(array('single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig'), $context);
 }
-
-
