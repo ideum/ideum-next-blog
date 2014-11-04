@@ -26,9 +26,15 @@
           text-transform: uppercase;
 
           &.light {
-            color: $very-light-gray;
+            color: $light-gray;
             font-size: 1em;
             margin-bottom: 0px; 
+          }
+
+          &.medium {
+            color: $dark-gray;
+            font-size: 1em;
+            margin-bottom: 0px;
           }
 
           &.dark {
