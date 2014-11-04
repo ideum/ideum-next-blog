@@ -8,14 +8,14 @@
 
         <div class="half-box">
           <div class="required fname">
-            <label class="light" for="first-name">Full name <span class="requiredNote">*</span></label>
+            <label class="medium" for="first-name">Full name <span class="requiredNote">*</span></label>
             <input class="full-input" type="text" name="inquiries[first-name]" id="first-name" autofocus required>
           </div>
         </div>
 
         <div class="half-box">
           <div class="required lname">
-            <label class="light" for="last-name">Last name <span class="requiredNote">*</span></label>
+            <label class="medium" for="last-name">Last name <span class="requiredNote">*</span></label>
             <input class="full-input" type="text" name="inquiries[last-name]" id="last-name" required>
           </div>
         </div>
@@ -23,12 +23,12 @@
       </div>
 
       <div class="required email">
-        <label class="light" for="email">Email <span class="requiredNote">*</span></label>
+        <label class="medium" for="email">Email <span class="requiredNote">*</span></label>
         <input class="full-input" type="email" name="inquiries[email]" id="email" autocomplete="off" required>
       </div>
 
       <div class="not-required company">
-        <label class="light" for="company-name">Company Name</label>
+        <label class="medium" for="company-name">Company Name</label>
         <input class="full-input" type="text" name="inquiries[company]" id="company-name">
       </div>
 
@@ -65,6 +65,10 @@
             <label class="dark check-label right-label" for="check-app-web-dev">App / Web development</label>
           </div>
           <div class="half-box">
+            <input class="left-checkbox" type="checkbox" name="inquiries[service][cust-exhibit-dev]" id="check-cust-exhibit-dev" value="Custom Exhibit Development" />
+            <label class="dark check-label right-label" for="check-cust-exhibit-dev">Custom exhibit development</label>
+          </div>
+          <div class="half-box">
             <input class="left-checkbox" type="checkbox" name="inquiries[service][touch-tables]" id="check-touch-tables" value="Touch Tables" />
             <label class="dark check-label right-label" for="check-touch-tables">Touch Tables</label>
           </div>
@@ -73,9 +77,10 @@
             <label class="dark check-label right-label" for="check-touch-walls">Touch Walls</label>
           </div>
           <div class="half-box">
-            <input class="left-checkbox" type="checkbox" name="inquiries[service][cust-exhibit-dev]" id="check-cust-exhibit-dev" value="Custom Exhibit Development" />
-            <label class="dark check-label right-label" for="check-cust-exhibit-dev">Custom exhibit development</label>
+            <input class="left-checkbox" type="checkbox" name="inquiries[service][product-rentals]" id="check-product-rentals" value="Product Rentals" />
+            <label class="dark check-label right-label" for="check-product-rentals">Product Rentals</label>
           </div>
+          
         </fieldset>
       </div>
 
