@@ -3,6 +3,11 @@
 {% block content %}
 
 <!-- begin single-twig -->
+{% if post.alternative_meta_image %}
+<img class="full-size-share" src="{{TimberImage(post.get_field('alternative_meta_image')) }}"><!-- img -->
+{% elseif post.alternative_meta_image_path %}
+<img class="full-size-share" src="{{post.alternative_meta_image_path}}"><!-- path -->
+{% endif %}
 
 <div class="blog-post-detail">
 
