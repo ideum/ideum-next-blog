@@ -10,9 +10,11 @@
     }
 
     .txt-wrap {
+
       @include media($medium-screen-up) {
         padding-bottom: $gutter * 4;
       }
+      
     }
 
   }
