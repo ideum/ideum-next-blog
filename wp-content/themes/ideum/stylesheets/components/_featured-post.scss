@@ -6,7 +6,7 @@
 
     .img-wrap {
       background-size: cover;
-      height: 35%;
+      height: auto;
     }
 
     .txt-wrap {
@@ -19,9 +19,8 @@
 
   @include media($medium-screen-up) {
 
-    &.img-left { /* no op */ 
-      
-
+    &.img-left { 
+      /* no op */ 
     }
 
     &.img-right {
@@ -32,10 +31,10 @@
 
     .img-wrap {
       position: relative;
-      background-position: center;
+      background-position: top center;
       background-repeat: no-repeat;        
       background-size: cover;
-      height: 52%;
+      height: auto;
       width: 50%;
       
       a {
@@ -49,13 +48,26 @@
         img {
           display: block;
           float: left;
-          height: 75%;
           max-width: initial;
           /*position: relative;
             right: 50%;
           */
+          height: 75%;
+
         }
 
+      }
+
+    }
+
+  }
+
+  @include media($large-screen-up) {
+
+    .img-wrap {
+
+      img {
+        height: 65%;
       }
 
     }
