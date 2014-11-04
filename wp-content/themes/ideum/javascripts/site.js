@@ -15,20 +15,16 @@ var App = module.exports =  angular.module('ideum', [
 ]);
 
 App.factory('screenSize', function ($window) {
-  // Technique adapted from http://css-tricks.com/making-sass-talk-to-javascript-with-json/
   return function () {
-    var style, content, data;
+    var width = angular.element($window).width();
 
-    style = $window.getComputedStyle($window.document.body, '::before');
-    if (!style) { return 'small'; }
-
-    content = style.content;
-
-    // Strip whatever quotes the browser wraps around our JSON
-    content = content.replace(/^['"]+|\s+|\\|(;\s?})+|['"]$/g, '');
-
-    data = angular.fromJson(content) || {};
-    return data.screenSize;
+    if (width >= 960) {
+      return 'large';
+    } else if (width >= 640) {
+      return 'medium';
+    } else {
+      return 'small';
+    }
   };
 });
 
