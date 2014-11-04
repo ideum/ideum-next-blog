@@ -63,7 +63,6 @@
 @import 'components/post-style';
 @import 'components/our-products';
 @import 'components/slider';
-@import 'components/social-media-feed';
 @import 'components/sub-nav';
 @import 'components/talking-points';
 @import 'components/touch-tables';
@@ -75,6 +74,7 @@
 @import 'components/inquiry-form';
 @import 'components/page-layout-default';
 @import 'components/contact-sidebar';
+@import 'components/social-media-feed';
 
 // Necessary to avoid flash of unrendered angular templates
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
