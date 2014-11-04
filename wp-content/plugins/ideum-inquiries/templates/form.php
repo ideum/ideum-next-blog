@@ -79,8 +79,7 @@
           <div class="half-box">
             <input class="left-checkbox" type="checkbox" name="inquiries[service][product-rentals]" id="check-product-rentals" value="Product Rentals" />
             <label class="dark check-label right-label" for="check-product-rentals">Product Rentals</label>
-          </div>
-          
+          </div>          
         </fieldset>
       </div>
 
