@@ -19,7 +19,9 @@
 
 <meta property="og:type" content="{% if page.opengraph.type %}{{ page.opengraph.type }}{% elseif post.id == '11878' %}website{% else %}article{% endif %}">
 
+{% if post.post_type != 'ideum_project' %}
 <meta property="og:image" content="{% if page.opengraph.image %}{{ page.opengraph.image }}{% elseif post.alternative_meta_image %}{{site.url}}{{TimberImage(post.get_field('alternative_meta_image')) }}{% elseif post.alternative_meta_image_path %}{{site.url}}/{{ post.alternative_meta_image_path }}{% elseif blog.alternative_meta_image %}{{site.url}}{{TimberImage(blog.get_field('alternative_meta_image')) }}{% elseif blog.alternative_meta_image_path %}{{site.url}}{{TimberImage(blog.get_field('alternative_meta_image_path')) }}{% elseif post.thumbnail %}{{site.url}}{{ post.get_thumbnail.get_src }}{% elseif post.primary_image %}{{site.url}}/{{ post.primary_image}}{% else %} {{ site.opengraph.default_image }}{% endif %}">
+{% endif %}
 
 <meta property="og:description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}"/>
 
