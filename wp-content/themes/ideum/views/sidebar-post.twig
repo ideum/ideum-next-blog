@@ -4,7 +4,7 @@
   <!-- { //endif } -->
   {% if acf_author_image %}
   <a href="{{thispost.author.path}}"><div class="img-circular {{ thispost.author.slug }} tablet-n-desktop" style="background-image: url({{ acf_author_image }})" title="{{ thispost.author }} - Click here to view this author's post archive."> </div></a>
-  <a href="{{thispost.author.path}}"><img class="phone-only" alt="{{ thispost.author }}" src="{{ acf_author_image }}" title="{{ thispost.author }}"></a>
+  <a href="{{thispost.author.path}}"><img class="{{ thispost.author.slug }} phone-only" src="{{ acf_author_image }}" title="{{ thispost.author }} - Click here to view this author's post archive."></a>
   {% elseif thispost.author.author_icon %}
   <p class="author-img">
     <a href="{{thispost.author.path}}"><img alt="{{ thispost.author }} - Click here to view this author's post archive." src="{{ thispost.author.author_icon }}" title="{{ thispost.author }} - Click here to view this author's post archive."></a>
