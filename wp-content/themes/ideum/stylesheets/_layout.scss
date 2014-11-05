@@ -6,16 +6,16 @@
 @include media($small-screen-up) {
   .phone-only {
     visibility: visible !Important;
-    position: initial;
-      left: initial; top: initial;
+    position: relative;
+      left: -0px; top: -0px;
     &.gone {
       display: block;
     }
   }
   .phone-n-tablet {
     visibility: visible !Important;
-    position: initial;
-      left: initial; top: initial; 
+    position: relative;
+      left: -0px; top: -0px; 
     &.gone {
       display: block;
     }     
@@ -57,24 +57,24 @@
   }
   .phone-n-tablet {
     visibility: visible !Important;
-    position: initial;
-      left: initial; top: initial;
+    position: relative;
+      left: -0px; top: -0px;
     &.gone {
       display: block;
     }
   }
   .tablet-only {
     visibility: visible !Important;
-    position: initial;
-      left: initial; top: initial;
+    position: relative;
+      left: -0px; top: -0px;
     &.gone {
       display: block;
     }
   }
   .tablet-n-desktop {
     visibility: visible !Important;
-    position: initial;
-      left: initial; top: initial;
+    position: relative;
+      left: -0px; top: -0px;
     &.gone {
       display: block;
     }
@@ -116,16 +116,16 @@
   }
   .tablet-n-desktop {
     visibility: visible !Important;
-    position: initial;
-      left: initial; top: initial;
+    position: relative;
+      left: -0px; top: -0px;
     &.gone {
       display: block;
     }
   }
   .desktop-only {
     visibility: visible !Important;
-    position: initial;
-      left: initial; top: initial;
+    position: relative;
+      left: -0px; top: -0px;
     &.gone {
       display: block;
     }    
