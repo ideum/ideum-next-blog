@@ -6,7 +6,7 @@ $product-spec-list-width: 150px;
 $product-spec-list-left-margin: 15px;
 
 .productOuterWrapper{
-	background-color: $base-background-color;
+	background-color: $off-vv-light-gray;
 
 	> header{
 
@@ -42,7 +42,7 @@ $product-spec-list-left-margin: 15px;
 	}
 
 	ul.slider{
-		background-color: $base-background-color;
+		background-color: $off-vv-light-gray;
 		li.client-slide.rn-carousel-slide{
 			text-align: center;
 			width: 37%;
@@ -93,17 +93,7 @@ $product-spec-list-left-margin: 15px;
 	background-color: $white;
 	width: 100%;
 
-	&.gold {
-    background-color: $medium-dark-orange;
-  }
-
-  &.red {
-    background-color: $very-dark-red;
-  }
-
-  &.blue {
-    background-color: $ideum-blue;
-  }
+	
 
 	@include media($medium-screen-up){
 		height: $product-section-height;
