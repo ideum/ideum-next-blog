@@ -6,13 +6,13 @@
 
     .img-wrap {
       background-size: cover;
-      height: 32%;
+      /*height: 32%;*/
     }
 
     .txt-wrap {
 
       @include media($medium-screen-up) { 
-        padding-bottom: $gutter * 4;
+        padding-bottom: $gutter * 2;
       }
 
     }
@@ -67,7 +67,7 @@
     .img-wrap {
 
       img {
-        height: 65%;
+        /*height: 65%;*/
       }
 
     }
