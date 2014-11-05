@@ -93,7 +93,7 @@ $product-spec-list-left-margin: 15px;
 	background-color: $white;
 	width: 100%;
 
-	
+
 
 	@include media($medium-screen-up){
 		height: $product-section-height;
@@ -108,8 +108,12 @@ $product-spec-list-left-margin: 15px;
       	@include flex-direction(column);
       	@include align-items(center);
       	@include justify-content(center);
-      	padding: 0 4em;
-      	height: $product-section-height;
+      	padding: $gutter 4em;
+      	
+      	@include media($medium-screen-up){
+					height: $product-section-height;
+					padding: 0 4em;
+				}
 
       	&.white{
       		color: $white;
@@ -132,12 +136,14 @@ $product-spec-list-left-margin: 15px;
       	}
 
       	.specs{
-      		margin-left: 66px;
+      		@include media($medium-screen-up){
+      			margin-left: 66px;
+					}
 	      	ul.specList{
 	      		width: 150px;
 	      		float: left;
 	      		height: auto;
-				margin-left: 15px;
+						margin-left: 15px;
 	      		li{
 	      			list-style-type: disc;
 	      			margin-left: 5px;
