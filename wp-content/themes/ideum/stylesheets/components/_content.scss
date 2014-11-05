@@ -155,6 +155,10 @@
     &.red {
       background-color: $very-dark-red;
     }
+
+    &.blue {
+      background-color: $ideum-blue;
+    }
     
     @include media($small-screen-up) {
       
