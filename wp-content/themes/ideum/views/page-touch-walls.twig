@@ -1,0 +1,90 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div id="touch-walls">
+
+  <section class="product-category" id-autoplay>
+    <video poster="{{theme.link}}/images/products/Presenter.png">
+      <source src="{{theme.link}}/videos/Presenter.webm" type="video/webm">
+      <source src="{{theme.link}}/videos/Presenter.mp4" type="video/mp4">
+      <img src="{{theme.link}}/images/products/Presenter.png">
+    </video>
+
+    <div class="overlay">
+      <div class="content">
+        <h2>Presenter</h2>
+        <p>
+          The Presenter is Ideum’s line of HD and 4K / UHD rugged, ultra-thin touch
+          walls. Available in 46”, 55” and 65” versions, there is a Presenter model to
+          match every type of application or need. The Presenter can be used just about
+          anywhere; it has appeared in major US art museums, busy aquariums and science
+          centers, in the board rooms of Fortune 500 companies, inside a mobile
+          laboratory and even in a moving rail car exhibit.
+        </p>
+        <a class="presenter" href="presenter">View Selections</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients-n-partners" ng-init="clientSliderIndex = 0">
+
+    <div class="section-info">
+
+      <h1>
+        <a href="/client-list/">Clients &amp; Partners</a>
+      </h1>
+
+      <p>
+        We have worked with top museums and cultural institutions, the world’s leading technology firms, along with exhibit design and fabrication firms on a variety of challenging and collaborative projects.
+      </p>
+
+    </div>
+
+    {% include 'client-slider.twig' %}
+
+  </section>
+
+  <section class="featured-pages">
+    <article class="content direct-sales">
+      <div class="txt-wrap">
+        <h1>
+          Direct Sales
+        </h1>
+        <p>
+          Please contact us at (505) 792-1110 ext.1 or toll free in the US and Canada (855) 989-6824, use our online inquiry form, or emails us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;</a>. Our multitouch tables are sold domestically and internationally and are only available direct from Ideum.
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="/contact/">Inquire about sales</a>
+          <!-- <a class="share" href="#FIXME">Share This</a> -->
+        </footer>
+
+      </div>
+    </article>
+
+    <article class="content rentals">
+      <div class="txt-wrap">
+        <h1>
+          Multitouch Rentals
+        </h1>
+        <p>
+          Ideum's 46&quot; Platform, 55&quot; 4k Drafting table, 46&quot; and 32&quot; Coffee Tables, and 46&quot; Presenter Touch Wall are available for rent for tradeshows and special events.
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="/contact/">Inquire about rentals</a>
+          <!-- <a class="share" href="#FIXME">Share This</a> -->
+        </footer>
+
+      </div>
+    </article>
+  </section>
+
+  {{follow_dialog}}
+
+  {% include 'follow-us-button.twig' %}
+
+</div>
+
+{% endblock %}
