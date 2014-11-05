@@ -1,8 +1,9 @@
 set :stage, :staging
 
-server '54.68.178.198',
+server 'next.ideum.com',
     user: 'ubuntu',
-    roles: %w{web app db}
+    roles: %w{web app db},
+    ssh_options: { forward_agent: true }
 
 set :deploy_to, '/var/www/ideum-next-blog'
 
