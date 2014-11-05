@@ -1,8 +1,8 @@
 <nav class="sub-nav">
   <ul>
     <li class="current-menu-item"><a href="{{post.link}}">{{post.title}}</a></li>
-    {% for child in post.children %}
+    {% for child in post.children %}{% if child.post_type == 'page' %}
     <li><a href="{{child.link}}">{{child.title}}</a></li>
-    {% endfor %}
+    {% endif %}{% endfor %}
   </ul>
 </nav>
