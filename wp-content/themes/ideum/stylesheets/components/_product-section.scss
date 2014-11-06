@@ -47,7 +47,7 @@ $product-spec-list-left-margin: 15px;
 			text-align: center;
 			
 			@include media($small-screen-up){				
-				border-bottom: 1px solid $very-light-gray;
+				border-bottom: 1px solid $vv-light-gray;
 				float:left;
 				height: auto;
 				margin: 0 auto;
