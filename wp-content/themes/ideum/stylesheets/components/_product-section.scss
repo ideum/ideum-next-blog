@@ -133,17 +133,17 @@ $product-spec-list-left-margin: 15px;
       	&.white{
       		color: $white;
 
-      		h2{
+      		h2, p {
       			color: $white;
       		}
       	}
 
       	h2{
       		width: 100%;
-      		font-weight: $bold;
-      		font-size: 2em;
+      		font-weight: $ultra-bold;
+      		font-size: 2.25em;
       		text-align: left;
-      		padding-bottom: 1em;
+      		padding-bottom: .5em;
       	}
 
       	p{
