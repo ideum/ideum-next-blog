@@ -61,6 +61,7 @@ $product-spec-list-left-margin: 15px;
 
 			@include media($medium-screen-up){
 				border: 0px;
+				float: none;
 				margin: 0 6%;
 				padding: 0;
 				width: 37%;
