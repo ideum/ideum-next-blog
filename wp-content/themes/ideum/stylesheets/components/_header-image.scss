@@ -13,7 +13,7 @@
   //
   @each $class, $color, $image, $width, $offset, $bgvert, $bghoriz, $bgheight, $txtorient in ( 
     ('home',                  #61A6E7, 'home-pseudo-header-bg',                       800px,  200px, center, center,  800px,  left),
-    ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',            600px,  100px, center, center,  460px,  center),
+    ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px,  center),
     ('mission',               #211f20, 'mission-pseudo-header-bg-final',              600px,  100px, center, center,  460px,  center),
     ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px,  center),
     ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg-final', 600px,  100px, center, top,     460px,  center),
