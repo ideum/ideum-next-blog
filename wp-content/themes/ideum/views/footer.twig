@@ -37,13 +37,19 @@
     </ul>
   </nav>
 
-  <form class="newsletter-signup scroll-bottom" ng-show="showNewsletter">
+  <form
+    class="newsletter-signup scroll-bottom"
+    action="http://ideum.createsend.com/t/y/s/eihk/"
+    method="POST"
+    ng-show="showNewsletter"
+  >
+    <input type="hidden" name="name" value="Subscriber">
     <label for="newsletter_signup_email">Newsletter Signup</label>
     <input
       type="email"
       id="newsletter_signup_email"
       class="email"
-      name="email"
+      name="cm-eihk-eihk"
       placeholder="Enter Your Email Here"
     >
   </form>
