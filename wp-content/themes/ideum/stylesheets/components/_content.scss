@@ -670,3 +670,7 @@ img {
     float: right;
   }
 }
+
+// msie fixes
+html[data-useragent*='MSIE'] #header .header-image .page-intro.centered-intro .page-intro-inner h1 { position: relative; top: -25%; }
+
