@@ -673,4 +673,5 @@ img {
 
 // msie fixes
 html[data-useragent*='MSIE'] #header .header-image .page-intro.centered-intro .page-intro-inner h1 { position: relative; top: -25%; }
+html[data-useragent*='MSIE'].featured-page .content.team-n-clients .txt-wrap { padding: 0 10%; width:100%; } 
 
