@@ -46,12 +46,17 @@ $product-spec-list-left-margin: 15px;
 		li.client-slide.rn-carousel-slide{
 			text-align: center;
 			
-			@include media($small-screen-up){
-				width: 100%;
+			@include media($small-screen-up){				
+				border-bottom: 1px solid $very-light-gray;
+				float:left;
 				height: auto;
 				margin: 0 auto;
 				padding: 0 20px;
-				border-bottom: 1px solid 
+				width: 100%;
+
+				&:last-of-type {
+					border: 0px;
+				}
 			}
 
 			@include media($medium-screen-up){
@@ -78,6 +83,7 @@ $product-spec-list-left-margin: 15px;
 
 	ul.slider.platform-coffee li.client-slide.rn-carousel-slide .svgHolder > svg{
 		fill: $platform-coffee-color;
+		color: $white;
 	}
 
 	ul.slider.platform-drafting li.client-slide.rn-carousel-slide .svgHolder > svg{
