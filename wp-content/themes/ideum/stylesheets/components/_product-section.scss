@@ -83,7 +83,9 @@ $product-spec-list-left-margin: 15px;
 
 	ul.slider.platform-coffee li.client-slide.rn-carousel-slide .svgHolder > svg{
 		fill: $platform-coffee-color;
-		color: $white;
+		h1, h2, h3, h4, p, a {
+			color: $white;
+		}
 	}
 
 	ul.slider.platform-drafting li.client-slide.rn-carousel-slide .svgHolder > svg{
