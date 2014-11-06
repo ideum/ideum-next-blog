@@ -27,6 +27,7 @@ $very-light-gray:       hsl(  0,   0%,  88%);
 $vv-light-gray:         hsl(  0,   0%,  94%);
 $off-vv-light-gray:     hsl(  0,   0%,  97%);
 
+$vv-dark-teal           hsl(171,  46%,  60%);
 $very-dark-teal:        hsl(170,  58%,  59%);
 $dark-teal:             hsl(170,  58%,  59%);
 $medium-teal:           hsl(170,  71%,  78%);
@@ -111,7 +112,7 @@ $platform-drafting-color: rgb(92, 184, 230); //about 10 more than $dark-blue
 $platform-color: rgb(255, 112, 101); //close to dark red
 $pro-color: rgb(156, 140, 216); //purple
 $pano-color: rgb(101, 207, 137); //green but not in our greens.
-$presenter-color: rgb(78, 205, 179); //teal, but not in out teals.
+$presenter-color: hsl(171, 46%, 60%); //teal, but not in our teals.
 
 // Neat Overrides
 $column: 60px;
