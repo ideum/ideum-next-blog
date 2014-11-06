@@ -98,6 +98,10 @@ $touchtable-description-margin: 25px;
       a.pano:hover{
         @include bgAndBorderColor($pano-color);
       }
+
+      a.presenter:hover{
+        @include bgAndBorderColor($presenter-color);
+      }
     }
   }
 
