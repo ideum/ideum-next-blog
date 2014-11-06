@@ -659,3 +659,14 @@
     display: inline-block !Important;
   }
 }
+
+img {
+  &.aligncenter {
+    display:block;
+    float: none;
+    margin: 20px auto !important;
+  }
+  &.alignright {
+    float: right;
+  }
+}
