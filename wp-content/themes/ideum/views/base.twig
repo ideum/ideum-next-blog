@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html class="no-js" ng-app="ideum">
 
+<script>
+  // get Browser and OS info and put it in the html tag 
+  var b = document.documentElement;
+    b.setAttribute('data-useragent',  navigator.userAgent);
+    b.setAttribute('data-platform', navigator.platform );
+    b.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
+</script>
+
   <head>
     {% include 'html-header.twig' %}
     {% block head %}
