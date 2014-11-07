@@ -137,7 +137,7 @@ body {
     a {
       color: #3e4857;
       @include transition(color 0.4s ease-in);
-      font: { size: 9px; weight: 500; }
+      font: { size: 11px; weight: 500; }
       text: { transform: uppercase; decoration: none; }
 
       padding-right: 2em;
