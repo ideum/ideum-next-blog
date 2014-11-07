@@ -130,7 +130,7 @@ body {
   );
 
   nav {
-    background: $productpage-lightgray;
+    background: $productpage-lightgray; 
     line-height: 28px;
     text-align: center;
 
@@ -146,7 +146,7 @@ body {
   }
 
   .content {
-    @include position(absolute, 40px 120px 0px 120px);
+    @include position(absolute, 40px 190px 0px 190px);
     text-align: center;
 
     @extend %hide-and-show;
