@@ -43,15 +43,20 @@ $touchtable-description-margin: 25px;
       h2,p,a{
         @include transition (all $touchtable-transition-time);
       }
+      h2,p {
+        text-shadow: 1px 1px 2px #000;
+      }
 
       h2{
         color: $touchtable-content-color;
-        font-weight: $bold;
+        font-size: 2rem;
+        font-weight: $bold; 
       }
 
       p{
         max-width: 640px;
         display: none;
+        font-size: 1em;
         margin: $touchtable-description-margin auto 0;
 
         @include media($large-screen-up){
