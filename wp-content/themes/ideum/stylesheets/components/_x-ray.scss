@@ -156,11 +156,11 @@ body {
 
       ul {
         display: inline-block;
-        list-style-image: disc !Important;
+        list-style-image: disc;
+        list-style-type: disc;
 
         li {
           text-align: left;
-          list-style-image: disc !Important;
         }
 
       }
