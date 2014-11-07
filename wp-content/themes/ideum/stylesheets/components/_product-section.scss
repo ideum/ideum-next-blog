@@ -129,6 +129,10 @@ $product-spec-list-left-margin: 15px;
 
 	@include media($medium-screen-up) { 
 		height: $product-section-height;
+
+		&.more-text {
+			height: $product-section-height-large;
+		}
 	
 		.prod-sect-img-wrap {
 			display:flex;			
@@ -153,96 +157,106 @@ $product-spec-list-left-margin: 15px;
 
 	}
 
+	@include media($large-screen-up) { 
+		height: $product-section-height;
+
+		&.more-text {
+			height: $product-section-height;
+		}
+	}
+
 	> .productText{
 		@include display(flex);
-      	@include flex-direction(column);
-      	@include align-items(center);
-      	@include justify-content(center);
-      	padding: $gutter 4em;
-      	
-      	@include media($medium-screen-up){ 
-					height: $product-section-height;
-					padding: 0 4em;
+  	@include flex-direction(column);
+  	@include align-items(center);
+  	@include justify-content(center);
+  	padding: $gutter 4em;
+  	
+  	@include media($medium-screen-up){ 
+			height: $product-section-height;
+			padding: 0 4em;
+			&.more-text {
+				height: $product-section-height-large;
+			}
+		}
 
-					&.more-text {
-						height: $product-section-height-large;
-					}
-				}
+		@include media($large-screen-up){ 
 
-				@include media($large-screen-up){ 
+			&.more-text {
+				height: $product-section-height;
+			}
 
-					&.more-text {
-						height: $product-section-height;
-					}
-				}
+		}
 
-      	&.white{
-      		color: $white;
+  	&.white{
+  		color: $white;
 
-      		h2, p {
-      			color: $white;
-      		}
-      	}
+  		h2, p {
+  			color: $white;
+  		}
 
-      	h2{
-      		width: 100%;
-      		font-weight: $ultra-bold;
-      		font-size: 2.25em;
-      		text-align: left;
-      		padding-bottom: .5em;
-      	}
+  	}
 
-      	p{
-      		max-width: 100%;
-      		text-align: left;
-      	}
+  	h2{
+  		width: 100%;
+  		font-weight: $ultra-bold;
+  		font-size: 2.25em;
+  		text-align: left;
+  		padding-bottom: .5em;
+  	}
 
-      	.specs{
-      		@include media($medium-screen-up){
-      			margin-left: 186px;
-					}
-					@include media($large-screen-up){
-      			margin-left: 66px;
-					}
-	      	ul.specList{
-	      		width: 150px;
-	      		float: left;
-	      		height: auto;
-						margin-left: 15px;
-	      		li{
-	      			list-style-type: disc;
-	      			margin-left: 5px;
-	      		}
+  	p{
+  		max-width: 100%;
+  		text-align: left;
+  	}
 
-	      		li.listHeader{
-	      			font-weight: $bold;
-	      			list-style-type: none;
-	      			margin-left: -10px;
-	      		}
-	      	}
+  	.specs{
+  		@include media($medium-screen-up){
+  			margin-left: 186px;
+			}
+			@include media($large-screen-up){
+  			margin-left: 66px;
+			}
+    	ul.specList{
+    		width: 150px;
+    		float: left;
+    		height: auto;
+				margin-left: 15px;
+    		li{
+    			list-style-type: disc;
+    			margin-left: 5px;
+    		}
 
-	      	ul.column2{
-	      		@include media($medium-screen-up){
-	    	  		margin-left: $product-spec-list-width + 100px;
-	      			float: none;
-		  		}
-	      	}
+    		li.listHeader{
+    			font-weight: $bold;
+    			list-style-type: none;
+    			margin-left: -10px;
+    		}
+    	}
 
-	      	ul.column3{
-	      		@include media($medium-screen-up){
-	    	  		margin-left: $product-spec-list-width + 200px;
-	      			float: none;
-		  		}
-	      	}
-	    }
-	}
+    	ul.column2{
+    		@include media($medium-screen-up){
+  	  		margin-left: $product-spec-list-width + 100px;
+    			float: none;
+  		}
+    	}
+
+    	ul.column3{
+    		@include media($medium-screen-up){
+  	  		margin-left: $product-spec-list-width + 200px;
+    			float: none;
+  			}
+    	}
+    }
+  }
+	
 
 	// for productText, when there is a full section image, and the text is on the Left
 	> .fullLeft, > .fullRight{
 		@include media($medium-screen-up){
 			width: 50%;
 			position: absolute;
-  		}
+  	}
 	}
 
 	// " ... when text is on the right
@@ -256,7 +270,7 @@ $product-spec-list-left-margin: 15px;
 		@include media($medium-screen-up){
 			float: left;
 			width: auto;
-  		}
+  	}
 	}
 
 	> .left{
@@ -264,7 +278,7 @@ $product-spec-list-left-margin: 15px;
 		@include media($medium-screen-up){
 			float: left;
 			width: 50%;
-  		}
+  	}
 	}
 
 	// text on left
@@ -273,7 +287,7 @@ $product-spec-list-left-margin: 15px;
 		@include media($medium-screen-up){
 			float: right;
 			width: auto;
-  		}
+  	}
 	}
 }
 
