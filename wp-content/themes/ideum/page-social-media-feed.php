@@ -45,4 +45,11 @@ $context['sidebar_contact'] = Timber::get_sidebar('sidebar-contact.twig', $sideb
 
 $context['social_media_feed'] = ideum_social_feed();
 
+$context['social_sources'] = array();
+foreach ($context['social_media_feed'] as $social_item) {
+    if (!in_array($social_item->source, $context['social_sources'])) {
+        $context['social_sources'][] = $social_item->source;
+    }
+}
+
 Timber::render(array('page-social-media-feed.twig'), $context);

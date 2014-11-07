@@ -16,6 +16,17 @@
 
   <div class="article-body">
 
+    <div class="select-box-wrap">
+
+      <select ui-select2 ng-model="projectType" data-placeholder="Source">
+        <option value=""></option>
+        {% for source in social_sources %}
+          <option>{{ source }}</option>
+        {% endfor %}
+      </select>
+
+    </div>
+
   <!-- Ben, you do realize that there is different html based on which media outlet the item is fed from, right? -->
 
     <ul class="social-media-feed">

@@ -32,20 +32,16 @@
 
         </div>
 
-        <!-- 
         <div class="select-box-wrap">
 
-          <select ui-select2 ng-model="projectType" data-placeholder="Browse By Type">
+          <select ui-select2 ng-model="projectType" data-placeholder="Browse By Category">
             <option value=""></option>
-          </select>
-          <select ui-select2 ng-model="projectTopic" data-placeholder="Browse By Topic">
-            <option value=""></option>
+            {% for category in categories %}
+              <option>{{ category.category_nicename }}</option>
+            {% endfor %}
           </select>
 
         </div>
-        -->
-
-        <!-- Ben, I won't build the rest of this section out until everything actually works and the functionality is set in stone and complete. Also, remember, you said you were going to integrate the select box replacement script. When you do I will style. There is just no point until that is done. -->
 
       </div>
 

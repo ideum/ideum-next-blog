@@ -18,7 +18,7 @@
 
 		$data = Timber::get_context();
 		$data['page'] = Timber::get_post(11803);
-			
+
 		$data['title'] = 'Archive';
 		if (is_day()){
 			$data['title'] = 'Archive: '.get_the_date( 'D M Y' );
@@ -41,7 +41,7 @@
 		} else if (is_post_type_archive()){
 			$data['title'] = post_type_archive_title('', false);
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
-		}	
+		}
 
 		if ($post_type == 'ideum_project') {
 			$data['custom_slug'] = 'creative-services';
@@ -51,7 +51,8 @@
 			$data['ogp_title'] = get_field('alternative_meta_title', 11803);
 			$data['ogp_keywords'] = get_field('alternative_meta_keywords', 11803);
 			$data['ogp_description'] = get_field('alternative_meta_description', 11803);
-		} 
+            $data['categories'] = get_categories(array('type' => 'ideum_project'));
+		}
 
 		$data['posts'] = Timber::get_posts();
 
