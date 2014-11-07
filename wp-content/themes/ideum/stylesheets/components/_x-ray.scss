@@ -156,7 +156,7 @@ body {
 
       ul {
         display: inline-block;
-        list-style-image: disc;
+        list-style-image: disc !Important;
 
         li {
           text-align: left;
