@@ -128,7 +128,7 @@ $product-spec-list-left-margin: 15px;
 
 	}
 
-	@include media($medium-screen-up) { 
+	@include media($medium-screen-up) {
 		height: $product-section-height;
 
 		&.more-text {
@@ -136,7 +136,7 @@ $product-spec-list-left-margin: 15px;
 		}
 	
 		.prod-sect-img-wrap {
-			display:flex;			
+			@include display(flex);;			
 			height: 100%;
 			overflow: hidden;
 			position:relative;

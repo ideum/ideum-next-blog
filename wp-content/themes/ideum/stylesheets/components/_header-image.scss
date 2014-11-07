@@ -147,7 +147,7 @@
     }
 
     &.centered-intro {
-      display: flex;
+      @include display(flex);
       align-items: center;
       height: 100% !Important;
       justify-content: center;

@@ -2,7 +2,7 @@
   background: $off-vv-light-gray url("images/#{$background-file}") no-repeat center center;
   text-align: center;
   min-height: $footer-overlap-height;
-  display: flex;
+  @include display(flex);
   align-items: center;
   justify-content: center;
   .button {
