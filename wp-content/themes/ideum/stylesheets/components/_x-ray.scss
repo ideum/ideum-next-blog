@@ -153,6 +153,17 @@ body {
 
     .body {
       @extend %hide-and-show;
+
+      ul {
+        display: inline-block;
+        list-style-image: disc;
+
+        li {
+          text-align: left;
+        }
+
+      }
+
     }
 
     //show content button
