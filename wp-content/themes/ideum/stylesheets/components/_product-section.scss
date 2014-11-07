@@ -45,12 +45,11 @@ $product-spec-list-left-margin: 15px;
 		background-color: $off-vv-light-gray;
 		li.client-slide.rn-carousel-slide{
 			text-align: center;
-			
-			@include media($small-screen-up){				
+
+			@include media($small-screen-up){
 				border-bottom: 1px solid $vv-light-gray;
 				float:left;
 				height: auto;
-				margin: 0 auto;
 				padding: 0 20px;
 				width: 100%;
 
@@ -62,9 +61,8 @@ $product-spec-list-left-margin: 15px;
 			@include media($medium-screen-up){
 				border: 0px;
 				float: none;
-				margin: 0 6%;
-				padding: 0;
-				width: 37%;
+				padding: 0 55px;
+				width: 50%;
 			}
 
 			.svgHolder{

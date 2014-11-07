@@ -1,7 +1,17 @@
+.rn-carousel-slides {
+  @include display(flex);
+
+  .rn-carousel-slide {
+    display: block;
+    @include flex(0 0 auto);
+  }
+}
+
 .slider {
   .rn-carousel-slide {
     height: initial;
     width: 100%;
+    display: block;
 
     @include media($medium-screen-up) { width: (100% / 2); }
     @include media($large-screen-up)  { width: (100% / 3); }
