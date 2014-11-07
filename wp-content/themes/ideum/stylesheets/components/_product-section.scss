@@ -129,8 +129,10 @@ $product-spec-list-left-margin: 15px;
 		height: $product-section-height;
 	
 		.prod-sect-img-wrap {
-			display:flex; 
-			position:relative; 
+			display:flex;			
+			height: 100%;
+			overflow: hidden;
+			position:relative;
 			width:50%;
 
 			&.img-left {
