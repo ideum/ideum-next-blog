@@ -47,7 +47,9 @@
     </div> <!-- Close tabs -->
 
     <section class="productSection pano">
-      <img class="left" src="{{theme.link}}/images/products/pano/half_01.jpg">
+      <div class="prod-sect-img-wrap img-left">
+        <img class="left" src="{{theme.link}}/images/products/pano/half_01.jpg">
+      </div>
       <div class="productText white">
         <h2>Tough Enough for Virtually Any Environment</h2>
         <p>
@@ -62,7 +64,9 @@
     </section>
 
     <section class="productSection">
-      <img class="full" src="{{theme.link}}/images/products/pano/full_01.jpg">
+      <div class="prod-sect-img-wrap full img-left">
+        <img class="full" src="{{theme.link}}/images/products/pano/full_01.jpg">
+      </div>
       <div class="productText fullRight">
         <h2>All-in-One or Control Room Set Up</h2>
         <p>
@@ -163,9 +167,8 @@
 
     <button class="very-dark-gray-button">Download Spec Sheet</button>
 
-    <section class="productSection plain pano">
-      <div class="prod-sect-img-wrap full img-left">
-        <img class="full" src="{{theme.link}}/images/products/pano/full_03.jpg">
+    <section class="productSection plain pano full" 
+    style="background:url('{{theme.link}}/images/products/pano/full_03.jpg') no-repeat top center; background-size: cover;">
       </div>
       <div class="productText white fullLeft">
         <h2>Upgrades</h2>
