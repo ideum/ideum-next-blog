@@ -1,6 +1,6 @@
 
 $product-section-height: 480px;
-$product-setcion-width: 960px;
+$product-section-width: 960px; // corrected spelling of var
 
 $product-spec-list-width: 150px;
 $product-spec-list-left-margin: 15px;
@@ -26,7 +26,7 @@ $product-spec-list-left-margin: 15px;
 }
 
 .productInnerWrapper{
-	max-width: $product-setcion-width;
+	max-width: $product-section-width; // corrected spelling of var
 	margin: -20% auto 0 auto;
 	z-index: 999;
 	position: relative;
@@ -107,16 +107,48 @@ $product-spec-list-left-margin: 15px;
 	}
 }
 
-.productSection{
+.productSection {
 	background-color: $white;
 	width: 100%;
 
-	@include media($medium-screen-up){
-		height: $product-section-height;
-	}
-
 	>img{
 		width: 50%;
+	}
+
+	@include media($small-screen-up) { 
+	
+		.prod-sect-img-wrap {
+
+			img {
+				width: 100% !Important;
+			}
+
+		}
+
+	}
+
+	@include media($medium-screen-up) { 
+		height: $product-section-height;
+	
+		.prod-sect-img-wrap {
+			display:flex; 
+			position:relative; 
+			width:50%;
+
+			&.img-left {
+				float:left;
+			}
+
+			&.img-right {
+				float:right;
+			}
+
+			img {
+				width: 100% !Important;
+			}
+
+		}
+
 	}
 
 	> .productText{
@@ -126,7 +158,7 @@ $product-spec-list-left-margin: 15px;
       	@include justify-content(center);
       	padding: $gutter 4em;
       	
-      	@include media($medium-screen-up){
+      	@include media($medium-screen-up){ 
 					height: $product-section-height;
 					padding: 0 4em;
 				}
@@ -154,6 +186,9 @@ $product-spec-list-left-margin: 15px;
 
       	.specs{
       		@include media($medium-screen-up){
+      			margin-left: 186px;
+					}
+					@include media($large-screen-up){
       			margin-left: 66px;
 					}
 	      	ul.specList{
@@ -212,7 +247,7 @@ $product-spec-list-left-margin: 15px;
 	}
 
 	> .left{
-    	width: 100%;
+    width: 100%;
 		@include media($medium-screen-up){
 			float: left;
 			width: 50%;
