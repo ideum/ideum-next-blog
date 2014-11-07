@@ -3,27 +3,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<title>{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}</title>
+<title>{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% elseif ogp_title %}{{ ogp_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}</title>
 
 {% if post.alternative_meta_keywords %}<meta name="keywords" content="{{ post.alternative_meta_keywords }}">{% endif %}
+{% if ogp_keywords %}<meta name="keywords" content="{{ ogp_keywords }}">{% endif %}
 
-<meta name="description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}">
+<meta name="description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}">
 
 <meta property="og:site_url" content="{{site.url}}">
 
 <meta property="og:site_name" content="{{ site.title }}">
 
-<meta property="og:url" content="{% if post.permalink %}{{ post.permalink }}{% else %}{{site.url}}/{{ post.slug }}{% endif %}"> 
+<meta property="og:url" content="{% if post.permalink %}{{ post.permalink }}{% elseif custom_slug %}{{site.url}}/{{ custom_slug }}{% else %}{{site.url}}/{{ post.slug }}{% endif %}"> 
 
-<meta property="og:title" content="{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}">
+<meta property="og:title" content="{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif ogp_title %}{{ ogp_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}">
 
 <meta property="og:type" content="{% if page.opengraph.type %}{{ page.opengraph.type }}{% elseif post.id == '11878' %}website{% else %}article{% endif %}">
 
 {% if post.post_type != 'ideum_project' %}
-<meta property="og:image" content="{% if page.opengraph.image %}{{ page.opengraph.image }}{% elseif post.alternative_meta_image %}{{site.url}}{{TimberImage(post.get_field('alternative_meta_image')) }}{% elseif post.alternative_meta_image_path %}{{site.url}}/{{ post.alternative_meta_image_path }}{% elseif blog.alternative_meta_image %}{{site.url}}{{TimberImage(blog.get_field('alternative_meta_image')) }}{% elseif blog.alternative_meta_image_path %}{{site.url}}{{TimberImage(blog.get_field('alternative_meta_image_path')) }}{% elseif post.thumbnail %}{{site.url}}{{ post.get_thumbnail.get_src }}{% elseif post.primary_image %}{{site.url}}/{{ post.primary_image}}{% else %} {{ site.opengraph.default_image }}{% endif %}">
+<meta property="og:image" content="{% if page.opengraph.image %}{{ page.opengraph.image }}{% elseif post.alternative_meta_image %}{{site.url}}{{TimberImage(post.get_field('alternative_meta_image')) }}{% elseif post.alternative_meta_image_path %}{{site.url}}/{{ post.alternative_meta_image_path }}{% elseif blog.alternative_meta_image %}{{site.url}}{{TimberImage(blog.get_field('alternative_meta_image')) }}{% elseif blog.alternative_meta_image_path %}{{site.url}}{{TimberImage(blog.get_field('alternative_meta_image_path')) }}{% elseif post.thumbnail %}{{site.url}}{{ post.get_thumbnail.get_src }}{% elseif post.primary_image %}{{site.url}}/{{ post.primary_image}}{% elseif ogp_image_path %}{{site.url}}/{{ ogp_image_path }}{% elseif ogp_image %}{{site.url}}/{{ ogp_image }}{% else %} {{ site.opengraph.default_image }}{% endif %}">
 {% endif %}
 
-<meta property="og:description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}"/>
+<meta property="og:description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}"/>
 
 {# 
 <meta property="og:url" content="{% if page.opengraph.url %}{{ page.opengraph.url }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}"> 

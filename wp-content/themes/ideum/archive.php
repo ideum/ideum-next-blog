@@ -44,7 +44,12 @@
 
 		if ($post_type == 'ideum_project') {
 			$data['custom_slug'] = 'creative-services';
-			$data['custom_header'] = get_field('header_image_text_content', 11803);			
+			$data['custom_header'] = get_field('header_image_text_content', 11803);
+			$data['ogp_image_path'] = get_field('alternative_meta_image_path', 11803);
+			$data['ogp_image'] = get_field('alternative_meta_image', 11803);
+			$data['ogp_title'] = get_field('alternative_meta_title', 11803);
+			//$data['ogp_keywords'] = get_field('alternative_meta_keywords', 11803);
+			$data['ogp_description'] = get_field('alternative_meta_description', 11803);
 		} 
 
 		$data['posts'] = Timber::get_posts();
