@@ -1,5 +1,7 @@
 
 $product-section-height: 480px;
+$product-section-height-large: 550px;
+
 $product-section-width: 960px; // corrected spelling of var
 
 $product-spec-list-width: 150px;
@@ -161,6 +163,17 @@ $product-spec-list-left-margin: 15px;
       	@include media($medium-screen-up){ 
 					height: $product-section-height;
 					padding: 0 4em;
+
+					&.more-text {
+						height: $product-section-height-large;
+					}
+				}
+
+				@include media($large-screen-up){ 
+
+					&.more-text {
+						height: $product-section-height;
+					}
 				}
 
       	&.white{
