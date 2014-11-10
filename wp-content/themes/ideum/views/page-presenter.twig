@@ -15,7 +15,7 @@
         <div pane title="Presenter 46">
           <header>
             <h1>Presenter 46</h1>
-            <h2>Touch Space. Refined.</h2>
+            <h2>Touch Space, Refined</h2>
           </header>
           <div ng-app="productDetails">
             <section class="x-ray presenter-46" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
@@ -29,7 +29,7 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
-                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+                  <h2>{{ '{{ detail.blurb|e('html') }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
@@ -47,7 +47,7 @@
         <div pane title="Presenter 55">
           <header>
             <h1>Presenter 55</h1>
-            <h2>Built Touch for Public Spaces. Versatile Enough for Any Setting.</h2>
+            <h2>Built Touch for Public Spaces, Versatile Enough for Any Setting</h2>
           </header>
           <div ng-app="productDetails">
             <section class="x-ray presenter-55" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
@@ -61,7 +61,7 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
-                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+                  <h2>{{ '{{ detail.blurb|e('html') }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
@@ -79,7 +79,7 @@
         <div pane title="Presenter 65">
           <header>
             <h1>Presenter 65</h1>
-            <h2>The Big Picture. Totally Touchable.</h2>
+            <h2>The Big Picture, Totally Touchable</h2>
           </header>
           <div ng-app="productDetails">
             <section class="x-ray presenter-65" ng-controller="xRayCtrl" ng-init="dataIndex = 2">
@@ -93,7 +93,7 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
-                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+                  <h2>{{ '{{ detail.blurb|e('html') }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
