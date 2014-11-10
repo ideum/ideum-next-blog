@@ -11,7 +11,8 @@ var App = module.exports =  angular.module('ideum', [
   // Project code
   'ideum.productDetails',
   'ideum.tabs',
-  'ideum.video'
+  'ideum.video',
+  'ideum.selectFilters'
 ]);
 
 App.factory('screenSize', function ($window) {
@@ -62,6 +63,7 @@ require('./header');
 require('./footer');
 require('./expander');
 require('./product-details');
+require('./select-filters');
 require('./tabs');
 require('./touch-tables');
 require('./colorbox');

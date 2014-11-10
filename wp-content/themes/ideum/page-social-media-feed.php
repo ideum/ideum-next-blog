@@ -52,4 +52,13 @@ foreach ($context['social_media_feed'] as $social_item) {
     }
 }
 
+if (!empty($_GET['source'])) {
+    $context['social_media_feed'] = array_filter(
+        $context['social_media_feed'],
+        function ($social_item) {
+            return $social_item->source === $_GET['source'];
+        }
+    );
+}
+
 Timber::render(array('page-social-media-feed.twig'), $context);
