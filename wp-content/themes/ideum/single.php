@@ -14,10 +14,22 @@ $post = new TimberPost();
 
 $post = Timber::query_post();
 
-$post_cat = $post->get_terms('category');
-$post_cat = $post_cat[0]->ID;
-
 $context['post'] = $post;
+
+$post_cat = get_the_category();
+$cat_name = $post_cat[0]->name;
+
+// make an argument list for related posts get_post query
+$args = array(
+  'posts_per_page'  => 3,
+  'category'        => $cat_name,
+  'numberposts'     => 3,
+  'post_type'       => 'post',
+  'exclude'         => $post->ID
+ );
+
+//print_r ($args);
+//echo '/'.$cat_name.'/';
 
 $post_author_img_id = get_the_author_meta('team_user_image');
 $acf_author_img_url = wp_get_attachment_url( $post_author_img_id );
@@ -28,7 +40,9 @@ $context['acf'] = get_field_objects($data['post']->ID);
 
 $sidebar_context = Timber::get_context();
 $sidebar_context['site_url'] = get_bloginfo('url');
-$sidebar_context['related_posts'] = Timber::get_posts('cat=-592,'.$post_cat.'&numberposts=3');  //FIXME - don't know if this works
+
+$sidebar_context['related_posts'] = Timber::get_posts($args); //FIXME - don't know if this works
+
 $sidebar_context['thispost'] = Timber::get_post($post->ID);
 $sidebar_context['acf_author_image'] = $acf_author_img_url;
 
