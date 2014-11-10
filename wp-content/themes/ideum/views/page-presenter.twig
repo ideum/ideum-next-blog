@@ -29,7 +29,7 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
-                  <h2>{{ '{{ detail.blurb|e('html') }}' }}</h2>
+                  <h2>{{ '{{ detail.blurb|e("html") }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
@@ -61,7 +61,7 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
-                  <h2>{{ '{{ detail.blurb|e('html') }}' }}</h2>
+                  <h2>{{ '{{ detail.blurb|e("html") }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
@@ -93,7 +93,7 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
-                  <h2>{{ '{{ detail.blurb|e('html') }}' }}</h2>
+                  <h2>{{ '{{ detail.blurb|e("html") }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
