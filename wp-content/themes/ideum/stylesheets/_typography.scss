@@ -73,6 +73,16 @@ a {
   }
 }
 
+.light-link-color {
+
+  a {
+    @include transition(color $base-animation-speed $base-animation-easing);
+    color: $light-accent-color;
+    text-decoration: none;
+  }
+
+}
+
 hr {
   border-bottom: 1px solid $base-border-color;
   border-left: none;

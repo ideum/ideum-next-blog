@@ -650,6 +650,12 @@
   text-decoration: none;
 }
 
+.light-link-color {
+  .faux-link {
+    color: $light-accent-color;
+  }
+}
+
 .hidden {visibility: hidden;}
 
 .download-open-exhibits {
