@@ -43,6 +43,7 @@ $light-orange:          hsl( 60,  55%,  87%);
 $very-light-orange:     hsl( 60,  67%,  92%);
 
 $ideum-blue:            hsl(209,  74%,  64%);
+$vv-dark-blue:          hsl(192,  93%,  29%);
 $very-dark-blue:        hsl(192,  57%,  62%);
 $dark-blue:             hsl(200,  73%,  63%);
 $medium-blue:           hsl(192,  66%,  67%);
@@ -74,7 +75,8 @@ $base-background-color: $vv-light-gray;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $dark-teal;
+$base-accent-color: $vv-dark-blue; 
+
 
 // Font Weights
 $light: 300;
