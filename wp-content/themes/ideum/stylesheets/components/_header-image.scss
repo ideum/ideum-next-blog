@@ -12,7 +12,7 @@
   // compiler will throw an error and refuse to continue.
   //
   @each $class, $color, $image, $width, $offset, $bgvert, $bghoriz, $bgheight, $txtorient in ( 
-    ('home',                  #6AAAE8, 'home-pseudo-header-bg-DoE',                   800px,  200px, center, center,  800px,  left),
+    ('home',                  #6AAAE8, 'home-pseudo-header-bg-DoE2',                  800px,  200px, center, center,  800px,  left),
     ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px,  center),
     ('mission',               #211f20, 'mission-pseudo-header-bg-final',              600px,  100px, center, center,  460px,  center),
     ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px,  center),
@@ -25,7 +25,7 @@
     ('client-list',           #ef6c6c, '',                                            800px,  250px, center, center,  460px,  center),
     ('customer-support',      #f4c057, '',                                            800px,  250px, center, center,  460px,  center),
     ('legal',                 #3e4857, '',                                            800px,  250px, center, center,  460px,  center),
-    ('social-media-feed',     #2c2c2d, 'blog-pseudo-header-bg',                       600px,  100px, center, top,     460px,  center),
+    ('social-media-feed',     #2c2c2d, 'social-media-pseudo-header-bg',               600px,  100px, center, top,     460px,  center),
     ('thank-you',             #3e4857, '',                                            800px,  250px, center, center,  460px,  center),
   ) {
     .#{$class} {
