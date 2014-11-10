@@ -1,4 +1,3 @@
-
 'use strict';
 
-var App = angular.module('ideum.selectFilters');
+var App = angular.module('ideum.selectFilters', []);
