@@ -19,8 +19,9 @@
 		$data = Timber::get_context();
 		$data['page'] = Timber::get_post(11803);
 
-		$data['blog'] = Timber::get_post(11864);
-		$data['blog_ogp_description'] = get_field('alternative_meta_description', 11864);
+		if is_page(11864) {
+			$data['blog'] = Timber::get_post(11864);
+		}
 
 		$data['title'] = 'Archive';
 		if (is_day()){
