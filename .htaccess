@@ -5,7 +5,6 @@ redirect permanent /interactive-exhibit     http://ideum.com/ideum_projects
 redirect permanent /media-web-design        http://ideum.com/ideum_project
 redirect permanent /products/multitouch     http://ideum.com/touch-tables
 redirect permanent /about-us                http://ideum.com/our-story
-redirect permanent /customer-support        http://ideum.com/customer-support
 redirect permanent /inquiry                 http://ideum.com/contact
 redirect permanent /contact-us              http://ideum.com/contact
 
