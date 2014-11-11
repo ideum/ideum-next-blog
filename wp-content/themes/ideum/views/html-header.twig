@@ -1,16 +1,16 @@
 <meta charset="{{site.charset}}" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
 <title>{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% elseif ogp_title %}{{ ogp_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}</title>
 
-{% if post.alternative_meta_keywords %}
+{#% if post.alternative_meta_keywords %}
 <meta name="keywords" content="{{ post.alternative_meta_keywords }}">
 {% elseif blog.alternative_meta_keywords %}
 <meta name="keywords" content="{{ blog.alternative_meta_keywords }}">
 {% elseif ogp_keywords %}<meta name="keywords" content="{{ ogp_keywords }}">
-{% endif %}
+{% endif %#}
 
 <meta name="description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif blog.alternative_meta_description %}{{ blog.alternative_meta_description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}">
 
