@@ -125,6 +125,17 @@ $footer-font-color: $white;
           color: $footer-font-color;
         }
       }
+
+      .input-button-wrap {
+        position: relative;
+        .newsletter-submit {
+          border: 1px solid #ccc;
+          padding: 1%;
+          position: absolute;
+            bottom: 3px; right: 0;
+        }
+      }
+
     }
 
     @include media($large-screen-up) {
