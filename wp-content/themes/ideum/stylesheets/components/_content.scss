@@ -31,7 +31,6 @@
     }    
 
   }
-
   
   .select2-container {        
     background: #424c5a;
@@ -58,7 +57,6 @@
     @include media($large-screen-up) {
       min-width: 240px;
     }
-
 
     a.select2-choice {
       background: #424c5a;
@@ -664,6 +662,10 @@
   @include media($large-screen-up) {
     display: inline-block !Important;
   }
+}
+
+.select2-search {
+  display: none;
 }
 
 img {
