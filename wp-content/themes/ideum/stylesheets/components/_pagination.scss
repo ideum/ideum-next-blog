@@ -57,7 +57,11 @@
         }
 
         .current {
-          color: $very-dark-gray;
+          background-color: #343e4b;
+          border-radius: 50%;
+          //color: $very-dark-gray;
+          color: #fff;
+          padding: 2px 5px 3px;
         }
       }
 
