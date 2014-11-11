@@ -9,7 +9,7 @@
 {% if blog.alternative_meta_keywords %}<meta name="keywords" content="{{ blog.alternative_meta_keywords }}">{% endif %}
 {% if ogp_keywords %}<meta name="keywords" content="{{ ogp_keywords }}">{% endif %}
 
-<meta name="description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}">
+<meta name="description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% if blog.opengraph.description %}{{ blog.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}">
 
 <meta property="og:site_url" content="{{site.url}}">
 
