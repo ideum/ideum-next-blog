@@ -20,7 +20,7 @@
 
       <div class="select-box-wrap" ng-controller="socialFilterCtrl">
 
-        <select ui-select2 ng-model="projectType" data-placeholder="Source">
+        <select ui-select2 ng-model="socialSource" data-placeholder="Source">
           <option value=""></option>
           {% for source in social_sources %}
             <option value="{{ source }}">{{ source }}</option>
