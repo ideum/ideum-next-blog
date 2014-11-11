@@ -9,7 +9,7 @@
 {% if blog.alternative_meta_keywords %}<meta name="keywords" content="{{ blog.alternative_meta_keywords }}">{% endif %}
 {% if ogp_keywords %}<meta name="keywords" content="{{ ogp_keywords }}">{% endif %}
 
-<meta name="description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% if blog.opengraph.description %}{{ blog.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}">
+<meta name="description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif blog.opengraph.description %}{{ blog.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}">
 
 <meta property="og:site_url" content="{{site.url}}">
 
@@ -25,7 +25,7 @@
 <meta property="og:image" content="{% if page.opengraph.image %}{{ page.opengraph.image }}{% elseif post.alternative_meta_image %}{{site.url}}{{TimberImage(post.get_field('alternative_meta_image')) }}{% elseif post.alternative_meta_image_path %}{{site.url}}/{{ post.alternative_meta_image_path }}{% elseif blog.alternative_meta_image %}{{site.url}}{{TimberImage(blog.get_field('alternative_meta_image')) }}{% elseif blog.alternative_meta_image_path %}{{site.url}}{{TimberImage(blog.get_field('alternative_meta_image_path')) }}{% elseif post.thumbnail %}{{site.url}}{{ post.get_thumbnail.get_src }}{% elseif post.primary_image %}{{site.url}}/{{ post.primary_image}}{% elseif ogp_image_path %}{{site.url}}/{{ ogp_image_path }}{% elseif page.thumbnail %}{{site.url}}/{{ page.get_thumbnail.get_src }}{% else %}{{ site.opengraph.default_image }}{% endif %}">
 {% endif %}
 
-<meta property="og:description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% if blog.opengraph.description %}{{ blog.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}"/>
+<meta property="og:description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif blog.opengraph.description %}{{ blog.opengraph.description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% else %}{{ site.description }}{% endif %}"/>
 
 {# 
 <meta property="og:url" content="{% if page.opengraph.url %}{{ page.opengraph.url }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}"> 
