@@ -49,6 +49,11 @@ $sidebar_context['acf_author_image'] = $acf_author_img_url;
 $context['related_posts'] = Timber::get_sidebar('bar-related-posts.twig', $sidebar_context);
 $context['sidebar_post'] = Timber::get_sidebar('sidebar-post.twig', $sidebar_context);
 
+// Dirty hack for "Array" bug
+if (is_array($context['post']->pull_quote)) {
+    $context['post']->pull_quote = current($context['post']->pull_quote);
+}
+
 if (post_password_required($post->ID)){ 
 	Timber::render('single-password.twig', $context);
 } else {
