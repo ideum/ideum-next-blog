@@ -46,7 +46,9 @@ $context['sidebar_contact'] = Timber::get_sidebar('sidebar-contact.twig', $sideb
 
 if (is_page('11825')){
   $context['team'] = Timber::get_posts('post_type=ideum_employee&post_status=publish&exclude=2655&order=asc&img=team_user_image&posts_per_page=-1'); 
-  
+}
+if() (is_page('Blog') or (is_page('Home') ){
+  echo "Here!";
 }
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

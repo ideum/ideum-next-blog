@@ -42,15 +42,6 @@
 			$data['title'] = post_type_archive_title('', false);
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
 		}
-		else if is_page('blog') {
-			$data['custom_header'] = get_field('header_image_text_content', 11864);
-			$data['ogp_image_path'] = get_field('alternative_meta_image_path', 11864);
-			$data['ogp_image'] = get_field('alternative_meta_image', 11864);
-			$data['ogp_title'] = get_field('alternative_meta_title', 11864);
-			$data['ogp_keywords'] = get_field('alternative_meta_keywords', 11864);
-			$data['ogp_description'] = get_field('alternative_meta_description', 11864);
-			echo "here";
-		}
 
 		if ($post_type == 'ideum_project') {
 			$data['custom_slug'] = 'creative-services';
