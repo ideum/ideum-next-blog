@@ -1,0 +1,62 @@
+# Pages
+redirect permanent /application-development http://ideum.com/our-story/software-initiatives
+redirect permanent /custom-exhibits         http://ideum.com/ideum_project
+redirect permanent /interactive-exhibit     http://ideum.com/ideum_projects
+redirect permanent /media-web-design        http://ideum.com/ideum_project
+redirect permanent /products/multitouch     http://ideum.com/touch-tables
+redirect permanent /about-us                http://ideum.com/our-story
+redirect permanent /customer-support        http://ideum.com/customer-support
+redirect permanent /inquiry                 http://ideum.com/contact
+redirect permanent /contact-us              http://ideum.com/contact
+
+
+
+# Products
+
+## Coffee Tables
+redirect permanent /coffee-tables http://ideum.com/touch-tables/platform-coffee
+
+## Platform
+redirect permanent /redefined                                     http://ideum.com/touch-tables/platform
+redirect permanent /products/multitouch/platform                  http://ideum.com/touch-tables/platform
+redirect permanent /products/multitouch/platform/gallery          http://ideum.com/touch-tables/platform
+redirect permanent /products/multitouch/platform/specifications   http://ideum.com/touch-tables/platform
+redirect permanent /products/multitouch/platform/selected-clients http://ideum.com/touch-tables/platform
+
+## Drafting Tables
+redirect permanent /drafting-touchtable http://ideum.com/touch-tables/platform-drafting
+
+## Pro & Pro Lab
+redirect permanent /products/multitouch/professional                  http://ideum.com/touch-tables/pro
+redirect permanent /products/multitouch/professional/gallery          http://ideum.com/touch-tables/pro
+redirect permanent /products/multitouch/professional/specifications   http://ideum.com/touch-tables/pro
+redirect permanent /products/multitouch/professional/selected-clients http://ideum.com/touch-tables/pro
+redirect permanent /products/multitouch/pro-lab                       http://ideum.com/touch-tables/pro
+redirect permanent /products/multitouch/pro-lab/gallery               http://ideum.com/touch-tables/pro
+redirect permanent /products/multitouch/pro-lab/specifications        http://ideum.com/touch-tables/pro
+redirect permanent /products/multitouch/pro-lab/selected-clients      http://ideum.com/touch-tables/pro
+
+## Pano
+redirect permanent /products/multitouch/pano                  http://ideum.com/touch-tables/pano
+redirect permanent /products/multitouch/pano/gallery          http://ideum.com/touch-tables/pano
+redirect permanent /products/multitouch/pano/specifications   http://ideum.com/touch-tables/pano
+redirect permanent /products/multitouch/pano/selected-clients http://ideum.com/touch-tables/pano
+
+## Presenter
+redirect permanent /touch-walls/presenter-46                http://ideum.com/touch-walls/presenter
+redirect permanent /touch-walls/presenter-46/gallery        http://ideum.com/touch-walls/presenter
+redirect permanent /touch-walls/presenter-46/specifications http://ideum.com/touch-walls/presenter
+redirect permanent /touch-walls/presenter-55                http://ideum.com/touch-walls/presenter
+redirect permanent /touch-walls/presenter-55/gallery        http://ideum.com/touch-walls/presenter
+redirect permanent /touch-walls/presenter-55/specifications http://ideum.com/touch-walls/presenter
+redirect permanent /touch-walls/presenter-65                http://ideum.com/touch-walls/presenter
+redirect permanent /touch-walls/presenter/gallery           http://ideum.com/touch-walls/presenter
+redirect permanent /touch-walls/presenter/specifications    http://ideum.com/touch-walls/presenter
+redirect permanent /touch-walls/presenter/selected-clients  http://ideum.com/touch-walls/presenter
+
+
+
+# Projects
+redirect permanent ^/interactive-exhibits/(.+) http://ideum.com/ideum_project/$1
+redirect permanent ^/media-web-design/(.+)     http://ideum.com/ideum_project/$1
+redirect permanent /monterey                   http://ideum.com/ideum_project/aquarium_multitouch_wall
