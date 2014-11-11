@@ -107,6 +107,7 @@
       }
 
       h1 a, a.view, a.share, a.read {
+        text-shadow: 1px 1px 2px #000;
         font-weight: $bold;
         color: $white;
 
@@ -118,6 +119,7 @@
 
       h2 {
         display: none;
+        text-shadow: 1px 1px 2px #000;
         @include media($medium-screen-up) {
           color: $white;
           display: block;
