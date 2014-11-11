@@ -41,6 +41,8 @@
 		} else if (is_post_type_archive()){
 			$data['title'] = post_type_archive_title('', false);
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
+		}
+		else if is_home() {
 			$data['custom_header'] = get_field('header_image_text_content', 11864);
 			$data['ogp_image_path'] = get_field('alternative_meta_image_path', 11864);
 			$data['ogp_image'] = get_field('alternative_meta_image', 11864);
