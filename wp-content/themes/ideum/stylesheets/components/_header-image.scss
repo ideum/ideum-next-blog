@@ -153,6 +153,7 @@
       align-items: center;
       height: 100% !Important;
       justify-content: center;
+      width:100%;
 
       &.no-image {
         align-items: initial;
@@ -167,11 +168,12 @@
       }
 
       .page-intro-inner {
-        @include span-columns(10);
+        
         
         height: auto;        
         position: relative;
         text-align: center;
+        width: 100%;
         
         @include media($medium-screen-up) {
           height: 70%;
