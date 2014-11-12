@@ -8,6 +8,8 @@ redirect permanent /about-us                http://ideum.com/our-story
 redirect permanent /inquiry                 http://ideum.com/contact
 redirect permanent /contact-us              http://ideum.com/contact
 
+redirect permanent ^/blog/category/(.+)     http://ideum.com/category/$1
+
 
 
 # Products
