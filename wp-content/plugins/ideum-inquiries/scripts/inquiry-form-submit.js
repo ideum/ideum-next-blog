@@ -1,7 +1,7 @@
 jQuery(function ($) {
   'use strict';
 
-  var $container = $('#inquiryForm'),
+  var $container = $('#inquiry-form'),
       $form = $container.find('form');
 
   $form.on('submit', function (event) {
