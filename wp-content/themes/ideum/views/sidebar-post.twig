@@ -33,7 +33,9 @@
     <span class="label">Category: </span>
     {% if thispost.terms('category') %}
     {% for term in thispost.terms('category') %}
-    <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %},{% else %}.{% endif %}   
+    {% if term != 'featured' and term != 'Featured' %}
+    <a href="{{ term.link }}" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %},{% else %}.{% endif %}
+    {% endif %}
     {% endfor %}
     {% endif %}
 

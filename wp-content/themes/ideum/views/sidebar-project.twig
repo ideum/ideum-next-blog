@@ -29,7 +29,9 @@
     <span class="label">Category: </span>
     {% if thisproject.terms('category') %}
     {% for term in thisproject.terms('category') %}
+    {% if term != 'featured' and term != 'Featured' %}
     <a href="{{ term.link }}?post_type=ideum_project" title="View all posts in {{ term.name }}" rel="category tag">{{ term.name }}</a>{% if loop.last == false %} / {% else %}.{% endif %}
+    {% endif %}
     {% endfor %}
     {% endif %}
   </p>
