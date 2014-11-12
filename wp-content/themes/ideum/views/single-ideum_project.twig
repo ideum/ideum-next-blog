@@ -91,13 +91,13 @@
             {% if post.first_secondary_image or post.second_secondary_image or post.third_secondary_image %}
             <ul>
             {% if post.first_secondary_image %}
-            <li><a class="project-secondary-group" href="{{TimberImage(post.get_field('first_secondary_image')).src}}"><img alt="Another Image for {{ post.title }}" src="{{TimberImage(post.get_field('first_secondary_image')).src}}" title="Another Image for {{ post.title }}"/></a></li>
+            <li><a class="project-secondary-group" href="{{TimberImage(post.get_field('first_secondary_image')).src}}"><img alt="{{ post.title }}" src="{{TimberImage(post.get_field('first_secondary_image')).src}}" title="{{ post.title }}"/></a></li>
             {% endif %}
             {% if post.second_secondary_image %}
-            <li><a class="project-secondary-group" href="{{TimberImage(post.get_field('second_secondary_image')).src}}"><img alt="Another Image for {{ post.title }}" src="{{TimberImage(post.get_field('second_secondary_image')).src}}" title="Another Image for {{ post.title }}"/></a></li>
+            <li><a class="project-secondary-group" href="{{TimberImage(post.get_field('second_secondary_image')).src}}"><img alt="{{ post.title }}" src="{{TimberImage(post.get_field('second_secondary_image')).src}}" title="{{ post.title }}"/></a></li>
             {% endif %}
             {% if post.third_secondary_image %}
-            <li><a class="project-secondary-group" href="{{TimberImage(post.get_field('third_secondary_image')).src}}"><img alt="Another Image for {{ post.title }}" src="{{TimberImage(post.get_field('third_secondary_image')).src}}" title="Another Image for {{ post.title }}"/></a></li>
+            <li><a class="project-secondary-group" href="{{TimberImage(post.get_field('third_secondary_image')).src}}"><img alt="{{ post.title }}" src="{{TimberImage(post.get_field('third_secondary_image')).src}}" title="{{ post.title }}"/></a></li>
             {% endif %}
             <ul>
             {% endif %}
