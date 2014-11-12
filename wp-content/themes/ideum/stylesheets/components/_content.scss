@@ -687,21 +687,19 @@ html[data-useragent*='MSIE'] .featured-page .content.team-n-clients .txt-wrap { 
 html[data-useragent*='MSIE'] .contact-content .inquiry-form .inquiry-content form .right-label { margin-top: -0px;}
 // Safari Fixes
 html[data-useragent*='Safari'] .talking-points .point .point-text { margin-left: 0; } 
-html[data-useragent*='Safari'] .blog-post-detail .content-wrapper .pull-quote .pull-quote-txt h2 { padding-top:20%; }
+html[data-useragent*='Safari'] .blog-post-detail .content-wrapper .pull-quote .pull-quote-txt h2 { 
+  @include media($medium-screen-up) {
+    padding-top:20%;
+  }
+}
 // Silk Fix (only required because of 'Safari' string in Silk user-agent)
 html[data-useragent*='Silk'] .blog-post-detail .content-wrapper .pull-quote .pull-quote-txt h2 { 
-  @include media($small-screen-up) {
-    padding: $gutter $gutter $medium-gutter;
-  }
   @include media($medium-screen-up) {
     padding-top: 0; 
   }
 }
 // Chrome Fix (only required because of 'Safari' string in Silk user-agent)
 html[data-useragent*='Chrome'] .blog-post-detail .content-wrapper .pull-quote .pull-quote-txt h2 { 
-  @include media($small-screen-up) {
-    padding: $gutter $gutter $medium-gutter;
-  }
   @include media($medium-screen-up) {
     padding-top: 0; 
   }
