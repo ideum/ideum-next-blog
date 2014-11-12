@@ -51,6 +51,9 @@
 
 		if ($post_type == 'ideum_project') {
 			$data['custom_slug'] = 'creative-services';
+			if (is_category()) {
+				$data['custom_slug'] = '';
+			}
 			//$data['custom_slug'] = 'ideum_projects';
 			$data['custom_header'] = get_field('header_image_text_content', 11803);
 			$data['ogp_image_path'] = get_field('alternative_meta_image_path', 11803);
