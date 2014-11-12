@@ -21,7 +21,18 @@ $touchtable-description-margin: 25px;
     height: auto !important;
     margin: 0;
     padding: 0;
+    display: none;
+    @include media($medium-screen-up) {
+      display: block;
+    }
+  }
+
+  img.mobile-fallback {
+    width: 100%;
     display: block;
+    @include media($medium-screen-up) {
+      display: none;
+    }
   }
 
   .overlay{
