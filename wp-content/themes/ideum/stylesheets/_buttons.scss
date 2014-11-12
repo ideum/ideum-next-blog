@@ -23,4 +23,8 @@ button.very-dark-gray-button, a.very-dark-gray-button {
 	border-radius: 4px; 
 	border: none;
 	display: block;
+  &:hover {
+    background-color: $inactive-button-color;
+    color: darken $white;
+  }
 }
