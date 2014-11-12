@@ -35,6 +35,9 @@
             color: $dark-gray;
             font-size: 1em;
             margin-bottom: 0px;
+            &.error {
+              color: $very-dark-red;
+            }
           }
 
           &.dark {
@@ -182,6 +185,8 @@
         }
 
         .required-note {
+          color: $very-dark-red; 
+          font-weight: $bold;         
           margin-bottom: $medium-gutter;
         }
 
@@ -201,3 +206,5 @@
   }
 
 }
+
+
