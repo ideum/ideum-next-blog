@@ -10,7 +10,7 @@
       
     {% if post.get_field('landing_page_image') %}
     <img src="{{ post.get_field('landing_page_image') }}" alt="Image for the post: '{{post.title}}'" 
-    title="Image for the post: '{{post.title}}'"/>
+    title="Image for the post: '{{post.title}}'" nopin="nopin" />
     {#% else %#}
     <!-- <img src="{{theme.link}}/images/placeholder-science-project-{{ random(2) }}.jpg" 
     alt="Placeholder image for the post: '{{post.title}}'" title="Placeholder image for the post: '{{post.title}}'"/> -->
