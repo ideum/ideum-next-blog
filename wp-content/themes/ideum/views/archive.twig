@@ -4,21 +4,63 @@
 
 <!-- begin - archive.twig -->
 
-<div id="archive" class="sub-page-wrap blog-listing">
+{% if the_post_type == "ideum_project" %}
 
-  <section class="highlight-text child-page">
+<section class="our-creative-services">
 
-    {% if post.can_edit %}
-    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
-    {% endif %}
+  <div class="section-info">
 
     <h1>
       {{ title }}
     </h1>
+    
+  </div>
 
-    <p>
-      {{post.content}}
-    </p>
+  <div class="custom-project-listing">
+
+    {% for post in posts %}
+    {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+    {% endfor %}
+
+  </div>
+
+  <div class="tool-pagination">
+
+  <div class="pagination-interior-wrap">
+
+    {% if pagination.prev %}
+      <a href="{{pagination.prev.link}}" alt="Previous" title="Previous" class="prev arrow arrow-left {{pagination.prev.link|length ? '' : 'invisible'}}"></a>
+    {% endif %}
+    <ul class="pages">
+      {% for page in pagination.pages %}
+        <li>
+          {% if page.link %}
+            <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+          {% else %}
+            <span class="{{page.class}}">{{page.title}}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% if pagination.next %}
+      <a href="{{pagination.next.link}}" alt="Next" title="Next" class="next arrow arrow-right {{pagination.next.link|length ? '' : 'invisible'}}"></a>
+    {% endif %}
+
+  </div>
+
+</div>
+
+</section>
+
+{% else %}
+
+<div id="archive" class="sub-page-wrap blog-listing">
+
+  <section class="highlight-text child-page">
+
+    <h1>
+      {{ title }}
+    </h1>
 
   </section>
 
@@ -55,6 +97,8 @@
     </div>
 
   </section>
+
+  {% endif %}
 
   <!-- end - archive.twig -->
 

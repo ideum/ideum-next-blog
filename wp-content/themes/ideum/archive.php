@@ -23,6 +23,8 @@
 			$data['blog'] = Timber::get_post(11864);
 		}
 
+		$data['the_post_type'] = $_GET['post_type'];
+
 		$data['title'] = 'Archive';
 		if (is_day()){
 			$data['title'] = 'Archive: '.get_the_date( 'D M Y' );
