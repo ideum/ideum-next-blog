@@ -681,6 +681,7 @@ img {
 
 // msie fixes
 html[data-useragent*='Trident'] #header .header-image .page-intro.no-image.centered-intro .page-intro-inner h1 { position: relative; top: -25%; }
+html[data-useragent*='Trident'] .overlay nav a { letter-spacing: -.5px; }
 html[data-useragent*='MSIE'] .featured-page .content.team-n-clients .txt-wrap {padding:0 10%;width:100%;} 
 html[data-useragent*='MSIE'] .contact-content .inquiry-form .inquiry-content form .right-label {margin-top: -0px;}
 
