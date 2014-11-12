@@ -12,7 +12,7 @@ set :branch, 'wip-integration'
 # set :pty, true
 
 # set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{wp-content/uploads}
+set :linked_dirs, %w{spec-sheets wp-content/uploads}
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :keep_releases, 5
