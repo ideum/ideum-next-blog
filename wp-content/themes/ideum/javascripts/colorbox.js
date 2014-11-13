@@ -13,8 +13,8 @@ $(document).ready(function(){
   //$(".group4").colorbox({rel:'group4', slideshow:true});
   $(".project-secondary-group").colorbox({rel:'project-secondary-group',});
   $(".ajax").colorbox();
-  $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
-  $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+  //$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+  //$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
   $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
   $(".inline").colorbox({inline:true, width:"60%", height:"auto"});
   $(".inline-share").colorbox({inline:true, width:"60%", height:"auto"});
