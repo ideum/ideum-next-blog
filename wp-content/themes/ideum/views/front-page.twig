@@ -6,395 +6,395 @@
 
 {% block content %}
 
-  <section class="our-creative-services front-page-featured-projects">
+<section class="our-creative-services front-page-featured-projects">
 
-    <div class="section-info">
+  <div class="section-info">
 
-      <h1>
-        <a href="/ideum_project/">Our Creative Services</a>
-      </h1>
+    <h1>
+      <a href="/ideum_project/">Our Creative Services</a>
+    </h1>
 
-      <!-- options: one-column-text (one column text is centered), two-column-text (two column text is left aligned) -->
-      <div class="two-column-text">
+    <!-- options: one-column-text (one column text is centered), two-column-text (two column text is left aligned) -->
+    <div class="two-column-text">
 
-        <p>
-          For the last 15 years, Ideum has excelled in creating compelling, computer-based interactive experiences for visitors around the world. We have been pioneers in the development of multitouch and multiuser exhibits developing both the software and hardware for these unique visitor experiences. In addition, our firm has captured and produced media, engaged in research and writing, and has been involved in all aspects of content creation for exhibit development.
-        </p>
-
-        <p>
-          Ideum has worked with a wide variety of organizations including, innovative aquariums and science centers, history museums and historic sites, world-renowned art museums and cultural organizations, along with unique public spaces and iconic corporate brands. We have worked on projects in our home state of New Mexico and across the globe in Europe, Asia, North and South America, and the Middle East.
-        </p>
-
-      </div>
-
-    </div>
-
-    <ul class="slider project-wrap" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveThreeUp()">
-
-      {{featured_projects}}
-
-    </ul>
-
-    <div class="section-info">
-      
       <p>
-        <a href="/ideum_project/" class="button active">View All</a>
+        For the last 15 years, Ideum has excelled in creating compelling, computer-based interactive experiences for visitors around the world. We have been pioneers in the development of multitouch and multiuser exhibits developing both the software and hardware for these unique visitor experiences. In addition, our firm has captured and produced media, engaged in research and writing, and has been involved in all aspects of content creation for exhibit development.
+      </p>
+
+      <p>
+        Ideum has worked with a wide variety of organizations including, innovative aquariums and science centers, history museums and historic sites, world-renowned art museums and cultural organizations, along with unique public spaces and iconic corporate brands. We have worked on projects in our home state of New Mexico and across the globe in Europe, Asia, North and South America, and the Middle East.
       </p>
 
     </div>
 
-  </section>
+  </div>
 
-  {{featured_post}}
+  <ul class="slider project-wrap" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveThreeUp()">
 
-  {# the Our Products section (below) needs to be made dynamic - but there was 
-  no way to do so before launch as Products Functionality not built in time #}
+    {{featured_projects}}
 
-  {# `productSliderIndex` is used to track the status of the product slider
-   # contained within. It must be initialized to zero (the first slide) before the
-   # slider initializes. #}
-  <section class="our-products" ng-init="productSliderIndex = 0">
+  </ul>
 
-    <div class="section-info">
-
-      <h1>
-        Our Products
-      </h1>
-
-      <p>
-        Ideum offers a range of multitouch hardware solutions to meet the need of any exhibition or installation space. We offer a variety of multitouch tables and touch wall products. In addition, we can design custom touch tables, touch walls, kiosks, and other types of computer-based installations and environments. We have been designing and building multitouch tables since 2008.
-      </p>
-
-      <button class="pointer" ng-class="{active: productSliderIndex == 0}"
-        ng-click="productSliderIndex = 0">Touch Tables</button>
-      <button class="pointer" ng-class="{active: productSliderIndex == 1}"
-        ng-click="productSliderIndex = 1">Touch Walls</button>
-
-    </div>
-
-    <ul rn-carousel rn-carousel-index="productSliderIndex">
-
-      <li class="product-slide">
-
-        <div class="touch-tables product-item post-style img-right">
-
-          <div class="content">
-
-            <div class="img-wrap">
-
-              <a href="/touch-table/"><img src="{{theme.link}}/images/product-touch-tables.png"></a>
-
-            </div>
-
-            <div class="txt-wrap">
-
-              <h1>
-                <a href="/touch-table/">Touch Tables</a>
-              </h1>
-
-              <p>
-                Our touch tables, from 46” to 100” in size, meet the needs of just about any installation or application. All of our models are turnkey and constructed of aircraft-grade aluminum or cold-rolled steel, making them perfect for demanding environments.
-              </p>
-
-              <!-- begin hidden content for multitouch-tables-share -->
-              <div style="display:none;">
-                <div id="multitouch-tables-share" class="share-dialog">
-                  <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
-                  <p>Like what you see? Share this.</p>
-                  <!-- Facebook -->
-                  <a href="http://www.facebook.com/sharer.php?u={{site.url}}/touch-tables/" target="_blank"><img class="sharing-icon" 
-                  src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
-                  <!-- Twitter -->
-                  <a href="http://twitter.com/share?url={{site.url}}/touch-tables/&amp;text=Ideum builds reliable, hardened touch tables with the best available components and exemplary service." target="_blank"><img class="sharing-icon" 
-                  src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
-                  <!-- Google+ -->
-                  <a href="https://plus.google.com/share?url={{site.url}}/touch-tables/" target="_blank"><img class="sharing-icon" 
-                  src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
-                  <!-- LinkedIn -->
-                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}/touch-tables/" target="_blank"><img class="sharing-icon" 
-                  src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
-                  <!-- Pinterest -->
-                  <!-- 
-                  <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a> 
-                  -->
-                  <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}/touch-tables/&amp;media={{site_url}}/wp-content/uploads/2014/09/OG-MultitouchTables.jpg&amp;description=Ideum builds touch tables, from 42” to 100” in size, meeting the needs of just about any installation or application. All of our models are turnkey and constructed of aircraft-grade aluminum or steel, making them perfect for demanding environments." data-pin-do="buttonBookmark" data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
-                </div>
-              </div>
-              <!-- end hidden content for multitouch-tables-share - revealed when user clicks 'Share This' link (below)-->
-
-              <footer class="footer">
-                <a class="read" href="/touch-table/">View Selection</a>
-                <a class="tablet-n-desktop share share-dialog-tab-desk" href="#multitouch-tables-share">Share This</a>
-                <a class="phone-only share share-dialog-phone" href="#multitouch-tables-share">Share This</a>
-              </footer>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </li>
-
-      <li class="product-slide">
-
-        <div class="touch-walls product-item post-style img-left">
-
-          <div class="content">
-
-            <div class="img-wrap">
-
-              <a href="/touch-walls/"><img src="{{theme.link}}/images/product-touch-walls.png"></a>
-
-            </div>
-
-            <div class="txt-wrap">
-
-              <h1>
-                <a href="/touch-walls/">Touch Walls</a>
-              </h1> 
-
-              <p>
-                Our Presenter touch walls range in size from 46” to 65” (75” model, December 2014) and can be mounted on a motorized stand, allowing them to be used drafting- or table-style. Tough enough for public spaces, our touch walls can be hung horizontally or vertically.
-              </p>
-
-              <!-- begin hidden content for touch-walls-share -->
-              <div style='display:none'>
-                <div id='touch-walls-share' class="share-dialog">
-                  <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
-                  <p>Like what you see? Share this.</p>
-                  <!-- Facebook -->
-                  <a href="http://www.facebook.com/sharer.php?u={{site.url}}/touch-walls/" target="_blank"><img class="sharing-icon" 
-                  src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
-                  <!-- Twitter -->
-                  <a href="http://twitter.com/share?url={{site.url}}/touch-walls/&amp;text=Ideum builds reliable, hardened touch walls with the best available components and exemplary service." target="_blank"><img class="sharing-icon" 
-                  src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
-                  <!-- Google+ -->
-                  <a href="https://plus.google.com/share?url={{site.url}}/touch-walls/" target="_blank"><img class="sharing-icon" 
-                  src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
-                  <!-- LinkedIn -->
-                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}/touch-walls/" target="_blank"><img class="sharing-icon" 
-                  src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
-                  <!-- Pinterest -->
-                  <!-- 
-                  <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
-                  -->
-                  <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}/touch-walls/&amp;media={{site_url}}/wp-content/uploads/2014/11/OG-Presenter.jpg&amp;description=Ideum Presenter touch walls range in size from 46 to 65inches (75 inch model in December 2014) and can be mounted on a motorized stand, allowing them to be used drafting- or table-style. Tough enough for public spaces, our touch walls can be hung horizontally or vertically." data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>       
-                </div>
-              </div>
-              <!-- end hidden content for touch-walls-share - revealed when user clicks 'Share This' link (below)-->
-
-              <footer class="footer">
-                <a class="read" href="/touch-walls/">View Selection</a>
-                <a class="tablet-n-desktop share inline" href="#touch-walls-share">Share This</a>
-                <a class="phone-only share share-dialog-phone" href="#touch-walls-share">Share This</a>
-              </footer>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </li>
-
-    </ul>
-
-  </section>
-
-  <!-- 
-  <section class="chat">
-
-    <div class="button">
+  <div class="section-info">
     
-      <a href="#FIXME">Click here to build your own multitouch table.</a>
+    <p>
+      <a href="/ideum_project/" class="button active">View All</a>
+    </p>
 
-    </div>
+  </div>
 
-  </section>
-  -->
+</section>
 
-  <section class="clients-n-partners" ng-init="clientSliderIndex = 0">
+{{featured_post}}
 
-    <div class="section-info">
+{# the Our Products section (below) needs to be made dynamic - but there was 
+no way to do so before launch as Products Functionality not built in time #}
 
-      <h1>
-        <a href="/client-list/">Clients &amp; Partners</a>
-      </h1>
+{# `productSliderIndex` is used to track the status of the product slider
+ # contained within. It must be initialized to zero (the first slide) before the
+ # slider initializes. #}
+<section class="our-products" ng-init="productSliderIndex = 0">
 
-      <p>
-        We have worked with top museums and cultural institutions, the world’s leading technology firms, along with exhibit design and fabrication firms on a variety of challenging and collaborative projects. 
-      </p>
+  <div class="section-info">
 
-    </div>
+    <h1>
+      Our Products
+    </h1>
 
-    {% include 'client-slider.twig' %}
+    <p>
+      Ideum offers a range of multitouch hardware solutions to meet the need of any exhibition or installation space. We offer a variety of multitouch tables and touch wall products. In addition, we can design custom touch tables, touch walls, kiosks, and other types of computer-based installations and environments. We have been designing and building multitouch tables since 2008.
+    </p>
 
-  </section>
+    <button class="pointer" ng-class="{active: productSliderIndex == 0}"
+      ng-click="productSliderIndex = 0">Touch Tables</button>
+    <button class="pointer" ng-class="{active: productSliderIndex == 1}"
+      ng-click="productSliderIndex = 1">Touch Walls</button>
 
-  <!-- end client-slider.twig -->
+  </div>
 
-  <section class="featured-pages">
+  <ul rn-carousel rn-carousel-index="productSliderIndex">
 
-    <article class="content initiatives">
+    <li class="product-slide">
 
-      <div class="txt-wrap">
+      <div class="touch-tables product-item post-style img-right">
 
-        <h1>
-          <a href="/our-story/software-initiatives/">Software Initiatives</a>
-        </h1>
+        <div class="content">
 
-        <p>
-          Ideum began developing software tools to aid in the development of its own interactive exhibits. Several years ago, it began to release these tools to other developers with the release of GestureWorks and Open Exhibits. More recently, Ideum has release its first software product, GestureWorks Gameplay for consumer use. Gameplay is also available bundled on HP’s innovative Sprout PC platform.
-        </p>
+          <div class="img-wrap">
 
-        <!-- begin hidden content for software-initiatives-share -->
-        <div style="display:none">
-          <div id="software-initiatives-share" class="share-dialog">
-            <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
-            <p>Like what you see? Share this.</p>
-            <!-- Facebook -->
-            <a href="http://www.facebook.com/sharer.php?u={{site_url}}/our-story/software-initiatives/" target="_blank"><img class="sharing-icon" 
-            src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
-            <!-- Twitter -->
-            <a href="http://twitter.com/share?url={{site_url}}/our-story/software-initiatives/&amp;text=Software Initiatives - We are passionate about the projects that we take on." target="_blank"><img class="sharing-icon" 
-            src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
-            <!-- Google+ -->
-            <a href="https://plus.google.com/share?url={{site_url}}/our-story/software-initiatives/" target="_blank"><img class="sharing-icon" 
-            src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
-            <!-- LinkedIn -->
-            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site_url}}/our-story/software-initiatives/" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
-            <!-- Pinterest -->
-            <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a> -->
-            <a href="//www.pinterest.com/pin/create/button/?url={{site_url}}/our-story/software-initiatives/&amp;media={{site_url}}/wp-content/uploads/2014/09/OG-Software.jpg&amp;description=Ideum began developing software tools to aid in the development of its own interactive exhibits. Several years ago, it began to release these tools to other developers with the release of GestureWorks and Open Exhibits. More recently, Ideum has release its first software product, GestureWorks Gameplay for consumer use. Gameplay is also available bundled on HP’s innovative Sprout PC platform." data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+            <a href="/touch-table/"><img src="{{theme.link}}/images/product-touch-tables.png"></a>
+
           </div>
-        </div>
-        <!-- end hidden content for software-initiatives-share - revealed when user clicks 'Share This' link (below)-->
 
-        <footer class="footer">
-          <a class="read" href="/our-story/software-initiatives/">View Initiatives</a>
-          <a class="tablet-n-desktop share inline" href="#software-initiatives-share">Share This</a>
-          <a class="phone-only share share-dialog-phone" href="#software-initiatives-share">Share This</a>
-        </footer>
+          <div class="txt-wrap">
+
+            <h1>
+              <a href="/touch-table/">Touch Tables</a>
+            </h1>
+
+            <p>
+              Our touch tables, from 46” to 100” in size, meet the needs of just about any installation or application. All of our models are turnkey and constructed of aircraft-grade aluminum or cold-rolled steel, making them perfect for demanding environments.
+            </p>
+
+            <!-- begin hidden content for multitouch-tables-share -->
+            <div style="display:none;">
+              <div id="multitouch-tables-share" class="share-dialog">
+                <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+                <p>Like what you see? Share this.</p>
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u={{site.url}}/touch-tables/" target="_blank"><img class="sharing-icon" 
+                src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+                <!-- Twitter -->
+                <a href="http://twitter.com/share?url={{site.url}}/touch-tables/&amp;text=Ideum builds reliable, hardened touch tables with the best available components and exemplary service." target="_blank"><img class="sharing-icon" 
+                src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+                <!-- Google+ -->
+                <a href="https://plus.google.com/share?url={{site.url}}/touch-tables/" target="_blank"><img class="sharing-icon" 
+                src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+                <!-- LinkedIn -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}/touch-tables/" target="_blank"><img class="sharing-icon" 
+                src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+                <!-- Pinterest -->
+                <!-- 
+                <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a> 
+                -->
+                <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}/touch-tables/&amp;media={{site_url}}/wp-content/uploads/2014/09/OG-MultitouchTables.jpg&amp;description=Ideum builds touch tables, from 42” to 100” in size, meeting the needs of just about any installation or application. All of our models are turnkey and constructed of aircraft-grade aluminum or steel, making them perfect for demanding environments." data-pin-do="buttonBookmark" data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+              </div>
+            </div>
+            <!-- end hidden content for multitouch-tables-share - revealed when user clicks 'Share This' link (below)-->
+
+            <footer class="footer">
+              <a class="read" href="/touch-table/">View Selection</a>
+              <a class="tablet-n-desktop share share-dialog-tab-desk" href="#multitouch-tables-share">Share This</a>
+              <a class="phone-only share share-dialog-phone" href="#multitouch-tables-share">Share This</a>
+            </footer>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </article>
+    </li>
 
-    <article class="content team">
+    <li class="product-slide">
 
-      <div class="txt-wrap">
+      <div class="touch-walls product-item post-style img-left">
 
-        <h1>
-          <a href="/our-story/team/">Meet the Team</a>
-        </h1>
+        <div class="content">
 
-        <p>
-          The multidisciplinary team at Ideum has a diverse set of backgrounds in the arts, cultural heritage, electronics, design, engineering, photography &amp; film, game development, software and web development. We are industrious, curious, and professional and we love what we do.
-        </p>
+          <div class="img-wrap">
 
-        <!-- begin hidden content for team-share -->
-        <div style="display:none">
-          <div id="team-share" class="share-dialog">
-            <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
-            <p>Like what you see? Share this.</p>
-            <!-- Facebook -->
-            <a href="http://www.facebook.com/sharer.php?u={{site_url}}/our-story/team/" target="_blank"><img class="sharing-icon" 
-            src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
-            <!-- Twitter -->
-            <a href="http://twitter.com/share?url={{site_url}}/our-story/team/&amp;text=Software Initiatives - We are passionate about the projects that we take on." target="_blank"><img class="sharing-icon" 
-            src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
-            <!-- Google+ -->
-            <a href="https://plus.google.com/share?url={{site_url}}/our-story/team/" target="_blank"><img class="sharing-icon" 
-            src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
-            <!-- LinkedIn -->
-            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site_url}}/our-story/team/" target="_blank"><img class="sharing-icon" 
-            src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
-            <!-- Pinterest -->
-            <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a> -->
-            <a href="//www.pinterest.com/pin/create/button/?url={{site_url}}/our-story/team/&amp;media={{site_url}}/wp-content/uploads/2014/09/OG-Team.jpg&amp;description=The multidisciplinary team at Ideum has a diverse set of backgrounds in the arts, cultural heritage, electronics, design, engineering, photography and film, game development, software and web development. We are industrious, curious, and professional and we love what we do." data-pin-do="buttonBookmark" data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+            <a href="/touch-walls/"><img src="{{theme.link}}/images/product-touch-walls.png"></a>
+
           </div>
-        </div>
-        <!-- end hidden content for team-share - revealed when user clicks 'Share This' link (below)-->
 
-        <footer class="footer">
-          <a class="read" href="/our-story/team/">View Team</a>
-          <a class="tablet-n-desktop share inline" href="#team-share">Share This</a>
-          <a class="phone-only share share-dialog-phone" href="#team-share">Share This</a>
-        </footer>
+          <div class="txt-wrap">
+
+            <h1>
+              <a href="/touch-walls/">Touch Walls</a>
+            </h1> 
+
+            <p>
+              Our Presenter touch walls range in size from 46” to 65” (75” model, December 2014) and can be mounted on a motorized stand, allowing them to be used drafting- or table-style. Tough enough for public spaces, our touch walls can be hung horizontally or vertically.
+            </p>
+
+            <!-- begin hidden content for touch-walls-share -->
+            <div style='display:none'>
+              <div id='touch-walls-share' class="share-dialog">
+                <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+                <p>Like what you see? Share this.</p>
+                <!-- Facebook -->
+                <a href="http://www.facebook.com/sharer.php?u={{site.url}}/touch-walls/" target="_blank"><img class="sharing-icon" 
+                src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+                <!-- Twitter -->
+                <a href="http://twitter.com/share?url={{site.url}}/touch-walls/&amp;text=Ideum builds reliable, hardened touch walls with the best available components and exemplary service." target="_blank"><img class="sharing-icon" 
+                src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+                <!-- Google+ -->
+                <a href="https://plus.google.com/share?url={{site.url}}/touch-walls/" target="_blank"><img class="sharing-icon" 
+                src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+                <!-- LinkedIn -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}/touch-walls/" target="_blank"><img class="sharing-icon" 
+                src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+                <!-- Pinterest -->
+                <!-- 
+                <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+                -->
+                <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}/touch-walls/&amp;media={{site_url}}/wp-content/uploads/2014/11/OG-Presenter.jpg&amp;description=Ideum Presenter touch walls range in size from 46 to 65inches (75 inch model in December 2014) and can be mounted on a motorized stand, allowing them to be used drafting- or table-style. Tough enough for public spaces, our touch walls can be hung horizontally or vertically." data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>       
+              </div>
+            </div>
+            <!-- end hidden content for touch-walls-share - revealed when user clicks 'Share This' link (below)-->
+
+            <footer class="footer">
+              <a class="read" href="/touch-walls/">View Selection</a>
+              <a class="tablet-n-desktop share inline" href="#touch-walls-share">Share This</a>
+              <a class="phone-only share share-dialog-phone" href="#touch-walls-share">Share This</a>
+            </footer>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </article>
+    </li>
 
-  </section>
+  </ul>
 
-  <section class="social-media-feed">
+</section>
 
-    <div class="section-info">
+<!-- 
+<section class="chat">
+
+  <div class="button">
+  
+    <a href="#FIXME">Click here to build your own multitouch table.</a>
+
+  </div>
+
+</section>
+-->
+
+<section class="clients-n-partners" ng-init="clientSliderIndex = 0">
+
+  <div class="section-info">
+
+    <h1>
+      <a href="/client-list/">Clients &amp; Partners</a>
+    </h1>
+
+    <p>
+      We have worked with top museums and cultural institutions, the world’s leading technology firms, along with exhibit design and fabrication firms on a variety of challenging and collaborative projects. 
+    </p>
+
+  </div>
+
+  {% include 'client-slider.twig' %}
+
+</section>
+
+<!-- end client-slider.twig -->
+
+<section class="featured-pages">
+
+  <article class="content initiatives">
+
+    <div class="txt-wrap">
 
       <h1>
-        <a href="/social-media-feed/">Social Media Feed</a>
+        <a href="/our-story/software-initiatives/">Software Initiatives</a>
       </h1>
 
-      <!-- <select><option>Browse By Media Type</option></select> -->
-
-    </div>
-
-    {# the social media slider (below) needs to be made dynamic - but there was no way to 
-    do so before launch as the social media feed Functionality was not built in time #}
-
-    <div class="social-media-feed-slider">
-
-      <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveThreeUp()">
-
-        {% for social_post in social_media_feed|slice(0, 6) %}{# restricts slides to 6 #}
-
-        <li class="item {{social_post.source}}" 
-          {% if social_post.source == 'flickr' %} style="background-image:url('{{social_post.image}}');"{% endif %}>
-
-          <a class="view" href="{{social_post.url}}">
-          {% if social_post.source == 'youtube' or social_post.source == 'facebook' %}<img class="img-circular" src="{{social_post.image}}">{% endif %}
-          </a>
-
-          <div class="content">
-            
-            {% if social_post.source != 'flickr' %}
-            {% if social_post.text %}
-              <p>{{social_post.text}}</p>
-            {% endif %}
-            {% endif %}
-
-          </div>
-
-          <footer class="footer">
-            {% if social_post.source == 'twitter' %}
-            <a class="read" href="http://twitter.com/home?status={{social_post.text}}">Retweet</a>
-            {% endif %}
-            <a class="share" href="{{social_post.url}}">View on {{social_post.source}}</a>
-          </footer>
-
-          <i class="social-icon icon-{{social_post.source}}"></i>
-
-        </li>
-
-        {% endfor %}
-
-      </ul>
-
-    </div>
-
-    <div class="section-info">
-
       <p>
-        <a href="/social-media-feed/" class="button active">View All</a>
+        Ideum began developing software tools to aid in the development of its own interactive exhibits. Several years ago, it began to release these tools to other developers with the release of GestureWorks and Open Exhibits. More recently, Ideum has release its first software product, GestureWorks Gameplay for consumer use. Gameplay is also available bundled on HP’s innovative Sprout PC platform.
       </p>
 
+      <!-- begin hidden content for software-initiatives-share -->
+      <div style="display:none">
+        <div id="software-initiatives-share" class="share-dialog">
+          <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+          <p>Like what you see? Share this.</p>
+          <!-- Facebook -->
+          <a href="http://www.facebook.com/sharer.php?u={{site_url}}/our-story/software-initiatives/" target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+          <!-- Twitter -->
+          <a href="http://twitter.com/share?url={{site_url}}/our-story/software-initiatives/&amp;text=Software Initiatives - We are passionate about the projects that we take on." target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+          <!-- Google+ -->
+          <a href="https://plus.google.com/share?url={{site_url}}/our-story/software-initiatives/" target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+          <!-- LinkedIn -->
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site_url}}/our-story/software-initiatives/" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+          <!-- Pinterest -->
+          <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a> -->
+          <a href="//www.pinterest.com/pin/create/button/?url={{site_url}}/our-story/software-initiatives/&amp;media={{site_url}}/wp-content/uploads/2014/09/OG-Software.jpg&amp;description=Ideum began developing software tools to aid in the development of its own interactive exhibits. Several years ago, it began to release these tools to other developers with the release of GestureWorks and Open Exhibits. More recently, Ideum has release its first software product, GestureWorks Gameplay for consumer use. Gameplay is also available bundled on HP’s innovative Sprout PC platform." data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+        </div>
+      </div>
+      <!-- end hidden content for software-initiatives-share - revealed when user clicks 'Share This' link (below)-->
+
+      <footer class="footer">
+        <a class="read" href="/our-story/software-initiatives/">View Initiatives</a>
+        <a class="tablet-n-desktop share inline" href="#software-initiatives-share">Share This</a>
+        <a class="phone-only share share-dialog-phone" href="#software-initiatives-share">Share This</a>
+      </footer>
+
     </div>
 
-  </section>
+  </article>
 
-  <!-- begin hidden content for page-share -->
+  <article class="content team">
+
+    <div class="txt-wrap">
+
+      <h1>
+        <a href="/our-story/team/">Meet the Team</a>
+      </h1>
+
+      <p>
+        The multidisciplinary team at Ideum has a diverse set of backgrounds in the arts, cultural heritage, electronics, design, engineering, photography &amp; film, game development, software and web development. We are industrious, curious, and professional and we love what we do.
+      </p>
+
+      <!-- begin hidden content for team-share -->
+      <div style="display:none">
+        <div id="team-share" class="share-dialog">
+          <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+          <p>Like what you see? Share this.</p>
+          <!-- Facebook -->
+          <a href="http://www.facebook.com/sharer.php?u={{site_url}}/our-story/team/" target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+          <!-- Twitter -->
+          <a href="http://twitter.com/share?url={{site_url}}/our-story/team/&amp;text=Software Initiatives - We are passionate about the projects that we take on." target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+          <!-- Google+ -->
+          <a href="https://plus.google.com/share?url={{site_url}}/our-story/team/" target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
+          <!-- LinkedIn -->
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site_url}}/our-story/team/" target="_blank"><img class="sharing-icon" 
+          src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+          <!-- Pinterest -->
+          <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="http://m.ideum.com/img/social/pinterest.png" alt="Pinterest"></a> -->
+          <a href="//www.pinterest.com/pin/create/button/?url={{site_url}}/our-story/team/&amp;media={{site_url}}/wp-content/uploads/2014/09/OG-Team.jpg&amp;description=The multidisciplinary team at Ideum has a diverse set of backgrounds in the arts, cultural heritage, electronics, design, engineering, photography and film, game development, software and web development. We are industrious, curious, and professional and we love what we do." data-pin-do="buttonBookmark" data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+        </div>
+      </div>
+      <!-- end hidden content for team-share - revealed when user clicks 'Share This' link (below)-->
+
+      <footer class="footer">
+        <a class="read" href="/our-story/team/">View Team</a>
+        <a class="tablet-n-desktop share inline" href="#team-share">Share This</a>
+        <a class="phone-only share share-dialog-phone" href="#team-share">Share This</a>
+      </footer>
+
+    </div>
+
+  </article>
+
+</section>
+
+<section class="social-media-feed">
+
+  <div class="section-info">
+
+    <h1>
+      <a href="/social-media-feed/">Social Media Feed</a>
+    </h1>
+
+    <!-- <select><option>Browse By Media Type</option></select> -->
+
+  </div>
+
+  {# the social media slider (below) needs to be made dynamic - but there was no way to 
+  do so before launch as the social media feed Functionality was not built in time #}
+
+  <div class="social-media-feed-slider">
+
+    <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveThreeUp()">
+
+      {% for social_post in social_media_feed|slice(0, 6) %}{# restricts slides to 6 #}
+
+      <li class="item {{social_post.source}}" 
+        {% if social_post.source == 'flickr' %} style="background-image:url('{{social_post.image}}');"{% endif %}>
+
+        <a class="view" href="{{social_post.url}}">
+        {% if social_post.source == 'youtube' or social_post.source == 'facebook' %}<img class="img-circular" src="{{social_post.image}}">{% endif %}
+        </a>
+
+        <div class="content">
+          
+          {% if social_post.source != 'flickr' %}
+          {% if social_post.text %}
+            <p>{{social_post.text}}</p>
+          {% endif %}
+          {% endif %}
+
+        </div>
+
+        <footer class="footer">
+          {% if social_post.source == 'twitter' %}
+          <a class="read" href="http://twitter.com/home?status={{social_post.text}}">Retweet</a>
+          {% endif %}
+          <a class="share" href="{{social_post.url}}">View on {{social_post.source}}</a>
+        </footer>
+
+        <i class="social-icon icon-{{social_post.source}}"></i>
+
+      </li>
+
+      {% endfor %}
+
+    </ul>
+
+  </div>
+
+  <div class="section-info">
+
+    <p>
+      <a href="/social-media-feed/" class="button active">View All</a>
+    </p>
+
+  </div>
+
+</section>
+
+<!-- begin hidden content for page-share -->
 <div style='display:none'>
   <div id='home-share' class="share-dialog">
     <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
