@@ -51,7 +51,7 @@
 
   <!-- begin hidden content for blog-post-share -->
   <div style='display:none'>
-    <div id='blog-post-share' class="share-dialog">
+    <div id='{{thispost.slug}}-share' class="share-dialog">
       <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
       <p>Like what you see? Share this.</p>
       <!-- Facebook -->
@@ -77,8 +77,8 @@
   <!-- end hidden content for blog-post-share - revealed when user clicks 'Share This' link (below)-->
 
   <p class="sidebar-share-button">   
-    <a class="button active tablet-n-desktop inline-share" href="#blog-post-share">Share This</a>
-    <a class="button active phone-only share-dialog-phone" href="#blog-post-share">Share This</a>
+    <a class="button active tablet-n-desktop inline-share" href="#{{thispost.slug}}-share">Share This</a>
+    <a class="button active phone-only share-dialog-phone" href="#{{thispost.slug}}-share">Share This</a>
   </p>
 
   <!-- <p class="sidebar-link-button">

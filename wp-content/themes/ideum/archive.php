@@ -20,7 +20,7 @@
 		$data['page'] = Timber::get_post('creative-services'); // need it to get creative services ogp image
 
 		if (is_page('blog')) {
-			$data['blog'] = Timber::get_post('blog)';
+			$data['blog'] = Timber::get_post('blog');
 		}
 
 		$data['the_post_type'] = $_GET['post_type'];
@@ -65,7 +65,7 @@
 
 		$data['posts'] = Timber::get_posts();
 
-
+		rewind_posts();
 
 		$data['pagination'] = Timber::get_pagination();
 
