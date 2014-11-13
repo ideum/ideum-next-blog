@@ -13,6 +13,7 @@ $(document).ready(function(){
   //$(".group4").colorbox({rel:'group4', slideshow:true});
   $(".project-secondary-group").colorbox({rel:'project-secondary-group',});
   $(".ajax").colorbox();
+  // removed to prevent colorbox from glomming onto all vimeo and youtube links
   //$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
   //$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
   $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
