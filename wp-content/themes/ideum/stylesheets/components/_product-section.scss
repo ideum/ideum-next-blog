@@ -296,6 +296,42 @@ $product-spec-list-left-margin: 15px;
 	}
 }
 
+.productSection { 
+  position: relative;
+  .productText {    
+    /* no op */
+    .footer {
+      @include span-columns(12);
+      padding: $gutter 0 0 0;
+
+      @include media($medium-screen-up) {
+        @include span-columns(8);
+        height: 4em;
+        margin-top: $medium-gutter;
+        padding: 0 0 $large-gutter + $gutter; 
+        position: absolute;
+          bottom: 0;
+      }
+
+      a.share {
+        color: inherit;
+        display: block;
+        float: left;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
 .productSection.plain{
 	background-color: $base-background-color;
 }
