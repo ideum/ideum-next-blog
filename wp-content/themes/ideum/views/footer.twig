@@ -25,7 +25,7 @@
       {% for item in foot.get_items %}
       <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
       {% endfor %}
-      <li class="page-share">
+      <li class="page-share {{post.slug}}">
         <a class="phone-only share-dialog-phone" href="#{% if custom_slug %}{{custom_slug}}{% else %}{{post.slug}}{% endif %}-share">Share This Page</a>
       </li>
     </ul>
@@ -37,7 +37,7 @@
       {% for item in foot.get_items %}
       <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
       {% endfor %}
-      <li class="page-share">
+      <li class="page-share {{post.slug}}">
         <a class="tablet-n-desktop share-dialog-tab-desk" href="#{% if custom_slug %}{{custom_slug}}{% else %}{{post.slug}}{% endif %}-share">Share This Page</a>
         <a class="phone-only share-dialog-phone" href="#{% if custom_slug %}{{custom_slug}}{% else %}{{post.slug}}{% endif %}-share">Share This Page</a>
       </li>
