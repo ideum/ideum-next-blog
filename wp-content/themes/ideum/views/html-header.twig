@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 
-<title>{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% elseif ogp_title %}{{ ogp_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}</title>
+<title>{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif acf. alternative_meta_title %}{{ acf.alternative_meta_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% elseif ogp_title %}{{ ogp_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}</title>
 
 {#% if post.alternative_meta_keywords %}
 <meta name="keywords" content="{{ post.alternative_meta_keywords }}">
