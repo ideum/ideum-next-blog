@@ -38,7 +38,7 @@
 
   <!-- begin hidden content for featured-blogpost-share -->
   <div style="display:none;">
-    <div id="single-project-share" class="share-dialog">
+    <div id="{{thisproject.slug}}-share" class="share-dialog">
       <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
       <p>Like what you see? Share this.</p>
       <!-- Facebook -->
@@ -60,8 +60,8 @@
   <!-- end hidden content for featured-blogpost-share - revealed when user clicks 'Share This' link (below)-->
 
   <p class="sidebar-share-button">
-    <a class="button active tablet-n-desktop inline-share" href="#single-project-share">Share This</a>
-    <a class="button active phone-only share-dialog-phone" href="#single-project-share">Share This</a>
+    <a class="button active tablet-n-desktop inline-share" href="#{{thisproject.slug}}-share">Share This</a>
+    <a class="button active phone-only share-dialog-phone" href="#{{thisproject.slug}}-share">Share This</a>
   </p>
 
   <!-- <p class="sidebar-link-button">
