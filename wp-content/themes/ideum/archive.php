@@ -17,10 +17,10 @@
 		$templates = array('archive.twig', 'index.twig');
 
 		$data = Timber::get_context();
-		$data['page'] = Timber::get_post(11803);
+		$data['page'] = Timber::get_post('creative-services'); // need it to get creative services ogp image
 
-		if (is_page(11864)) {
-			$data['blog'] = Timber::get_post(11864);
+		if (is_page('blog')) {
+			$data['blog'] = Timber::get_post('blog)';
 		}
 
 		$data['the_post_type'] = $_GET['post_type'];
@@ -54,7 +54,6 @@
 			if (is_category()) {
 				$data['custom_slug'] = 'project-category-archive';
 			}
-			//$data['custom_slug'] = 'ideum_projects';
 			$data['custom_header'] = get_field('header_image_text_content', 11803);
 			$data['ogp_image_path'] = get_field('alternative_meta_image_path', 11803);
 			$data['ogp_image'] = get_field('alternative_meta_image', 11803);
@@ -65,6 +64,8 @@
 		}
 
 		$data['posts'] = Timber::get_posts();
+
+
 
 		$data['pagination'] = Timber::get_pagination();
 
