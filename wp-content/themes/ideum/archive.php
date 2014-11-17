@@ -43,6 +43,7 @@
 			}
 		} else if (is_category()){
 			$data['title'] = 'Category Archive for <em>' . single_cat_title('', false) .'</em>';
+			$data['custom_cat_url'] = 'http://'.$_SERVER[HTTP_HOST].''.$_SERVER[REQUEST_URI]; // used for metadata url 
 			array_unshift($templates, 'archive-'.get_query_var('cat').'.twig');
 		} else if (is_post_type_archive()){
 			$data['title'] = post_type_archive_title('', false);
@@ -54,6 +55,7 @@
 			$data['custom_slug2'] = 'ideum_project'; // used for metadata url slug
 			if (is_category()) {
 				$data['custom_slug'] = 'project-category-archive'; // used for metadata url slug and contextual div class
+				$data['custom_cat_url'] = 'http://'.$_SERVER[HTTP_HOST].''.$_SERVER[REQUEST_URI];// used for metadata url 
 			}
 			$data['custom_header'] = get_field('header_image_text_content', 11803);
 			$data['ogp_image_path'] = get_field('alternative_meta_image_path', 11803);
