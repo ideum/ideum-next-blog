@@ -50,9 +50,10 @@
 		}
 
 		if ($post_type == 'ideum_project') {
-			$data['custom_slug'] = 'creative-services';
+			$data['custom_slug'] = 'creative-services'; // used for metadata url slug and contextual div class
+			$data['custom_slug2'] = 'ideum_project'; // used for metadata url slug
 			if (is_category()) {
-				$data['custom_slug'] = 'project-category-archive';
+				$data['custom_slug'] = 'project-category-archive'; // used for metadata url slug and contextual div class
 			}
 			$data['custom_header'] = get_field('header_image_text_content', 11803);
 			$data['ogp_image_path'] = get_field('alternative_meta_image_path', 11803);
