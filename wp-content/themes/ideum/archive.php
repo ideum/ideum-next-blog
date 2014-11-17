@@ -34,6 +34,7 @@
 			$data['title'] = 'Archive: '.get_the_date( 'Y' );
 		} else if (is_tag()){
 			$data['title'] = 'Tag Archive for <em>' . single_tag_title('', false) .'</em>';
+			$data['custom_cat_url'] = 'http://'.$_SERVER[HTTP_HOST].''.$_SERVER[REQUEST_URI]; // used for metadata url 
 		} else if (is_author()) {
 			$data['title'] = 'Author Archive for <em>' . get_the_author().'</em>';
 			if (isset($query_vars['author'])){
