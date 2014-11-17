@@ -250,6 +250,7 @@
             .column-66-left {
               @include span-columns(7);
               float: left;
+              padding-bottom: $gutter * 1.5;
 
               h2 {
                 padding-bottom: $gutter;
