@@ -21,7 +21,7 @@
 
 <meta property="og:site_name" content="{{ site.title }}">
 
-<meta property="og:url" content="{% if post.permalink %}{{ post.permalink }}{% elseif custom_cat_url %}{{ custom_cat_url }}{% elseif custom_slug2 %}{{ site.url }}/{{ custom_slug2 }}{% elseif custom_slug %}{{ site.url }}/{{ custom_slug }}{% else %}{{ site.url }}/{{ post.slug }}{% endif %}"> 
+<meta property="og:url" content="{% if post.permalink %}{{ post.permalink }}{% elseif custom_cat_url %}{{ custom_cat_url }}{% elseif custom_slug2 %}{{ site.url }}/{{ custom_slug2 }}/{% elseif custom_slug %}{{ site.url }}/{{ custom_slug }}/{% else %}{{ site.url }}/{{ post.slug }}{% endif %}"> 
 
 <meta property="og:title" content="{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif ogp_title %}{{ ogp_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}">
 
