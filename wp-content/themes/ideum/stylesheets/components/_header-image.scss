@@ -27,6 +27,7 @@
     ('legal',                 #3e4857, '',                                            800px,  250px, center, center,  460px,  center),
     ('social-media-feed',     #2c2c2d, 'social-media-pseudo-header-bg',               600px,  100px, center, top,     460px,  center),
     ('thank-you',             #3e4857, '',                                            800px,  250px, center, center,  460px,  center),
+    ('jobs',                  #000000, 'jobs-pseudo-header-bg-final',                 600px,  100px, center, top,     460px,  center),
   ) {
     .#{$class} {
       background: $color url("images/header-images/#{$image}-phone.jpg") no-repeat bottom right;
