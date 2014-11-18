@@ -684,6 +684,7 @@ html[data-useragent*='Trident'] #header .header-image .page-intro.no-image.cente
 html[data-useragent*='Trident'] .chat.foot-chat { display: block !important; margin: 0 auto;}
 html[data-useragent*='Trident'] .overlay nav a { letter-spacing: -.5px; }
 html[data-useragent*='Trident'] .featured-page .content.team-n-clients .txt-wrap { padding:0 10%; width: 100%;} 
+html[data-useragent*='Trident'] .featured-pages .content.team-n-clients .featured-page.content .txt-wrap .footer {position: relative;}
 html[data-useragent*='Trident'] .contact-content .inquiry-form .inquiry-content form .right-label { margin-top: -0px;}
 // Safari Fixes
 html[data-useragent*='Safari'] .talking-points .point .point-text { margin-left: 0; } 
