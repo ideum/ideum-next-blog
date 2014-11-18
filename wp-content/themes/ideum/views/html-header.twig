@@ -23,7 +23,7 @@
 
 <meta property="og:url" content="{% if post.permalink %}{{ post.permalink }}{% elseif custom_cat_url %}{{ custom_cat_url }}{% elseif custom_slug2 %}{{ site.url }}/{{ custom_slug2 }}/{% elseif custom_slug %}{{ site.url }}/{{ custom_slug }}/{% else %}{{ site.url }}/{{ post.slug }}/{% endif %}"> 
 
-<meta property="og:title" content="{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif ogp_title %}{{ ogp_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}">
+<meta property="og:title" content="{% if post.alternative_meta_title %}{{ post.alternative_meta_title|title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title|title }}{% elseif ogp_title %}{{ ogp_title|title }}{% elseif post.title  %}{{ post.title|title }} | Ideum{% else %}{{wp_title|title}} | Ideum{% endif %}">
 
 <meta property="og:type" content="{% if page.opengraph.type %}{{ page.opengraph.type }}{% elseif post.id == '11878' %}website{% else %}article{% endif %}">
 
