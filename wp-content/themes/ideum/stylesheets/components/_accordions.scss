@@ -222,6 +222,52 @@
           @include span-columns(10);
           @include shift(1);
 
+          @include media($small-screen-up) {
+
+            .column-33-right {
+              padding-bottom: $gutter;
+
+              h3 {
+                padding-bottom: $gutter * 1.25;
+              }
+
+              ul {
+                margin-bottom: $gutter;
+
+                li {
+                  color: $dark-gray;
+                  font-size:.9em;
+                  line-height:1.25em;
+                  margin-bottom: $gutter;
+                }
+
+              }
+
+            }
+
+            .column-66-left {
+              padding-bottom: $gutter;
+
+              h2 {
+                padding-bottom: $gutter;
+              }
+
+              p {
+                color: $very-dark-gray;
+              }
+
+              p + h2 {
+                margin-top: $gutter * 2;
+              }
+
+              img {
+                height: auto;
+              }
+
+            }
+
+          }
+
           @include media($medium-screen-up) {
 
             .column-33-right {
