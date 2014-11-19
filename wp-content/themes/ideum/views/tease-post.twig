@@ -4,6 +4,23 @@
 
 <!-- begin tease-post.twig -->
 
+{# ugly way to get a generic post img#}
+{% if post.has_term('Publications') %}
+  {% set generic_post_img = 'blog-publications.jpg' %}
+{% elseif post.has_term('Gesture Works') %}
+  {% set generic_post_img = 'blog-gestureworks.jpg' %}
+{% elseif post.has_term('Open Exhibits') %}
+  {% set generic_post_img = 'blog-openexhibits.jpg' %}
+{% elseif post.has_term('Ideum Labs') %}
+  {% set generic_post_img = 'blog-ideumlabs.jpg' %}
+{% elseif post.has_term('Awards') %}
+  {% set generic_post_img = 'blog-awards.jpg' %}
+{% elseif post.has_term('Conferences') %}
+  {% set generic_post_img = 'blog-conferences.jpg' %}
+{% elseif post.has_term('New Mexico') %}
+  {% set generic_post_img = 'blog-newmexico.jpg' %}
+{% endif %}
+
 {% if post.get_thumbnail %}
 <div class="post-img-wrap" style="background-image:url('{{post.thumbnail.src|resize(600)}}');">
 
@@ -16,6 +33,16 @@
   title="Placeholder image for the post: '{{post.title}}'"/></a> -->
 
 </div>
+{% elseif generic_post_img %}
+
+<div class="post-img-wrap" style="background-image:url('/wp-content/themes/ideum/images/generic-images/{{generic_post_img}}');">
+
+  <a href="{{post.link}}"><img src="{{site.url}}/wp-content/themes/ideum/images/generic-images/{{generic_post_img}}" 
+  alt="Image for the post: '{{post.title}}'" 
+  title="Image for the post: '{{post.title}}'"/></a>
+
+</div>
+
 {% endif %}
 
 <div class="post-txt-wrap">
@@ -26,28 +53,10 @@
     <a href="{{post.link}}">{{post.title}}</a>
   </h2>
 
-  {% if post.get_thumbnail %}
+  {% if post.get_thumbnail or generic_post_img %}
   <p>{{post.get_preview(34, 'true', '', 'true')}}</p>
   {% else %}
   <p>{{post.get_preview(85, 'true', '', 'true')}}</p>
-  {% endif %}
-
-  {% if post.has_term('Publications') %}
-    {% set generic_post_img = 'blog-publications.jpg' %}
-  {% elseif post.has_term('Gesture Works') %}
-    {% set generic_post_img = 'blog-gestureworks.jpg' %}
-  {% elseif post.has_term('Open Exhibits') %}
-    {% set generic_post_img = 'blog-openexhibits.jpg' %}
-  {% elseif post.has_term('Ideum Labs') %}
-    {% set generic_post_img = 'blog-ideumlabs.jpg' %}
-  {% elseif post.has_term('Awards') %}
-    {% set generic_post_img = 'blog-awards.jpg' %}
-  {% elseif post.has_term('Conferences') %}
-    {% set generic_post_img = 'blog-conferences.jpg' %}
-  {% elseif post.has_term('New Mexico') %}
-    {% set generic_post_img = 'blog-newmexico.jpg' %}
-  {% else %}
-    {% set generic_post_img = 'blog-ideum.jpg' %}
   {% endif %}
 
   <!-- begin hidden content for {{post.slug}} -->
@@ -70,7 +79,7 @@
       <!-- Pinterest -->
       {% if post.thumbnail %}
       <a href="//www.pinterest.com/pin/create/button/?url={{post.link}}&amp;media={{site.url}}{{post.thumbnail.src}}&amp;description={{post.title}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
-      {% else %}
+      {% elseif generic_post_img %}
         <a href="//www.pinterest.com/pin/create/button/?url={{post.link}}&amp;media={{site.url}}/wp-content/themes/ideum/images/generic-images/{{generic_post_img}}&amp;description={{post.title}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
       {% endif %}
     </div>
