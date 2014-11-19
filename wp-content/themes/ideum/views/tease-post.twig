@@ -32,6 +32,24 @@
   <p>{{post.get_preview(85, 'true', '', 'true')}}</p>
   {% endif %}
 
+  {% if post.has_term('Publications') %}
+    {% set generic_post_img = 'blog-publications.jpg' %}
+  {% elseif post.has_term('Gesture Works') %}
+    {% set generic_post_img = 'blog-gestureworks.jpg' %}
+  {% elseif post.has_term('Open Exhibits') %}
+    {% set generic_post_img = 'blog-openexhibits.jpg' %}
+  {% elseif post.has_term('Ideum Labs') %}
+    {% set generic_post_img = 'blog-ideumlabs.jpg' %}
+  {% elseif post.has_term('Awards') %}
+    {% set generic_post_img = 'blog-awards.jpg' %}
+  {% elseif post.has_term('Conferences') %}
+    {% set generic_post_img = 'blog-conferences.jpg' %}
+  {% elseif post.has_term('New Mexico') %}
+    {% set generic_post_img = 'blog-newmexico.jpg' %}
+  {% else %}
+    {% set generic_post_img = 'blog-ideum.jpg' %}
+  {% endif %}
+
   <!-- begin hidden content for {{post.slug}} -->
   <div style='display:none'>
     <div id='{{post.slug}}' class="share-dialog">
@@ -53,7 +71,7 @@
       {% if post.thumbnail %}
       <a href="//www.pinterest.com/pin/create/button/?url={{post.link}}&amp;media={{site.url}}{{post.thumbnail.src}}&amp;description={{post.title}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
       {% else %}
-      <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+        <a href="//www.pinterest.com/pin/create/button/?url={{post.link}}&amp;media={{site.url}}/wp-content/themes/ideum/images/generic-images/{{generic_post_img}}&amp;description={{post.title}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
       {% endif %}
     </div>
   </div>
