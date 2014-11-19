@@ -19,6 +19,8 @@
   {% set generic_post_img = 'blog-conferences.jpg' %}
 {% elseif post.has_term('New Mexico') %}
   {% set generic_post_img = 'blog-newmexico.jpg' %}
+{% elseif post.has_term('Ideum') %}
+  {% set generic_post_img = 'blog-ideum.jpg' %}
 {% endif %}
 
 {% if post.get_thumbnail %}
