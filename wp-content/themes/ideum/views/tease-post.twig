@@ -7,10 +7,10 @@
 {# ugly way to get a generic post img#}
 {% if post.has_term('Publications') %}
   {% set generic_post_img = 'blog-publications.jpg' %}
-{% elseif post.has_term('Gesture Works') %}
-  {% set generic_post_img = 'blog-gestureworks.jpg' %}
 {% elseif post.has_term('Open Exhibits') %}
   {% set generic_post_img = 'blog-openexhibits.jpg' %}
+{% elseif post.has_term('Gesture Works') %}
+  {% set generic_post_img = 'blog-gestureworks.jpg' %}
 {% elseif post.has_term('Ideum Labs') %}
   {% set generic_post_img = 'blog-ideumlabs.jpg' %}
 {% elseif post.has_term('Awards') %}
