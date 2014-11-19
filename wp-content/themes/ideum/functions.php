@@ -69,7 +69,7 @@
 							'name' => 'pull_quote',
 							'type' => 'textarea',
 							'instructions' => 'Quote from the article.	This will appear with the featured image at the top of the page.',
-							'required' => 1,
+							'required' => 0, // value was '1' - had to set to '0' in order to import old posts
 							'default_value' => '',
 							'placeholder' => '',
 							'maxlength' => 200,

@@ -26,7 +26,13 @@ $context['site_url'] = get_bloginfo('url');
 
 $sidebar_context = Timber::get_context();
 $sidebar_context['site_url'] = get_bloginfo('url');
-$sidebar_context['featured_post'] = Timber::get_posts('category=featured&numberposts=1&posts_per_page=1');
+
+// 'featured posts' needs to be from the 'Featured' category 592/staging or 604/live
+// no, Ben, it is not possible to use cat slugs instead of ids - it just doesn't work that way 
+// unless, perhaps, we make a custom function
+$sidebar_context['featured_post'] = Timber::get_posts('cat=604&numberposts=1&posts_per_page=1'); 
+// remove '592' as value for cat (above) before pushing - that value is in use in live site
+
 $sidebar_context['featured_projects'] = Timber::get_posts('post_type=ideum_project&numberposts=6&posts_per_page=6'); 
 
 $context['featured_projects'] = Timber::get_sidebar('bar-featured-projects.twig', $sidebar_context);

@@ -23,6 +23,7 @@
 
 			</header>
 
+			{% if post.pull_quote and post.get_thumbnail %}
 			<section class="pull-quote">
 
       	<div class="pull-quote-img" style="background-image:url('{{post.thumbnail.src|resize(640, 400)}}');">
@@ -35,17 +36,14 @@
       	<div class="pull-quote-txt">
 
 	        <h2>
-	        	{% if post.pull_quote %}
 	        	{{post.pull_quote}}
-	        	{#% else %#}
-	          <!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-	          Ut wisi enim adi 175 char max. -->
-	          {% endif %}
 	        </h2>
 
 	      </div>
 
   		</section>
+
+  		{% endif %}
 
 			<section class="article-content">
 
