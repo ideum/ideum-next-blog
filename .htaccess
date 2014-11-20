@@ -42,8 +42,6 @@ RedirectMatch permanent /touch-walls/presenter-55/.* http://ideum.com/touch-wall
 Redirect      permanent /touch-walls/presenter-55    http://ideum.com/touch-walls/presenter
 RedirectMatch permanent /touch-walls/presenter-65/.* http://ideum.com/touch-walls/presenter
 Redirect      permanent /touch-walls/presenter-65    http://ideum.com/touch-walls/presenter
-RedirectMatch permanent /touch-walls/presenter/.*    http://ideum.com/touch-walls/presenter
-Redirect      permanent /touch-walls/presenter       http://ideum.com/touch-walls/presenter
 
 
 
