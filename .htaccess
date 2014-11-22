@@ -8,8 +8,6 @@ Redirect permanent /inquiry                 http://ideum.com/contact
 Redirect permanent /contact-us              http://ideum.com/contact
 Redirect permanent /multitouch              http://ideum.com/touch-tables
 
-RedirectMatch permanent ^/blog/category/(.+)     http://ideum.com/category/$1
-
 
 
 # Products
