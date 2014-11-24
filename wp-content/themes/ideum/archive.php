@@ -58,13 +58,14 @@
 				$data['custom_slug'] = 'project-category-archive'; // used for metadata url slug and contextual div class
 				$data['custom_cat_url'] = 'http://'.$_SERVER[HTTP_HOST].''.$_SERVER[REQUEST_URI];// used for metadata url 
 			}
+			// 11803 is the id of the creative-services page from which we need to pull our custom fields
 			$data['custom_header'] = get_field('header_image_text_content', 11803);
 			$data['ogp_image_path'] = get_field('alternative_meta_image_path', 11803);
 			$data['ogp_image'] = get_field('alternative_meta_image', 11803);
 			$data['ogp_title'] = get_field('alternative_meta_title', 11803);
 			$data['ogp_keywords'] = get_field('alternative_meta_keywords', 11803);
 			$data['ogp_description'] = get_field('alternative_meta_description', 11803);
-            $data['categories'] = get_categories(array('type' => 'ideum_project'));
+      $data['categories'] = get_categories(array('type' => 'ideum_project'));
 		}
 
 		$data['posts'] = Timber::get_posts();
