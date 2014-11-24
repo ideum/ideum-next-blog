@@ -679,6 +679,12 @@ img {
   }
 }
 
+.subfooter-scripts {
+  img {
+    position: absolute;
+  }
+}
+
 // msie fixes
 html[data-useragent*='Trident'] #header .header-image .page-intro.no-image.centered-intro .page-intro-inner h1 { position: relative; top: -25%; }
 html[data-useragent*='Trident'] .chat.foot-chat { display: block !important; margin: 0 auto;}
