@@ -3,22 +3,31 @@
 {% block content %}
 
 <main class="productOuterWrapper">
+
   <header>
+
     <h1>Platform</h1>
     <img src="{{theme.link}}/images/products/platform/header.jpg">
+
   </header>
+
   <main class="productInnerWrapper">
+
     <div ng-app="ideum.tabs">
       <!-- Tabs -->
       <div tabs class="platform">
         <!-- PLATFORM TAB -->
         <div pane title="Platform 46">
+
           <header>
             <h1>Platform 46</h1>
             <h2>The Multitouch Table Redefined</h2>
           </header>
+
           <div ng-app="productDetails">
+
             <section class="x-ray platform46" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+
               <section class="overlay" ng-style="overlayStyle">
                 <nav>
                   <a href=""
@@ -40,18 +49,26 @@
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
               </section>
+
             </section>
-          </div>       
+
+          </div>
+
         </div>
 
         <div pane title="Platform 55">
+
           <header>
             <h1>Platform 55</h1>
             <h2>Iconic Design, Built to Perform</h2>
           </header>
+
           <div ng-app="productDetails">
+
             <section class="x-ray platform55" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
+
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -61,27 +78,39 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
                   <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
                 </div>
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
+
             </section>
+
           </div>
-        </div> 
-    </div> <!-- Close tabs -->
+
+        </div>
+
+      </div> <!-- Close tabs -->
+
+    </div>
 
     <section class="productSection platform">
-      <div class="prod-sect-img-wrap img-left">
+
+      <div class="prod-sect-img-wrap img-left">      
         <img class="left" src="{{theme.link}}/images/products/platform/01.png">
       </div>
+
       <div class="productText white">
+
         <h2>The Perfect Package</h2>
         <p> 
           This fully integrated and turnkey solution has single push button operation and
@@ -92,7 +121,9 @@
 
         <!-- begin hidden content for product-share -->
         <div style='display:none'>
+
           <div id='platform-share' class="share-dialog">
+
             <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
             <p>Like what you see? Share this.</p>
             <!-- Facebook -->
@@ -109,7 +140,9 @@
             src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
             <!-- Pinterest -->
             <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+
           </div>
+
         </div>
         <!-- end hidden content for product-share - revealed when user clicks 'Share This' link (below)-->
 
@@ -119,13 +152,17 @@
         </footer>
         
       </div>
+
     </section>
 
     <section class="productSection more-text">
+
       <div class="prod-sect-img-wrap img-left">
         <img class="left" src="{{theme.link}}/images/products/platform/02.png">
       </div>
+
       <div class="productText more-text">
+
         <h2>Same Tech, Different Scale</h2>
         <p>
           The projected capacitive multitouch technology featured in the Platform 46 is
@@ -139,11 +176,15 @@
           and is available with both an HD and 4K / Ultra HD display. It performs in
           almost all lighting conditions.
         </p>
+
       </div>
+
     </section>
 
     <section class="section-info">
+
       <h1>Key Features</h1>
+
     </section>
     
     <ul
@@ -266,8 +307,11 @@
 
     <section class="productSection plain full" 
     style="background:url('{{theme.link}}/images/products/platform/04.png') no-repeat top center; background-size:cover;">
+
       <div class="productText white fullLeft">
+
         <h2>Upgrades</h2>
+
         <p> 
           There are a variety of upgrades and add-ons for sharing and portability.
           <div class="specs">
@@ -292,20 +336,41 @@
             </ul>
           </div>
         </p>
+
       </div>
+
     </section>
 
+    <!--
+    <section class="made-in-usa">
+
+      <h3>
+        Made in the USA
+      </h3>
+
+    </section>
+    -->
+
     <section class="productSection">
+
       <div class="prod-sect-img-wrap img-left">
         <img class="left" src="{{theme.link}}/images/products/platform/06_direct-sales-platform.jpg">
       </div>
+
       <div class="productText">
+
         <h2>Direct Sales &amp; Rentals</h2>
+
         <p> 
           Please contact us at <span class="faux-link">(505) 791-1110</span> ext. 1 or toll free in the US and Canada <span class="faux-link">(855) 898-6824</span>, use our online inquiry form, or email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;</a>. Platforms are sold domestically and internationally and are only available direct from Ideum. We also rent the Platform in the US and Canada.
         </p>
+
       </div>
+
     </section>
+
   </main>
+
 </main>
+
 {% endblock %}
