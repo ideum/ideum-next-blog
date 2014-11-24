@@ -1,0 +1,135 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<!-- begin archive-ideum_project.twig -->
+
+<section class="article-content">
+
+  <div class="article-body">
+
+    <section class="our-creative-services">
+
+      <div class="section-info">
+
+        {#% if post.can_edit %}
+        <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+        {% endif %#}
+
+        <h1>
+          Our Creative Services
+        </h1>
+
+        <div class="two-column-text">
+
+          <p>
+            For the last 15 years, Ideum has excelled in creating compelling interactive experiences.  We are pioneers in the multitouch and multiuser space, and have produced groundbreaking applications for clients as diverse as aquariums, a cultural center for the Kingdom of Saudi Arabia, the ArcelorMittal and Spinnaker towers in England, as well as Fortune 500 companies like Coca-Cola.
+          </p>
+
+          <p>
+            Ideum has extensive experience in the informal science education field. We have developed software for museums and educational organizations such as Museum of Science &amp; Industry (Chicago), New England Aquarium, SFMOMA, and NASA. 
+          </p>
+
+        </div>
+
+        <!--
+        <div class="select-box-wrap" ng-controller="projectFilterCtrl">
+
+          <select ui-select2 ng-model="projectType" data-placeholder="Browse By Category">
+            <option value=""></option>
+            {% for category in categories %}
+              <option>{{ category.category_nicename }}</option>
+            {% endfor %}
+          </select>
+
+        </div>
+        -->
+
+      </div>
+
+      <div class="custom-project-listing">
+
+        {% for post in posts %}
+        {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+        {% endfor %}
+
+      </div>
+
+      <div class="tool-pagination">
+
+      <div class="pagination-interior-wrap">
+
+        {% if pagination.prev %}
+          <a href="{{pagination.prev.link}}" alt="Previous" title="Previous" class="prev arrow arrow-left {{pagination.prev.link|length ? '' : 'invisible'}}"></a>
+        {% endif %}
+        <ul class="pages">
+          {% for page in pagination.pages %}
+            <li>
+              {% if page.link %}
+                <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+              {% else %}
+                <span class="{{page.class}}">{{page.title}}</span>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+        {% if pagination.next %}
+          <a href="{{pagination.next.link}}" alt="Next" title="Next" class="next arrow arrow-right {{pagination.next.link|length ? '' : 'invisible'}}"></a>
+        {% endif %}
+
+      </div>
+
+    </div>
+
+  </section>
+  
+  <!-- 
+  <section class="clients-n-partners" ng-init="clientSliderIndex = 0">
+
+    <div class="section-info">
+
+      <h1>
+        <a href="/client-list/">Clients &amp; Partners</a>
+      </h1>
+
+      <p>
+        Ideum has worked with top museums and cultural institutions, the world’s leading technology firms, along with exhibit design and fabrication firms on a variety of challenging and collaborative projects. 
+      </p>
+
+    </div>
+
+    {#% include 'client-slider.twig' %#}
+
+  </section>
+  -->
+
+  </div>
+
+</section>
+
+<!-- begin hidden content for page-share -->
+<div style='display:none'>
+  <div id='creative-services-share' class="share-dialog">
+    <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+    <p>Like what you see? Share this.</p>
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u={{page.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+    <!-- Twitter -->
+    <a href="http://twitter.com/share?url={{page.link}}&amp;text=Ideum - {{ title }}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+    <!-- Google+ -->
+    <a href="https://plus.google.com/share?url={{page.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{page.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+    <!-- Pinterest -->
+    <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+  </div>
+</div>
+<!-- end hidden content for page-share - revealed when user clicks 'Share This Page' link in footer -->
+
+<!-- end archive-ideum_project.twig -->
+
+{% endblock %}

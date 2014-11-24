@@ -48,4 +48,8 @@ if (is_page('team')){
   $context['team'] = Timber::get_posts('post_type=ideum_employee&post_status=publish&exclude=2655&order=asc&img=team_user_image&posts_per_page=-1'); 
 }
 
+if (is_page('creative-services')){
+  $context['posts'] = Timber::get_posts('post_type=ideum_project&post_status=publish'); 
+}
+
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
