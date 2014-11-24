@@ -44,8 +44,8 @@ $context['featured_pages_contact'] = Timber::compile('featured-pages-contact.twi
 
 $context['sidebar_contact'] = Timber::get_sidebar('sidebar-contact.twig', $sidebar_context);
 
-if (is_page('team')){
-  $context['team'] = Timber::get_posts('post_type=ideum_employee&post_status=publish&exclude=2655&order=asc&img=team_user_image&posts_per_page=-1'); 
+if (is_page('team')){ 
+  $context['team'] = Timber::get_posts('post_type=ideum_employee&post_status=publish&order=asc&img=team_user_image&posts_per_page=-1'); 
 }
 
 if (is_page('creative-services')){
