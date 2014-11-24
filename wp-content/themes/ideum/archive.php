@@ -53,7 +53,7 @@
 
 		if ($post_type == 'ideum_project') {
 			$data['custom_slug'] = 'creative-services'; // used for metadata url slug and contextual div class
-			$data['custom_slug2'] = 'ideum_project'; // used for metadata url slug
+			$data['custom_slug2'] = 'blog/ideum_project'; // used for metadata url slug
 			if (is_category()) {
 				$data['custom_slug'] = 'project-category-archive'; // used for metadata url slug and contextual div class
 				$data['custom_cat_url'] = 'http://'.$_SERVER[HTTP_HOST].''.$_SERVER[REQUEST_URI];// used for metadata url 
