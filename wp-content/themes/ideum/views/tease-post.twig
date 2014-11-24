@@ -27,8 +27,8 @@
 <div class="post-img-wrap" style="background-image:url('{{post.thumbnail.src|resize(600)}}');">
 
   <a href="{{post.link}}"><img src="{{post.thumbnail.src|resize(600)}}" 
-  alt="Image for the post: '{{post.title}}'" 
-  title="Image for the post: '{{post.title}}'"/></a>
+  alt="{{post.title}}" 
+  title="{{post.title}}"/></a>
   {#% else %#}
   <!-- <a href="{{post.link}}"><img src="{{theme.link}}/images/blog-post-img-placeholders-{{ random(2) }}.jpg" 
   alt="Placeholder image for the post: '{{post.title}}'" 
