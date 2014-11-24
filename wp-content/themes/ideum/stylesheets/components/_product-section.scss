@@ -334,28 +334,45 @@ $product-spec-list-left-margin: 15px;
 	background-color: $base-background-color;
 }
 
-.productSection.platform-coffee{
+.productSection.platform-coffee, .made-in-usa.platform-coffee{
 	background-color: $platform-coffee-color;
 }
 
-.productSection.platform-drafting{
+.productSection.platform-drafting, .made-in-usa.platform-drafting{
 	background-color: $platform-drafting-color;
 }
 
-.productSection.platform{
+.productSection.platform, .made-in-usa.platform{
 	background-color: $platform-color;
 }
 
-.productSection.pro{
+.productSection.pro, .made-in-usa.pro{
 	background-color: $pro-color;
 }
 
-.productSection.pano{
+.productSection.pano, .made-in-usa.pano{
 	background-color: $pano-color;
 }
 
-.productSection.presenter{
+.productSection.presenter, .made-in-usa.presenter{
 	background-color: $presenter-color;
 }
 
+.made-in-usa {
+  background-image: url("images/made-in-usa.png");
+  background-repeat: no-repeat;
+  height:150px;
+  line-height: 150px;
+  text-align: center;
+  width: 100%;
+  
+  h2 {
+    color: $white;
+    display: inline-block;
+    font-weight: $bold;
+    line-height: normal; 
+    vertical-align: middle;
+  }
+
+}
 
