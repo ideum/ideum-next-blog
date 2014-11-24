@@ -50,6 +50,7 @@ if (is_page('team')){
 
 if (is_page('creative-services')){
   $context['posts'] = Timber::get_posts('post_type=ideum_project&post_status=publish'); 
+  $data['pagination'] = Timber::get_pagination();
 }
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
