@@ -685,6 +685,12 @@ img {
   }
 }
 
+.archive.category #footer .main nav.footer-nav li.page-share, 
+.archive.tag #footer .main nav.footer-nav li.page-share, 
+.archive.post-type-archive-ideum_project #footer .main nav.footer-nav li.page-share {
+  display: none;
+}
+
 // msie fixes
 html[data-useragent*='Trident'] #header .header-image .page-intro.no-image.centered-intro .page-intro-inner h1 { position: relative; top: -25%; }
 html[data-useragent*='Trident'] .chat.foot-chat { display: block !important; margin: 0 auto;}
