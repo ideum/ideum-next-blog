@@ -60,11 +60,6 @@
       width: 2em;
     }
 
-    @include media($large-screen-up) { 
-      display: block;
-      @include size(rem(70));
-    }
-
     &:hover { opacity: 1 }
     &-prev { @extend .icon-arrow-left;  left: 0;  }
     &-next { @extend .icon-arrow-right; right: 0; }
