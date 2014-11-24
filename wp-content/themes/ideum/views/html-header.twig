@@ -8,13 +8,25 @@
 
 <meta name="google-site-verification" content="brxnLtsKoz7BBFWkh_keSUHpdLYn7ZDnH8WNzvSke8Q" />
 
+{# begin scripts that might best go elsewhere - Ben, I leave that to you #}
+
 <!-- Start Alexa Certify Javascript -->
 <script type="text/javascript">
 _atrk_opts = { atrk_acct:"+cU1j1a8Dy002H", domain:"ideum.com",dynamic: true};
 (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
 </script>
 <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=+cU1j1a8Dy002H" style="display:none" height="1" width="1" alt="" /></noscript>
-<!-- End Alexa Certify Javascript -->  
+<!-- End Alexa Certify Javascript --> 
+
+<!-- begin google ad services script -->
+<noscript>
+  <div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1072509777/?label=lKb-CJ638AIQ0ea0_wM&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+<!-- end google ad services script -->
+
+{# end scripts that might best go elsewhere - also see bottom of base.twig #}
 
 <title>{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif acf.alternative_meta_title.value %}{{ acf.alternative_meta_title.value }}{% elseif post.title  %}{{ post.title }} | Ideum{% elseif ogp_title %}{{ ogp_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}</title>
 
