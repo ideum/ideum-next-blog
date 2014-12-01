@@ -622,6 +622,19 @@
 
 }
 
+.one-column-text {
+  @include span-columns(10);
+  @include shift(1);
+
+  padding:0 0 $gutter;
+  text-align: justify;
+
+  &.no-justification {
+    text-align: left;
+  }
+
+}
+
 .error-page {
   border:2px solid $very-dark-red;
   position:relative;
