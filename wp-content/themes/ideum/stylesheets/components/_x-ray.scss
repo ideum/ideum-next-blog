@@ -29,7 +29,7 @@ body {
 }
 
 .x-ray {
-  @include size(1280px 760px);
+  @include size(100% 760px);
   margin: 0 auto;
   position: relative;
   display: none;
