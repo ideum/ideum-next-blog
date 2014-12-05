@@ -2,7 +2,7 @@
 $product-section-height: 480px;
 $product-section-height-large: 580px;
 
-$product-section-width: 960px; // corrected spelling of var
+$product-section-width: 100%; // corrected spelling of var
 
 $product-spec-list-width: 150px;
 $product-spec-list-left-margin: 15px;
@@ -274,7 +274,7 @@ $product-spec-list-left-margin: 15px;
 		width: 100%;
 		@include media($medium-screen-up){
 			float: left;
-			width: auto;
+			width: 100%;
   	}
 	}
 
@@ -308,7 +308,7 @@ $product-spec-list-left-margin: 15px;
         height: 4em;
         padding: $gutter 0px;
         position: relative;
-        width: 100%;
+        width: 50%;
       }
 
       a.share {
