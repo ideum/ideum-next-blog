@@ -24,7 +24,7 @@ $footer-font-color: $white;
         color: $footer-font-color;
         margin: 0;
 
-        span { float: left  }
+        span { float: left; }
         i {
           float: right;
           @include transition(transform $base-animation-speed $base-animation-easing);
