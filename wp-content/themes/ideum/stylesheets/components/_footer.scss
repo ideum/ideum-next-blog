@@ -75,6 +75,11 @@ $footer-font-color: $white;
       li {
         display: inline-block;
         padding-right: 1rem;
+
+        &.menu-item-12250, &.menu-item-14358 {
+          position:absolute;
+          left:-500px;
+        }
         
         // navi-effect for the footer
         &.current-menu-item {
