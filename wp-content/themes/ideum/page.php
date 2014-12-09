@@ -48,6 +48,11 @@ if (is_page('team')){
   $context['team'] = Timber::get_posts('post_type=ideum_employee&post_status=publish&order=asc&img=team_user_image&posts_per_page=-1'); 
 }
 
+if (is_page('site-map')){ 
+  $context['map_categories'] = Timber::get_terms('category');
+  $context['map_posts'] = Timber::get_posts('post_type=post&post_status=publish&order=desc&posts_per_page=-1'); 
+}
+
 if (is_page('creative-services')) { // this is just-in-case someone lands here but the pagination does not work 
   $context['posts'] = Timber::get_posts('post_type=ideum_project'); 
   rewind_posts();
