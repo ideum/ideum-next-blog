@@ -1,0 +1,203 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div id="faq-list" class="sub-page-wrap">
+
+  <section class="highlight-text child-page">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% endif %}
+
+    {{post.content}}
+
+  </section>
+
+  <div class="accordion-wrap" id-expander>
+
+    <section class="item-wrap blue" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1 class-"expander" id-expander-button>
+            Pages
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+
+              <ul class="site-links">
+                {% for item in menu.get_items %}
+                <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a>
+                  {% if item.get_children %}
+                    <ul class="sub" style="margin-left:10px;">
+                      {% for child in item.get_children %}
+                        <li class="nav-sub-item {{child.classes | join(' ')}}"><a href="{{child.get_link}}">{{child.title}}</a></li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+  
+    <section class="item-wrap gold" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1 class-"expander" id-expander-button>
+            Categories
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+              
+              <ul class="site-links">
+              {% for category in map_categories %}
+              <li><a href="{{category.get_link}}">{{category.title}}</a></li>
+              {% endfor %}
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap red" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1 class-"expander" id-expander-button>
+            Blog Posts
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+              
+              <ul class="site-links">
+              {% for blogpost in map_posts %}
+              <li><a href="{{blogpost.get_link}}">{{blogpost.title}}</a></li>
+              {% endfor %}
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </div>
+
+  <section class="featured-pages">
+    <article class="content direct-sales light-link-color">
+      <div class="txt-wrap">
+        <h1>
+          Direct Sales
+        </h1>
+        <p>
+          Please contact us at <span class="faux-link">(505) 792-1110</span> ext.1 or toll free in the US and Canada <span class="faux-link">(855) 989-6824</span>, use our online inquiry form, or emails us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;</a>. Our multitouch tables are sold domestically and internationally and are only available direct from Ideum.
+        </p>
+
+        <footer class="footer">
+          <a class="read" href="/contact/">Inquire about sales</a>
+          <!-- <a class="share" href="#FIXME">Share This</a> -->
+        </footer>
+
+      </div>
+    </article>
+
+    <article class="content rentals light-link-color">
+      <div class="txt-wrap">
+        <h1>
+          Multitouch Rentals
+        </h1>
+        <p>
+          Ideum's 46&quot; Platform, 55&quot; 4K Drafting table, 46&quot; and 32&quot; Coffee Tables, and 46&quot; Presenter Touch Wall are available for rent for trade shows and special events.
+        </p>
+        
+        <footer class="footer">
+          <a class="read" href="/contact/">Inquire about rentals</a>
+          <!-- <a class="share" href="#FIXME">Share This</a> -->
+        </footer>
+
+      </div>
+    </article>
+
+  </section>
+
+  {{follow_dialog}}
+
+  {% include 'follow-us-button.twig' %}
+
+</div>
+
+<!-- begin hidden content for page-share -->
+<div style='display:none'>
+  <div id='client-list-share' class="share-dialog">
+    <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+    <p>Like what you see? Share this.</p>
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+    <!-- Twitter -->
+    <a href="http://twitter.com/share?url={{post.link}}&amp;text=Ideum - Our Clients" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+    <!-- Google+ -->
+    <a href="https://plus.google.com/share?url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+    <!-- Pinterest -->
+    <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+  </div>
+</div>
+<!-- end hidden content for page-share - revealed when user clicks 'Share This Page' link in footer -->
+
+{% endblock %}
