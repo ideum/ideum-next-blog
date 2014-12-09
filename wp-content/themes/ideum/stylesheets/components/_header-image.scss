@@ -30,7 +30,7 @@
     ('jobs',                  #000000, 'jobs-pseudo-header-bg-final',                 600px,  100px, center, top,     460px,  center),
   ) {
     .#{$class} {
-      background: $color url("images/header-images/#{$image}-phone.jpg") no-repeat bottom right;
+      background: $color url("images/header-images/#{$image}-phone.jpg") no-repeat bottom right; 
       height: 460px;
 
       @include media($medium-screen-up) {
