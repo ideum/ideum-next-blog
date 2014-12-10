@@ -59,15 +59,15 @@
       </article>
 
     </section>
-  
-    <section class="item-wrap gold" id-expander-item>
+
+    <section class="item-wrap purple" id-expander-item>
 
       <article>
 
         <header>
 
           <h1 class-"expander" id-expander-button>
-            Categories
+            Products
           </h1>
 
           <button id-expander-button><i class="icon-caret-down"></i></button>
@@ -81,8 +81,55 @@
             <div class="two-column-text">
               
               <ul class="site-links">
-              {% for category in map_categories %}
-              <li><a href="{{category.get_link}}">{{category.title}}</a></li>
+                <li><a href="/touch-tables/"><strong>Multitouch Tables</strong></a>
+                  <ul class="sub">
+                    <li><a href="/touch-tables/platform-coffee/">Platform Coffee Table</a></li>
+                    <li><a href="/touch-tables/platform/">Platform</a></li>
+                    <li><a href="/touch-tables/platform-drafting/">Platform Drafting Table</a></li>
+                    <li><a href="/touch-tables/Pro/">Pro &amp; Pro Lab</a></li>
+                    <li><a href="/touch-tables/pano/">Pano</a></li> 
+                  </ul>
+                </li>               
+                <li><a href="/touch-wallss/"><strong>Touch Walls</strong></a>
+                  <ul class="sub">
+                    <li><a href="/touch-walls/presenter/">Presenter</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap green" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1 class-"expander" id-expander-button>
+            Projects
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+              
+              <ul class="site-links">
+              {% for project in map_projects %}
+              <li><a href="{{project.get_link}}">{{project.title}}</a></li>
               {% endfor %}
               </ul>
 
@@ -119,6 +166,42 @@
               <ul class="site-links">
               {% for blogpost in map_posts %}
               <li><a href="{{blogpost.get_link}}">{{blogpost.title}}</a></li>
+              {% endfor %}
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="item-wrap gold" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1 class-"expander" id-expander-button>
+            Categories
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+              
+              <ul class="site-links">
+              {% for category in map_categories %}
+              <li><a href="{{category.get_link}}">{{category.title}}</a></li>
               {% endfor %}
               </ul>
 
