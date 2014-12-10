@@ -215,6 +215,42 @@
 
     </section>
 
+    <section class="item-wrap aquamarine" id-expander-item>
+
+      <article>
+
+        <header>
+
+          <h1 class-"expander" id-expander-button>
+            Tags
+          </h1>
+
+          <button id-expander-button><i class="icon-caret-down"></i></button>
+
+        </header>        
+
+        <div class="item-content">
+
+          <div class="text-container">
+
+            <div class="two-column-text">
+              
+              <ul class="site-links">
+              {% for tag in map_tags %}
+              <li><a href="{{tag.get_link}}">{{tag.title}}</a></li>
+              {% endfor %}
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
   </div>
 
   <section class="featured-pages">

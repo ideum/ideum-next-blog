@@ -50,6 +50,7 @@ if (is_page('team')){
 
 if (is_page('site-map')){ 
   $context['map_categories'] = Timber::get_terms('category');
+  $context['map_tags'] = Timber::get_terms('tag');
   $context['map_posts'] = Timber::get_posts('post_type=post&post_status=publish&order=desc&posts_per_page=-1'); 
   $context['map_projects'] = Timber::get_posts('post_type=ideum_project&post_status=publish&order=desc&posts_per_page=-1');
 }
