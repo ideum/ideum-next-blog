@@ -52,7 +52,8 @@
     font-weight: $bold;
     text-transform: uppercase;
   }
-
+  
+  ul {border: 2px solid #eee;}
   ul > li:hover {background-color: darken($white, 10);}
   ul > li > a {width: 100%;}
   ul > li.current-menu-item, ul > li.current-page-ancestor {background-color: darken($white, 5);}
@@ -63,8 +64,8 @@
 
   ul > li:hover > ul.sub, ul > li:active > ul.sub {display:block;}
   ul > li.current-menu-item ul.sub li > a:before {content: '';}
-  ul > li > ul.sub {background-color: darken($white, 5); }
-  ul > li > ul.sub li {padding: 0 $gutter; }
+  ul > li > ul.sub {background-color: darken($white, 5);} 
+  ul > li > ul.sub li {border-left:8px solid $vv-dark-gray; padding: 0 $tiny-gutter 0 $gutter; margin-left:-3px;}
   ul > li > ul.sub li a { font-weight:normal;}
   ul > li > ul.sub li.current-menu-item {background-color: darken($white, 10);}
   
