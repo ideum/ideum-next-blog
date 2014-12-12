@@ -43,7 +43,7 @@ Redirect      permanent /touch-walls/presenter-65    http://ideum.com/touch-wall
 
 # Projects
 Redirect      permanent /custom-exhibits             http://ideum.com/blog/ideum_project
-Redirect      permanent /interactive-exhibits        http://ideum.com/blog/ideum_projects
-Redirect      permanent /media-web-design            http://ideum.com/blog/ideum_projects
+Redirect      permanent /interactive-exhibits        http://ideum.com/blog/ideum_project
+Redirect      permanent /media-web-design            http://ideum.com/blog/ideum_project
 Redirect      permanent /monterey                    http://ideum.com/blog/ideum_project/aquarium_multitouch_wall
 Redirect      permanent /ideum_project               http://ideum.com/blog/ideum_project
