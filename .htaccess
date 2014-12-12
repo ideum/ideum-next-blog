@@ -52,3 +52,4 @@ Redirect      permanent /portfolio                   http://ideum.com/blog/ideum
 
 ## Archives
 Redirect      permanent /category                    http://ideum.com/blog/category
+Redirect      permanent /tag                         http://ideum.com/blog/tag
