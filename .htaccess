@@ -1,12 +1,13 @@
 # Pages
-Redirect permanent /application-development http://ideum.com/our-story/software-initiatives
-Redirect permanent /custom-exhibits         http://ideum.com/ideum_project
-Redirect permanent /interactive-exhibit     http://ideum.com/ideum_projects
-Redirect permanent /media-web-design        http://ideum.com/ideum_project
-Redirect permanent /about-us                http://ideum.com/our-story
-Redirect permanent /inquiry                 http://ideum.com/contact
-Redirect permanent /contact-us              http://ideum.com/contact
-Redirect permanent /multitouch              http://ideum.com/touch-tables
+Redirect      permanent /application-development     http://ideum.com/our-story/software-initiatives
+Redirect      permanent /custom-exhibits             http://ideum.com/blog/ideum_project
+Redirect      permanent /interactive-exhibit         http://ideum.com/blog/ideum_projects
+Redirect      permanent /media-web-design            http://ideum.com/blog/ideum_projects
+Redirect      permanent /about-us                    http://ideum.com/our-story
+Redirect      permanent /inquiry                     http://ideum.com/contact
+Redirect      permanent /contact-us                  http://ideum.com/contact
+Redirect      permanent /multitouch                  http://ideum.com/touch-tables
+RedirectMatch permanent ^/products/?$                http://ideum.com/touch-tables
 
 
 
