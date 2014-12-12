@@ -39,7 +39,8 @@ Redirect      permanent /touch-walls/presenter-55    http://ideum.com/touch-wall
 RedirectMatch permanent /touch-walls/presenter-65/.* http://ideum.com/touch-walls/presenter
 Redirect      permanent /touch-walls/presenter-65    http://ideum.com/touch-walls/presenter
 
-
+## Support
+Redirect      permanent /hardware-support/           http://ideum.com/customer-support/
 
 # Projects
 Redirect      permanent /custom-exhibits             http://ideum.com/blog/ideum_project
