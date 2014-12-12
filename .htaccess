@@ -49,3 +49,6 @@ Redirect      permanent /media-web-design            http://ideum.com/blog/ideum
 Redirect      permanent /monterey                    http://ideum.com/blog/ideum_project/aquarium_multitouch_wall
 Redirect      permanent /ideum_project               http://ideum.com/blog/ideum_project
 Redirect      permanent /portfolio                   http://ideum.com/blog/ideum_project
+
+## Archives
+Redirect      permanent /category                    http://ideum.com/blog/category
