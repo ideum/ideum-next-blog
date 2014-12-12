@@ -106,7 +106,17 @@
     width: 80%;
 
     @include media($medium-screen-up) {
-      width: 75%;
+      width: 90%;
+    }
+
+    h2.text-feature {
+      font-size: $base-font-size;
+      line-height: $unitless-line-height;
+      @include media($medium-screen-up) {
+        font-family: 'Roboto Light', $helvetica;
+        font-size: 1.28em;
+        line-height:1.5em;
+      }
     }
 
     .follow-button-wrap {
