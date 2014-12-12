@@ -112,6 +112,7 @@
     h2.text-feature {
       font-size: $base-font-size;
       line-height: $unitless-line-height;
+      text-align: center;
       @include media($medium-screen-up) {
         font-family: 'Roboto Light', $helvetica;
         font-size: 1.28em;
