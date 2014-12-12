@@ -38,7 +38,7 @@
         background: $color url("images/header-images/#{$image}.jpg") no-repeat $bgvert $bghoriz;
         background-size: auto $width;
         height: $bgheight;
-        margin-bottom: -$offset;
+        margin-bottom: -$offset; 
       }
 
       .page-intro {
