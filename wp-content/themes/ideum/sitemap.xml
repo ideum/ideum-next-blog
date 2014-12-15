@@ -1,0 +1,2328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://ideum.com/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/our-story/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/touch-tables/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/touch-walls/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/our-story/mission/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/our-story/services/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/our-story/team/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/our-story/facilities/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/our-story/software-initiatives/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/client-list/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/customer-support/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/legal/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/jobs/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/touch-tables/platform-coffee/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/touch-tables/platform/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/touch-tables/platform-drafting/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/touch-tables/pro/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/touch-tables/pano/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/touch-walls/presenter/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://ideum.com/contact/</loc>
+  <changefreq>never</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/new-cooper-hewitt-experience/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/department-of-energy-multi-user-interactive/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/the-truth-about-trees/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/crystal-bridges-state-of-the-art/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/beyond-rubiks-cube-and-grooviks-cube-traveling-exhibit/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/arcelormittal-orbit-gigapixel-viewers/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/multiusermultitouch-node-exhibit/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/garry-winogrands-films-at-sfmoma/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/visit-indy-3d-interactive-display/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/the-worlds-cup/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/take-note-george-washington/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/premier-informal-science-education-site-relaunches-as-a-comprehensive-and-collaborative-resource/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/climate-change-miami-2/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/blue-planet/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/usda-nrcs/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/surveying-george-washington-interactive/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/spinnaker-tower-gigapixel-multitouch/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/multiscreen-multitouch-collection-viewer-museum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/open-exhibits/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/informal-commons/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/union-pacific/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/timeline-exhibit-multitouch-stretched-lcd-2/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/cosmic-serpent-website/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/aquarium_multitouch_wall/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/onion-news-network-recon-wall/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/coelophysis/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/animal-comparison-multitouch-exhibit/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/los-angeles-basin-multitouch-multi-user-mapping-exhibit/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/arctic-choices-multitouch-multiuser-mapping-exhibit/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/multitouch-enabled-media-viewer/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/magic-planet-exhibit-shows-visitors-global-images-on-a-spherical-display/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/multiplayer-space-science-game/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/custom-100-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/visitor-studies-association-website/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/name-website/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/nasa-space-weather-android-app/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/the-american-image/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/kqed-quest/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/moad-slave-narratives/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/exhibit-files/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/ideum_project/moca-exhibition-archive/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/feed/</loc>
+  <lastmod>2014-12-12T19:31:31+00:00</lastmod>
+  <changefreq>hourly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/11/gestureworks-gameplay-innovative-sprout-hp/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/10/custom-multitouch-tables-cooper-hewitt-experience/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/09/ideum-touch-tables-and-software-at-national-laboratory-day-on-capital-hill/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/09/imls-funds-omeka-everywhere-partnership-with-open-exhibits/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/09/ideum-creative-director-jim-spadaccini-on-pbs-new-mexico-in-focus/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/08/virgil-ortiz-touchtabl-sfim14/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/08/prototyping-usability-lab/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/08/the-dynamic-desktop-experimental-tangible-interfaces-for-capacitive-touch-tables/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/08/state-of-the-art-discovering-american-art-now/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/07/multitouch-table-research-findings/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/07/gestureworks-gameplay-2-available/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/07/why-buy-an-ideum-multitouch-table-or-wall/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/07/new-lower-pricing-on-presenter-55-and-65/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/07/ideum-and-the-mbas-across-america/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/07/ideum-on-2-kasa-this-morning/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/06/2014-flying-40-award-recipient/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/06/production-is-ramping-up/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/06/production-is-ramping-up-2/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/06/ideums-new-usability-prototyping-lab/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/06/ideum-multitouch-tables-at-cooper-hewitt-smithsonian-design-museum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/06/gestureworks-gameplay-on-steam/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/06/ideum-next-generation-prototypes-infocomm-las-vegas/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/06/creative-startups/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/06/gestureworks-gameplay-version-2-in-beta/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/05/discovery-channel-highlights-android-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/05/open-exhibits-at-aam-museum-expo/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/05/ideum-is-hiring/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/05/gameplay-greenlit-on-steam/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/04/kitkat-android-ideum-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/04/ideum-rents-4k-multitouch-drafting-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/03/ideum-table-gameplay-gdc/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/03/gameplay-2-android/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/03/ideum-at-sxsw-interactive/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/02/ideum-3m-android-dse-2014/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/02/ideum-tables-at-dse-2014/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/01/human-computer-interaction-and-the-next-generation-of-science-center-exhibits/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2014/01/multitouch-tables-walls-4k-uhd/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/12/ideum-at-ces2014-las-vegas/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/12/multitouch-drafting-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/12/sur40-no-longer-no-problem/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/11/projected-capacitive-touch-vs-ir-overlays-which-tech-is-better/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/11/ideum-multitouch-tables-available-to-rent/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/11/gestureworks-gameplay-windows-8-games/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/10/multitouch-table-gameplay-intel-extreme-masters/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/10/gestureworks-gameplay-beta-release/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/10/new-museum-survey-connecting-in-gallery-experiences-with-online-content-management-systems/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/09/gestureworks-gameplay-revealed-today-in-san-francisco/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/09/ideum-open-exhibits-astc-2013/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/08/ideum-creative-services-portfolio-update/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/07/multitouch-tables-now-shipping/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/07/mbas-across-america-next-stop-ideum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/06/platform-46-available-next-month-infocomm-update/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/06/ideum-named-one-of-the-fastest-growing-companies-in-new-mexico/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/06/hci-plus-is/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/05/new-version-of-informal-science-is-live/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/05/ideum-at-the-aam-annual-meeting-and-museumexpo/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/04/flickr-based-multitouch-multiuser-collection-viewer/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/03/spring-equinox-traditions-of-the-sun/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/03/ideum-at-museums-and-the-web-and-aam-annual-conferences/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/03/ideum-cto-paul-lacey-nominated-for-biztech-award/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/02/3m-46-platform-multitouch-table-prototype/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/02/gestureworks-core-and-gesturekey-release/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/02/multitouch-hci-workshop-at-webwise-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/02/open-exhibits-workshop-at-museums-and-the-web-2013/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/01/ideum-ise-2013-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2013/01/gestureworks-core-multitouch-hci-framework-available-february-13th-video/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/12/pano-featured-in-gizmag/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/12/gestureworks-on-multiple-touch-screens-leap-motion-device-video/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/12/ideum-gestureworks-ise-2013-amsterdam/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/11/gestureworks-and-gesturekey-featured-in-techcrunch/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/11/human-computer-interaction-in-informal-science-education-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/11/jim-spadaccini-and-ideum-featured-in-entrepreneur-spotlight/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/11/ideum-interviewed-in-tech-crunch-technology-blog/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/10/gestureworks-and-open-exhibits-new-releases-tomorrow/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/09/ideum-and-open-exhibits-at-isea-2012/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/09/new-presenter-model-huge-multitouch-wall/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/08/ideum-and-open-exhibits-at-astc-2012-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/08/new-improved-specs-options-for-the-pro-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/08/ideum-expands-again/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/07/new-platform-and-pro-featured-in-engadget-and-gizmag/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/06/new-multitouch-tables/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/05/ghosts-in-armour-at-santa-fe-comp/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/04/ideum-founder-wins-new-mexico-business-weekly-titans-of-i-t-award/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/03/mt65-presenter-feature-video-2/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/02/welcome-to-ideum-labs/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/02/mt55-pro-tour-video/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/02/collection-viewer-2-0-and-other-open-exhibits-updates/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/02/multitouch-table-and-display-comparison-chart/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/01/emerging-exhibits-exploring-new-models-of-hci-course-at-ontario-science-centre/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/01/ideum-mt65-multitouch-wall-display/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/01/100-years-exhibition-at-the-indian-pueblo-cultural-center/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2012/01/linux-multitouch-support-coming-to-the-mt55/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/12/happy-holidays-from-ideum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/12/gestureworks-and-touch-revolution-at-ces-2012/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/11/gestureworks-3-released/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/11/ideum-featured-in-new-mexico-business-weekly/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/11/mt55-developer-partner-program/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/11/gestureworks-3-release-next-week-good-news-for-flash-developers/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/11/boeing-presents-mt55-pro-solution-at-iitsec-2011/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/11/tech-test-zone-open-exhibits-kinect-gigapixe/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/11/see-the-mt55-pro-at-iaapa/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/11/on-the-road-the-tech-museum-and-the-maxwell-museum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/11/multitouch-table-bowling-ball-test/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/10/video-tour-platform-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/10/open-exhibits-year-two/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/09/mt55-pro-exhibit-promotes-recycling-at-discovery-science-center/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/09/open-exhibits-and-gestureworks-built-installations/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/09/mt55-platform-now-shipping-worldwide/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/08/7-foot-multitouch-wall-at-monterey-bay-aquarium-video/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/08/the-mt55-platform-is-ready-for-international-distribution/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/08/ideum-is-expanding-and-moving/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/07/the-mt55-platform-multitouch-table-has-arrived/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/07/emerging-exhibits-exploring-new-models-of-human-computer-interaction-hci/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/06/open-source-release-of-the-nasa-space-weather-app-for-android/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/06/gesture-font-family-multitouch-gestures/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/06/building-a-high-resolution-multitouch-wall-part-5/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/06/multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/06/tune-grid-multitouch-audio-sequencer-now-playing/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/05/nasa-space-weather-viewer-google-android-market/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/05/open-source-for-museums-session-at-the-aam-2011-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/05/aam-session-museum-community-response-to-the-gulf-oil-spill/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/05/nasa-space-weather-android-app/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/04/building-high-resolution-multitouch-wall-part-4/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/04/new-mt55-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/04/free-multitouch-software-for-flash-and-kinect-from-open-exhibits-video/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/04/how-to-build-your-own-mt-50-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/03/new-multitouch-magnifier-viewer-on-open-exhibits/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/03/100k-downloads-for-nasa-space-weather-iphone-app/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/03/sensus-and-open-exhibits-easy-sharing-between-tables-tablets-phones/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/03/building-a-high-resolution-multitouch-wall-part-3/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/03/the-next-25-years-in-emerging-tech/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/02/building-high-resolution-multitouch-wall/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/02/open-exhibits-authoring-kinect/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/02/touch-revolution-monitors-and-gestureworks-bundles-now-available/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/02/gestureworks-2-1-for-flex-released/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/presenting-at-blur-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/field-study-on-multitouch-tables-at-vancouver-aquarium/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/gigapixel-kinect-controller/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/gestureworks-app-on-onion-news/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/source-released-for-the-nasa-space-weather-media-viewer-mobile/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/ces-2011-review-microsoft-surface-2-0/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/live-ces-touchscreens-3d/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/ces-exclusive-tru-touch-monitor/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/ideum-blog-is-five-years-old-today/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2011/01/gestureworks-partners-touch-revolution/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/12/gesture-based-computing-four-to-five-years-out-in-horizon-report/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/12/winter-solstice-solar-marker-at-chaco-canyon/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/12/gestureworks-2-0-multitouch-for-flash-and-flex/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/12/nasa-space-weather-viewer-iphone-app-the-video/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/11/building-a-high-resolution-multitouch-wall-part-1/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/11/introducing-open-exhibits/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/11/apple-not-adobe-is-in-trouble/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/11/simple-mobile-using-qr-codes-with-a-multitouch-table-exhibit/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/10/nasa-space-weather-media-viewer-mobile-uncaged-and-wild/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/10/computer-exhibits-in-museums-survey-open-api/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/10/open-exhibits-free-release-and-new-website-november-15/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/10/gestureworks-2-0-new-release/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/10/gestureworks-multitouch-flash-on-android-video/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/10/on-the-brooklyn-museum-response-to-the-ny-times-phone-app-article/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/10/interactivedesigner-and-project-coordinator-position/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/10/make-it-multitouch-at-museum-computer-network-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/09/open-exhibits-is-funded-by-the-national-science-foundation/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/09/ideum-partners-with-hp-releases-new-touchstand/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/09/know-a-good-flash-programmer/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/09/oil-spill-multitouch-exhibit/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/08/gestureworks-goes-broadcast/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/08/first-multitouch-flash-website/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/08/new-features-added-to-exhibitfiles/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/07/multitouch-hardware-page-updated/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/07/multitouch-tutorials-abound/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/06/bp-oil-spill-multitouch-mashup/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/05/ideum-and-adventure-science-center-win-a-2010-aam-muse-award/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/05/conferences-aam-sid2010/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/05/vide-mt-50-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/05/3m-22-multitouch-screen/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/05/why-apple-closed-off-the-iphone-and-ipad-to-flash-developers/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/05/multitouch-google-maps-tutorial-up-on-gestureworks-site/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/05/gestureworks-wins-tech-award/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/05/oakland-museum-2-0/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/04/clear-plexiglass-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/04/finalists-for-techex-awards/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/04/table-install-at-omca/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/04/north-to-alaska/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/04/gestureworks-multitouch-flash-flex/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/04/case-study-multitouch-multiuser-exhibit-exhibitfiles/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/03/table-install-at-petrosains-discovery-centre-kuala-lumpur-malaysia/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/03/new-gestureworks-tutorials-educational-pricing/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/03/toughness-test-mt-50-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/02/inside-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/02/gestureworks-illustrations-show-up-in-adobe-presentation-unattributed/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/02/multitouch-hardware-a-list-of-supported-devices/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/02/exhibitfiles-new-bits-feature/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/02/make-it-multitouch-workshop-at-museums-and-the-web-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/02/a-peek-inside-the-100-multitouch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/02/social-dimension-interactive-exhibits/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/01/gestureworks-1-1-open-source-gesture-library/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/01/true-multitouch-with-adobe-flash/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2010/01/ideum-portfolio-redesign-wordpress-flickr-twitter-and-youtube-integration/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/10/multitouch-table-em-spectrum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/10/a-view-of-the-moon-from-chaco-culture-national-park/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/10/ideum-featured-in-trend-magazine/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/10/best-use-of-web-2-0-new-media-award/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/10/viewing-the-moon-from-chaco-canyon/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/09/results-posted-2009-survey-on-computer-based-interactive-exhibits/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/09/multitouch-programmer-developer-1-position/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/09/exhibit-technician-position/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/09/gestureworks-multitouch-flash-sdk-pricing-and-release-date/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/08/screens-arent-killing-museums/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/08/multi-touch-table/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/08/the-social-dimension-interactive-exhibits-for-the-floor-and-web/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/07/ideum-multitouch-table-at-ontario-science-centre/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/07/gestureworks-flash-multitouch-sdk-is-now-available/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/07/name-national-association-for-museum-exhibition/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/06/gestureworks-multitouch-framework-for-flash/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/06/ideum-expands/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/06/wii-and-flash-exhibits/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/06/hp-touchsmart-kiosk-stand/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/06/100-multitouch-table-exhibit/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/05/exhibit-developertechnician-1-position/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/05/open-exhibits-computer-based-exhibits-survey-closing-soon/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/05/nui-multitouch-summit-at-adobe-in-munich/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/04/open-source-session-and-multitouch-table-at-aam/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/04/make-it-multitouch-workshop-at-mw2009/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/04/ideum-wins-a-new-mexico-technology-solution-award/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/03/open-exhibits-2009-survey-on-computer-exhibits-in-museums/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/03/birmingham-today-multitouch-exhibition-space/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/02/multitouch-exhibit-design-3-the-visitor-experience/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/02/multitouch-exhibit-design-2-elements-objects-and-environments/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/02/multitouch-exhibit-design-1-interaction-and-feedback/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/02/multitouch-table-and-mapping-exhibit-install/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/02/new-mexico-stories-flickr-and-yahoo-maps-mashup/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/02/multi-touch-blog-directory-site-multitouch-blogs/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/02/multitouch-table-is-released/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2009/02/online-video-editor-update/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/12/museum-blogs-and-museum-podcasts-directory-sites/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/12/web-and-interaction-designer-position/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/12/technology-enhanced-communication-for-cultural-heritage-online-course/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/12/rss-mixer/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/12/center-for-the-advancement-of-informal-science-education-caise/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/11/make-it-multitouch-workshop-at-museums-and-the-web/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/11/open-source-software-new-possibilities-for-museums/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/11/memory-maker-video-mashup-editor/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/11/museum-blogs-redux/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/10/web-2-science-centers/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/10/planning-for-social-sites/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/10/multi-touch-multi-user-table-prototype/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/10/ten-twitter-tools-helpful-utilities/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/09/alexa-ranking-and-rss-mixer/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/09/scaling-rss-mixer-analyzing-google-crawl-stats/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/09/presentation-for-nmipa/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/09/rss-mixer-featured-in-mashable/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/09/using-twitterfeed-to-update-twitter/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/08/rss-mixer-alpha-now-live/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/07/free-or-nearly-free-ways-museums-can-use-web-20/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/07/our-third-year-as-carbon-neutral-company/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/07/open-exhibits-wwwopenexhibitsorg/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/06/summer-solstice-at-chaco-canyon-2/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/06/100000-posts-on-museum-blogs/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/06/kqed-quests-next-step/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/05/dawn-of-the-dinosaurs/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/04/technology-and-small-museums/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/04/the-american-image-and-exhibitfiles-win-at-mw2008/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/04/open-exhibits-survey-update/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/03/introducing-open-exhibits-tell-us-about-exhibits-in-your-museum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2008/01/rss-mixer-alpha-to-launch-in-february/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/12/museums-and-the-web-2008-montreal/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/12/the-new-web-course-offering-at-uvic/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/12/jukebox-memories-case-study/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/11/vrmag-full-screen-panoramas/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/11/the-vintage-mac-museum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/11/remembering-artist-and-educator-bob-miller/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/10/350-social-networking-sites/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/10/museum-blogging-is-mainstream/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/10/a-museum-dashboard/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/10/cultural-connections-western-museum-associations-and-astc/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/09/review-of-old-masters-picture-gallery-in-second-life/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/08/slave-narratives-interactive-is-a-flashforward-finalist/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/08/filming-in-bolivia/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/07/cnet-webware-reviews-rss-mixer/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/07/rss-mixer-in-mashable-the-blogosphere/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/07/nevada-coal-power-plant-stopped-for-good/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/07/rss-mixer-combines-feeds-for-iphone-web-and-apple-widgets/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/07/climate-neutral-year-two/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/06/blog-analyzer-prototype/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/06/more-photos-of-the-zuni-dancers-at-chaco-canyon/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/06/summer-solstice-at-chaco-canyon/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/06/exhibitfiles-new-features-available/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/06/ideum-in-todays-albuquerque-journal/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/05/feedburner-blogs-about-museums/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/05/smithsonian-images-on-flickr/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/05/web-page-image-capture-prototype-try-it/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/05/152-museum-blogs-20000-posts/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/04/the-exhibitfiles-is-live/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/04/new-additions-to-the-john-collier-jr-collection/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/04/radical-trust-presentation-and-blogger-meet-up/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/04/real-science-20-interacting-with-scientific-imagery-and-live-data/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/04/museum-mashups/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/04/exhibitfiles-beta-on-april-23rd/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/03/radical-trust-the-state-of-the-museum-blogosphere/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/03/museums-and-the-web-san-francisco/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/03/the-complete-list-of-nasa-podcasts/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/03/the-museum-room-apple-ipod-tour/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/02/the-tech-museum-in-youtube/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/02/new-and-improved-museum-blogs-directory/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/02/mashup-of-the-day-and-other-thoughts/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/02/museum-blogs-google-co-op-search-engine/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/01/online-video-editors-and-a-quick-survey-of-web-20-video-sites/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/01/flickr-mashups-and-interestingness/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/01/video-from-the-digital-forum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/01/100-museum-blogs-49-surveyed/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2007/01/comparing-map-services-through-mashups/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/12/museum-blog-survey-for-museums-and-web-conference-2007/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/12/museums-in-transition/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/12/colonizing-social-spaces/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/12/national-digital-forum-day-2-by-the-people-social-tagging-of-art-museum-collections/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/12/national-digital-forum-day-2-opening-the-gates-new-opportunities-in-online-collections/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/12/national-digital-forum-day-2-day-2-mobile-guide-systems/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/national-digital-forum-day-2-lets-see-what-happens-if/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/national-digital-forum-day-1/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/national-digital-forum-wellington-new-zealand/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/the-new-web-victoria-canada/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/museum-blogs-5000/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/desktop-widgets-on-the-web/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/the-best-of-the-best-web-20-sites/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/latest-images-of-the-sun-mac-os-x-dashboard-widget/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/election-day-november-7-vote/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/ideums-new-portfolio-technical-aspects/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/11/future-of-science-interviews/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/10/off-to-the-association-of-science-technology-centers-annual-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/10/our-new-beta-bookshelf-on-shelfari/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/10/a-new-look-for-the-ideum-portfolio-and-blog/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/10/le-maya-miatsil-kuxaan-mayan-world-alive/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/09/the-future-of-intelligence-the-final-day-of-the-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/09/more-on-the-conference/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/09/the-biological-future-of-humanity/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/09/the-future-of-science/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/09/10000-pounds-and-counting/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/08/radical-trust/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/08/museums-and-the-new-web-online-forum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/08/more-exhibitfiles/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/08/remembering-nagasaki/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/08/a-model-recycling-google-maps-mashup/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/07/la-times-calendarlivecom-now-on-exhibit-the-bloggers-view/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/07/museums-and-the-new-web-the-promise-of-social-technologies/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/07/where-to-recycle-a-google-map-mash-up/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/07/rainbows-over-pueblo-bonito/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/07/exhibitfiles-development-blog/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/07/102/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/06/were-a-climate-neutral-company/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/06/more-summer-solstice-photographs/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/06/chaco-culture-on-the-solstice/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/06/off-to-chaco-for-summer-solstice-celebration/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/06/museum-blogs-update/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/06/museum-blog-round-up5/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/05/museumblogsorg-a-directory-and-blog-for-museums/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/05/wind-power/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/05/the-weather-makers/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/05/ny-governor-uses-alternative-fuels-design/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/05/museum-blog-round-up4/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/04/earth-observatory-and-neo/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/04/save-the-internet/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/04/arizona-sonora-desert-museum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/04/museum-blog-round-up-3/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/04/a-better-online-community-through-membership/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/04/rss-feeds/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/04/windows-xp-on-apple/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/new-nasa-rules/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/ideum-fiesta/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/nevada-coal-plant-stopped-for-now/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/museum-blog-round-up-2/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/the-e-word/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/museums-on-the-web-recap/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/museums-and-the-web/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/museum-vodcasting/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/rewriting-the-science/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/museum-blog-round-up/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/the-web-20-build-up/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/curate-your-own-museum/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/museums-and-web-20-connectivism/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/museum-blog-survey-follow-up/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/reconfiguring-a-bad-idea/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/a-survey-of-museum-blogs-community-sites-2/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/03/museums-and-web-20/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/02/community-sites-emerging-sociable-technologies/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/02/national-science-foundation-latest-image/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/02/wikipedia-nature-and-nicholas-carr/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/02/state-of-the-blogosphere/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/02/new-and-notable/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/02/solar-viewer-mini/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/02/censoring-truth/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/02/the-new-web-interactive-and-collaborative-technologies-in-the-museum-world/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/01/trying-to-silence-science/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/01/the-strength-of-internet-ties-a-new-report/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/01/the-state-of-museum-blogs/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/01/solar-widget-31000/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/01/so-you-want-to-build-a-yahoo-widget/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/01/solar-viewer-10000/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/01/solar-viewer-widget/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/blog/2006/01/why-blog/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://ideum.com/site-map/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+</urlset>
