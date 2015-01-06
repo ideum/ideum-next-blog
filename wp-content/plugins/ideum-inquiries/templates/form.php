@@ -2,7 +2,7 @@
 
   <section id="inquiry-form">
 
-    <form autocomplete="on" novalidate>
+    <form autocomplete="on">
       
       <div class="full-box">
 
