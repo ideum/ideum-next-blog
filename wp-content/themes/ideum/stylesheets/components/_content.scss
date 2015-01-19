@@ -717,6 +717,33 @@ img {
   display: none;
 }
 
+/* ### CUSCO ###*/
+
+h2.secondaryTitle {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 36px 0px 0px;
+}
+
+.panoWrap {
+  border: 1px dashed #CCC;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.panoWrap h2 {
+  clear: none;
+  color: #444;
+  margin: -10px 0px 0px;
+}
+
+.panoWrap img {
+  float: left;
+  margin: 0px 20px 0px 0px;
+}
+
+
 // msie fixes
 html[data-useragent*='Trident'] #header .header-image .page-intro.no-image.centered-intro .page-intro-inner h1 { position: relative; top: -25%; }
 html[data-useragent*='Trident'] .chat.foot-chat { display: block !important; margin: 0 auto;}
