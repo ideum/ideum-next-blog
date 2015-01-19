@@ -729,6 +729,7 @@ h2.secondaryTitle {
   border: 1px dashed #CCC;
   border-radius: 20px;
   margin-bottom: 30px;
+  overflow: auto; /* stupid hack to force content to stay in container */
   padding: 20px;
 }
 
