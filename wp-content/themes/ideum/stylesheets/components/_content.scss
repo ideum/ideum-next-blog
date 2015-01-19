@@ -744,6 +744,8 @@ h2.secondaryTitle {
   margin: 0px 20px 0px 0px;
 }
 
+.view-cusco .follow-button-wrap, .view-cusco .foot-chat { display:none; }
+
 
 // msie fixes
 html[data-useragent*='Trident'] #header .header-image .page-intro.no-image.centered-intro .page-intro-inner h1 { position: relative; top: -25%; }
