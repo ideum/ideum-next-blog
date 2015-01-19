@@ -744,7 +744,7 @@ h2.secondaryTitle {
   margin: 0px 20px 0px 0px;
 }
 
-.view-cusco .follow-button-wrap, .view-cusco .foot-chat { display:none; }
+.view-cusco .follow-button-wrap, .view-cusco .foot-chat { display:none !Important; }
 
 
 // msie fixes
