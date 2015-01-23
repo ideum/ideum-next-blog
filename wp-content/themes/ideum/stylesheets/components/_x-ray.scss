@@ -52,6 +52,18 @@ body {
     @include navAndButtonColors($platform-coffee-color);
   }
 
+  &.duet-46-coffee{
+    background-image: url("images/x-rays/platform-coffee-img.png");
+    @include x-ray-image("images/x-rays/platform-coffee-outline.png");
+    @include navAndButtonColors($platform-coffee-color);
+  }
+
+  &.duet-42-coffee{
+    background-image: url("images/x-rays/duet-42-coffee-img.png");
+    @include x-ray-image("images/x-rays/duet-42-coffee-outline.png");
+    @include navAndButtonColors($platform-coffee-color);
+  }
+
   //platform styles
   &.platform46{
     background-image: url("images/x-rays/platform46-img.png");
@@ -154,6 +166,11 @@ body {
     text-align: center;
 
     @extend %hide-and-show;
+
+    h2 {
+      font-size: 34px;
+      font-weight: 200;
+    }
 
     .body {
       @extend %hide-and-show;

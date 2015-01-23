@@ -86,6 +86,10 @@
       text-transform: uppercase;
     }
 
+    a.read {
+      margin-right: 1em;
+    }
+
     h1 a, a.view, a.share, a.read {
       font-weight: $bold;
       color: $very-dark-gray;

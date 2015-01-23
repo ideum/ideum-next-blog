@@ -50,7 +50,7 @@ $product-spec-list-left-margin: 15px;
 			text-align: center;
 
 			@include media($small-screen-up){
-				border-bottom: 1px solid $vv-light-gray;
+				/*border-bottom: 1px solid $vv-light-gray;*/
 				float:left;
 				height: auto;
 				padding: 0 20px;
@@ -76,6 +76,13 @@ $product-spec-list-left-margin: 15px;
 				border-radius: 100px;
 				background-color: #FFF;
 			}
+      .svgHolder.twotimes{
+        padding: 20px 10px;
+      }
+      .svgHolder.edison{
+        padding: 40px 35px;
+      }
+
 
 			.svgHolder > svg{
 				fill: black;
@@ -263,6 +270,11 @@ $product-spec-list-left-margin: 15px;
 			position: absolute;
   	}
 	}
+  .bleeder > .fullLeft, > .fullRight{
+    @include media($medium-screen-up){
+      width: 40%;
+    }
+  }
 
 	// " ... when text is on the right
 	> .fullRight{
@@ -375,4 +387,58 @@ $product-spec-list-left-margin: 15px;
   }
 
 }
+
+/* productSection featured video adjustemnts */
+.productSection.featured-video {
+  height: auto;
+}
+
+.productSection.featured-video.post-style {
+  display: block;
+  .img-wrap { 
+    @include media($small-screen-up) { 
+      width:100%;
+    } 
+    @include media($medium-screen-up) { 
+      width: 50%; 
+    }
+  }
+}
+
+/* begin hacks for product section full with image bleed */
+@include media($small-screen-up){
+  .productSection.bleeder { background-repeat: no-repeat; }
+  .productSection.bleeder.tablet-n-desktop { position: absolute; top: -4000px; left: -4000px; }
+  .productSection.bleeder > .fullLeft, .productSection > .fullRight {
+    width: 100%;
+  }
+  .productSection.bleeder > .productText {
+    padding: $gutter 4em;
+  }
+}
+@include media($medium-screen-up){
+  .productSection.bleeder { background-position-x: -2% !important; background-repeat: no-repeat; }
+  .productSection.bleeder.tablet-n-desktop { position: relative; top: -0; left: -0; }
+  .productSection.bleeder > .fullLeft, .productSection > .fullRight {
+    width: 50%;
+  }
+  .productSection.bleeder > .productText {
+    padding: 0 4em;
+  }
+}
+@include media($large-screen-up){
+  .productSection.bleeder { background-repeat: no-repeat; background-position: top center; background-size: cover; }
+  .productSection.bleeder > .fullLeft, .productSection > .fullRight {
+    width: 40%;
+  }
+  .productSection.bleeder > .productText {
+      padding: 0 6em;
+    }
+  }
+  /* end hacks for product section full with image bleed */
+
+.text-shadow {
+  text-shadow: 1px 1px 2px #000;
+}
+
 

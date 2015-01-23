@@ -5,19 +5,40 @@
 
 .tabs-nav{
 	margin: 0px auto;
-	text-align: center;
+	text-align: center;	
+	/* adjustment to make tab flex width */
+	@include media($medium-screen-up){
+		display: flex;
+		flex-direction: row;
+	}
+	width: 80%;
 
 	li{
 		display: inline-block;
 		padding: 0;
+		/* adjustment to make tab flex width */
+			flex-grow: 1;
+			border-right:1px solid #f0f0f0;
+
+		&:last-of-type {
+			border:none;
+		}
+
 		a, a:visited{
+			color: $white;
+			display: block;
+			font-weight: $bold;
+			
 			text-transform: uppercase;
 			text-decoration: none;
-			font-weight: $bold;
-			color: $white;
-			padding: 2.4em 0;
-			width: 240px;
-			display: block;
+			/* adjustment to make tab flex width */
+				min-width: 240px;
+				@include media($small-screen-up){
+					padding: 2.4em 0;
+				}
+				@include media($medium-screen-up){
+					padding: 3.5em 0;
+				}
 		}
 		a::after {
 			@extend %icon;
@@ -59,16 +80,31 @@
 
 	min-height: 130px;
 	@include media($large-screen-up){
-    	min-height: 760px;
-  	}
+  	min-height: 760px;
+	}
 
 	header{
 		text-align: center;
+		@include media($small-screen-up){
+	  	padding-bottom: 20px;
+		}
+		@include media($large-screen-up){
+	  	padding-bottom: 0px;
+		}
 
 		> h2 {
-			@include media($large-screen-up){
-    			margin-bottom: 1em;
-  			}
+			@include media($small-screen-up){
+    		color: #7e7e7e;
+    		font-size: 24px;
+				font-weight: 200;
+				margin-bottom: .5em;
+				padding: 0 5%;
+  		}
+			@include media($medium-screen-up){
+    		font-size: 34px;    		
+				margin-bottom: 1em;
+				padding: 0 20%;
+  		}
 		}
 	}
 }
