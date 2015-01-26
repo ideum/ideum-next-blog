@@ -162,7 +162,7 @@ body {
   }
 
   .content {
-    @include position(absolute, 40px 180px 0px 180px);
+    @include position(absolute, 40px 170px 0px 170px);
     text-align: center;
 
     @extend %hide-and-show;
