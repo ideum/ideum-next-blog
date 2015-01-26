@@ -162,13 +162,13 @@ body {
   }
 
   .content {
-    @include position(absolute, 40px 190px 0px 190px);
+    @include position(absolute, 40px 180px 0px 180px);
     text-align: center;
 
     @extend %hide-and-show;
 
     h2 {
-      font-size: 34px;
+      font-size: 32px;
       font-weight: 200;
     }
 
