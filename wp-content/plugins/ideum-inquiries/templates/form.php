@@ -8,7 +8,7 @@
 
         <div class="half-box">
           <div class="required fname">
-            <label class="medium" for="first-name">Full name <span class="requiredNote">*</span></label>
+            <label class="medium" for="first-name">First name <span class="requiredNote">*</span></label>
             <input class="full-input" type="text" name="inquiries[first-name]" id="first-name" autofocus required>
           </div>
         </div>
