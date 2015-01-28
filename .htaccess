@@ -1,6 +1,7 @@
 # Pages
 Redirect      permanent /application-development     http://ideum.com/our-story/software-initiatives
 Redirect      permanent /about-us                    http://ideum.com/our-story
+Redirect      permanent /about                       http://ideum.com/our-story
 Redirect      permanent /inquiry                     http://ideum.com/contact
 Redirect      permanent /contact-us                  http://ideum.com/contact
 Redirect      permanent /multitouch                  http://ideum.com/touch-tables
