@@ -8,6 +8,8 @@ bower_components/
 .vagrant/
 .sass-cache/
 
+wp-content/themes/ideum/npm-debug.log
+
 wp-content/themes/ideum/js/vendor.js
 wp-content/themes/ideum/js/site.js
 wp-content/themes/ideum/style.css
