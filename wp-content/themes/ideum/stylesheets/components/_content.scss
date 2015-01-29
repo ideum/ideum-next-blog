@@ -27,7 +27,7 @@
     
     @include media($medium-screen-up) {
       max-height: $footer-overlap-height;
-      padding: $gutter;
+      padding: $gutter; 
     }    
 
   }
