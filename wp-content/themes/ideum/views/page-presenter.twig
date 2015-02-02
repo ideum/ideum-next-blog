@@ -107,6 +107,39 @@
             </section>
           </div>
         </div>
+
+        <div pane title="Presenter 75">
+          <header>
+            <h1>Presenter 75</h1>
+            <h2>An Even Bigger Picture. Epic Overview</h2>
+          </header>
+          <div ng-app="productDetails">
+            <section class="x-ray presenter-75" ng-controller="xRayCtrl" ng-init="dataIndex = 3">
+              <section class="overlay" ng-style="overlayStyle">
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+              </section>
+            </section>
+          </div>
+        </div>
+
     </div> <!-- Close tabs -->
 
     <section class="productSection presenter">

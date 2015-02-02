@@ -132,6 +132,12 @@ body {
     @include x-ray-image("images/x-rays/presenter65-outline.png");
     @include navAndButtonColors($presenter-color);
   }
+
+  &.presenter-75{
+    background-image: url("images/x-rays/presenter75-img.png");
+    @include x-ray-image("images/x-rays/presenter75-outline.png");
+    @include navAndButtonColors($presenter-color);
+  }
 }
 
 .overlay {
@@ -170,10 +176,13 @@ body {
     h2 {
       font-size: 30px;
       font-weight: 200;
+      margin-bottom: 12px;
     }
 
     .body {
       @extend %hide-and-show;
+      margin:0 auto;
+      max-width: 650px;
 
       ul {
         display: inline-block;
