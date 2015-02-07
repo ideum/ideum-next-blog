@@ -637,6 +637,10 @@
     text-align: left;
   }
 
+  &.center {
+    text-align: center;
+  }
+
 }
 
 .one-column-text {
@@ -648,6 +652,10 @@
 
   &.no-justification {
     text-align: left;
+  }
+
+  &.center {
+    text-align: center;
   }
 
 }
@@ -747,6 +755,9 @@ h2.secondaryTitle {
 .view-cusco .follow-button-wrap, .view-cusco .foot-chat, .view-cusco .layout-contact-sidebar.contact-details  { display:none !Important; }
 #mobile-slideout-menu ul > li.current-menu-item, #mobile-slideout-menu ul > li.page-item-14496, #footer .main nav.sitemap li.page-share.view-cusco, #footer .main nav.footer-nav li.page-share.view-cusco { display:none; }
 
+.copyright {
+  padding-top:20px
+}
 
 // msie fixes
 html[data-useragent*='Trident'] #header .header-image .page-intro.no-image.centered-intro .page-intro-inner h1 { position: relative; top: -25%; }
@@ -768,7 +779,7 @@ html[data-useragent*='Silk'] .blog-post-detail .content-wrapper .pull-quote .pul
     padding-top: 0; 
   }
 }
-// Chrome Fix (only required because of 'Safari' string in Silk user-agent)
+// Chrome Fix (only required because of 'Safari' string in Chrome user-agent)
 html[data-useragent*='Chrome'] .blog-post-detail .content-wrapper .pull-quote .pull-quote-txt h2 { 
   @include media($medium-screen-up) {
     padding-top: 0; 

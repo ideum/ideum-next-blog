@@ -80,6 +80,9 @@ $footer-font-color: $white;
           position:absolute;
           left:-500px;
         }
+        &.social-media-feed {
+          width: auto;
+        }
         
         // navi-effect for the footer
         &.current-menu-item {
