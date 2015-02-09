@@ -3,7 +3,7 @@
   position: relative; // Force a new z-index stacking context
   z-index: 0;
 
-  // adjustments to pseudo-header will vary by page (as class)
+  // adjustments to pseudo-header will vary by page (determined by class set in body based on pg name)
   //
   // Images must be formatted as follows:  The desktop image must be named
   // '{name}-bg.jpg' and the mobile image must be '{name}-bg-phone.jpg'.  {name} may
@@ -11,9 +11,9 @@
   // directory and must both be JPEGs.  Note that if an image is not found, the
   // compiler will throw an error and refuse to continue.
   //
-  @each $class, $color, $image, $width, $offset, $bgvert, $bghoriz, $bgheight, $txtorient in ( 
-    ('home',                  #005294, 'home-pseudo-header-bg-CooperHewitt',         800px,  200px, center, center,  800px,  left),
-    ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px,  center),
+  @each $class, $color, $image, $bgwidth, $offset, $bghoriz, $bgvert, $bgheight, $txtorient in ( 
+    ('home',                  #005294, 'home-pseudo-header-bg-CooperHewitt',          800px,  200px, center, center,  800px,  left),
+    ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px,  center), 
     ('mission',               #211f20, 'mission-pseudo-header-bg-final',              600px,  100px, center, center,  460px,  center),
     ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px,  center),
     ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg-final', 600px,  100px, center, top,     460px,  center),
@@ -35,8 +35,8 @@
       height: 460px;
 
       @include media($medium-screen-up) {
-        background: $color url("images/header-images/#{$image}.jpg") no-repeat $bgvert $bghoriz;
-        background-size: auto $width;
+        background: $color url("images/header-images/#{$image}.jpg") no-repeat $bghoriz $bgvert;
+        background-size: auto $bgwidth;
         height: $bgheight;
         margin-bottom: -$offset;
       }
