@@ -15,6 +15,11 @@
     margin: 0;      
     position: relative;
     width: 100%;
+
+    &.dynamic {
+      background-size: cover;
+      background-position: top center;
+    }
     
     @include media($medium-screen-up) { 
       min-height: 380px;
@@ -32,6 +37,7 @@
       &.#{$class} {
         background: url("images/#{$image}") no-repeat $bgposvert $bgposhorz;
         background-size: $bgsize;
+        background-size: cover;
         background-position: top center;
         }
       }
@@ -108,8 +114,9 @@
   .content {
 
     @include media($medium-screen-up) { 
-      @include span-columns(6, block-collapse);
-      @include omega; 
+      //@include span-columns(6, block-collapse);
+      //@include omega; 
+      width: 50%;
     }
 
   }
