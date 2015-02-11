@@ -18,7 +18,11 @@
 
     &.dynamic {
       background-size: cover;
-      background-position: top center;
+      background-position: top left;
+
+      &:nth-child(2) {
+        background-position: top right;
+      }
     }
     
     @include media($medium-screen-up) { 
