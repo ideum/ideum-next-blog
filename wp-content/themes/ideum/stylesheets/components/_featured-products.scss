@@ -1,0 +1,122 @@
+.featured-product.post-style {
+  width:100%;
+
+  @include media($small-screen-up) {
+
+    .img-wrap {
+      background-size: cover;
+      max-height: 380px;
+      min-height: 380px;
+    }
+
+    .txt-wrap {
+      padding: 6% 8%;
+
+      @include media($medium-screen-up) { 
+        padding-bottom: $gutter * 2;
+      }
+
+    }
+
+  }
+
+  @include media($medium-screen-up) {
+
+    &.img-left { 
+      .img-wrap{ float: left !important; margin: 0; width: 50%; }
+      .txt-wrap{ float: right; margin: 0; width: 50%; }
+    }
+
+    &.img-right {
+      .img-wrap{ float: right !important; margin: 0; width: 50%; }
+      .txt-wrap{ float: left; margin: 0; width: 50%; }
+    }
+
+    .txt-wrap {
+      padding: 2% 8%;
+      max-height: 380px;
+      min-height: 380px;
+    }
+
+    .img-wrap {
+      position: relative;
+      background-repeat: no-repeat;        
+      background-size: contain;
+      max-height: 380px;
+      min-height: 380px;
+      width: 50%;
+      
+      a {
+        float: left;
+        /*position: relative;
+          left: 50%;*/
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        img {
+          display: block;
+          float: left;
+          /*max-width: initial;*/
+          /*position: relative;
+            right: 50%;
+          */
+          max-height: 380px;
+          min-height: 380px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .txt-wrap {
+    h1, p, a, a.read, a.share { color: inherit; }
+    h1 a:hover,  a:hover, a:hover.read, a:hover.share { color: inherit; opacity: 0.8; }
+  }
+
+  @include media($large-screen-up) {
+
+     &.img-left { 
+      .img-wrap{ float: left !important; margin: 0; width: 50%; }
+      .txt-wrap{ float: right; margin: 0; width: 50%; }
+    }
+
+    &.img-right {
+      .img-wrap{ float: right !important; margin: 0; width: 50%; }
+      .txt-wrap{ float: left; margin: 0; width: 50%; }
+    }
+
+    .img-wrap {
+      position: relative;
+      background-repeat: no-repeat;        
+      background-size: cover;
+      width: 50%;
+      
+      a {
+        float: left;
+        /*position: relative;
+          left: 50%;*/
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        img {
+          display: block;
+          float: left;
+          /*max-width: initial;*/
+          /*position: relative;
+            right: 50%;
+          */
+          max-height: 380px;
+          min-height: 380px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
