@@ -1,0 +1,109 @@
+
+<!-- begin bar-featured-post.twig -->
+
+<section class="featured-products" ng-init="productSliderIndex = 0">
+
+  <div class="section-info">
+
+    <h1>
+      Our Products
+    </h1>
+
+    <!-- content editable in WP via custom field on Home pg -->    
+    {% if post.our_products_text %}
+      {{ post.our_products_text }}
+    {% endif %}
+
+    <p>&nbsp;</p>
+
+    {% if post.get_field('featured_products') %}
+
+      {# `productSliderIndex` is used to track the status of the product slider
+      # contained within. It must be initialized to zero (the first slide) before the
+      # slider initializes. #}
+
+      {% for detail_item in post.get_field('featured_products') %}
+
+        <button class="pointer" ng-class="{active: productSliderIndex == {{ loop.index0 }}}" ng-click="productSliderIndex = {{ loop.index0 }}">{{detail_item.title}}</button>
+
+      {% endfor %}
+
+    {% endif %}
+
+  </div>
+
+  {% if post.get_field('featured_products') %}
+
+    <ul rn-carousel rn-carousel-index="productSliderIndex">
+
+    {% for detail_item in post.get_field('featured_products') %}
+
+        <li class="featured-product post-style {{detail_item.image_side}} product-slide" style="background-color:{{detail_item.background_color}}; color:{{detail_item.text_color}};">
+
+          <article class="content">
+
+            <div class="img-wrap" style="background:url('{{detail_item.background_image}}') no-repeat {{detail_item.background_position}};">
+
+              <a href="{{detail_item.link}}"><img class="hidden" src="{{detail_item.background_image}}" 
+              alt="Image for the post: '{{detail_item.title}}'" title="Image for the post: '{{detail_item.title}}'"></a>
+
+            </div>
+
+            <div class="txt-wrap">
+
+              <h1>
+                <a href="{{detail_item.link}}">{{detail_item.title}}</a>
+              </h1>
+              
+              <!-- Limit to 160 characters -->
+              <p>        
+                {{detail_item.text}}
+              </p>
+
+              <!-- begin hidden content for touch-walls-share -->
+              <div style='display:none'>
+                <div id='{{ detail_item.title|replace(' ', '-')|lower }}-share' class="share-dialog">
+                  <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+                  <p>Like what you see? Share this.</p>
+                  <!-- Facebook -->
+                  <a href="http://www.facebook.com/sharer.php?u={{site.url}}{{detail_item.link}}" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+                  <!-- Twitter -->
+                  <a href="http://twitter.com/share?url={{site.url}}{{detail_item.link}}&amp;text={{detail_item.twitter_share_text}}" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+                  <!-- Google+ -->
+                  <a href="https://plus.google.com/share?url={{site.url}}{{detail_item.link}}" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+                  <!-- LinkedIn -->
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}{{detail_item.link}}" target="_blank"><img class="sharing-icon" 
+                  src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+                  <!-- Pinterest -->
+                  <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}{{detail_item.link}}&amp;media={{site_url}}{{detail_item.share_image}}&amp;description={{detail_item.text}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>       
+                </div>
+              </div>
+              <!-- end hidden content for touch-walls-share - revealed when user clicks 'Share This' link (below)-->
+
+              <footer class="footer">
+                <a class="read" href="{{detail_item.link}}">Learn More</a>
+                <a class="tablet-n-desktop share inline" href="#{{ detail_item.title|replace(' ', '-')|lower }}-share">Share This</a>
+                <a class="phone-only share share-dialog-phone" href="#{{ detail_item.title|replace(' ', '-')|lower }}-share">Share This</a>
+              </footer>
+
+            </div>
+
+          </article>
+
+        </li>
+
+      {% endfor %}
+
+    </ul>
+
+  {% endif %}
+
+</section>
+
+
+
+
+
