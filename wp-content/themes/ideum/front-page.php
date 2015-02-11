@@ -36,6 +36,7 @@ $sidebar_context['featured_post'] = Timber::get_posts('cat=604&numberposts=1&pos
 $sidebar_context['recent_projects'] = Timber::get_posts('post_type=ideum_project&numberposts=6&posts_per_page=6'); 
 
 $context['recent_projects'] = Timber::get_sidebar('bar-recent-projects.twig', $sidebar_context);
+
 $context['related_posts'] = Timber::get_sidebar('bar-related-posts.twig', $sidebar_context);
 
 $context['featured_post'] = Timber::get_sidebar('bar-featured-post.twig', $sidebar_context);
