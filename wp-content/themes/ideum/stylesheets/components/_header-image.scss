@@ -10,10 +10,11 @@
   // include containing directories, but the two images must reside in the same
   // directory and must both be JPEGs.  Note that if an image is not found, the
   // compiler will throw an error and refuse to continue.
+  // Desktop image should be 1786x800.
+  // Phone image should be 640x502
   //
   @each $class, $color, $image, $bgwidth, $offset, $bghoriz, $bgvert, $bgheight, $txtorient in ( 
-    ('home',                  #000000, 'home-pseudo-header-bg-EMS',          800px,  200px, center, center,  800px,  left),
-    //('home',                  #005294, 'home-pseudo-header-bg-CooperHewitt',          800px,  200px, center, center,  800px,  left),
+    ('home',                  #000000, 'home-pseudo-header-bg-EMS',                   800px,  200px, center, center,  800px,  left),
     ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px,  center), 
     ('mission',               #211f20, 'mission-pseudo-header-bg-final',              600px,  100px, center, center,  460px,  center),
     ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px,  center),
@@ -22,7 +23,6 @@
     ('services',              #807F7D, 'services-pseudo-header-bg',                   600px,  100px, center, top,     460px,  center),
     ('blog',                  #2c2c2d, 'blog-pseudo-header-bg-final',                 600px,  100px, center, top,     460px,  center),
     ('creative-services',     #000000, 'creative-services-header-image',              800px,  200px, center, center,  800px,  left),
-    //('creative-services',     #2c2c2d, 'cs-worldcup-project-pseudo-header-bg',        800px,  200px, center, center,  800px,  left),
     ('contact',               #2c2c2d, 'contact-pseudo-header-bg-final',              600px,  100px, center, top,     460px,  center),
     ('client-list',           #ef6c6c, '',                                            800px,  250px, center, center,  460px,  center),
     ('customer-support',      #f4c057, '',                                            800px,  250px, center, center,  460px,  center),
