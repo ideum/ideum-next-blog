@@ -4,7 +4,7 @@
   @include media($small-screen-up) {
 
     .img-wrap {
-      display:none;
+      display: none;
     }
 
     .txt-wrap {
@@ -37,11 +37,12 @@
     }
 
     .img-wrap {
-      position: relative;
       background-repeat: no-repeat;        
       background-size: contain;
+      display: block;
       max-height: 380px;
       min-height: 380px;
+      position: relative;
       width: 50%;
       
       a {
