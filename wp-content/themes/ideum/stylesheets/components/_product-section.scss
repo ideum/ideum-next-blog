@@ -219,7 +219,7 @@ $product-spec-list-left-margin: 15px;
   	}
 
   	p{
-  		max-width: 100%;
+  		width: 100%;
   		text-align: left;
       color: #999999;
   	}
@@ -234,6 +234,7 @@ $product-spec-list-left-margin: 15px;
 
   	.specs{
   		margin-left: 0;
+      width: 100%;
 
     	ul.specList{
     		width: 150px;
