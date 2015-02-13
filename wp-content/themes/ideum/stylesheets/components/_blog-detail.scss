@@ -155,6 +155,15 @@
 
         h1.alternative-title {
           margin-top:0;
+
+          @include media($small-screen-up) { 
+            font-size: 1.42857rem;
+          }
+
+          @include media($medium-screen-up) { 
+            font-size: 2.42857rem;
+          }
+
         }
 
         img {
