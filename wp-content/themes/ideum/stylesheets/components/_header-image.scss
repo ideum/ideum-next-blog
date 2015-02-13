@@ -12,8 +12,8 @@
   // compiler will throw an error and refuse to continue.
   //
   @each $class, $color, $image, $bgwidth, $offset, $bghoriz, $bgvert, $bgheight, $txtorient in ( 
-    //('home',                  #000000, 'home-pseudo-header-bg-EMS',          800px,  200px, center, center,  800px,  left),
-    ('home',                  #005294, 'home-pseudo-header-bg-CooperHewitt',          800px,  200px, center, center,  800px,  left),
+    ('home',                  #000000, 'home-pseudo-header-bg-EMS',          800px,  200px, center, center,  800px,  left),
+    //('home',                  #005294, 'home-pseudo-header-bg-CooperHewitt',          800px,  200px, center, center,  800px,  left),
     ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px,  center), 
     ('mission',               #211f20, 'mission-pseudo-header-bg-final',              600px,  100px, center, center,  460px,  center),
     ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px,  center),
