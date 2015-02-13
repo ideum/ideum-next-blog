@@ -203,32 +203,38 @@ $product-spec-list-left-margin: 15px;
   	&.white{
   		color: $white;
 
-  		h2, p {
+  		h2, p, a {
   			color: $white;
   		}
 
   	}
 
   	h2{
-  		width: 100%;
+      font-family: "Roboto-Black", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   		font-weight: $ultra-bold;
-  		font-size: 2.25em;
+  		font-size: 2.6em;
   		text-align: left;
   		padding-bottom: .5em;
+      width: 100%;
   	}
 
   	p{
   		max-width: 100%;
   		text-align: left;
+      color: #999999;
   	}
 
+    p.learnMore{
+      width: 100%;
+      text-align: left;
+      color: #999999;
+      margin-top:20px;
+      a:hover { opacity:.8; }
+    }
+
   	.specs{
-  		@include media($medium-screen-up){
-  			margin-left: 186px;
-			}
-			@include media($large-screen-up){
-  			margin-left: 66px;
-			}
+  		margin-left: 0;
+
     	ul.specList{
     		width: 150px;
     		float: left;
@@ -245,6 +251,17 @@ $product-spec-list-left-margin: 15px;
     			margin-left: -10px;
     		}
     	}
+
+      &.singlelist {
+        width: 100%;
+        ul.specList{
+          width: 100%;
+          li{
+            list-style-type: disc;
+            margin-left: 5px;
+          }
+        }
+      }
 
     	ul.column2{
     		@include media($medium-screen-up){
