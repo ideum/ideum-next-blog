@@ -25,9 +25,11 @@
       {% for item in foot.get_items %}
       <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
       {% endfor %}
+      {% if not ['site-map', 'contact', 'legal', 'thank-you'] in post.slug %}
       <li class="page-share {{post.slug}}">
         <a class="phone-only share-dialog-phone" href="#{% if custom_slug %}{{custom_slug}}{% else %}{{post.slug}}{% endif %}-share">Share This Page</a>
       </li>
+    {% endif %}
     </ul>
   </nav>
 
@@ -40,10 +42,12 @@
       <li class="site-map-link">
         <a href="/site-map/">Site Map</a>
       </li>
+      {% if not ['site-map', 'contact', 'legal', 'thank-you'] in post.slug %}
       <li class="page-share {{post.slug}}">
         <a class="tablet-n-desktop share-dialog-tab-desk" href="#{% if custom_slug %}{{custom_slug}}{% else %}{{post.slug}}{% endif %}-share">Share This Page</a>
         <a class="phone-only share-dialog-phone" href="#{% if custom_slug %}{{custom_slug}}{% else %}{{post.slug}}{% endif %}-share">Share This Page</a>
       </li>
+      {% endif %}
     </ul>
     <p class="copyright">&copy; Ideum</p>
   </nav>
