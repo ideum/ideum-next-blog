@@ -14,7 +14,7 @@
   // Phone image should be 640x502
   //
   @each $class, $color, $image, $bgwidth, $offset, $bghoriz, $bgvert, $bgheight, $txtorient in ( 
-    //('home',                  #000000, 'home-pseudo-header-bg-EMS',                   800px,  202px, center, center,  800px,  left),
+
     ('creative-services',     #000000, 'creative-services-header-image',              800px,  202px, center, center,  800px,  left), 
     ('legal',                 #3e4857, '',                                            800px,  202px, center, center,  460px,  center),    
     ('thank-you',             #3e4857, '',                                            800px,  202px, center, center,  460px,  center),
@@ -246,7 +246,7 @@
 
 .front-page-slider .rn-carousel-indicator { display: none; }
 .front-page-slider img.slider-spacer-image { float:right; visibility: hidden; width: 1px; }
-.front-page-slider .page-intro-inner .footer { font-size: 1em; margin: 35px 0; text-transform: uppercase; }
+.front-page-slider .page-intro-inner .footer { font-size: 1em; font-weight: bold; margin: 35px 0; text-transform: uppercase; }
 .front-page-slider .page-intro-inner .footer a:hover, .front-page-slider h1 a:hover { border-bottom: 3px solid white; }
 
 .front-page-slider .slide-text-wrap {  
@@ -304,6 +304,26 @@
   @include media($large-screen-up) {
     padding: 10% 5% 0;
     width: 45%; 
+  }
+}
+
+@include media($small-screen-up) {
+  .front-page-slider .slider.item .page-intro-inner {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@include media($medium-screen-up) {
+  .front-page-slider .slider.item.Right .page-intro-inner {
+    float: right;
+    margin: 0 auto;
+    text-align: right;
+  }
+  .front-page-slider .slider.item.Left .page-intro-inner {
+    float: left !important;
+    margin: 0 auto;
+    text-align: left !important;
   }
 }
 
