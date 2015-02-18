@@ -291,6 +291,7 @@
   } 
 }
 
+/* makes front page slider header text go to centered alignment in small displays */
 .front-page-slider .page-intro-inner { 
   @include media($small-screen-up) {
     padding: 10% 10% 0;
@@ -307,6 +308,7 @@
   }
 }
 
+/* makes front page slider header text go back to its specified alignment in medium and large displays */
 @include media($small-screen-up) {
   .front-page-slider .slider.item .page-intro-inner {
     float: none;
@@ -327,7 +329,10 @@
   }
 }
 
-.front-page-slider .rn-carousel-controls { margin-top: -20%; }
+/* raise location of slider arrows a bit since we have the content over-running the bottom of slide by 200px; */
+.front-page-slider .rn-carousel-controls { 
+  margin-top: -20%; 
+}
 
 .home #content, .front #content { 
   position: relative; 
