@@ -47,6 +47,13 @@ $footer-font-color: $white;
         font-weight: bold;
         text-transform: uppercase;
       }
+      .copyright {
+        padding-top:20px; 
+        a {
+          font-weight: normal;
+          text-transform: none;
+        }
+      }
     }
 
     nav.sitemap {
