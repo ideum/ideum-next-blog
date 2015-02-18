@@ -48,6 +48,10 @@ if (is_page('team')){
   $context['team'] = Timber::get_posts('post_type=ideum_employee&post_status=publish&order=asc&img=team_user_image&posts_per_page=-1'); 
 }
 
+if (is_page('client-list')){ 
+  $context['clients'] = Timber::get_posts('post_type=page&post_status=publish&order=asc&post_parent=11816&posts_per_page=-1'); 
+}
+
 if (is_page('site-map')){ 
   $context['map_categories'] = Timber::get_terms('category');
   $context['map_tags'] = Timber::get_terms('tag');
