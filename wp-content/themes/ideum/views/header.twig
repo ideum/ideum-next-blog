@@ -57,7 +57,7 @@
       {% for slide in post.get_field('slides') %}
         .slider-item-article.slide-{{loop.index0}} { background: {{slide.background_color}} url('{{TimberImage(slide.slide_image).src}}') no-repeat center center; background-size: auto 800px; }
         .slider-item-article.slide-{{loop.index0}} h1, .slider-item-article.slide-{{loop.index0}} h1 a, .slider-item-article.slide-{{loop.index0}} h1 a:hover, .slider-item-article.slide-{{loop.index0}} h2, .slider-item-article.slide-{{loop.index0}} p, .slider-item-article.slide-{{loop.index0}} a { color: {{slide.text_color}}; text-shadow: 1px 1px 2px #000; }
-        .slider-item-article.slide-{{loop.index0}} .page-intro-inner { {% if slide.text_content_alignment == 'Center' %}margin: 0 auto; text-align:center;{% else %}float:{{slide.text_content_alignment}};{% endif %} }
+        .slider-item-article.slide-{{loop.index0}} .page-intro-inner { {% if slide.text_content_alignment == 'Center' %}margin: 0 auto; text-align:center;{% else %}float:{{slide.text_content_alignment}};text-align:{{slide.text_content_alignment}};{% endif %} } 
       {% endfor %}
       /* end pseudo-dynamic styles for front-page slider */
     </style>
@@ -68,7 +68,7 @@
 
         {% for item in post.get_field('slides') %}
 
-          <li class="slider item">
+          <li class="slider item {{item.text_content_alignment}}">
 
             <article class="slider-item-article slide-{{loop.index0}}">
 
