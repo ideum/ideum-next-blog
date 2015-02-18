@@ -785,3 +785,8 @@ html[data-useragent*='Chrome'] .blog-post-detail .content-wrapper .pull-quote .p
     padding-top: 0; 
   }
 }
+
+html[data-useragent*='Firefox'] #footer {
+  padding-top: 160px;
+}
+
