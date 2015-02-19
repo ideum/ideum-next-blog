@@ -47,6 +47,13 @@ $footer-font-color: $white;
         font-weight: bold;
         text-transform: uppercase;
       }
+      .copyright {
+        padding-top:20px; 
+        a {
+          font-weight: normal;
+          text-transform: none;
+        }
+      }
     }
 
     nav.sitemap {
@@ -155,4 +162,11 @@ $footer-font-color: $white;
       }
     }
   }
+}
+
+.home #footer {
+  margin-top: $home-footer-margin-top;
+  background-color: $footer-background-color;
+  color: $footer-font-color;
+  padding-top: $footer-overlap-height;
 }

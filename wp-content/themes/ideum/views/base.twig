@@ -47,7 +47,7 @@
 
     </nav>
 
-    <section id="content" role="main" class="content-wrapper">
+    <section id="content" role="main" class="content-wrapper{% if post.slides %} slide-present{% endif %}">
 
       <!-- {% if title %}<h1>{{title}}</h1>{% endif %} -->
 
@@ -79,7 +79,7 @@
 
     <div class="subfooter-scripts">
 
-    {# begin scripts that might best go elsewhere - Ben, I leave that to you #}
+    {# begin scripts that might best go elsewhere - Ben, I will leave that to you #}
 
     <script type="text/javascript">
       var _gaq = _gaq || [];

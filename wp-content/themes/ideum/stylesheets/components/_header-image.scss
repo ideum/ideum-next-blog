@@ -14,23 +14,24 @@
   // Phone image should be 640x502
   //
   @each $class, $color, $image, $bgwidth, $offset, $bghoriz, $bgvert, $bgheight, $txtorient in ( 
-    ('home',                  #000000, 'home-pseudo-header-bg-EMS',                   800px,  200px, center, center,  800px,  left),
+
+    ('creative-services',     #000000, 'creative-services-header-image',              800px,  202px, center, center,  800px,  left), 
+    ('legal',                 #3e4857, '',                                            800px,  202px, center, center,  460px,  center),    
+    ('thank-you',             #3e4857, '',                                            800px,  202px, center, center,  460px,  center),
+    ('customer-support',      #f4c057, '',                                            800px,  202px, center, center,  460px,  center),
+    ('client-list',           #ef6c6c, '',                                            800px,  142px, center, center,  460px,  center),
+    ('site-map',              #3e4857, '',                                            800px,  142px, center, center,  460px,  center),
+    ('blog',                  #2c2c2d, 'blog-pseudo-header-bg-final',                 600px,  142px, center, top,     460px,  center),
     ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px,  center), 
     ('mission',               #211f20, 'mission-pseudo-header-bg-final',              600px,  100px, center, center,  460px,  center),
     ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px,  center),
     ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg-final', 600px,  100px, center, top,     460px,  center),
     ('team',                  #514748, 'team-pseudo-header-bg-final',                 600px,  100px, center, top,     460px,  center),
     ('services',              #807F7D, 'services-pseudo-header-bg',                   600px,  100px, center, top,     460px,  center),
-    ('blog',                  #2c2c2d, 'blog-pseudo-header-bg-final',                 600px,  100px, center, top,     460px,  center),
-    ('creative-services',     #000000, 'creative-services-header-image',              800px,  200px, center, center,  800px,  left),
-    ('contact',               #2c2c2d, 'contact-pseudo-header-bg-final',              600px,  100px, center, top,     460px,  center),
-    ('client-list',           #ef6c6c, '',                                            800px,  250px, center, center,  460px,  center),
-    ('customer-support',      #f4c057, '',                                            800px,  250px, center, center,  460px,  center),
-    ('legal',                 #3e4857, '',                                            800px,  250px, center, center,  460px,  center),
     ('social-media-feed',     #2c2c2d, 'social-media-pseudo-header-bg',               600px,  100px, center, top,     460px,  center),
-    ('thank-you',             #3e4857, '',                                            800px,  250px, center, center,  460px,  center),
+    ('contact',               #2c2c2d, 'contact-pseudo-header-bg-final',              600px,  100px, center, top,     460px,  center),
     ('jobs',                  #1F1F1F, 'jobs-pseudo-header-bg-final',                 600px,  100px, center, top,     460px,  center),
-    ('site-map',              #3e4857, '',                                            800px,  250px, center, center,  460px,  center),
+    
   ) {
     .#{$class} {
       background: $color url("images/header-images/#{$image}-phone.jpg") no-repeat bottom right; 
@@ -241,6 +242,107 @@
 }
 
 #header .header-image .home { background-position: bottom center; }
+
+
+.front-page-slider .rn-carousel-indicator { display: none; }
+.front-page-slider img.slider-spacer-image { float:right; visibility: hidden; width: 1px; }
+.front-page-slider .page-intro-inner .footer { font-size: 1em; font-weight: bold; margin: 35px 0; text-transform: uppercase; }
+.front-page-slider .page-intro-inner .footer a:hover, .front-page-slider h1 a:hover { border-bottom: 3px solid white; }
+
+.front-page-slider .slide-text-wrap {  
+  @include media($large-screen-up) {
+    margin: 0 auto;
+    max-width: 100%;
+    width:1280px;
+  }
+}
+
+.slider-item-article { 
+  @include media($small-screen-up) {
+    background-size: auto 460px;
+    height: 460px;
+    background-position: top center;
+    background-size: cover;
+  }
+  @include media($medium-screen-up) {
+    background-size: auto 600px;
+    height: 600px;
+    background-position: bottom center;
+  }
+  @include media($large-screen-up) {
+    background-size: auto 800px;
+    height: 800px;
+    background-position: bottom center;
+  }
+}
+
+.front-page-slider, .front-page-slider .rn-carousel-container { 
+  @include media($small-screen-up) {
+    background-size: auto 460px;
+    height: 460px;
+  }
+  @include media($medium-screen-up) {
+    background-size: auto 600px;
+    height: 600px;
+  }
+  @include media($large-screen-up) {
+    background-size: auto 800px;
+    height: 800px;
+  } 
+}
+
+/* makes front page slider header text go to centered alignment in small displays */
+.front-page-slider .page-intro-inner { 
+  @include media($small-screen-up) {
+    padding: 10% 10% 0;
+    width: 100%; 
+    h2 { display: none; }
+  }
+  @include media($medium-screen-up) {
+    width: 80%; 
+    h2 { display: block; }
+  }
+  @include media($large-screen-up) {
+    padding: 10% 5% 0;
+    width: 45%; 
+  }
+}
+
+/* makes front page slider header text go back to its specified alignment in medium and large displays */
+@include media($small-screen-up) {
+  .front-page-slider .slider.item .page-intro-inner {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@include media($medium-screen-up) {
+  .front-page-slider .slider.item.Right .page-intro-inner {
+    float: right;
+    margin: 0 auto;
+    text-align: right;
+  }
+  .front-page-slider .slider.item.Left .page-intro-inner {
+    float: left !important;
+    margin: 0 auto;
+    text-align: left !important;
+  }
+}
+
+/* raise location of slider arrows a bit since we have the content over-running the bottom of slide by 200px; */
+.front-page-slider .rn-carousel-controls { 
+  margin-top: -20%; 
+}
+
+.home #content, .front #content { 
+  position: relative; 
+  @include media($large-screen-up) {
+    top: -0px;
+  }  
+  @include media($large-screen-up) {
+    top: -200px;
+  } 
+}
 
 .project-category-archive .page-intro {
   display: none;

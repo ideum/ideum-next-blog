@@ -48,18 +48,70 @@
 
 {% block header_image %}
 
-  <div class="header-image">
+  {% if post.slides and post.slug == 'home' %}
 
-    <div class="{% if custom_slug %}{{custom_slug}}{% else %}{{ post.slug }}{% endif %}{% if post.get_field('has_image') == 'No' %} no-image{% endif %}">
+    <!-- begin slides -->
 
-      {% if custom_header %}
-      {{ custom_header }}
-      {% else %}
-      {{post.get_field('header_image_text_content')}}
-      {% endif %}
+    <style>
+      /* begin pseudo-dynamic styles for front-page slider */
+      {% for slide in post.get_field('slides') %}
+        .slider-item-article.slide-{{loop.index0}} { background: {{slide.background_color}} url('{{TimberImage(slide.slide_image).src}}') no-repeat center center; background-size: auto 800px; }
+        .slider-item-article.slide-{{loop.index0}} h1, .slider-item-article.slide-{{loop.index0}} h1 a, .slider-item-article.slide-{{loop.index0}} h1 a:hover, .slider-item-article.slide-{{loop.index0}} h2, .slider-item-article.slide-{{loop.index0}} p, .slider-item-article.slide-{{loop.index0}} a { color: {{slide.text_color}}; text-shadow: 2px 2px 6px #000; font-weight: 600;}
+        .slider-item-article.slide-{{loop.index0}} .page-intro-inner { {% if slide.text_content_alignment == 'Center' %}margin: 0 auto; text-align:center;{% else %}float:{{slide.text_content_alignment}};text-align:{{slide.text_content_alignment}};{% endif %} } 
+      {% endfor %}
+      /* end pseudo-dynamic styles for front-page slider */
+    </style>
+
+    <section class="front-page-slider{% if post.slides %}{% else %} no-slide{% endif %}">
+
+      <ul rn-carousel rn-carousel-control rn-carousel-indicator>
+
+        {% for item in post.get_field('slides') %}
+
+          <li class="slider item {{item.text_content_alignment}}">
+
+            <article class="slider-item-article slide-{{loop.index0}}">
+
+              <img class="slider-spacer-image" src="{{TimberImage(item.slide_image).src}}">
+
+              <div class="slide-text-wrap">
+
+                <div class="slide-text-content{% if item.text_content_alignment %} {{item.text_content_alignment}}{% endif %}">
+
+                    {{item.slide_text_content}}
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </li>
+
+        {% endfor %}
+
+      </ul>
+
+    </section>
+
+    <!-- end slides -->
+
+  {% else %}
+
+    <div class="header-image">
+
+      <div class="{% if custom_slug %}{{custom_slug}}{% else %}{{ post.slug }}{% endif %}{% if post.get_field('has_image') == 'No' %} no-image{% endif %}">
+
+        {% if custom_header %}
+        {{ custom_header }}
+        {% else %}
+        {{post.get_field('header_image_text_content')}}
+        {% endif %}
+
+      </div>
 
     </div>
 
-  </div>
+  {% endif %}
   
 {% endblock %}
