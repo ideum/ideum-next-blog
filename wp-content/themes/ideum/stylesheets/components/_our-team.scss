@@ -67,11 +67,12 @@
     position: relative;
     text-align: center;
     width: 100%;
+    overflow: hidden;
 
     a.member-dialog, a.member-dialog-phone {
       height: 100%;
       position: absolute;      
-        left: 0;
+      left: 0;
       width: 100%;
       z-index: 400;
     }
@@ -96,7 +97,7 @@
       img { 
         margin: 15px auto 0; 
         position: absolute;
-          bottom: 0; left: 0; right: 0
+        bottom: 0; left: 0; right: 0
       }
 
       width: (100% / 2); 
