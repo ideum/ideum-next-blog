@@ -17,7 +17,6 @@ gulp.task('stylesheets', function () {
   return gulp.src('stylesheets/**/*.scss')
     .pipe(rubySass({
       loadPath: 'bower_components',
-      sourcemap: true,
       sourcemapPath: './stylesheets',
       style: 'expanded'
     }))

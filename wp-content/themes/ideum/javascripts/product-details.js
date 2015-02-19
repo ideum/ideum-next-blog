@@ -14,7 +14,7 @@ App.factory('ProductDetails', function ($http, $sce, $q) {
 
       //   return details;
       // });
-      console.log(index);
+      //console.log(index);
       var deferred = $q.defer();
       angular.forEach(IDEUM_SITE.product_details, function (tab_set) {
         angular.forEach(tab_set, function(detail){
