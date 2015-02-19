@@ -113,9 +113,10 @@
         display: block;
         padding-top: $small-gutter;
         position: absolute;
-          bottom: 0; 
+        bottom: 0; 
         text-align: left;
         width: 100%;
+        @include transition(transform 0.25s ease);
       }
 
       p {
@@ -138,7 +139,7 @@
 
     @include media($medium-screen-up) {
       .data-wrap {
-        display:none;
+        @include transform(translateY(100%));
       }
     }
 
@@ -150,9 +151,10 @@
         display: block;
         padding-top: $small-gutter;
         position: absolute;
-          bottom: 0; 
+        bottom: 0; 
         text-align: left;
         width: 100%;
+        @include transform(translateY(0%));
       }
 
       p {
