@@ -28,3 +28,10 @@ button.very-dark-gray-button, a.very-dark-gray-button {
     color: darken $white;
   }
 }
+
+button.pointer{
+	margin: 0 3px;
+	@include media($small-screen-up) {
+		margin: 0 10px;	
+	}
+}
