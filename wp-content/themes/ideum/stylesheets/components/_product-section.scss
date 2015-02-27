@@ -222,6 +222,10 @@ $product-spec-list-left-margin: 15px;
   		width: 100%;
   		text-align: left;
       color: #999999;
+      &.note {
+        font-size: 11px;
+        margin-top: 20px;
+      }
   	}
 
     p.learnMore{
