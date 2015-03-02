@@ -37,7 +37,7 @@
             <div class="two-column-text">
 
               <ul class="site-links">
-                {% for item in menu.get_items if item.title != "Thank You" %}
+                {% for item in menu.get_items if item.title != "Thank You" and item.title != "View Cusco" %}
                 <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a>
                   {% if item.get_children %}
                     <ul class="sub" style="margin-left:10px;">
