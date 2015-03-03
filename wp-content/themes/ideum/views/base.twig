@@ -32,7 +32,7 @@
       </header>
 
       <ul>
-        {% for item in menu.get_items if item.title != "Thank You" and item.title != "Site Map" %}
+        {% for item in menu.get_items if item.title != "Thank You" and item.title != "Site Map" and item.title != "View Cusco"%}
         <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a>
           {% if item.get_children %}
             <ul class="sub">
