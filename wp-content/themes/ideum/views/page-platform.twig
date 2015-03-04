@@ -17,19 +17,21 @@
     <div ng-app="ideum.tabs">
       <!-- Tabs -->
       <div tabs class="platform">
-        <!-- PLATFORM TAB -->
-        <div pane title="Platform 46">
+
+        <!-- PLATFORM 55 4K P-CAP TAB -->
+        <div pane title="Platform 55 4K P-CAP">
 
           <header>
-            <h1>Platform 46</h1>
-            <h2>The Multitouch Table Redefined</h2>
+            <h1>Platform 55 4K P-CAP</h1>
+            <h2>The Latest in Touch</h2>
           </header>
 
           <div ng-app="productDetails">
 
-            <section class="x-ray platform46" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+            <section class="x-ray platform55pcap" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
 
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -39,16 +41,19 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
                   <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
                 </div>
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
 
             </section>
@@ -57,11 +62,12 @@
 
         </div>
 
-        <div pane title="Platform 55">
+        <!-- PLATFORM 55 IR TAB -->
+        <div pane title="Platform 55 IR">
 
           <header>
-            <h1>Platform 55</h1>
-            <h2>Iconic Design, Built to Perform</h2>
+            <h1>Platform 55 IR</h1>
+            <h2>Iconic Design, Reliable Touch</h2>
           </header>
 
           <div ng-app="productDetails">
@@ -100,6 +106,46 @@
 
         </div>
 
+        <!-- PLATFORM 46 TAB -->
+        <div pane title="Platform 46">
+
+          <header>
+            <h1>Platform 46</h1>
+            <h2>Ideum Design, Genuine 3M Display</h2>
+          </header>
+
+          <div ng-app="productDetails">
+
+            <section class="x-ray platform46" ng-controller="xRayCtrl" ng-init="dataIndex = 2">
+
+              <section class="overlay" ng-style="overlayStyle">
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+              </section>
+
+            </section>
+
+          </div>
+
+        </div>
+
       </div> <!-- Close tabs -->
 
     </div>
@@ -114,10 +160,9 @@
 
         <h2>The Perfect Package</h2>
         <p> 
-          This fully integrated and turnkey solution has single push button operation and
-          lockable access ports. There are no installation technicians, nor any special
-          set-up or requirements. The table arrives fully assembled. You unpack it, plug
-          it in, press the button and get started.
+          This fully integrated and turnkey solution has single push button operation and lockable access ports. 
+          There is no need for installation technicians, nor any special set-up or requirements. The Platform 
+          multitouch table arrives fully assembled. You unpack it, plug it in, press the button and get started.
         </p>
 
         <!-- begin hidden content for product-share -->
@@ -164,18 +209,16 @@
 
       <div class="productText more-text">
 
-        <h2>A Choice in Touch</h2>
+        <h2>Touch At Its Best</h2>
         <p>
-          The projected capacitive multitouch technology featured in the Platform 46 is
-          the same type of reliable touch technology that is used in smartphones and
-          tablets. This touch technology is impervious to light interference and provides
-          superior responsiveness and accuracy.
+          The multitouch technology featured in the Platform 55 4K P-CAP and the Platform 46 is the same 
+          reliable touch technology used in popular smartphones and tablets. This technology is impervious 
+          to light interference and provides superior responsiveness and accuracy. The bezel-less surface 
+          is water and dust resistant.
         </p>
-
         <p>
-          The Platform 55 features an ultra-reliable, infrared-based, 40+ touch point multitouch screen
-          and is available with both an HD and 4K / Ultra HD display. It performs in
-          almost all lighting conditions.
+          The Platform 55 IR features an ultra-reliable, infrared-based, 40+ touch point multitouch screen 
+          and is available with either an HD or 4K / Ultra HD display providing a cost-effective alternative.
         </p>
 
       </div>
@@ -197,17 +240,6 @@
       rn-carousel-width="responsiveTwoUp()"
       rn-carousel-index="clientSliderIndex"
     >
-      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
-        <div class="svgHolder">
-          {% include '/images/products/svg/armed.svg' %}
-        </div>
-        <h3>Armed &amp; Hyperthready</h3>
-        <p>
-          The integrated computer is a powerhouse. It includes an Intel&reg;
-          Quad Core i7 4770s&copy; (3.1GHz) with Hyperthreading&reg;, 8MB
-          cache computer with 8GB of RAM, and a 500GB HDD.
-        </p>
-      </li>
       
       <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
         <div class="svgHolder">
@@ -215,12 +247,23 @@
         </div>
         <h3>Reach Out &amp; Touch Everything</h3>
         <p>
-          Along with an industry-leading 40+ touch points, the touch surface on
-          the Platform multitouch tables has palm rejection, a bright HD
-          resolution screen, and up to a 60hz refresh rate.
+          The Platform models support from 40 to 100 simultaneous touch points depending on the model. 
+          They are built specifically for collaboration and multiuser applications.
         </p>
       </li>
 
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/armed.svg' %}
+        </div>
+        <h3>Armed &amp; Hyperthready</h3>
+        <p>
+          We build powerful systems. It includes an Intel&reg; Quad Core i7 4770s&copy; (3.1GHz) with 
+          Hyperthreading&reg;, 8MB cache computer with 8GB of RAM, and a 500GB HDD.
+        </p>
+      </li>
+      
+      {#
       <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
         <div class="svgHolder">
           {% include '/images/products/svg/widi.svg' %}
@@ -233,6 +276,7 @@
           participants. A WiDi receiver is available as an optional upgrade.
         </p>
       </li>
+      #}
 
       <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
         <div class="svgHolder">
@@ -240,12 +284,10 @@
         </div>
         <h3>Built for Demanding Spaces</h3>
         <p>
-          The tables have a chemically strengthened glass top and the chassis is made out
-          of aircraft-grade aluminum and cold-rolled steel. We are proud to say that the Platform 46 and 55
-          have exceptional build-quality and are perfect for public spaces and other
-          demanding environments. The Platform multitouch tables can travel too. They can
-          fit through standard doorways even when packed in a protective ATA case
-          (upgrade option).
+          The tables have a tough glass surface and a frame and chassis that are forged from aircraft-grade 
+          aluminum and cold-rolled steel. All of our models have exceptional build quality and are manufactured 
+          at our Corrales, New Mexico facility. The Platform multitouch tables can travel, too. They can 
+          fit through standard doorways even when packed in a protective ATA case (upgrade option).
         </p>
       </li>
 
@@ -255,7 +297,9 @@
         </div>
         <h3>Windows 8 &amp; Beyond</h3>
         <p>
-          The Platform 55 and Platform 46 ship with Windows 7 &amp; 8 64-bit Professional installed, respectively. Thousands of touch-enabled apps for Windows 8 and 7 are now available, and there is even a Windows 7 / 8 dual boot system upgrade option. 
+          The Platform 55 4K P-CAP and Platform 46 ship with Windows 8 64-bit Professional installed. The Platform 55 
+          IR comes with Windows 7. There is even a Windows 7 / 8 dual boot system upgrade option.
+
         </p>
       </li>
 
@@ -265,12 +309,10 @@
         </div>
         <h3>Creation by Intelligent Design</h3>
         <p>
-          The Platform tables come with a lifetime license for GestureWorks Core (C++, C#
-          / .NET, Java, Python, and HTML5 / JavaScript) and Open Exhibits (ActionScript).
-          The license includes ticketed, timely support and free upgrades for life.
-          GestureWorks Gameplay is also included: an innovative Windows 8 utility that
-          lets you configure touch, motion and voice controls for your favorite PC games
-          or applications.
+          The Platform tables come with a lifetime license for GestureWorks Core (C++, C# / .NET, Java, Python, and HTML5 / 
+          JavaScript) and Open Exhibits (ActionScript). The license includes ticketed, timely support and free upgrades for 
+          life. GestureWorks Gameplay is also included: an innovative Windows 8 utility that lets you configure touch, motion 
+          and voice controls for your favorite PC games or applications.
         </p>
       </li>
 
@@ -280,9 +322,9 @@
         </div>
         <h3>Graphically Speaking</h3>
         <p>
-          The Platform 46 and 55 are available with powerful graphics performance 
-          upgrades. For faster processing of graphics-intensive applications, customize 
-          your Platform table with these high performing and efficient options.
+          The Platform 46 and 55 models are available with powerful graphics performance upgrades. For faster processing of 
+          graphics-intensive applications, customize your Platform table with these high performing and efficient options.
+
         </p>
         <ul>
           <li>2GB 256 bit DDR5 graphics card</li>
@@ -296,10 +338,9 @@
         </div>
         <h3>Two Year Warranty</h3>
         <p>
-          We stand by our products and provide a two-year warranty against defective materials 
-          or workmanship. The same people who build our products, provide support. See our 
-          <a href="/spec-sheets/Ideum-2year-Touch-Product-Warranty.pdf" target="_blank">warranty document</a> for 
-          full details and restrictions.
+          We stand by our products and provide a two-year warranty against defective materials or workmanship. The same people 
+          who build our products, provide support. See our <a href="/spec-sheets/Ideum-2year-Touch-Product-Warranty.pdf" 
+          target="_blank">warranty document</a> for full details and restrictions.
         </p>
       </li>
 
