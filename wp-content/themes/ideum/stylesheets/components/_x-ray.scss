@@ -78,8 +78,8 @@ body {
   }
 
   &.platform55pcap{
-    background-image: url("images/x-rays/platform55-img.png");
-    @include x-ray-image("images/x-rays/platform55-outline.png");
+    background-image: url("images/x-rays/platform55pcap-img.png");
+    @include x-ray-image("images/x-rays/platform55pcap-outline.png");
     @include navAndButtonColors($platform-color);
   }
 
