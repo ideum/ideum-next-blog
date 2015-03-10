@@ -97,8 +97,8 @@ body {
   }
 
   &.platform-drafting-55-pcap{
-    background-image: url("images/x-rays/platform-drafting55-img.png");
-    @include x-ray-image("images/x-rays/platform-drafting55-outline.png");
+    background-image: url("images/x-rays/platform-drafting55-pcap-img.png");
+    @include x-ray-image("images/x-rays/platform-drafting55-pcap-outline.png");
     @include navAndButtonColors($platform-drafting-color);
   }
   
