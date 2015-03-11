@@ -32,11 +32,13 @@
 			text-transform: uppercase;
 			text-decoration: none;
 			/* adjustment to make tab flex width */
-				min-width: 240px;
+				/*min-width: 240px;*/
 				@include media($small-screen-up){
+					min-width: 240px;
 					padding: 2.4em 0;
 				}
 				@include media($medium-screen-up){
+					min-width: inherit;
 					padding: 3.5em 0;
 				}
 		}
