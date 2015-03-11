@@ -12,7 +12,7 @@
       <!-- Tabs -->
       <div tabs class="presenter">
         <!-- PLATFORM TAB -->
-        <div pane title="Presenter 46">
+        <div pane title="46&quot;">
           <header>
             <h1>Presenter 46</h1>
             <h2>Touch Space, Refined</h2>
@@ -44,9 +44,9 @@
           </div>
         </div>
 
-        <div pane title="Presenter 55">
+        <div pane title="55&quot; IR">
           <header>
-            <h1>Presenter 55</h1>
+            <h1>Presenter 55 IR</h1>
             <h2>Built Touch for Public Spaces, Versatile Enough for Any Setting</h2>
           </header>
           <div ng-app="productDetails">
@@ -76,7 +76,39 @@
           </div>
         </div>
 
-        <div pane title="Presenter 65">
+        <div pane title="55&quot; P-CAP">
+          <header>
+            <h1>Presenter 55 P-CAP</h1>
+            <h2>Better-Than-Ever Versatility</h2>
+          </header>
+          <div ng-app="productDetails">
+            <section class="x-ray presenter-55" ng-controller="xRayCtrl" ng-init="dataIndex = 4">
+              <section class="overlay" ng-style="overlayStyle">
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+              </section>
+            </section>
+          </div>
+        </div>
+
+        <div pane title="65&quot;">
           <header>
             <h1>Presenter 65</h1>
             <h2>The Big Picture, Totally Touchable</h2>
@@ -108,7 +140,7 @@
           </div>
         </div>
 
-        <div pane title="Presenter 75">
+        <div pane title="75&quot;">
           <header>
             <h1>Presenter 75</h1>
             <h2>An Even Bigger Picture. Epic Overview</h2>
