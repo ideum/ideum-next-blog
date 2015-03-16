@@ -14,3 +14,5 @@ wp-content/themes/ideum/js/vendor.js
 wp-content/themes/ideum/js/site.js
 wp-content/themes/ideum/style.css
 wp-content/themes/ideum/style.css.map
+
+.capistrano/metrics
