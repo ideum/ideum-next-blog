@@ -39,9 +39,9 @@ a better solution---one that works, I mean---we will have to go with this. #}
 {% endif %}
 
 <meta name="description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif blog.alternative_meta_description %}{{ blog.alternative_meta_description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% elseif post.get_preview %}{{post.get_preview(34, 'true', '', 'true')}}{% else %}{{ site.description }}{% endif %}">
-
+<!-- 
 <meta property="og:site_url" content="{{site.url}}">
-
+-->
 <meta property="og:site_name" content="{{ site.title }}">
 
 <meta property="og:type" content="{% if page.opengraph.type %}{{ page.opengraph.type }}{% elseif post.id == '11878' %}website{% else %}article{% endif %}">
