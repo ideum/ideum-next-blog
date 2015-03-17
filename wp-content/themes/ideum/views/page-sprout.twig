@@ -1,0 +1,293 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div id="sprout" class="sub-page-wrap">
+
+  {#% include "parent-nav.twig" %#}
+
+  <section class="highlight-text child-page">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}">[Edit me!]</a>
+    {% endif %}
+    
+    {{post.content}}
+
+  </section>
+
+  <a name="origami"></a><!-- andchor for the next section -->
+
+  <!-- ########## Begin First Section ########## -->
+
+  <section class="featured-video post-style img-left red">
+
+    <article class="content">
+
+      <div class="img-wrap">
+
+        <!-- <a class="iframe" href="//www.youtube.com/embed/z1jdlP4stAY?autoplay=1"> -->
+        <img src="{{theme.link}}/images/sprout-origami-share.jpg">
+        <!-- </a> -->
+        <!-- video placeholder image is: origami-video-placeholder.jpg -->
+
+      </div>
+
+      <div class="txt-wrap">
+
+        <h1>
+          <!-- <a href=""> -->Origami Apprentice<!-- </a> -->
+        </h1>
+
+        <p>
+          Origami Apprentice guides learners through the process of folding origami models. Projected instructions on the Sprout’s unique mat take the user step by step through the folds while the upper screen provides animated and verbal instructions. Users can create an angelfish, sailboat, traditional crane, balloon, or an Iris. 
+        </p>
+
+        <!-- begin hidden content for gestureworks-share -->
+        <div style="display:none;">
+          <div id="origami-share" class="share-dialog">
+            <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+            <p>Like what you see? Share this.</p>
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u={{site.url}}/sprout/#origami" 
+            target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+            <!-- Twitter -->
+            <a href="http://twitter.com/share?url={{site.url}}//sprout/#origami&amp;text=Origami Apprentice guides learners through the process of folding origami models like the crane, balloon, or Iris" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+            <!-- Google+ -->
+            <a href="https://plus.google.com/share?url={{site.url}}//sprout/#origami" 
+            target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}//sprout/#origami" 
+            target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+            <!-- Pinterest -->
+            <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a> -->
+            <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}//sprout/#origami&amp;media={{site_url}}{{theme.link}}/images/sprout-origami-share.jpg&amp;description=Origami Apprentice guides learners through the process of folding origami models. Projected instructions on the Sprout’s unique mat take the user step by step through the folds." data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+          </div>
+        </div>
+        <!-- end hidden content for gestureworks-share - revealed when user clicks 'Share This' link (below)-->
+
+        <footer class="footer">
+          <!-- <a class="read" href="http://gestureworks.com/">Visit Gestureworks</a> -->
+          <a class="inline-share read" href="#origami-share">Share This</a><!-- restore class to share if another link used above -->
+        </footer>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <a name="bills-n-coins"></a><!-- andchor for the next section -->
+  
+  <div class="section-info">
+    <!-- 
+    <h1>Key Features</h1>
+
+    <p>
+      GestureWorks Core is an incredibly efficient and powerful authoring solution and touch point cluster analysis system for multitouch. GestureWorks Core includes a library of over 300 pre-built gestures and includes support for the first markup language for multitouch, the Gesture Markup Language (GML).
+    </p>
+
+    <p>&nbsp;</p>
+    
+    <p>
+      <a href="http://gestureworks.com/" class="button download-open-exhibits active">Visit Gestureworks</a>
+      <a href="http://gestureworks.com/" class="button phone-n-tablet active">Visit Gestureworks</a>
+    </p>
+    -->
+    
+  </div> 
+
+
+  <!-- ########## End First Section ########## -->
+
+
+  <!-- ########## Begin Second Section ########## -->
+
+  <section class="featured-video post-style img-left blue">
+
+    <article class="content">
+
+      <div class="img-wrap">
+
+        <!-- <a name="bills-n-coins" class="iframe" href="http://player.vimeo.com/video/84602992?autoplay=1"> -->
+        <img src="{{theme.link}}/images/sprout-bills-n-coins-share.jpg">
+        <!-- </a> -->
+        <!-- video placeholder image is: bills-n-coins-placeholder.jpg -->
+
+      </div>
+
+      <div class="txt-wrap">
+
+        <h1>
+          <!-- <a href=""> -->Bills + Coins<!-- </a> -->
+        </h1>
+
+        <p>
+          Bills + Coins: Discovering the World’s Currency offers information about select currency from around the world. The Sprout's camera can identify real bills and coins, 
+          or the user can choose virtual currency, to explore conversion data, geographical information, the history of the currency, and the materials from which the money is 
+          made. 
+        </p>
+
+        <!-- begin hidden content for openexhibits-share -->
+        <div style="display:none;">
+          <div id="bills-n-coins-share" class="share-dialog">
+            <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+            <p>Like what you see? Share this.</p>
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u={{site.url}}/sprout/#bills-n-coins" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+            <!-- Twitter -->
+            <a href="http://twitter.com/share?url={{site.url}}/sprout/#bills-n-coins&amp;text=Bills + Coins offers information about select currency from around the world." 
+            target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+            <!-- Google+ -->
+            <a href="https://plus.google.com/share?url={{site.url}}/sprout/#bills-n-coins" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}/sprout/#bills-n-coins" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+            <!-- Pinterest -->
+            <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a> -->
+            <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}/sprout/#bills-n-coins&amp;media={{site_url}}{{theme.link}}/images/sprout-bills-n-coins-share.jpg&amp;description=Bills + Coins: Discovering the World’s Currency offers information about select currency from around the world. The camera can identify real bills and coins, or the user can choose virtual currency." data-pin-do="buttonBookmark" data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+          </div>
+        </div>
+        <!-- end hidden content for bills-n-coins-share - revealed when user clicks 'Share This' link (below)-->
+
+        <footer class="footer">
+          <!-- <a class="read" href="http://openexhibits.org/">Visit Open Exhibits</a> -->
+          <a class="inline-share read" href="#bills-n-coins-share">Share This</a><!-- restore class to share if another link used above -->
+        </footer>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <a name="gameplay"></a><!-- andchor for the next section -->
+  
+  <div class="section-info">
+    <!--
+    <h1>Key Features</h1>
+
+    <p>
+      Open Exhibits is a National Science Foundation (NSF) sponsored initiative that looks to transform the way in which museums and other informal learning institutions produce and share computer-based exhibits. Open Exhibits is both a collection of software and a growing community of practice.
+    </p>
+
+    <p>&nbsp;</p>
+
+    <p>
+      <a href="http://openexhibits.org/" class="button download-open-exhibits active">Visit Open Exhibits</a>
+      <a href="http://openexhibits.org/" class="button phone-n-tablet active">Visit Open Exhibits</a>
+    </p>
+    -->
+    
+  </div>
+
+
+  <!-- ########## End Second Section ########## -->
+
+
+  <!-- ########## Begin Third Section ########## -->
+  
+  <section class="featured-video post-style gold img-left">
+
+    <article class="content">
+
+      <div class="img-wrap">
+
+        <!-- <a class="iframe" href="https://www.youtube.com/embed/JqnuzPdfaJ8"> -->
+          <img src="{{theme.link}}/images/gameplay-placeholder.jpg">
+        <!-- </a> -->
+        <!-- video placholder image is: gameplay-video-placeholder.jpg -->
+
+      </div>
+
+      <div class="txt-wrap">
+
+        <h1>
+          <!-- <a href="http://store.steampowered.com/app/296610/"> -->GestureWorks Gameplay<!-- </a> -->
+        </h1>
+
+        <p>
+          GestureWorks Gameplay lets gamers use, build, customize, and share “Virtual Controllers” for Windows 8 touch and multitouch gestures which are overlaid on top of existing PC games. Virtual Controllers include such elements as joysticks, D-pads, and buttons which are  mapped to keyboard, mouse, or even gamepad input commands. 
+        </p>
+
+        <!-- begin hidden content for gameplay-share -->
+        <div style="display:none;">
+          <div id="gameplay-share" class="share-dialog">
+            <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+            <p>Like what you see? Share this.</p>
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u={{site.url}}/sprout/#gameplay" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+            <!-- Twitter -->
+            <a href="http://twitter.com/share?url={{site.url}}/sprout/#gameplay&amp;text=GestureWorks Gameplay is inexpensive Win 8 software providing touch controls for 100s of PC games" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+            <!-- Google+ -->
+            <a href="https://plus.google.com/share?url={{site.url}}/sprout/#gameplay" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>               
+            <!-- LinkedIn -->
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{site.url}}/sprout/#gameplay" target="_blank"><img class="sharing-icon" 
+            src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+            <!-- Pinterest -->
+            <!-- <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a> -->
+            <a href="//www.pinterest.com/pin/create/button/?url={{site.url}}/sprout/#gameplay&amp;media={{site_url}}{{theme.link}}/images/Gampelay.jpg&amp;description= GestureWorks Gameplay lets gamers use, build, customize, and share “Virtual Controllers” for Windows 8 touch and multitouch gestures which are overlaid on top of existing PC games." data-pin-do="buttonBookmark" data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+          </div>
+        </div>
+        <!-- end hidden content for gameplay-share - revealed when user clicks 'Share This' link (below)-->
+
+        <footer class="footer">
+          <!-- <a class="read" href="http://store.steampowered.com/app/296610/">Learn more on Steam</a> -->
+          <a class="inline-share read" href="#gameplay-share">Share This</a><!-- restore class to share if another link used above -->
+        </footer>
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <div class="section-info">
+
+    <h1>Key Features</h1>
+
+    <p>
+      Gameplay includes many pre-built Virtual Controllers that are ready for immediate use, or you can download new Virtual Controllers from the Gameplay website. GestureWorks Gameplay also includes an editor that allows you to customize or even create your own Virtual Controllers from scratch.
+    </p>
+
+    <p>&nbsp;</p>
+
+    <p>
+        <a href="http://store.steampowered.com/app/296610/" class="button download-open-exhibits active">Learn more on Steam</a>
+        <a href="http://store.steampowered.com/app/296610/" class="button phone-n-tablet active">Learn more on Steam</a>
+      </p>
+
+  </div>
+
+  <!-- ########## End Third Section ########## -->
+
+  <!-- begin hidden content for page-share -->
+  <div style='display:none'>
+    <div id='sprout-share' class="share-dialog">
+      <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+      <p>Like what you see? Share this.</p>
+      <!-- Facebook -->
+      <a href="http://www.facebook.com/sharer.php?u={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+      <!-- Twitter -->
+      <a href="http://twitter.com/share?url={{post.link}}&amp;text=Ideum + Sprout by HP" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+      <!-- Google+ -->
+      <a href="https://plus.google.com/share?url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
+      <!-- LinkedIn -->
+      <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+      src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+      <!-- Pinterest -->
+      <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+    </div>
+  </div>
+  <!-- end hidden content for page-share - revealed when user clicks 'Share This Page' link in footer -->
+
+{% endblock %}
