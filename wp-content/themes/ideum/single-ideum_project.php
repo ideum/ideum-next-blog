@@ -29,7 +29,7 @@ $context['acf'] = get_field_objects($data['post']->ID);
 
 $sidebar_context = Timber::get_context();
 $sidebar_context['site_url'] = get_bloginfo('url');
-$sidebar_context['related_projects'] = Timber::get_posts('post_type=ideum_project&cat='.$post_cats_ids.'&posts_per_page=3'); //FIXME - don't know if this works
+$sidebar_context['related_projects'] = Timber::get_posts('post_type=ideum_project&cat='.$post_cats_ids.'&posts_per_page=3');
 $sidebar_context['thisproject'] = Timber::get_post($post->ID);
 
 $context['related_projects'] = Timber::get_sidebar('bar-related-projects.twig', $sidebar_context);
