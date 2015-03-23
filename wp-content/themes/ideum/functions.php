@@ -107,6 +107,7 @@
 			$context['tabs'] = new TimberMenu('pre-nav');
 			$context['nav'] = new TimberMenu('primary-nav');
 			$context['foot'] = new TimberMenu('footer-nav');
+			$context['sub'] = new TimberMenu('children-of-our-story');
 			$context['site'] = $this;
 			return $context;
 		}
