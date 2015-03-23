@@ -1,0 +1,7 @@
+<nav class="sub-nav">
+  <ul>
+    {% for item in sub.get_items %}
+      <li class="{{item.classes | join(' ')}}"><a href="{{item.link}}">{{item.title}}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
