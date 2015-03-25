@@ -1,0 +1,59 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+
+<!-- begin tease-creative-services.twig -->
+
+<ul class="project-wrap">
+
+  <li class="slide project-item">
+      
+    {% if post.get_field('landing_page_image') %}
+    <img src="{{ post.get_field('landing_page_image') }}" alt="{{post.title}}" 
+    title="{{post.title}}" />
+    {#% else %#}
+    <!-- <img src="{{theme.link}}/images/placeholder-science-project-{{ random(2) }}.jpg" 
+    alt="Placeholder image for the post: '{{post.title}}'" title="Placeholder image for the post: '{{post.title}}'"/> -->
+    {% endif %}
+
+    <div class="content-wrap"><a href="{{post.link}}"></a></div>
+
+    <a class="content-wrap-faux" href="{{post.link}}"><div class="content">
+
+      <header>
+
+        <h2 class="category">
+          {% for category in post.get_categories %}
+            {{category.name}} {% if not loop.last %},{% endif %}
+          {% endfor %}
+        </h2>
+
+        <h1 class="title">
+          {% if post.landing_page_title %}
+          {{ post.landing_page_title }}
+          {% else %}
+          {{ post.title }}
+          {% endif %}
+        </h1>
+
+      </header>
+
+      {% if post.landing_page_text %}
+      <p>
+        {{ post.landing_page_text }}
+      </p>
+      {% elseif post.get_preview %}
+      <p>
+        {{ post.get_preview(10) }}
+      </p>
+      {% endif %}
+
+    </div></a>
+
+  </li>
+
+</ul>
+
+<!-- end tease-creative-services.twig -->
+
+{% endblock %}

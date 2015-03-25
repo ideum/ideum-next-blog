@@ -32,7 +32,7 @@
 				'public' => true,
 				'has_archive' => true
 			));
-			register_post_type( 'ideum_project', array(
+			register_post_type( 'creative-services', array(
 				'labels' => array(
 					'name' => __( 'Projects' ),
 					'singular_name' => __( 'Project' )

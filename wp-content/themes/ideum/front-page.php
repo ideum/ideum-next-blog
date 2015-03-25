@@ -33,7 +33,7 @@ $sidebar_context['site_url'] = get_bloginfo('url');
 $sidebar_context['featured_post'] = Timber::get_posts('cat=604&numberposts=1&posts_per_page=1'); 
 // remove '592' as value for cat (above) before pushing - that value is not in use in live site
 
-$sidebar_context['recent_projects'] = Timber::get_posts('post_type=ideum_project&numberposts=6&posts_per_page=6'); 
+$sidebar_context['recent_projects'] = Timber::get_posts('post_type=creative-services&numberposts=6&posts_per_page=6'); 
 
 $context['recent_projects'] = Timber::get_sidebar('bar-recent-projects.twig', $sidebar_context);
 
