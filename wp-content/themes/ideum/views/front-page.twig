@@ -167,7 +167,13 @@
           
           {% if social_post.source != 'flickr' %}
           {% if social_post.text %}
-            <p>{{social_post.text}}</p>
+            <p>
+              {% if social_post.text|length < 258 %}
+                {{social_post.text}}
+              {% else %}
+                {{social_post.text[:258]}}...
+              {% endif %}
+            </p>
           {% endif %}
           {% endif %}
 
