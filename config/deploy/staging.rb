@@ -1,6 +1,6 @@
 set :stage, :staging
 
-server '54.68.192.183',
+server 'next.ideum.com',
     user: 'ubuntu',
     roles: %w{web app db},
     ssh_options: { forward_agent: true }
