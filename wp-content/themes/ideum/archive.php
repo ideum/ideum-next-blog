@@ -51,9 +51,9 @@
 			array_unshift($templates, 'archive-'.get_post_type().'.twig');
 		}
 
-		if ($post_type == 'ideum_project') {
+		if ($post_type == 'creative-services') {
 			$data['custom_slug'] = 'creative-services'; // used for metadata url slug and contextual div class
-			$data['custom_slug2'] = 'blog/ideum_project'; // used for metadata url slug
+			$data['custom_slug2'] = 'creative-services'; // used for metadata url slug
 			if (is_category()) {
 				$data['custom_slug'] = 'project-category-archive'; // used for metadata url slug and contextual div class
 				$data['custom_cat_url'] = 'http://'.$_SERVER[HTTP_HOST].''.$_SERVER[REQUEST_URI];// used for metadata url 
@@ -65,7 +65,7 @@
 			$data['ogp_title'] = get_field('alternative_meta_title', 11803);
 			$data['ogp_keywords'] = get_field('alternative_meta_keywords', 11803);
 			$data['ogp_description'] = get_field('alternative_meta_description', 11803);
-      $data['categories'] = get_categories(array('type' => 'ideum_project'));
+      $data['categories'] = get_categories(array('type' => 'creative-services'));
 		}
 
 		$data['posts'] = Timber::get_posts();

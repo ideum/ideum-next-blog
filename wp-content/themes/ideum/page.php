@@ -56,11 +56,11 @@ if (is_page('site-map')){
   $context['map_categories'] = Timber::get_terms('category');
   $context['map_tags'] = Timber::get_terms('tag');
   $context['map_posts'] = Timber::get_posts('post_type=post&post_status=publish&order=desc&posts_per_page=-1'); 
-  $context['map_projects'] = Timber::get_posts('post_type=ideum_project&post_status=publish&order=desc&posts_per_page=-1');
+  $context['map_projects'] = Timber::get_posts('post_type=creative-services&post_status=publish&order=desc&posts_per_page=-1');
 }
 
 if (is_page('creative-services')) { // this is just-in-case someone lands here but the pagination does not work 
-  $context['posts'] = Timber::get_posts('post_type=ideum_project'); 
+  $context['posts'] = Timber::get_posts('post_type=creative-services'); 
   rewind_posts();
   $context['pagination'] = Timber::get_pagination();
 }

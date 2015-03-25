@@ -44,12 +44,21 @@ Redirect      permanent /touch-walls/presenter-65    http://ideum.com/touch-wall
 Redirect      permanent /hardware-support/           http://ideum.com/customer-support/
 
 # Projects
-Redirect      permanent /custom-exhibits             http://ideum.com/blog/ideum_project
-Redirect      permanent /interactive-exhibits        http://ideum.com/blog/ideum_project
-Redirect      permanent /media-web-design            http://ideum.com/blog/ideum_project
-Redirect      permanent /monterey                    http://ideum.com/blog/ideum_project/aquarium_multitouch_wall
-Redirect      permanent /ideum_project               http://ideum.com/blog/ideum_project
-Redirect      permanent /portfolio                   http://ideum.com/blog/ideum_project
+#Redirect      permanent /custom-exhibits             http://ideum.com/creative-services
+#Redirect      permanent /interactive-exhibits        http://ideum.com/creative-services
+#Redirect      permanent /media-web-design            http://ideum.com/creative-services
+#Redirect      permanent /monterey                    http://ideum.com/creative-services/aquarium_multitouch_wall
+#Redirect      permanent /ideum_project               http://ideum.com/creative-services
+#Redirect      permanent /portfolio                   http://ideum.com/creative-services
+
+Redirect      permanent /custom-exhibits             http://ideum.com/creative-services
+Redirect      permanent /interactive-exhibits        http://ideum.com/creative-services
+Redirect      permanent /media-web-design            http://ideum.com/creative-services
+Redirect      permanent /monterey                    http://ideum.com/creative-services/aquarium_multitouch_wall
+Redirect      permanent /ideum_project               /creative-services
+Redirect      permanent /portfolio                   http://ideum.com/creative-services
+
+Redirect      permanent /blog/ideum_project          /creative-services
 
 ## Archives
 Redirect      permanent /category                    http://ideum.com/blog/category
