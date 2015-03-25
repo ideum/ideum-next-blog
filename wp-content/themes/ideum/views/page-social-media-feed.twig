@@ -43,9 +43,15 @@
           <div class="content">
             
             {% if social_post.source != 'flickr' %}
-            {% if social_post.text %}
-              <p>{{social_post.text}}</p>
-            {% endif %}
+              {% if social_post.text %}
+                <p>
+                  {% if social_post.text|length < 275 %}
+                    {{social_post.text[:275]}}
+                  {% else %}
+                    {{social_post.text[:275]}}...
+                {% endif %}
+                </p>
+              {% endif %}
             {% endif %}
 
           </div>
