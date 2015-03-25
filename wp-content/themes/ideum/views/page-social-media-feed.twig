@@ -45,10 +45,10 @@
             {% if social_post.source != 'flickr' %}
               {% if social_post.text %}
                 <p>
-                  {% if social_post.text|length < 266 %}
+                  {% if social_post.text|length < 261 %}
                     {{social_post.text}}
                   {% else %}
-                    {{social_post.text[:266]}}...
+                    {{social_post.text[:261]}}...
                 {% endif %}
                 </p>
               {% endif %}
