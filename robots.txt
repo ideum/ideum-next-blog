@@ -1,0 +1,4 @@
+# Block bots from crawling the uploads folder
+ 
+User-agent: *
+Disallow: /wp-content/uploads/
