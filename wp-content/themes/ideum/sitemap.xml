@@ -20,6 +20,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>http://ideum.com/sprout/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>http://ideum.com/creative-services/</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
@@ -322,7 +327,7 @@
 <url>
   <loc>http://ideum.com/feed/</loc>
   <lastmod>2014-12-12T19:31:31+00:00</lastmod>
-  <changefreq>hourly</changefreq>
+  <changefreq>daily</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
