@@ -4,48 +4,50 @@
  * (https://icomoon.io/).  Font built using Fontello (http://fontello.com).
  */
 $icons: (
-  gplus:            '\e800',
-  flickr:           '\e801',
-  rss:              '\e802',
-  linkedin:         '\e803',
-  twitter:          '\e804',
-  youtube:          '\e805',
-  vimeo:            '\e806',
-  facebook:         '\e807',
-  pinterest:        '\e808',
-  caret-up:         '\e809',
-  caret-right:      '\e80a',
-  caret-down:       '\e80b',
-  caret-left:       '\e80c',
-  arrow-up-left:    '\e80d',
-  arrow-up:         '\e80e',
-  arrow-up-right:   '\e80f',
-  arrow-right:      '\e810',
-  arrow-down-right: '\e811',
-  arrow-down:       '\e812',
-  arrow-down-left:  '\e813',
-  arrow-left:       '\e814',
-  menu:             '\e815',
-  close:            '\e816',
-  empty:            '\000a0',
-  dribbble:         '\e817',
-  phone:            '\e818',
-  phone-ring:       '\e819',
-  location-pin:     '\e81a',
-  online:          '\e81b',
-  email:            '\e81c',
-  behance:          '\e81d'
+  github:           '\e800',
+  gplus:            '\e80d',
+  flickr:           '\e80e',
+  rss:              '\e80f',
+  linkedin:         '\e810',
+  twitter:          '\e811',
+  youtube:          '\e812',
+  vimeo:            '\e813',
+  facebook:         '\e814',
+  pinterest:        '\e815',
+  caret-up:         '\e816',
+  caret-right:      '\e817',
+  caret-down:       '\e818',
+  caret-left:       '\e819',
+  arrow-up-left:    '\e81a',
+  arrow-up:         '\e81b',
+  arrow-up-right:   '\e81c',
+  arrow-right:      '\e81d',
+  arrow-down-right: '\e81e',
+  arrow-down:       '\e81f',
+  arrow-down-left:  '\e820',
+  arrow-left:       '\e821',
+  menu:             '\e822',
+  close:            '\e823',
+  dribbble:         '\e824',
+  phone:            '\e825',
+  phone-ring:       '\e826',
+  location-pin:     '\e827',
+  online:           '\e828',
+  email:            '\e829',
+  behance:          '\e82a',
+  empty:            '\000a0'
 );
 
 @include font-face(ideum-icons, 'fonts/ideum-icons');
 
 %icon {
   font-family: icons;
-  font-family: ideum-icons;
+  font-family: ideum-icons, social-icons;
+  font-size: 11px, 13px;
   font-style: normal;
   font-weight: normal;
-  font-variant: normal;
-  speak: none;
+  font-variant: normal; 
+  speak: none; 
   text-transform: none;
 }
 
