@@ -25,7 +25,7 @@
       {% for item in foot.get_items %}
       <li class="{{item.classes | join(' ')}}"><a href="{{item.get_path}}">{{item.title}}</a></li>
       {% endfor %}
-      {% if post.slug != 'site-map' and post.slug != 'legal' and post.slug != 'contact' and post.slug != 'social-media-feed' and post.slug != 'thank-you' and post.slug != 'blog' and custom_slug != 'project-category-archive' %}
+      {% if post.slug != 'site-map' and post.slug != 'legal' and post.slug != 'contact' and post.slug != 'social-media-feed' and post.slug != 'thank-you' and post.slug != 'blog' and post.slug != '' and custom_slug != 'project-category-archive' %}
       <li class="page-share {{post.slug}} 1">
         <a class="phone-only share-dialog-phone" href="#{% if custom_slug %}{{custom_slug}}{% else %}{{post.slug}}{% endif %}-share">Share This Page</a>
       </li>
@@ -42,7 +42,7 @@
       <li class="site-map-link">
         <a href="/site-map/">Site Map</a>
       </li>
-      {% if post.slug != 'site-map' and post.slug != 'legal' and post.slug != 'contact' and post.slug != 'social-media-feed' and post.slug != 'thank-you' and post.slug != 'blog' and custom_slug != 'project-category-archive' %}
+      {% if post.slug != 'site-map' and post.slug != 'legal' and post.slug != 'contact' and post.slug != 'social-media-feed' and post.slug != 'thank-you' and post.slug != 'blog' and post.slug != '' and custom_slug != 'project-category-archive' %}
       <li class="page-share {{post.slug}} 2">
         <a class="tablet-n-desktop share-dialog-tab-desk" href="#{% if custom_slug %}{{custom_slug}}{% else %}{{post.slug}}{% endif %}-share">Share This</a>
         <a class="phone-only share-dialog-phone" href="#{% if custom_slug %}{{custom_slug}}{% else %}{{post.slug}}{% endif %}-share">Share This</a>
