@@ -772,25 +772,26 @@ html[data-useragent*='Trident'] .featured-page .content.team-n-clients .txt-wrap
 html[data-useragent*='Trident'] .contact-content .inquiry-form .inquiry-content form .right-label { margin-top: -0px;}
 // Safari Fixes
 html[data-useragent*='Safari'] .talking-points .point .point-text { margin-left: 0; } 
+html[data-useragent*='Safari'] .tabs-nav li a { padding: 3.5em 1em !Important; }
 html[data-useragent*='Safari'] .blog-post-detail .content-wrapper .pull-quote .pull-quote-txt h2 { 
   @include media($medium-screen-up) {
     padding-top:20%;
   }
 }
-// Silk Fix (only required because of 'Safari' string in Silk user-agent)
+// Silk Fixes (only required because of 'Safari' string in Silk user-agent)
 html[data-useragent*='Silk'] .blog-post-detail .content-wrapper .pull-quote .pull-quote-txt h2 { 
   @include media($medium-screen-up) {
     padding-top: 0; 
   }
 }
-// Chrome Fix (only required because of 'Safari' string in Chrome user-agent)
+// Chrome Fixes (only required because of 'Safari' string in Chrome user-agent) - these fix the Safari hacks above
+html[data-useragent*='Chrome'] .tabs-nav li a { padding: 3.5em 0 !Important; } 
 html[data-useragent*='Chrome'] .blog-post-detail .content-wrapper .pull-quote .pull-quote-txt h2 { 
   @include media($medium-screen-up) {
     padding-top: 0; 
   }
 }
 
-html[data-useragent*='Firefox'] #footer {
-  padding-top: 160px;
-}
+// Firefox Fixes
+html[data-useragent*='Firefox'] #footer { padding-top: 160px; }
 
