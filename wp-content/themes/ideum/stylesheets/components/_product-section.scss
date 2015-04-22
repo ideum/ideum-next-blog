@@ -147,7 +147,7 @@ $product-spec-list-left-margin: 15px;
 		}
 	
 		.prod-sect-img-wrap {
-			@include display(flex);;			
+			@include display(flex);
 			height: 100%;
 			overflow: hidden;
 			position:relative;
