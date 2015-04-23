@@ -216,7 +216,7 @@ $product-spec-list-left-margin: 15px;
   	h2{
       font-family: "Roboto-Black", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   		font-weight: $ultra-bold;
-  		font-size: 2.6em;
+  		font-size: 2em;
   		text-align: left;
   		padding-bottom: .5em;
       width: 100%;
@@ -294,9 +294,13 @@ $product-spec-list-left-margin: 15px;
 	// for productText, when there is a full section image, and the text is on the Left
 	> .fullLeft, > .fullRight{
 		@include media($medium-screen-up){
-			width: 50%;
+			width: 60%;
 			position: absolute;
   	}
+    @include media($large-screen-up){
+      width: 50%;
+      position: absolute;
+    }
 	}
   .bleeder > .fullLeft, > .fullRight{
     @include media($medium-screen-up){
