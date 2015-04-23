@@ -191,12 +191,22 @@
           }
 
         }
+
         h1 {
           color: $white;
           font-size: 2rem;
           font-weight: $bold;
           margin: 1rem 0 1.14286rem;
         }
+
+        &.cleanBlock {
+          color: $very-dark-gray;
+          
+          h1{
+            color: $very-dark-gray;
+          }
+        }
+
       }
 
     }
@@ -216,10 +226,20 @@
           }
 
         }
+
         h1 {
           font-weight: $bold;
           color: $white;
         }
+
+        &.cleanBlock {
+          color: $very-dark-gray;
+
+          h1{
+            color: $very-dark-gray;
+          }
+        }
+
       }
 
     }
@@ -229,7 +249,7 @@
       &.img-left { /* no op */ }
 
       &.img-right {
-        .img-wrap{ @include shift(6); }
+        .img-wrap{ @include shift(6); position: relative; left: -1%; }
         .txt-wrap{ @include shift(-11); }
       }
 
