@@ -1,0 +1,236 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<main class="productOuterWrapper">
+  <header>
+    <h1>Colossus</h1>
+    <img src="{{theme.link}}/images/products/colossus/header.jpg">
+  </header>
+  <main class="productInnerWrapper">
+    <div ng-app="ideum.tabs">
+      <!-- Tabs -->
+      <div tabs class="colossus">
+        <!-- PLATFORM TAB -->
+        <div pane title="Colossus">
+          <header>
+            <h1>Colossus</h1>
+            <h2>Wonder of the Modern World</h2>
+          </header>
+          <div ng-app="productDetails">
+            <section class="x-ray colossus" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+              <section class="overlay" ng-style="overlayStyle">
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+              </section>
+            </section>
+          </div>
+        </div>
+
+    </div> <!-- Close tabs -->
+
+    
+    <section class="productSection featured-video post-style img-left colossus">
+
+      <article class="content">
+
+        <div class="img-wrap">
+
+          <a class="iframe" href="//www.youtube.com/embed/xxxxxxxxxx?autoplay=1"><img src="{{theme.link}}/images/products/colossus/half_01.jpg"></a>
+
+        </div>
+
+        <div class="txt-wrap">
+
+          <h1 style="color:#fff;">The Colossus</h1>
+
+          <p>
+            The Colossus is an 84” 4K UHD multitouch table designed specifically for busy public spaces. 
+            With the latest touch technology, the bezel-less glass top is impervious to light interference 
+            and supports up to 100 touch points for multiuser interaction. The vandal resistant chassis 
+            and frame are manufactured from high quality aluminum and are available in hundreds of colors. 
+            A powerful Intel based i7 computer allows dozens of interactions to occur simultaneously when 
+            running even the most intensive applications.
+          </p>
+
+          <!-- begin hidden content for product-share -->
+          <div style='display:none'>
+            <div id='colossus-share' class="share-dialog">
+              <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+              <p>Like what you see? Share this.</p>
+              <!-- Facebook -->
+              <a href="http://www.facebook.com/sharer.php?u={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+              src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+              <!-- Twitter -->
+              <a href="http://twitter.com/share?url={{post.link}}&amp;text=Ideum Colossus Multitouch Table" target="_blank"><img class="sharing-icon" 
+              src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+              <!-- Google+ -->
+              <a href="https://plus.google.com/share?url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+              src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
+              <!-- LinkedIn -->
+              <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+              src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+              <!-- Pinterest -->
+              <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+            </div>
+          </div>
+          <!-- end hidden content for product-share - revealed when user clicks 'Share This' link (below)-->
+
+          <footer class="footer">
+            <a class="tablet-n-desktop share share-dialog-tab-desk" href="#c-share">Share This</a>
+            <a class="phone-only share share-dialog-phone" href="#c-share">Share This</a>
+          </footer>
+          
+        </div>
+
+      </article>
+
+    </section>
+
+    <section class="productSection">
+      <div class="prod-sect-img-wrap full img-right">
+        <img class="full tablet-n-desktop" src="{{theme.link}}/images/products/colossus/full_01.jpg">
+        <img class="full phone-only" src="{{theme.link}}/images/products/colossus/full_01_phone.jpg">
+      </div>
+      <div class="productText fullLeft white">
+        <h2>Bigger is Better</h2>
+        <p>
+          Make a bold statement with the largest production-built multitouch table in the world. Up 
+          to eight people can interact with the Colossus table at the same time making it perfect 
+          for multiuser applications. With a responsive touch surface and ultra-high resolution 
+          display, the Colossus is the ultimate touch table for high-impact public and private spaces.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-info">
+      <h1>Key Features</h1>
+    </section>
+
+    <ul
+      class="slider colossus"
+      ng-init="clientSliderIndex = 0"
+      rn-carousel
+      rn-carousel-control
+      rn-carousel-indicator
+      rn-carousel-width="responsiveTwoUp()"
+      rn-carousel-index="clientSliderIndex"
+    >
+  
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/reach.svg' %}
+        </div>
+        <h3>The Latest Touch</h3>
+        <p>
+          Along with an industry-leading 40 touch points, the touch surface on the Colossus 
+          has palm rejection, bright HD or 4K / UHD resolution screens, and up to a 60hz 
+          refresh rate.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/armed.svg' %}
+        </div>
+        <h3>Power Inside</h3>
+        <p>
+          The integrated computer is a powerhouse. It includes an Intel® Quad Core i7-4930K 
+          (3.4GHz) hyper-threaded hexa-core 12MB cache computer with 16GB of RAM, and a 512GB 
+          SATA III solid state drive.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/demanding.svg' %}
+        </div>
+        <h3>Built For Demanding Spaces</h3>
+        <p>
+          The Colossus multitouch table has a tempered glass top and the chassis is made out 
+          of aircraft-grade aluminum. All of our touch tables have exceptional build-quality 
+          and are designed and constructed in the USA.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/gestureworks.svg' %}
+        </div>
+        <h3>Authoring for Life</h3>
+        <p>
+          The Colossus comes with a lifetime license for GestureWorks Core (C++, C# / .NET, Java, 
+          Python, and HTML5 / JavaScript) and Open Exhibits (ActionScript). The license includes 
+          ticketed, timely support and free upgrades for life.
+        </p>
+      </li>
+
+      <li class="client-slide" ng-class="{active: clientSliderIndex==0}">
+        <div class="svgHolder">
+          {% include '/images/products/svg/warranty.svg' %}
+        </div>
+        <h3>Two Year Warranty</h3>
+        <p>
+          We stand by our products and provide a two-year warranty against defective materials 
+          or workmanship. The same people who build our products, provide support. See our  
+          <a href="/spec-sheets/Ideum-2year-Touch-Product-Warranty.pdf" target="_blank">warranty document</a> for 
+          full details and restrictions.
+        </p>
+      </li>
+
+    </ul>
+
+    <a class="very-dark-gray-button" href="/spec-sheets/Ideum-Specs-Colossus.pdf">Download Spec Sheet</a>
+
+    <section class="productSection plain colossus full" 
+    style="background:url('{{theme.link}}/images/products/colossus/full_02.jpg') no-repeat top center; background-size: cover;">
+      <div class="productText white fullLeft">
+        <h2>Customizations</h2>
+        <p> 
+          We can customize the Colossus (or any of our other systems) to meet your needs. Our 
+          engineers and industrial designers have been building multitouch tables since 2008 
+          (who can say that?). We know how to build cutting-edge, ultra-reliable systems for 
+          just about any purpose or environment no matter how demanding. 
+        </p>
+      </div>
+    </section>
+
+    <section class="made-in-usa colossus">
+
+      <h2>
+        Made in the USA
+      </h2>
+
+    </section>
+
+    <section class="productSection">
+      <div class="prod-sect-img-wrap img-left">
+        <img class="left" src="{{theme.link}}/images/products/colossus/half_03.jpg">
+      </div>
+      <div class="productText">
+        <h2>Direct Sales</h2>
+        <p> 
+          Please contact us at <span class="faux-link">(505) 792-1110</span> ext. 1 or toll free in the US and Canada <span class="faux-link">(855) 898-6824</span>, use our online inquiry form, or email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#64;&#105;&#100;&#101;&#117;&#109;&#46;&#99;&#111;&#109;</a>. Our multitouch tables are sold domestically and internationally and are only available direct from Ideum.
+        </p>
+      </div>
+    </section>
+  </main>
+</main>
+{% endblock %} 
