@@ -114,6 +114,10 @@ $product-spec-list-left-margin: 15px;
 		fill: $pano-color;
 	}	
 
+  ul.slider.colossus li.client-slide.rn-carousel-slide .svgHolder > svg{
+    fill: $colossus-color;
+  } 
+
 	ul.slider.presenter li.client-slide.rn-carousel-slide .svgHolder > svg{
 		fill: $presenter-color;
 	}
@@ -388,6 +392,10 @@ $product-spec-list-left-margin: 15px;
 
 .productSection.pano, .made-in-usa.pano{
 	background-color: $pano-color;
+}
+
+.productSection.colossus, .made-in-usa.colossus{
+  background-color: $colossus-color;
 }
 
 .productSection.presenter, .made-in-usa.presenter{

@@ -126,6 +126,12 @@ body {
     @include navAndButtonColors($pano-color);
   }
 
+  &.colossus{
+    background-image: url("images/x-rays/colossus-img.png");
+    @include x-ray-image("images/x-rays/colossus-outline.png");
+    @include navAndButtonColors($colossus-color);
+  }
+
   //Presenter styles
   &.presenter-46{
     background-image: url("images/x-rays/presenter46-img.png");

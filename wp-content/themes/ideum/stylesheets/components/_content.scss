@@ -175,8 +175,33 @@
     &.blue {
       background-color: $ideum-blue;
     }
-    
+
     @include media($small-screen-up) {
+      
+      .txt-wrap {
+        color: $white;
+        padding: $gutter 0;
+
+        h1 a, a.view, a.share, a.read {
+          font-weight: $bold;
+          color: $white;
+
+          &:hover {
+            color: darken($white, 15);
+          }
+
+        }
+        h1 {
+          color: $white;
+          font-size: 2rem;
+          font-weight: $bold;
+          margin: 1rem 0 1.14286rem;
+        }
+      }
+
+    }
+    
+    @include media($large-screen-up) {
       
       .txt-wrap {
         color: $white;
