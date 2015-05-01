@@ -16,7 +16,7 @@
   
   <div class="accordion-wrap" id-expander>
 
-    {% for job in post.children %}
+    {% for job in post.children %}<!-- pulls alphabetically, but will sort by menu order if set in WP -->
     {% if job.post_status == "publish" %}
     <section class="item-wrap aquamarine only-open" id-expander-item>
 
