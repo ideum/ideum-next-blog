@@ -65,4 +65,12 @@ if (is_page('creative-services')) { // this is just-in-case someone lands here b
   $context['pagination'] = Timber::get_pagination();
 }
 
-Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
+if($post->post_parent == '13814') { // jobs page - 12216 on dev, 13814 on production
+
+  Timber::render(array('job-detail.twig'), $context);
+
+} else {
+
+  Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);
+
+}
