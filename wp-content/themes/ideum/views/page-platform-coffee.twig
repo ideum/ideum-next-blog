@@ -20,39 +20,6 @@
       <!-- Tabs -->
       <div tabs class="coffee">
 
-        <!-- Duet 42 TAB -->
-        <div pane title="Duet 42” Coffee Table"><!-- change title to appropriate name - this is actual text on product tab -->
-          <header>
-            <h1>Duet 42” Coffee Table</h1>
-            <h2>Windows 8 and Android systems that can switch in an instant</h2>
-          </header>
-          <div ng-app="productDetails"><!-- change class (below) to appropriate name - make sure images > x-rays has appropriately named images (2) -->
-            <section class="x-ray duet-42-coffee" ng-controller="xRayCtrl" ng-init="dataIndex=0"><!-- change dataIndex to tab # - 0 is start -->
-              <section class="overlay" ng-style="overlayStyle">
-                <nav>
-                  <a href=""
-                  ng-repeat="detail in productDetails"
-                  ng-class="{active: (currentDetail == $index)}"
-                  ng-click="goToDetail($index)"
-                  >{{ '{{ detail.title }}' }}</a>
-                </nav>
-
-                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
-                  <h2>{{ '{{ detail.blurb }}' }}</h2>
-
-                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
-
-                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
-                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
-                </div>
-
-                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
-                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
-              </section>
-            </section>
-          </div>
-        </div>
-
         <!-- Duet 46 TAB -->
         <div pane title="Duet 46” Coffee Table"><!-- change title to appropriate name - this is actual text on product tab -->
           <header>
@@ -60,7 +27,7 @@
             <h2>Windows 8 and Android systems that can switch in an instant</h2>
           </header>
           <div ng-app="productDetails"><!-- change class (below) to appropriate name - make sure images > x-rays has appropriately named images (2) -->
-            <section class="x-ray duet-46-coffee" ng-controller="xRayCtrl" ng-init="dataIndex=1"><!-- change dataIndex to tab # - 0 is start -->
+            <section class="x-ray duet-46-coffee" ng-controller="xRayCtrl" ng-init="dataIndex=0"><!-- change dataIndex to tab # - 0 is start -->
               <section class="overlay" ng-style="overlayStyle">
                 <nav>
                   <a href=""
@@ -85,6 +52,41 @@
             </section>
           </div>
         </div>
+
+        <!-- Duet 42 TAB -->
+        <div pane title="Duet 42” Coffee Table"><!-- change title to appropriate name - this is actual text on product tab -->
+          <header>
+            <h1>Duet 42” Coffee Table</h1>
+            <h2>Windows 8 and Android systems that can switch in an instant</h2>
+          </header>
+          <div ng-app="productDetails"><!-- change class (below) to appropriate name - make sure images > x-rays has appropriately named images (2) -->
+            <section class="x-ray duet-42-coffee" ng-controller="xRayCtrl" ng-init="dataIndex=1"><!-- change dataIndex to tab # - 0 is start -->
+              <section class="overlay" ng-style="overlayStyle">
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+              </section>
+            </section>
+          </div>
+        </div>
+
+        
 
       </div>
 
