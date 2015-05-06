@@ -11,14 +11,47 @@
     <div ng-app="ideum.tabs">
       <!-- Tabs -->
       <div tabs class="pro">
-        <!-- PLATFORM TAB -->
+        
+        <div pane title="Pro Lab">
+          <header>
+            <h1>Pro Lab</h1>
+            <h2>High-Powered, High Security</h2>
+          </header>
+          <div ng-app="productDetails">
+            <section class="x-ray pro-lab" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+              <section class="overlay" ng-style="overlayStyle">
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+              </section>
+            </section>
+          </div>
+        </div>
+
+        <!-- Pro TAB -->
         <div pane title="Pro">
           <header>
             <h1>Pro</h1>
             <h2>Powerful Pro, Easily Expandable</h2>
           </header>
           <div ng-app="productDetails">
-            <section class="x-ray pro" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+            <section class="x-ray pro" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
               <section class="overlay" ng-style="overlayStyle">
                 <nav>
                   <a href=""
@@ -44,37 +77,8 @@
           </div>       
         </div>
 
-        <div pane title="Pro Lab">
-          <header>
-            <h1>Pro Lab</h1>
-            <h2>High-Powered, High Security</h2>
-          </header>
-          <div ng-app="productDetails">
-            <section class="x-ray pro-lab" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
-              <section class="overlay" ng-style="overlayStyle">
-                <nav>
-                  <a href=""
-                  ng-repeat="detail in productDetails"
-                  ng-class="{active: (currentDetail == $index)}"
-                  ng-click="goToDetail($index)"
-                  >{{ '{{ detail.title }}' }}</a>
-                </nav>
+      </div>
 
-                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
-                  <h2>{{ '{{ detail.blurb }}' }}</h2>
-
-                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
-
-                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
-                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
-                </div>
-
-                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
-                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
-              </section>
-            </section>
-          </div>
-        </div>
     </div> <!-- Close tabs -->
 
     <section class="productSection pro">
