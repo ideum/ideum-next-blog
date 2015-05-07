@@ -247,29 +247,42 @@ $touchtable-description-margin: 25px;
       h2 {
         color: $white;
         font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: bold;
-        font-size: 2em;
+        /*font-weight: bold;*/
+        /*font-size: 2em;*/
         letter-spacing: +2px;
-        padding-bottom: 0;
-        text-transform: uppercase;
+        /*padding-bottom: 0;*/
+        /*text-transform: uppercase;*/
         width: 100%; 
+
+        /* below are new adjustments */
+        border-bottom: 3px solid #fff;
+        padding-bottom: .25em;
+        text-transform: none;
+        font-weight: 900;
+        font-size: 2.5em;
 
         @include media($small-screen-up) {
           text-align: center;
         }
 
         @include media($large-screen-up) {
-          text-align: left;
+          text-align: left; 
         }
 
       }
 
       h3 {
         color: $white;
-        font-size: 1.25em;
+        /*font-size: 1.25em;*/
         font-weight: normal;
         letter-spacing: +1px;
-        text-transform: none;
+        /*text-transform: none;*/
+
+        /* below are new adjustments */
+        font-size: .85em;
+        line-height: 1.5em;
+        text-transform: uppercase;
+        
 
         @include media($small-screen-up) {
           text-align: center;
@@ -294,6 +307,38 @@ $touchtable-description-margin: 25px;
         @include media($large-screen-up) {
           //max-width: 65%;
           text-align: left;
+        }
+
+      }
+
+      ul {
+        color: $white;
+        font-size: 1.1em;
+        font-weight: normal;
+        margin: 20px 0 0 20px;
+
+        @include media($small-screen-up) {
+          margin: 20px auto 0 auto;
+        }
+
+        @include media($large-screen-up) {
+          //max-width: 65%;
+          margin: 20px 0 0 20px;
+          text-align: left;
+        }
+
+        li {
+          list-style-type: disc;
+
+          @include media($small-screen-up) {
+            list-style-type: none;
+            text-align: center;
+          }
+
+          @include media($large-screen-up) {
+            list-style-type: disc;
+            text-align: left;
+          }
         }
 
       }
