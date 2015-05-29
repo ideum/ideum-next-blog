@@ -96,6 +96,7 @@ if ( WP_LOCAL_DEV ) {
     error_reporting( E_ALL );
     ini_set( 'display_errors', 1 );
     define( 'WP_DEBUG_DISPLAY', true );
+    define('FS_METHOD','direct');
 } else {
     ini_set( 'display_errors', 0 );
     define( 'WP_DEBUG_DISPLAY', false );
