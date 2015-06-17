@@ -115,7 +115,7 @@ $product-spec-list-left-margin: 15px;
 	}	
 
   ul.slider.colossus li.client-slide.rn-carousel-slide .svgHolder > svg{
-    fill: $colossus-color;
+    fill: $colossus-color; 
   } 
 
 	ul.slider.presenter li.client-slide.rn-carousel-slide .svgHolder > svg{
@@ -136,7 +136,8 @@ $product-spec-list-left-margin: 15px;
 		.prod-sect-img-wrap {
 
 			img {
-				width: 100% !Important;
+				height: 100%;
+        width: 100% !Important;
 			}
 
 		}
@@ -166,7 +167,8 @@ $product-spec-list-left-margin: 15px;
 			}
 
 			img {
-				width: 100% !Important;
+				height: auto;
+        width: 100% !Important;
 			}
 
 		}
