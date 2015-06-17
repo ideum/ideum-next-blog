@@ -66,7 +66,7 @@
 .pro .tabs-nav a{
 	background-color: darken($pro-color, 12%);
 }
-.pano .tabs-nav a{
+.pano .tabs-nav a, .pano .tabs-nav li.active a{
 	background-color: darken($pano-color, 12%);
 }
 .colossus .tabs-nav a, .colossus .tabs-nav li.active a{
