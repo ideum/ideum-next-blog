@@ -508,7 +508,7 @@ $product-spec-list-left-margin: 15px;
         @include media($small-screen-up) {  
           padding: 3vh 1.5em;
         }
-        @include media($middle-screen-up) {  
+        @include media($medium-screen-up) {  
           padding: 3vh 3.5em;
         }
       }
