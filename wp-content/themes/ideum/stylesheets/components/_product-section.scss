@@ -479,6 +479,7 @@ $product-spec-list-left-margin: 15px;
   .prod-sect-img-wrap.vid-block {
     a {
       display: inline-block;
+      overflow: hidden;
       position: relative;
       img {
         @include media($small-screen-up) { 
@@ -509,7 +510,10 @@ $product-spec-list-left-margin: 15px;
           padding: 3vh 1.5em;
         }
         @include media($medium-screen-up) {  
-          padding: 3vh 3.5em;
+          padding: 3vh 3em;
+        }
+        @include media($large-screen-up) {  
+          padding: 3vh 3em;
         }
       }
       .play-button-overlay {
