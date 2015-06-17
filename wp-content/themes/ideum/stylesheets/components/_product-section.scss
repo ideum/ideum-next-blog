@@ -506,10 +506,10 @@ $product-spec-list-left-margin: 15px;
         vertical-align: middle;
         width: 100%;
         @include media($small-screen-up) {  
-          padding: 3.5vh 1.5em;
+          padding: 1.5vh 2em;
         }
         @include media($medium-screen-up) {  
-          padding: 3.5vh 3em;
+          padding: 2.5vh 3em;
         }
         @include media($large-screen-up) {  
           padding: 3.5vh 3em;
