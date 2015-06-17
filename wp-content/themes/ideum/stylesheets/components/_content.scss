@@ -98,15 +98,21 @@
 
   }
 
+  .key-features-head {
+    background-color: $off-vv-light-gray;
+  }
+
   .section-info {
     clear: both;
     margin:0 auto;
+    overflow: hidden;
     padding-bottom: 30px;
     text-align: center;
-    width: 80%;
+    width: 100%;
+
 
     @include media($medium-screen-up) {
-      width: 90%;
+      width: 100%;
     }
 
     h2.text-feature {

@@ -8,7 +8,7 @@ $product-spec-list-width: 150px;
 $product-spec-list-left-margin: 15px;
 
 .productOuterWrapper{
-	background-color: $off-vv-light-gray;
+	/*background-color: $off-vv-light-gray; */
 
 	> header{
 
@@ -26,6 +26,30 @@ $product-spec-list-left-margin: 15px;
 			margin: 0px auto;
 		}
 	}
+}
+
+.productOuterWrapper {
+  .section-info {
+    p {
+      padding: 0 10%;
+    }
+  }
+}
+
+#software-initiatives {
+  .section-info {
+    p {
+      padding: 0 10%;
+    }
+  }
+}
+
+#sprout {
+  .section-info {
+    p {
+      padding: 0 10%;
+    }
+  }
 }
 
 .productInnerWrapper{

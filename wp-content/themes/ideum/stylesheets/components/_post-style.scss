@@ -5,13 +5,22 @@
   position: relative;
   
   .img-wrap {
-    @include span-columns(12);
+    /*@include span-columns(12);*/
+    width: 50%;
     margin: 0;
     overflow: hidden;
 
+    @include media($small-screen-up) {
+      /*@include span-columns(6);
+      @include omega;*/
+      width: 100%;
+    }
+
     @include media($medium-screen-up) {
-      @include span-columns(6);
-      @include omega;
+      /*@include span-columns(6);
+      @include omega;*/
+      float: left;
+      width: 50%;
     }
     
     a img:hover {
@@ -20,8 +29,14 @@
 
     img {
       display: block;
+      @include media($small-screen-up) {
+        height: 100%;
+        width: 100%;
+      }
       @include media($medium-screen-up) {
         float: left;
+        height: auto;
+        width: initial;
       }
     }
 
@@ -31,8 +46,9 @@
     /* no op */
 
     .txt-wrap {
-      @include span-columns(10);
-      @include shift(1);
+      /*@include span-columns(10);
+      @include shift(1);*/
+      width: 50%;
 
       @include media($medium-screen-up) {
         @include span-columns(4);
@@ -134,4 +150,8 @@
     width: 100%;
   }
 }
-  
+
+.productOuterWrapper .rn-carousel-container {
+  background-color: #f7f7f7;
+}
+
