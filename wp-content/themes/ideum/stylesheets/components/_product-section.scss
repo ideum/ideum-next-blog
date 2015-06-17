@@ -486,6 +486,8 @@ $product-spec-list-left-margin: 15px;
         } 
         @include media($medium-screen-up) { 
           height: 480px; 
+          max-width: none;
+          width: 640px !Important;
         }
       }
       .text-overlay {
