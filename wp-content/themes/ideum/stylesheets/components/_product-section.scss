@@ -509,10 +509,10 @@ $product-spec-list-left-margin: 15px;
           padding: 1.5vh 2em;
         }
         @include media($medium-screen-up) {  
-          padding: 2.5vh 3em;
+          padding: 2.5vh 2.5em;
         }
         @include media($large-screen-up) {  
-          padding: 3vh 3em;
+          padding: 3vh 2.5em;
         }
       }
       .play-button-overlay {
