@@ -7,18 +7,27 @@
 	margin: 0px auto;
 	text-align: center;	
 	/* adjustment to make tab flex width */
+	flex-direction: row;
+	@include media($small-screen-up){
+		display: block;
+		width: 100%;
+	}
 	@include media($medium-screen-up){
 		display: flex;
-		flex-direction: row;
+		width: 80%;
 	}
-	width: 80%;
 
 	li{
-		display: inline-block;
 		padding: 0;
 		/* adjustment to make tab flex width */
-			flex-grow: 1;
-			border-right:1px solid #f0f0f0;
+			@include media($small-screen-up){
+				display: block;
+			}
+			@include media($medium-screen-up){
+				display: inline-block;
+				flex-grow: 1;
+				border-right:1px solid #f0f0f0;
+			}
 
 		&:last-of-type {
 			border:none;
@@ -34,8 +43,8 @@
 			/* adjustment to make tab flex width */
 				/*min-width: 240px;*/
 				@include media($small-screen-up){
-					min-width: 240px;
-					padding: 2.4em 0;
+					min-width: 100%;
+					padding: 0 0;
 				}
 				@include media($medium-screen-up){
 					min-width: inherit;
@@ -114,3 +123,4 @@
 		}
 	}
 }
+
