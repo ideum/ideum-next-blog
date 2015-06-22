@@ -46,11 +46,16 @@
     /* no op */
 
     .txt-wrap {
-      /*@include span-columns(10);
-      @include shift(1);*/
-      width: 50%;
+      @include span-columns(10);
+      @include shift(1);
+      /*width: 50%;*/
 
       @include media($medium-screen-up) {
+        @include span-columns(5);
+        @include shift(.5);
+      }
+
+      @include media($large-screen-up) {
         @include span-columns(4);
         @include shift(1);
       }
