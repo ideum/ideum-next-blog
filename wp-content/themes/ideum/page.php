@@ -49,7 +49,7 @@ if (is_page('team')){
 }
 
 if (is_page('client-list')){ 
-  $context['clients'] = Timber::get_posts('post_type=page&post_status=publish&ordwerby=title&order=asc&post_parent=11816&posts_per_page=-1'); 
+  $context['clients'] = Timber::get_posts('post_type=page&post_status=publish&orderby=title&order=asc&post_parent=11816&posts_per_page=-1'); 
 }
 
 if (is_page('site-map')){ 
