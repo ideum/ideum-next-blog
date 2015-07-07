@@ -73,6 +73,19 @@ a {
   }
 }
 
+.article-content {
+  .article-body {
+    a {
+      color: $base-link-color;
+      border-bottom: 1px dotted $base-link-color;
+
+      &:hover {
+        border-bottom: none; 
+      }
+    }
+  }
+}
+
 .light-link-color {
 
   a {

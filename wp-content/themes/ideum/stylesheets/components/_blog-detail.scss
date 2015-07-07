@@ -176,6 +176,16 @@
           max-width: 100%;
         }
 
+        a {
+          color: $base-link-color;
+          border-bottom: 1px dotted $base-link-color;
+
+          &:hover {
+            border-bottom: none; 
+          }
+
+        }
+
         .back-to-blog, .back-to-projects {          
           margin-top: $large-gutter;
 
@@ -185,7 +195,7 @@
             text-transform: uppercase;
 
             &:hover {
-              border-bottom:1px dotted $very-dark-gray;
+              border-bottom: 1px dotted $very-dark-gray;
             }
 
           }
