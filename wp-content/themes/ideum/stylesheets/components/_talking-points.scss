@@ -29,6 +29,17 @@
         align-items: center;    
         float: left;
       }
+      .dandb {
+        border: 3px solid #efefef;
+        border-radius: 100px;
+        margin: 0 auto;
+        img {
+          display: block;
+          margin: 0 auto;
+          padding: 10px;
+          transform: scale(.75);
+        }
+      }
       img {
         display: block;
         margin: 0 auto;
