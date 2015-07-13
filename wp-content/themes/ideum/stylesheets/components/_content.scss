@@ -314,6 +314,14 @@
     a {
       /* no op */
 
+      &.dandb {
+        border: 3px solid #efefef;
+        border-radius: 100px;
+        display: block;
+        margin: 0 auto;
+        max-width: 100px;
+      }
+
       &.edit-link {
         color: $vv-dark-gray;
         font-size: .75em;
