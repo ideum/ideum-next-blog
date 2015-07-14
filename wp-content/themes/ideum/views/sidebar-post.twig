@@ -2,7 +2,11 @@
 <aside class="sidebar-post-meta layout-sidebar member-details">
   
   <!-- { //endif } -->
-  {% if acf_author_image %}
+  {% if thispost.get_field('team_user_image') %}
+  <p class="author-img">
+    <a href="{{thispost.author.path}}"><img src="{{ thispost.get_field('team_user_image') }}" alt="{{thispost.title}}" title="{{thispost.title}}" /></a>
+  </p>
+  {% elseif acf_author_image %}
   <a href="{{thispost.author.path}}"><div class="img-circular {{ thispost.author.slug }} tablet-n-desktop" style="background-image: url({{ acf_author_image }})" title="{{ thispost.author }} - Click here to view this author's post archive."> </div></a>
   <a href="{{thispost.author.path}}"><img class="{{ thispost.author.slug }} phone-only" src="{{ acf_author_image }}" title="{{ thispost.author }} - Click here to view this author's post archive."></a>
   {% elseif thispost.author.author_icon %}
@@ -10,25 +14,39 @@
     <a href="{{thispost.author.path}}"><img alt="{{ thispost.author }} - Click here to view this author's post archive." src="{{ thispost.author.author_icon }}" title="{{ thispost.author }} - Click here to view this author's post archive."></a>
   </p> 
   {% endif %}
-  
-  {% if thispost.author.profile_title_position %}
+
+
+  {% if thispost.get_field('profile_title_position') %}
+  <p class="author-position">
+    {{ thispost.get_field('profile_title_position') }}
+  </p>
+  {% elseif thispost.author.profile_title_position %}
   <p class="author-position">
     {{ thispost.author.profile_title_position }}
   </p>
   {% endif %}
-  
-  {% if thispost.author %}
+
+  {% if thispost.get_field('team_user_image') %}
+  <h4 class="author-name">
+    <a href="{{thispost.author.path}}">{{ thispost.title }}</a>
+  </h4>  
+  {% elseif thispost.author %}
   <h4 class="author-name">
     <a href="{{thispost.author.path}}">{{ thispost.author }}</a>
   </h4>
   {% endif %}
-  
-  {% if thispost.post_date %}
+
+  {% if thispost.get_field('team_user_image') %}
+  <!-- do nothing -->
+  {% elseif thispost.post_date %}
   <p class="post-date">
     <span class="label">Date: </span>{{ thispost.post_date|date }}
   </p>
   {% endif %}
 
+  {% if thispost.get_field('team_user_image') %}
+  <p>&nbsp;<!-- do nothing -->&nbsp;</p>
+  {% else %}
   <p class="post-category">
     <span class="label">Category: </span>
     {% if thispost.terms('category') %}
@@ -48,6 +66,7 @@
     {% endfor %}
     {% endif %}
   </p>
+  {% endif %}
 
   <!-- begin hidden content for blog-post-share -->
   <div style='display:none'>
