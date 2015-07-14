@@ -55,6 +55,7 @@ a better solution---one that works, I mean---we will have to go with this. #}
 
 <!-- {{ post.primary_image }} -->
 
+
 <meta property="og:description" content="{% if page.opengraph.description %}{{ page.opengraph.description }}{% elseif blog.alternative_meta_description %}{{ blog.alternative_meta_description }}{% elseif post.alternative_meta_description %}{{ post.alternative_meta_description }}{% elseif ogp_description %}{{ ogp_description }}{% elseif post.pull_quote %}{{ post.pull_quote }}{% elseif post.excerpt %}{{ post.title }} - {{ post.excerpt }}{% elseif post.get_preview %}{{post.get_preview(34, 'true', '', 'true')}}{% else %}{{ site.description }}{% endif %}"/>
 
 {# 
