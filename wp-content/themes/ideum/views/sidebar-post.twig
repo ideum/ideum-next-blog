@@ -4,7 +4,7 @@
   <!-- { //endif } -->
   {% if thispost.get_field('team_user_image') %}
   <p class="author-img">
-    <a href="{{thispost.author.path}}"><img src="{{ thispost.get_field('team_user_image') }}" alt="{{thispost.title}}" title="{{thispost.title}}" /></a>
+    <img src="{{ thispost.get_field('team_user_image') }}" alt="{{thispost.title}}" title="{{thispost.title}}" />
   </p>
   {% elseif acf_author_image %}
   <a href="{{thispost.author.path}}"><div class="img-circular {{ thispost.author.slug }} tablet-n-desktop" style="background-image: url({{ acf_author_image }})" title="{{ thispost.author }} - Click here to view this author's post archive."> </div></a>
