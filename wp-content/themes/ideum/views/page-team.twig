@@ -19,7 +19,9 @@
   <section class="teamgrid">
 
     {% for member in team %}
+      {% if member.get_field('is_staff') %}
     {% include ['tease-ideum_employee.twig', 'tease.twig'] %}
+    {% endif%}
     {% endfor %}
 
   </section>
