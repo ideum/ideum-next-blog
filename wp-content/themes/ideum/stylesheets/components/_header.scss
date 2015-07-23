@@ -199,3 +199,9 @@ $header-main-bar-height: rem(117);
     }
   }
 }
+
+@media screen and (max-height: 425px) {
+  #header .main {
+    height: 5.35714rem !important;
+  }
+}
