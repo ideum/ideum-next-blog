@@ -20,9 +20,11 @@ $product-spec-list-left-margin: 15px;
 			color: $white;
       @include media($small-screen-up){
         margin-top: 5%;
+        padding: 0 8%;
       }
       @include media($medium-screen-up){
         margin-top: 15%;
+        padding: 0;
       }
 		}
 
