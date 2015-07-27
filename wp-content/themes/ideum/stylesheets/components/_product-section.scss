@@ -570,14 +570,13 @@ $product-spec-list-left-margin: 15px;
   text-shadow: 1px 1px 2px #000;
 }
 
-.productinnerWrapper{
-  /*background-color: $off-vv-light-gray; */
+.productInnerWrapper{
 
-  > header{
+  > header {
 
     > h1, h2 {
 
-      @include media($small-screen-up){
+      @include media($small-screen-up) {
         padding: 0 8%;
       }
 
