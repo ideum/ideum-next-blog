@@ -106,12 +106,11 @@
     clear: both;
     margin:0 auto;
     overflow: hidden;
-    padding-bottom: 30px;
     text-align: center;
     width: 100%;
 
-
     @include media($medium-screen-up) {
+      padding-bottom: 30px;
       width: 100%;
     }
 
