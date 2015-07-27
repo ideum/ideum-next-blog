@@ -108,10 +108,17 @@ $product-spec-list-left-margin: 15px;
 			.svgHolder{
 				padding: 30px 35px;
 				margin: 45px auto;
-				width: 160px;
-				height: 160px;
 				border-radius: 100px;
 				background-color: #FFF;
+
+        @include media($small-screen-up){
+          height: 120px;
+          width: 120px;
+        }
+        @include media($medium-screen-up){
+          height: 160px;
+          width: 160px;
+        }
 			}
       .svgHolder.twotimes{
         padding: 20px 10px;
