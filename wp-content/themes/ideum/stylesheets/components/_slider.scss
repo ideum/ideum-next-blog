@@ -77,11 +77,6 @@
   background: transparent;
   box-sizing: content-box;
 
-  
-
-  @include media($small-screen-up) { 
-    display: none;
-  }
   @include media($medium-screen-up) { 
     display: inline-block;
   }
