@@ -3,23 +3,33 @@
 {% block content %}
 
 <main class="productOuterWrapper">
+
   <header>
-    <h1>Pro</h1>
+    <h1 class="tablet-n-desktop">Pro</h1>
     <img src="{{theme.link}}/images/products/pro/header.jpg">
   </header>
+
   <main class="productInnerWrapper">
+
     <div ng-app="ideum.tabs">
+
       <!-- Tabs -->
       <div tabs class="pro">
         
-        <div pane title="Pro Lab">
+        <!-- Pro Lab Tab -->
+        <div pane title="Pro Lab" class="tablet-n-desktop">
+
           <header>
             <h1>Pro Lab</h1>
             <h2>High-Powered, High Security</h2>
           </header>
+
           <div ng-app="productDetails">
+
             <section class="x-ray pro-lab" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -29,6 +39,7 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
@@ -39,20 +50,29 @@
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
+
             </section>
+
           </div>
+
         </div>
 
-        <!-- Pro TAB -->
-        <div pane title="Pro">
+        <!-- Pro Tab -->
+        <div pane title="Pro" class="tablet-n-desktop">
+
           <header>
             <h1>Pro</h1>
             <h2>Powerful Pro, Easily Expandable</h2>
           </header>
+
           <div ng-app="productDetails">
+
             <section class="x-ray pro" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
+
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -62,24 +82,40 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
                   <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
                 </div>
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
+
             </section>
-          </div>       
+
+          </div>  
+
         </div>
 
-      </div>
+        <!-- Generic Phone-Only Tab -->
+        <div title="Pro" class="phone-only"><!-- change title to appropriate name - this is actual text on product tab -->
 
-    </div> <!-- Close tabs -->
+          <header>
+            <h1>Pro &amp; Pro Lab Multitouch Tables</h1>
+            <h2>Powerful, Professional, Expandable.</h2>
+          </header>
+
+        </div>
+
+      </div><!-- Close tabs -->
+
+    </div><!-- Close ideum.tabs -->
 
     <section class="productSection pro">
       
@@ -288,7 +324,6 @@
         Made in the USA
       </h2>
     </section>
-  
 
     <section class="productSection">
       <div class="prod-sect-img-wrap img-left" style="background:url('{{theme.link}}/images/products/pro/06_direct-sales-pro.jpg') no-repeat top center; background-size:cover;">
@@ -302,7 +337,6 @@
         <!-- <p class="note">Please note - some kind of note here.</p> -->
       </div>
     </section>
-
 
   </main>
 </main>

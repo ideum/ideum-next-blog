@@ -3,23 +3,33 @@
 {% block content %}
 
 <main class="productOuterWrapper">
+
   <header>
-    <h1>Colossus</h1>
+    <h1 class="tablet-n-desktop">Colossus</h1>
     <img src="{{theme.link}}/images/products/colossus/header.jpg">
   </header>
+
   <main class="productInnerWrapper">
+
     <div ng-app="ideum.tabs">
+
       <!-- Tabs -->
       <div tabs class="colossus">
-        <!-- PLATFORM TAB -->
-        <div pane title="Colossus">
+
+        <!-- Colossus Tab -->
+        <div pane title="Colossus" class="tablet-n-desktop">
+
           <header>
             <h1>Colossus</h1>
             <h2>Wonder of the Modern World</h2>
           </header>
+
           <div ng-app="productDetails">
+
             <section class="x-ray colossus" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -29,22 +39,40 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
                   <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
                 </div>
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
+
             </section>
+
           </div>
+
         </div>
 
-    </div> <!-- Close tabs -->
+        <!-- Generic Phone-Only Tab -->
+        <div title="Colossus" class="phone-only"><!-- change title to appropriate name - this is actual text on product tab -->
+
+          <header>
+            <h1>Colossus</h1>
+            <h2>Wonder of the Modern World</h2>
+          </header>
+          
+        </div>
+
+      </div><!-- Close tabs -->
+
+    </div><!-- Close ideum.tabs -->
 
     
     <section class="productSection featured-video post-style img-left colossus">

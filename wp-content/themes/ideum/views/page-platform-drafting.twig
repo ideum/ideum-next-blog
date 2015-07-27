@@ -3,10 +3,12 @@
 {% block content %}
 
 <main class="productOuterWrapper">
+
   <header>
-    <h1>Platform Drafting Table</h1>
+    <h1 class="tablet-n-desktop">Platform Drafting Table</h1>
     <img src="{{theme.link}}/images/products/platform-drafting/header.jpg">
   </header>
+
   <main class="productInnerWrapper">
 
     <div ng-app="ideum.tabs">
@@ -14,15 +16,20 @@
       <!-- Tabs -->
       <div tabs class="platform-drafting">
 
-        <!-- PLATFORM DRAFTING 65 TAB -->
-        <div pane title="Platform 65">
+        <!-- Platform Drafting 65 Tab -->
+        <div pane title="Platform 65" class="tablet-n-desktop">
+
           <header>
             <h1>Platform 65 Drafting Table</h1>
             <h2>Maximum Fidelity for Exacting Detail</h2>
           </header>
+
           <div ng-app="productDetails">
+
             <section class="x-ray platform-drafting-65" ng-controller="xRayCtrl" ng-init="dataIndex = 0">
+
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -32,30 +39,41 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
                   <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
                 </div>
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
+
             </section>
+
           </div>
+
         </div>
         
-        <!-- PLATFORM DRAFTING 55 P-CAP TAB -->
-        <div pane title="Platform 55 P-CAP">
+        <!-- Platform Drafting 55 P-cap Tab -->
+        <div pane title="Platform 55 P-CAP" class="tablet-n-desktop">
+
           <header>
             <h1>Platform 55 P-CAP Drafting Table</h1>
             <h2>Better-Than-Ever Versatility</h2>
           </header>
+
           <div ng-app="productDetails">
+
             <section class="x-ray platform-drafting-55-pcap" ng-controller="xRayCtrl" ng-init="dataIndex = 1">
+
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -65,30 +83,41 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
                   <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
                 </div>
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
+
             </section>
+
           </div>
+
         </div>
         
-        <!-- PLATFORM DRAFTING 55 IR TAB -->
-        <div pane title="Platform 55 IR">
+        <!-- Platform Drafting 55 IR Tab -->
+        <div pane title="Platform 55 IR" class="tablet-n-desktop">
+
           <header>
             <h1>Platform 55 IR Drafting Table</h1>
             <h2>Thirty Degrees of Versatility</h2>
           </header>
+
           <div ng-app="productDetails">
+
             <section class="x-ray platform-drafting-55" ng-controller="xRayCtrl" ng-init="dataIndex = 2">
+
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -98,30 +127,41 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
                   <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
                 </div>
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
+
             </section>
+
           </div>
+
         </div>
 
-        <!-- PLATFORM DRAFTING 46 TAB -->
-        <div pane title="Platform 46">
+        <!-- Platform Drafting 46 Tab -->
+        <div pane title="Platform 46" class="tablet-n-desktop">
+
           <header>
             <h1>Platform 46 Drafting Table</h1>
-            <h2>Ready for Work, Study, or Play</h2>
+            <h2>Ready for Work, Study or Play</h2>
           </header>
+
           <div ng-app="productDetails">
+
             <section class="x-ray platform-drafting-46" ng-controller="xRayCtrl" ng-init="dataIndex = 3">
+
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -131,24 +171,40 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
 
                   <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
                   <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
                 </div>
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
+
             </section>
+
           </div>
+
         </div>
 
-      </div>
+        <!-- Generic Phone-Only Tab -->
+        <div title="Platform" class="phone-only"><!-- change title to appropriate name - this is actual text on product tab -->
 
-    </div> <!-- Close tabs -->
+          <header>
+            <h1>Platform 46", 55" IR, 55" P-CAP &amp; 65" Drafting Tables</h1>
+            <h2>Versatility for Work, Study or Play</h2>
+          </header>
+
+        </div>
+
+      </div><!-- Close tabs -->
+
+    </div><!-- Close ideum.tabs -->
 
     <section class="productSection platform-drafting">
 

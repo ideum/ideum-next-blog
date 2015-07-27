@@ -5,21 +5,19 @@
 <main class="productOuterWrapper">
 
   <header>
-
-    <h1>Platform</h1>
-
+    <h1 class="tablet-n-desktop">Platform</h1>
     <img src="{{theme.link}}/images/products/platform/header.jpg">
-
   </header>
 
   <main class="productInnerWrapper">
 
     <div ng-app="ideum.tabs">
+
       <!-- Tabs -->
       <div tabs class="platform">
 
-        <!-- PLATFORM 55 4K P-CAP TAB -->
-        <div pane title="Platform 55 4K P-CAP">
+        <!-- Platform 55 4k P-cap Tab -->
+        <div pane title="Platform 55 4K P-CAP" class="tablet-n-desktop">
 
           <header>
             <h1>Platform 55 4K P-CAP</h1>
@@ -62,8 +60,8 @@
 
         </div>
 
-        <!-- PLATFORM 55 IR TAB -->
-        <div pane title="Platform 55 IR">
+        <!-- Platform 55 IR Tab -->
+        <div pane title="Platform 55 IR" class="tablet-n-desktop">
 
           <header>
             <h1>Platform 55 IR</h1>
@@ -106,8 +104,8 @@
 
         </div>
 
-        <!-- PLATFORM 46 TAB -->
-        <div pane title="Platform 46">
+        <!-- Platform 46 Tab -->
+        <div pane title="Platform 46" class="tablet-n-desktop">
 
           <header>
             <h1>Platform 46</h1>
@@ -119,6 +117,7 @@
             <section class="x-ray platform46" ng-controller="xRayCtrl" ng-init="dataIndex = 2">
 
               <section class="overlay" ng-style="overlayStyle">
+
                 <nav>
                   <a href=""
                   ng-repeat="detail in productDetails"
@@ -128,6 +127,7 @@
                 </nav>
 
                 <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
                   <h2>{{ '{{ detail.blurb }}' }}</h2>
 
                   <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
@@ -138,6 +138,7 @@
 
                 <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
                 <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
               </section>
 
             </section>
@@ -146,9 +147,19 @@
 
         </div>
 
+        <!-- Generic Phone-Only Tab -->
+        <div title="Platform" class="phone-only"><!-- change title to appropriate name - this is actual text on product tab -->
+
+          <header>
+            <h1>Platform 46", 55" IR &amp; 55" 4k P-CAP Multitouch Tables</h1>
+            <h2>Ideum Design. Reliable Touch.</h2>
+          </header>
+
+        </div>
+
       </div> <!-- Close tabs -->
 
-    </div>
+    </div><!-- Close ideum.tabs -->
 
     <section class="productSection platform">
 

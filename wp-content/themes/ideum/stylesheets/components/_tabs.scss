@@ -7,6 +7,9 @@
 	margin: 0px auto;
 	text-align: center;	
 	/* adjustment to make tab flex width */
+	@include media($small-screen-up){
+		display:none; 
+	}
 	@include media($medium-screen-up){
 		display: flex;
 		flex-direction: row;
