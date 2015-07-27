@@ -795,6 +795,24 @@ img {
   display: none;
 }
 
+#facilities-slider {
+  @include media($small-screen-up) {
+    display: none; 
+  }
+  @include media($medium-screen-up) {
+    display: block;
+  }
+}
+
+#facilities-list {
+  @include media($small-screen-up) {
+    display: block; 
+  }
+  @include media($medium-screen-up) {
+    display: none;
+  }
+}
+
 /* ### CUSCO ###*/
 
 h2.secondaryTitle {
