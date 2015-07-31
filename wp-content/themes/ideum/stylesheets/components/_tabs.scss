@@ -11,6 +11,7 @@
 		display:none; 
 	}
 	@include media($medium-screen-up){
+		display:block;
 		display: flex;
 		flex-direction: row;
 	}
