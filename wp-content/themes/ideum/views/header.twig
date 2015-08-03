@@ -60,6 +60,7 @@
         .slider-item-article.slide-{{loop.index0}} .page-intro-inner { {% if slide.text_content_alignment == 'Center' %}margin: 0 auto; text-align:center;{% else %}float:{{slide.text_content_alignment}};text-align:{{slide.text_content_alignment}};{% endif %} } 
       {% endfor %}
       /* end pseudo-dynamic styles for front-page slider */
+      .slider-item-article .page-intro-inner h1 { text-transform: capitalize; }
     </style>
 
     <section class="front-page-slider{% if post.slides %}{% else %} no-slide{% endif %}">
