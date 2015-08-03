@@ -15,6 +15,7 @@
     }
 
     a.prev {
+      border-bottom: none;
       color: $light-gray; 
       float: left; 
       margin-right: $medium-gutter;
@@ -24,6 +25,7 @@
       }
     }
     a.next {
+      border-bottom: none;
       color: $light-gray; 
       float: right; 
       margin-left: $medium-gutter;
