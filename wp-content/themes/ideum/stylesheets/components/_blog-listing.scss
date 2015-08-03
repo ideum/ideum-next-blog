@@ -16,7 +16,7 @@
     }
 
     @include media($medium-screen-up) {       
-      border-bottom: none;
+      border-bottom: 2px solid $white;
       border-right:2px solid $white;
       width: (100% / 2);
     }
