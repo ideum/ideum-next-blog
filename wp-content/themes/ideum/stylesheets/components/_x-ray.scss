@@ -133,6 +133,11 @@ body {
   }
 
   //Presenter styles
+  &.presenter-42{
+    background-image: url("images/x-rays/presenter42-img.png");
+    @include x-ray-image("images/x-rays/presenter42-outline.png");
+    @include navAndButtonColors($presenter-color);
+  }
   &.presenter-46{
     background-image: url("images/x-rays/presenter46-img.png");
     @include x-ray-image("images/x-rays/presenter46-outline.png");
