@@ -36,7 +36,11 @@
   ) {
     .#{$class} {
       background: $color url("images/header-images/#{$image}-phone.jpg") no-repeat bottom right; 
-      height: 460px;
+
+      @include media($small-screen-up) {
+        height: 260px;
+        margin-bottom: auto;
+      }
 
       @include media($medium-screen-up) {
         background: $color url("images/header-images/#{$image}.jpg") no-repeat $bghoriz $bgvert;
@@ -70,7 +74,7 @@
 
       &.no-image {
         @include media($small-screen-up) {
-          height: auto;
+          height: 110px;
         }
 
         @include media($medium-screen-up) {
