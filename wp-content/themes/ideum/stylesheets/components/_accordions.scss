@@ -665,3 +665,13 @@
 }
 
 #jobs-list.job-detail .accordion-wrap .item-wrap article header h1 { margin-left: 0; }
+
+#client-list .accordion-wrap ul {
+  @include media($small-screen-up) {
+    text-align: left;
+    list-style-type: disc;
+  }
+   @include media($medium-screen-up) {
+    list-style-type: none;
+  }
+}
