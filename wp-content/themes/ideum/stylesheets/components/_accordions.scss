@@ -59,7 +59,20 @@
         }
       }
     }
-    &.darkblue, &.color-5 {
+    &.red, &.color-5 {
+      background-color: $medium-red;
+      &.only-open {
+        background-color: $white;
+        border-bottom:1px solid $very-light-gray;
+        &:first-of-type {
+          border-top:1px solid $very-light-gray;
+        }
+        &.open {
+          background-color: $medium-red;
+        }
+      }
+    }
+    &.darkblue, &.color-6 {
       background-color: $vv-dark-blue;
       &.only-open {
         background-color: $white;
@@ -72,7 +85,7 @@
         }
       }
     }
-    &.darkgold, &.color-6 {
+    &.darkgold, &.color-7 {
       background-color: $dark-orange;
       &.only-open {
         background-color: $white;
@@ -85,7 +98,7 @@
         }
       }
     }
-    &.darkpurple, &.color-7 {
+    &.darkpurple, &.color-8 {
       background-color: $very-dark-purple;
       &.only-open {
         background-color: $white;
@@ -98,7 +111,7 @@
         }
       }
     }
-    &.darkgreen, &.color-8 {
+    &.darkgreen, &.color-9 {
       background-color: $very-dark-green;
       &.only-open {
         background-color: $white;
@@ -111,7 +124,20 @@
         }
       }
     }
-    &.green, &.color-9 {
+    &.darkred, &.color-10 {
+      background-color: $very-dark-red;
+      &.only-open {
+        background-color: $white;
+        border-bottom:1px solid $very-light-gray;
+        &:first-of-type {
+          border-top:1px solid $very-light-gray;
+        }
+        &.open {
+          background-color: $very-dark-red;
+        }
+      }
+    }
+    &.green, &.color-11 {
       background-color: $dark-green;
       &.only-open {
         background-color: $white;
@@ -124,7 +150,6 @@
         }
       }
     }
-    
     
 
     article {
