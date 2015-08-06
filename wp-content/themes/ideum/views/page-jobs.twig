@@ -16,9 +16,8 @@
   
   <div class="accordion-wrap" id-expander>
 
-    {% for job in post.children %}<!-- pulls alphabetically, but will sort by menu order if set in WP -->
-    {% if job.post_status == "publish" %}
-    <section class="item-wrap aquamarine only-open" id-expander-item>
+    {% for job in post.children if job.post_status == "publish" %}<!-- pulls alphabetically, but will sort by menu order if set in WP -->
+    <section class="item-wrap color-{{ loop.index }}" id-expander-item><!-- add class only-open to make header white and text dark -->
 
       <article>
 
@@ -85,7 +84,6 @@
       </article>
 
     </section>
-    {% endif %}
     {% endfor %}
 
   </div>  

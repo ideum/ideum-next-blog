@@ -6,46 +6,8 @@
     @include span-columns(12); 
     @include omega;   
   
-    &.aquamarine {
-      background-color: $dark-teal;
-      &.only-open {
-        background-color: $white;
-        border-bottom:1px solid $very-light-gray;
-        &:first-of-type {
-          border-top:1px solid $very-light-gray;
-        }
-        &.open {
-          background-color: $dark-teal;
-        }
-      }
-    }
-    &.gold {
-      background-color: $light-medium-orange;
-      &.only-open {
-        background-color: $white;
-        border-bottom:1px solid $very-light-gray;
-        &:first-of-type {
-          border-top:1px solid $very-light-gray;
-        }
-        &.open {
-          background-color: $light-medium-orange;
-        }
-      }
-    }
-    &.darkgold {
-      background-color: $dark-orange;
-      &.only-open {
-        background-color: $white;
-        border-bottom:1px solid $very-light-gray;
-        &:first-of-type {
-          border-top:1px solid $very-light-gray;
-        }
-        &.open {
-          background-color: $dark-orange;
-        }
-      }
-    }
-    &.blue {
+    
+    &.blue, &.color-1 {
       background-color: $medium-blue;
       &.only-open {
         background-color: $white;
@@ -58,8 +20,8 @@
         }
       }
     }
-    &.red {
-      background-color: $very-dark-red;
+    &.gold, &.color-2 {
+      background-color: $light-medium-orange;
       &.only-open {
         background-color: $white;
         border-bottom:1px solid $very-light-gray;
@@ -67,11 +29,11 @@
           border-top:1px solid $very-light-gray;
         }
         &.open {
-          background-color: $very-dark-red;
+          background-color: $light-medium-orange;
         }
       }
     }
-    &.purple {
+    &.purple, &.color-3 {
       background-color: $medium-purple;
       &.only-open {
         background-color: $white;
@@ -84,7 +46,72 @@
         }
       }
     }
-    &.green {
+    &.aquamarine, &.color-4 {
+      background-color: $dark-teal;
+      &.only-open {
+        background-color: $white;
+        border-bottom:1px solid $very-light-gray;
+        &:first-of-type {
+          border-top:1px solid $very-light-gray;
+        }
+        &.open {
+          background-color: $dark-teal;
+        }
+      }
+    }
+    &.darkblue, &.color-5 {
+      background-color: $vv-dark-blue;
+      &.only-open {
+        background-color: $white;
+        border-bottom:1px solid $very-light-gray;
+        &:first-of-type {
+          border-top:1px solid $very-light-gray;
+        }
+        &.open {
+          background-color: $vv-dark-blue;
+        }
+      }
+    }
+    &.darkgold, &.color-6 {
+      background-color: $dark-orange;
+      &.only-open {
+        background-color: $white;
+        border-bottom:1px solid $very-light-gray;
+        &:first-of-type {
+          border-top:1px solid $very-light-gray;
+        }
+        &.open {
+          background-color: $dark-orange;
+        }
+      }
+    }
+    &.darkpurple, &.color-7 {
+      background-color: $very-dark-purple;
+      &.only-open {
+        background-color: $white;
+        border-bottom:1px solid $very-light-gray;
+        &:first-of-type {
+          border-top:1px solid $very-light-gray;
+        }
+        &.open {
+          background-color: $very-dark-purple;
+        }
+      }
+    }
+    &.darkgreen, &.color-8 {
+      background-color: $very-dark-green;
+      &.only-open {
+        background-color: $white;
+        border-bottom:1px solid $very-light-gray;
+        &:first-of-type {
+          border-top:1px solid $very-light-gray;
+        }
+        &.open {
+          background-color: $very-dark-green;
+        }
+      }
+    }
+    &.green, &.color-9 {
       background-color: $dark-green;
       &.only-open {
         background-color: $white;
@@ -97,6 +124,8 @@
         }
       }
     }
+    
+    
 
     article {
 

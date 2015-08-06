@@ -18,33 +18,33 @@
 
     {% for child in clients %}
 
-<section class="item-wrap red only-open" id-expander-item>
+      <section class="item-wrap color-{{ loop.index }}" id-expander-item><!-- add class only-open to make header white and text dark -->
 
-  <article>
+        <article>
 
-    <header class-"expander">
+          <header class-"expander">
 
-      <h1 id-expander-button>
-        {{child.title}}
-      </h1>
+            <h1 id-expander-button>
+              {{child.title}}
+            </h1>
 
-      <button id-expander-button><i class="icon-caret-down"></i></button>
+            <button id-expander-button><i class="icon-caret-down"></i></button>
 
-    </header>        
+          </header>        
 
-    <div class="item-content">
+          <div class="item-content">
 
-      <div class="text-container">
+            <div class="text-container">
 
-        {{child.content}}
+              {{child.content}}
 
-      </div>
+            </div>
 
-    </div>
+          </div>
 
-  </article>
+        </article>
 
-</section>
+      </section>
 
     {% endfor %}
 
