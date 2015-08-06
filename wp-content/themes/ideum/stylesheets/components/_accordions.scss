@@ -170,7 +170,12 @@
           margin-bottom: $gutter;
           cursor: pointer;
 
+          @include media($small-screen-up) {
+            font-size: 1.42857rem;
+          }
+
           @include media($medium-screen-up) {
+            font-size: 2.42857rem;
             @include span-columns(8);
             @include shift(1.5);
             text-align: center;
@@ -185,12 +190,16 @@
           border: 0;
           color: #fff;        
           float: right;
-          font-size: 1.75em;
+
           outline: none;
           position: relative;
             right: -10%;
 
           @include media($medium-screen-up) {
+            font-size: 1em;
+          }
+          @include media($medium-screen-up) {
+            font-size: 1.75em;
             right: 0;
           }
 
