@@ -165,8 +165,9 @@ $footer-font-color: $white;
 }
 
 .home #footer {
-  margin-top: $home-footer-margin-top;
   background-color: $footer-background-color;
   color: $footer-font-color;
   padding-top: $footer-overlap-height;
+
+  @include media($large-screen-up) { margin-top: $home-footer-margin-top; }
 }
