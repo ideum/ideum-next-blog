@@ -69,9 +69,11 @@
               right: 0;
             } @elseif $txtorient == center {
               padding-left: 0;
+              padding-right: 0;
             }
             @else {
               padding-left: 5%;
+              padding-right: 0;
               left: 0;
             }
           }
@@ -107,14 +109,15 @@
     }
 
     .page-intro-inner {
-      @include span-columns(10);
- 
+      @include span-columns(12);
+      text-align: center;
 
       @include media($medium-screen-up) {
         @include span-columns(7);
         //padding-top: 125px;
         position: absolute;
           top: 40%;
+        text-align: left;
       }
 
       @include media($large-screen-up) {
