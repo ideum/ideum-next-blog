@@ -15,25 +15,25 @@
   // 
   // pseudo-dynamic styles for front-page slider (below) are output to header.php lines 55 - 64
   //
-  @each $class, $color, $image, $bgwidth, $offset, $bghoriz, $bgvert, $bgheight, $txtorient in ( 
+  @each $class, $color, $image, $bgwidth, $offset, $bghoriz, $bgvert, $bgheight in ( 
 
-    ('creative-services',     #000000, 'creative-services-header-image',              800px,  202px, center, center,  800px,  left), 
-    ('legal',                 #3e4857, '',                                            800px,  202px, center, center,  460px,  center),    
-    ('thank-you',             #3e4857, '',                                            800px,  202px, center, center,  460px,  center),
-    ('customer-support',      #f4c057, '',                                            800px,  202px, center, center,  460px,  center),
-    ('client-list',           #ef6c6c, '',                                            800px,  202px, center, center,  460px,  center),
-    ('site-map',              #3e4857, '',                                            800px,  202px, center, center,  460px,  center),
-    ('blog',                  #2c2c2d, 'blog-pseudo-header-bg-final',                 600px,  142px, center, top,     460px,  center),
-    ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px,  center), 
-    ('mission',               #211f20, 'mission-pseudo-header-bg-final',              600px,  100px, center, center,  460px,  center),
-    ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px,  center),
-    ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg-final', 600px,  100px, center, top,     460px,  center),
-    ('team',                  #514748, 'team-pseudo-header-bg-final',                 600px,  100px, center, top,     460px,  center),
-    ('services',              #807F7D, 'services-pseudo-header-bg',                   600px,  100px, center, top,     460px,  center),
-    ('social-media-feed',     #2c2c2d, 'social-media-pseudo-header-bg',               600px,  100px, center, top,     460px,  center),
-    ('contact',               #2c2c2d, 'contact-pseudo-header-bg-final',              600px,  100px, center, top,     460px,  center),
-    ('jobs',                  #1F1F1F, 'jobs-pseudo-header-bg-final',                 600px,  100px, center, top,     460px,  center),
-    ('sprout',                #344535, 'sprout-header-image',                         600px,  100px, center, top,     460px,  center),
+    ('creative-services',     #000000, 'creative-services-header-image',              800px,  202px, center, center,  800px), 
+    ('legal',                 #3e4857, '',                                            800px,  202px, center, center,  460px), 
+    ('thank-you',             #3e4857, '',                                            800px,  202px, center, center,  460px),
+    ('customer-support',      #f4c057, '',                                            800px,  202px, center, center,  460px),
+    ('client-list',           #ef6c6c, '',                                            800px,  202px, center, center,  460px),
+    ('site-map',              #3e4857, '',                                            800px,  202px, center, center,  460px),
+    ('blog',                  #2c2c2d, 'blog-pseudo-header-bg-final',                 600px,  142px, center, top,     460px),
+    ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px), 
+    ('mission',               #211f20, 'mission-pseudo-header-bg-final',              600px,  100px, center, center,  460px),
+    ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px),
+    ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg-final', 600px,  100px, center, top,     460px),
+    ('team',                  #514748, 'team-pseudo-header-bg-final',                 600px,  100px, center, top,     460px),
+    ('services',              #807F7D, 'services-pseudo-header-bg',                   600px,  100px, center, top,     460px),
+    ('social-media-feed',     #2c2c2d, 'social-media-pseudo-header-bg',               600px,  100px, center, top,     460px),
+    ('contact',               #2c2c2d, 'contact-pseudo-header-bg-final',              600px,  100px, center, top,     460px),
+    ('jobs',                  #1F1F1F, 'jobs-pseudo-header-bg-final',                 600px,  100px, center, top,     460px),
+    ('sprout',                #344535, 'sprout-header-image',                         600px,  100px, center, top,     460px),
     
   ) {
     .#{$class} {
@@ -53,31 +53,8 @@
 
       .page-intro {
         .page-intro-inner {
-          padding-left: 10%;
-          padding-right: 0;
-
-          @include media($small-screen-up) {
-            padding-left: 5%;
-            padding-right: 5%;
-          }
-
-          @include media($medium-screen-up) { /* jim decided we will not use text-orient: now front page always left, all else always centered - see above */
-
-            @if $txtorient == right {
-              padding-left: 0;
-              padding-right: 5%;
-              right: 0;
-            } @elseif $txtorient == center {
-              padding-left: 0;
-              padding-right: 0;
-            }
-            @else {
-              padding-left: 5%;
-              padding-right: 0;
-              left: 0;
-            }
-          }
-
+          padding-left: 5%;
+          padding-right: 5%;
         }
       }
 
@@ -89,11 +66,7 @@
         @include media($medium-screen-up) {
           height: 460px;
         }
-        .page-intro {
-          .page-intro-inner {
-            padding-left: 0;
-          }
-        }
+        
       }
 
     }
