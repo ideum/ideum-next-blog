@@ -19,6 +19,7 @@ $(document).ready(function(){
   $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
   $(".inline").colorbox({inline:true, width:"60%", height:"auto"});
   $(".inline-share").colorbox({inline:true, width:"60%", height:"auto"});
+  $(".share").colorbox({inline:true, width:"60%", height:"auto"});
   $(".follow-share-phone").colorbox({inline:true, width:330, height:"auto"});
   $(".follow-share-tab-desk").colorbox({inline:true, width:600, height:"auto"});
   $(".directions-dialog").colorbox({inline:true, width:330, height:"auto"});
