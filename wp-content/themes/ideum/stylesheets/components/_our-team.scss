@@ -108,14 +108,26 @@
     }
 
     @include media($small-screen-up) {
-      .data-wrap {
+      .data-wrap.position {
         background: transparent url('images/team-hover-overlay.png') repeat 0 0;
         color: $white;
         display: block;
-        padding-top: $small-gutter;
+        padding: 10px 0;
         position: absolute;
         bottom: 0; 
         text-align: left;
+        width: 100%;
+        @include transition(transform 0.25s ease);
+      }
+      .data-wrap.name {
+        background: none;
+        color: $vv-dark-gray;
+        display: block;
+        padding: 5px;
+        position: absolute;
+        top: 0; 
+        bottom: initial;
+        text-align: center;
         width: 100%;
         @include transition(transform 0.25s ease);
       }
@@ -139,14 +151,17 @@
     }
 
     @include media($medium-screen-up) {
-      .data-wrap {
+      .data-wrap.position {
         @include transform(translateY(100%));
+      }
+      .data-wrap.name {
+        display:none;
       }
     }
 
     &:hover, &.active {
 
-      .data-wrap {
+      .data-wrap.position {
         background: transparent url('images/team-hover-overlay.png') repeat 0 0;
         color: $white;
         display: block;
@@ -156,6 +171,18 @@
         text-align: left;
         width: 100%;
         @include transform(translateY(0%));
+      }
+      .data-wrap.name {
+        background: none;
+        color: $vv-dark-gray;
+        display: block;
+        padding: 5px;
+        position: absolute;
+        top: 0; 
+        bottom: initial;
+        text-align: center;
+        width: 100%;
+        @include transition(transform 0.25s ease);
       }
 
       p {
