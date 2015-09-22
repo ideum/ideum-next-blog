@@ -185,6 +185,9 @@
     src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
     <!-- Pinterest -->
     <a href="//www.pinterest.com/pin/create/button/?url={{post.link}}&amp;media={% if post.alternative_meta_image %}{{site.url}}{{TimberImage(post.get_field('alternative_meta_image')) }}{% elseif post.alternative_meta_image_path %}{{site.url}}/{{ post.alternative_meta_image_path }}{% elseif post.thumbnail %}{{site.url}}{{ post.get_thumbnail.get_src }}{% else %}{{site.url}}/wp-content/themes/ideum/images/generic-images/blog-ideum.jpg{% endif %}&amp;description={% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% else %}{{post.title}}{% endif %}" data-pin-do="buttonBookmark" data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+    <!-- Tumblr-->
+    <a href="http://www.tumblr.com/share/link?url={{post.link|url_encode}}&amp;title={{post.title}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/tumblr.png" alt="Tumblr" /></a>
   </div>
 </div>
 <!-- end hidden content for page-share - revealed when user clicks 'Share This Page' link in footer -->
