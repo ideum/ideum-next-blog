@@ -84,6 +84,9 @@
       {% elseif generic_post_img %}
         <a href="//www.pinterest.com/pin/create/button/?url={{post.link}}&amp;media={{site.url}}/wp-content/themes/ideum/images/generic-images/{{generic_post_img}}&amp;description={{post.title}}" data-pin-do="buttonBookmark"  data-pin-shape="round" target="_blank"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
       {% endif %}
+			<!-- Tumblr-->
+			<a href="http://www.tumblr.com/share/link?url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+			src="/wp-content/themes/ideum/images/social/tumblr.png" alt="Tumblr" /></a>
     </div>
   </div>
 
