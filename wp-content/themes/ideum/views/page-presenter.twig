@@ -106,11 +106,11 @@
         </div>
         <!-- End Presenter 65 Tab -->
 
-        <!-- Presenter 55 P-CAP Tab -->
-        <div pane title="55&quot; P-CAP" class="tablet-n-desktop">
+        <!-- Presenter 55 Tab -->
+        <div pane title="55&quot;" class="tablet-n-desktop">
 
           <header>
-            <h1>Presenter 55 P-CAP</h1>
+            <h1>Presenter 55</h1>
             <h2>Better-Than-Ever Versatility</h2>
           </header>
 
@@ -148,7 +148,7 @@
           </div>
 
         </div>
-        <!-- End Presenter 55 P-CAP Tab -->
+        <!-- End Presenter 55 Tab -->
 
         <!-- Presenter 55 IR Tab 
         <div pane title="55&quot; IR" class="tablet-n-desktop">
@@ -195,6 +195,53 @@
         </div>
         End Presenter 55 IR Tab -->
 
+
+        <!-- Presenter 46 Tab -->
+        <div pane title="46&quot;" class="tablet-n-desktop">
+
+          <header>
+            <h1>Presenter 46</h1>
+            <h2>Ready for Work, Study or Play</h2>
+          </header>
+
+          <div ng-app="productDetails">
+
+            <section class="x-ray presenter-46" ng-controller="xRayCtrl" ng-init="dataIndex = 4">
+
+              <section class="overlay" ng-style="overlayStyle">
+
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
+              </section>
+
+            </section>
+
+          </div>
+
+        </div>
+        <!-- End Presenter 46 Tab -->
+
+
         <!-- Presenter 42 Tab -->
         <div pane title="42&quot;" class="tablet-n-desktop">
 
@@ -205,7 +252,7 @@
 
           <div ng-app="productDetails">
 
-            <section class="x-ray presenter-42" ng-controller="xRayCtrl" ng-init="dataIndex = 3">
+            <section class="x-ray presenter-42" ng-controller="xRayCtrl" ng-init="dataIndex = 5">
 
               <section class="overlay" ng-style="overlayStyle">
                 <nav>
@@ -243,7 +290,7 @@
         <div title="Presenter" class="phone-only"><!-- change title to appropriate name - this is actual text on product tab for mobile -->
 
           <header>
-            <h1>Presenter 42, 55&nbsp;IR, 55&nbsp;P&hyphen;CAP, 65 &amp; 75 Multitouch Tables</h1>
+            <h1>Presenter 42, 46&nbsp;, 55&nbsp;, 65 &amp; 75 Multitouch Tables</h1>
             <h2>Versatility that's Ready for Work, Study or Play</h2>
           </header>
 
