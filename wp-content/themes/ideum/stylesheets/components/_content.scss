@@ -412,25 +412,38 @@
               bottom: -73%; right: 50%;
             text-align: center;
             width: 100%;
+						
+						@include media($small-screen-up) {
 
-            @include media($medium-screen-up) {
-              bottom: -83%;
-            }
+							h1 { 
+								color: #fff;
+								font-size: 3.5vw;
+								text-shadow: 1px 1px 2px #000;
+							}   
 
-            h1 { 
-              color: #fff;
-              font-size: 3.5vw;
-              text-shadow: 1px 1px 2px #000;
-            }   
+							p {
+								color: #fff; 
+								font-size: 2.5vw; 
+								line-height: 3.5vw; 
+								margin: 0 auto;
+								max-width: 40%;
+								text-shadow: 1px 1px 2px #000;
+							}
+							
+						}
+						
+						@include media($large-screen-up) {
 
-            p {
-              color: #fff; 
-              font-size: 2.5vw; 
-              line-height: 3.5vw; 
-              margin: 0 auto;
-              max-width: 40%;
-              text-shadow: 1px 1px 2px #000;
-            }
+							h1 { 
+								font-size: 55px;
+							}   
+
+							p {
+								font-size: 46px; 
+								line-height: 1.3em; 
+							}
+							
+						}
 
             &.Left {
               h1, p {
