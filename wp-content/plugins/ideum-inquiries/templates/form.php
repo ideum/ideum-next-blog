@@ -36,23 +36,25 @@
         <fieldset>
           <div class="dark faux-label fieldset-label">Contact me by phone</div>
           <div class="half-box">
-            <input class="left-radio" type="radio" name="inquiries[contact-by-phone]" id="contact-by-phone-yes" value="yes" checked />
+            <input class="left-radio" type="radio" name="inquiries[contact-by-phone]" id="contact-by-phone-yes" onclick="javascript:yesnoCheck();" value="yes" checked />
             <label class="radio-label right-label" for="contact-by-phone-yes">Yes</label>
           </div>
           <div class="half-box">            
-            <input class="left-radio" type="radio" name="inquiries[contact-by-phone]" id="contact-by-phone-no" value="no" />
+            <input class="left-radio" type="radio" name="inquiries[contact-by-phone]" id="contact-by-phone-no" onclick="javascript:yesnoCheck();" value="no" />
             <label class="radio-label right-label" for="contact-by-phone-no">No</label>
           </div>
+          
+          <div id="ifphoneYes">
+            <hr>
 
-          <hr>
-
-          <div class="full-box">
-            <label class="dark two-thirds-label left-label" for="phone-number">What phone number is best for reaching you?</label>
-            <input class="third-input right-input" type="tel" name="inquiries[phone]" id="phone-number" placeholder="Phone">
-          </div>
-          <div class="full-box">
-            <label class="dark two-thirds-label left-label" for="phone-time">What time is best for reaching you?</label>
-            <input class="third-input right-input" type="text" name="inquiries[time]" id="phone-time" placeholder="Time">
+            <div class="full-box">
+              <label class="dark two-thirds-label left-label" for="phone-number">What phone number is best for reaching you?</label>
+              <input class="third-input right-input" type="tel" name="inquiries[phone]" id="phone-number" placeholder="Phone">
+            </div>
+            <div class="full-box">
+              <label class="dark two-thirds-label left-label" for="phone-time">What time is best for reaching you?</label>
+              <input class="third-input right-input" type="text" name="inquiries[time]" id="phone-time" placeholder="Time">
+            </div>
           </div>
         </fieldset>
       </div>
