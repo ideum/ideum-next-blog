@@ -44,6 +44,9 @@
       display: none;
     }
   }
+  a.white-dotted-tab-n-desk {
+  	border-bottom: 0px;
+  }
 }
 
 @include media($medium-screen-up) {
