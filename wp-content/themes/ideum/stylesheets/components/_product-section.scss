@@ -256,6 +256,13 @@ $product-spec-list-left-margin: 15px;
   		h2, p, a {
   			color: $white;
   		}
+  		a.white-dotted-tab-n-desk {
+  			border-bottom: 1px dotted;
+  			text-decoration: none;
+  		}
+  		a.white-dotted-tab-n-desk:hover {
+  			border-bottom: 0px;
+  		}
 
   	}
 
