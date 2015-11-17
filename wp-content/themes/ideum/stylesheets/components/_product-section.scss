@@ -585,7 +585,7 @@ $product-spec-list-left-margin: 15px;
 }
 
 .productInnerWrapper {
-
+	/* no data*/
   header {
 
     h1, h2 {
@@ -600,4 +600,24 @@ $product-spec-list-left-margin: 15px;
 
     }
   }
+}
+
+
+a.white-dotted-tab-n-desk {
+	border-bottom: 1px dotted;
+	color:#FFF;
+	text-decoration: none;
+}
+a.white-dotted-tab-n-desk:hover {
+	border-bottom: 0px;
+	opacity: 0.7;
+}
+
+a.white-dotted-allstops {
+	border-bottom: 1px dotted;
+	color: #FFF;
+	text-decoration: none;
+}
+a.white-dotted-allstops:hover {
+	border-bottom: 0px;
 }
