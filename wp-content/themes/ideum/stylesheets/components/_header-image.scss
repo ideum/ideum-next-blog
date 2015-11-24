@@ -17,16 +17,17 @@
   //
   @each $class, $color, $image, $bgwidth, $offset, $bghoriz, $bgvert, $bgheight in ( 
 
-    ('creative-services',     #000000, 'faces',              800px,  202px, center, center,  800px), 
+    ('creative-services',     #000000, 'faces',                                       800px,  202px, center, center,  800px), 
     ('legal',                 #3e4857, '',                                            800px,  202px, center, center,  460px), 
     ('thank-you',             #3e4857, '',                                            800px,  202px, center, center,  460px),
     ('customer-support',      #f4c057, '',                                            800px,  202px, center, center,  460px),
     ('client-list',           #ef6c6c, '',                                            800px,  202px, center, center,  460px),
     ('site-map',              #3e4857, '',                                            800px,  202px, center, center,  460px),
     ('blog',                  #2c2c2d, 'blog-pseudo-header-bg-final',                 600px,  142px, center, top,     460px),
-    ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px), 
+    ('our-story',             #352323, 'our-story-pseudo-header-bg-final2',           600px,  100px, center, center,  460px),
     ('mission',               #211f20, 'mission-pseudo-header-bg-final',              600px,  100px, center, center,  460px),
-    ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px),
+    ('facilities',            #E2E6FD, 'facilities-pseudo-header-bg-final',           600px,  100px, center, center,  460px), 
+    ('community',             #352323, 'community-pseudo-header-bg',                  600px,  100px, center, top,     460px), 
     ('software-initiatives',  #344535, 'software-initiatives-pseudo-header-bg-final', 600px,  100px, center, top,     460px),
     ('team',                  #514748, 'team-pseudo-header-bg-final',                 600px,  100px, center, top,     460px),
     ('services',              #807F7D, 'services-pseudo-header-bg',                   600px,  100px, center, top,     460px),
@@ -226,6 +227,12 @@
 
   }
 
+}
+
+@include media($small-screen-up) {
+  #header .header-image .community {
+    background-position: top center;
+  }
 }
 
 #header .header-image .home { background-position: bottom center; }
