@@ -1,0 +1,115 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div id="community" class="sub-page-wrap">
+
+  {% include "parent-nav.twig" %}
+
+  <section class="highlight-text child-page">
+
+    {% if post.can_edit %}
+    <a class="edit-link" href="{{post.edit_link}}" alt="Edit the content of this blurb." title="Edit the content of this blurb.">[Edit me!]</a>
+    {% endif %}
+
+    {{post.content}}
+
+  </section>
+
+  <section class="our-story-slider">
+
+    <p style="margin:20px auto 10px;max-width:90%;text-align:center;"><em>Some Images from our participation in <a href="http://discoveryfestivalnm.com/" target="_blank">Discovery Festival</a>, a community initiative focused on acquainting local youth with the STEM professions.</a></p>
+
+    <ul class="slider" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-width="responsiveTwoUp()">
+
+      <li class="story-slide item">
+        <img src="{{theme.link}}/images/community/discovery.jpg">
+      </li>
+      
+      <li class="story-slide item">
+        <img src="{{theme.link}}/images/community/discovery4.jpg">
+      </li>
+
+      <li class="story-slide item">
+        <img src="{{theme.link}}/images/community/discovery3.jpg">
+      </li>
+
+      <li class="story-slide item">
+        <img src="{{theme.link}}/images/community/discovery2.jpg">
+      </li>
+
+    </ul>
+
+  </section>
+
+  <section class="talking-points" style="padding:0;">
+
+    <article class="point" style="border-top:1px solid #f0f0f0;padding:0 0 3.57143rem;">
+
+      <div class="point-text">
+
+        <h2 style="width:100%;">
+          <strong>Ideum is proud to support these local organizations:</strong>
+        </h2>
+
+        <ul style="list-style-type:disc;min-width:250px;margin:5% 0 5% 10%;">
+          <li><a href="http://www.bbbs-cnm.org/site/c.buITJdNXKmL4G/b.6343541/k.EE77/Home_Page.htm" target="_blank">Big Brothers &amp; Big Sisters of Central New Mexico</a></li>
+          <li><a href="http://indianpueblo.org/" target="_blank">Indian Pueblo Cultural Center</a></li>
+          <li><a href="http://friendsofchaco.org/" target="_blank">The Friends of Chaco</a></li>
+          <li><a href="https://www.facebook.com/nmcenteronlawandpoverty/" target="_blank">New Mexico Center on Law and Poverty</a></li>
+          <li><a href="https://www.facebook.com/ThirdMayaPuebloCulturalExchange" target="_blank">Pueblo-Maya Youth Cultural Exchange</a></li>
+        </ul>
+
+      </div>
+
+    </article>
+
+    <article class="point" style="padding:0 0 3.57143rem;">
+
+      <div class="point-text">
+
+        <h2 style="width:100%;">
+          <strong>Ideum is also happy to provide in-kind support to:</strong>
+        </h2>
+
+        <ul style="list-style-type:disc;min-width:250px;margin:5% 0 5% 10%;">
+          <li><a href="https://www.cabq.gov/culturalservices/biopark" target="_blank">Albuquerque Biological Park</a></li>
+          <li><a href="http://www.iaia.edu/" target="_blank">Institute of American Indian Arts (IAIA)</a></li>
+          <li><a href="http://name-aam.org/" target="_blank">The National Association for Museum Exhibition (NAME-AAM)</a></li>
+        </ul>
+
+      </div>
+
+    </article>
+
+  </section>
+
+</div>
+
+<!-- begin hidden content for page-share -->
+<div style='display:none'>
+  <div id='community-share' class="share-dialog">
+    <img class="ideum-icon" src="/wp-content/themes/ideum/images/logo.png" alt="Ideum" title="Ideum">
+    <p>Like what you see? Share this.</p>
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/facebook.png" alt="Facebook"></a>
+    <!-- Twitter -->
+    <a href="http://twitter.com/share?url={{post.link}}&amp;text=Ideum - Community" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/twitter.png" alt="Twitter"></a>
+    <!-- Google+ -->
+    <a href="https://plus.google.com/share?url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/google.png" alt="Google"></a>
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/linkedin.png" alt="LinkedIn"></a>
+    <!-- Pinterest -->
+    <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img class="sharing-icon" src="/wp-content/themes/ideum/images/social/pinterest.png" alt="Pinterest"></a>
+    <!-- Tumblr-->
+    <a href="http://www.tumblr.com/share/link?url={{post.link|url_encode}}" target="_blank"><img class="sharing-icon" 
+    src="/wp-content/themes/ideum/images/social/tumblr.png" alt="Tumblr" /></a>
+  </div>
+</div>
+<!-- end hidden content for page-share - revealed when user clicks 'Share This Page' link in footer -->
+
+{% endblock %}
