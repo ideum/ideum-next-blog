@@ -26,10 +26,15 @@
 			{% if post.pull_quote and post.get_thumbnail %}
 			<section class="pull-quote">
 
-      	<div class="pull-quote-img" style="background-image:url('{{post.thumbnail.src|resize(640, 400)}}');">
+      	<div class="pull-quote-img" style="background-image:url('{{post.thumbnail.src}}');">
+      	<!-- the code below worked before upgrading timber -->
+      	{# <div class="pull-quote-img" style="background-image:url('{{post.thumbnail.src|resize(640, 400)}}');"> #}
 
-				  <a href="{{post.thumbnail.src}}"><img class="phone-only" src="{{post.thumbnail.src|resize(600)}}" 
+				  <a href="{{post.thumbnail.src}}"><img class="phone-only" src="{{post.thumbnail.src}}" 
 				  alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/></a>
+					<!-- the code below worked before upgrading timber -->
+					{# <a href="{{post.thumbnail.src}}"><img class="phone-only" src="{{post.thumbnail.src|resize(600)}}" 
+						alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/></a> #}
 
       	</div>
 
