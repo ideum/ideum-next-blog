@@ -18,7 +18,7 @@
 class Twig_TokenStream
 {
     protected $tokens;
-    protected $current;
+    protected $current = 0;
     protected $filename;
 
     /**
@@ -29,9 +29,8 @@ class Twig_TokenStream
      */
     public function __construct(array $tokens, $filename = null)
     {
-        $this->tokens     = $tokens;
-        $this->current    = 0;
-        $this->filename   = $filename;
+        $this->tokens = $tokens;
+        $this->filename = $filename;
     }
 
     /**
@@ -101,7 +100,7 @@ class Twig_TokenStream
     /**
      * Looks at the next token.
      *
-     * @param integer $number
+     * @param int $number
      *
      * @return Twig_Token
      */
@@ -115,9 +114,9 @@ class Twig_TokenStream
     }
 
     /**
-     * Tests the current token
+     * Tests the current token.
      *
-     * @return Boolean
+     * @return bool
      */
     public function test($primary, $secondary = null)
     {
@@ -125,9 +124,9 @@ class Twig_TokenStream
     }
 
     /**
-     * Checks if end of stream was reached
+     * Checks if end of stream was reached.
      *
-     * @return Boolean
+     * @return bool
      */
     public function isEOF()
     {
@@ -135,7 +134,7 @@ class Twig_TokenStream
     }
 
     /**
-     * Gets the current token
+     * Gets the current token.
      *
      * @return Twig_Token
      */
@@ -145,7 +144,7 @@ class Twig_TokenStream
     }
 
     /**
-     * Gets the filename associated with this stream
+     * Gets the filename associated with this stream.
      *
      * @return string
      */

@@ -2,8 +2,8 @@
 Contributors: jarednova
 Tags: template engine, templates, twig
 Requires at least: 3.7
-Stable tag: 0.20.5
-Tested up to: 4.0
+Stable tag: 0.22.2
+Tested up to: 4.2.3
 PHP version: 5.3.0 or greater
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -34,12 +34,113 @@ Timber is great for any WordPress developer who cares about writing good, mainta
 
 #### Want to read more?
 * [Timber on GitHub](http://github.com/jarednova/timber/)
-* [Timber Overview on Tidy Repo](http://www.wpmayor.com/articles/timber-templating-language-wordpress/)
-* ["What is WordPress Missing? A Template Language" on Torque](http://torquemag.io/what-is-wordpress-lacking-a-template-language/)
+* [Timber Overview on Tidy Repo](http://tidyrepo.com/timber/)
+* ["Timber and Twig Reignited My Love for WordPress" on CSS-Tricks](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/)
 
 
 
 == Changelog ==
+
+= 0.22.2 =
+* New .time method for TimberPost and TimberComment (thanks @lggorman)
+* Added support for WordPress's quality filter when resizing (thanks @t-wright)
+* Added support for animated gifs
+
+= 0.22.1 =
+* Added better support for [post.get_terms](https://github.com/jarednova/timber/pull/737) (thanks @aaemnnosttv)
+* Fix for issue with ACF date field (thanks @rpkoller)
+* Fix for resizing jpEgs (thanks @eaton)
+
+= 0.22.0 =
+* Added fetch method to Timber (thanks @xavivars and @erik-landvall)
+* Added a total to the pagination data array (thanks @lggorman)
+* Threaded comments get some love! (thanks @josephbergdoll)
+* A fix to date parsing when handling numeric timestamps (thanks @xavivars)
+
+= 0.21.10 =
+* Removed deprecated twitterify function
+* Much more docs (and deprecation docs)
+* Fixed issues with using constants (thanks @xavivars)
+
+= 0.21.9 =
+* Much much much more inline docs
+* Fix to TimberComment::approved()
+* HHVM support confirmed (it always worked, but now the tests prove it)
+* Fixes to multisite handling of themes
+* Fix to comments pagination (thanks @newkind)
+
+= 0.21.8 =
+* Fixes to things in docs
+* Added ID to timber/image/src filter (thanks @aaronhippie)
+* Fixed edgecase with HTTP_HOST vs SERVER_NAME (thanks @maketimetodesign)
+
+= 0.21.7 =
+* Fix for Image src in some situtations
+
+= 0.21.6 =
+* Fix for TimberMenu visiblility
+* Fix for TimberComment visibility
+
+= 0.21.5 =
+* Patch for method property visibility in TimberPost
+
+= 0.21.4 =
+* Fixed issue with multisite variables
+* Fixed issue with string conversion on function output
+
+= 0.21.3 =
+* Fixed issues with static post pages
+* Fixed issues with front pages with static pages
+
+= 0.21.2 =
+* Fixed GIF handling (thanks @josephbergdoll and @jarednova)
+* Improved handling of diff't image sizes
+* Timber Archives are now tested and much improved (thanks @KLVTZ)
+* Image fixing (thanks @marciojcoelho)
+* More tests and improving coverage to 77%
+
+= 0.21.1 =
+* Fixed capitalization problem for WP.org version
+
+= 0.21.0 =
+* Routes is now its own independent repo
+* Timber Starter Theme is now its own independent repo
+* Improved loading of files (thanks @mgmartel)
+* Fixed some errors with TimberImages (thanks @imranismail)
+
+= 0.20.10 =
+* Resolved lingering composer issues (thanks @austinpray, @lucasmichot)
+* You can now access `{{comment.status}}` when working with comments (thanks @simonmilz)
+* Better support for alternate setups with uploads directory (thanks @xavierpriour)
+* Major clean-up of image-handling classes (thanks @xavierpriour)
+* Starter theme now follows WP coding standards (thanks @kuus)
+* A slew of other bugs and clean-up (thanks @JeyKeu, @quinn and @jaredNova)
+
+= 0.20.9 =
+* Twig goes from 1.6.2 to 1.6.3 (thanks @fabpot)
+* Some clean-up items on Menus (thanks @oskarrough)
+* Simplified composer installation (thanks @lucasmichot)
+
+= 0.20.8 =
+* Fixed some Twig deprecation (thanks @alexlrobertson)
+* Support for {{img.src|retina}} filter (@jarednova)
+
+= 0.20.7 =
+* Cleaned-up logic for {{post.next}} and {{post.prev}} (thanks @alexlrobertson)
+* Simplifiying internals of TimberCore, TimberPost (thanks @alexlrobertson)
+* Initialization of variables from stolen WP functions (thanks @alexlrobertson)
+* Fixed Twitter API call (thanks @asecondwill)
+* Matched TimberMenu fallback behavior to grab pages_men (@jaredNova)
+* Fixed a bug with the_title filter (thanks @kuus)
+* Fixed weird conflicts when ACF names match methods (@jaredNova)
+* Added a filter for timber_output (thanks @aristath)
+* Fix for galleries showing only 5 images (thanks @IJMacD)
+
+= 0.20.6 =
+* Fixed some resulting bugs from numberposts vs. posts_per_page change as relates to galleries (thanks @IJMacD)
+* Fixed issue with author.php in starter theme (thanks @dmtroyer)
+* Added some sanity checks when menus are missing (thanks @jaredNova)
+* New tests, yay!
 
 = 0.20.5 =
 * Fixed issue with sticky posts being included when just feeding an array of ids
@@ -48,7 +149,7 @@ Timber is great for any WordPress developer who cares about writing good, mainta
 = 0.20.4 =
 * Fixed issue with Timber::get_posts and Timber::query_posts using numberposts in args
 
-= 0.20.3 = 
+= 0.20.3 =
 * Fixed some issues with linking to menu items with a hash
 
 = 0.20.2 =
