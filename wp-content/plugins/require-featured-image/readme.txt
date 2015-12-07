@@ -3,8 +3,8 @@ Contributors: pressupinc, davidbhayes
 Plugin URI: http://pressupinc.com/wordpress-plugins/require-featured-image/
 Tags: featured image, images, edit, post, admin, require featured image, image, media, thumbnail, thumbnails, post thumbnail, photo, pictures
 Requires at least: 3.5
-Tested up to: 3.9.0
-Stable tag: 0.6.3
+Tested up to: 4.3.1
+Stable tag: 1.1.3
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -58,7 +58,7 @@ Yep, just for different "custom post types." In your left sidebar under Settings
 
 = Support for other languages? =
 
-The plugin does support other languages, and we're happy to accept contributions of translation packs. We have a Spanish translation kindly provided by Andrew Curtis of [WebHostingHub](http://www.webhostinghub.com/).
+The plugin does support other languages, and we're happy to accept contributions of translation packs.
 
 == Screenshots ==
 
@@ -68,11 +68,70 @@ The plugin does support other languages, and we're happy to accept contributions
 
 == CHANGELOG ==
 
+= 1.1.2 (2015.10.01) =
+* Improving support for WP4.3 by getting right of h1/h2 targetting issue in jQuery. Thanks [Jamie](https://github.com/hubdotcom).
+* Added Danish translation. Thanks [Jess](https://github.com/JessNielsen)!
+
+= 1.1.2 (2015.10.01) =
+* Added support for WordPress v4.3+
+
+= 1.1.1 (2015.06.22) =
+* Fixed an logic error that made it nearly impossible to publish posts. Apologies to all affected.
+
+= 1.1.0 (2015.06.21) =
+* Version bump because we finally resolved the issue people started complaining about in 1.0, where you were able to publish with an image and then go remove the image. The change was made in 1.0 to allow for people with old content without featured images to edit posts easily, which was an issue in pre-1.0. The solution, turned out to be to store an option on plugin activation, and then only start enforcing from that time forward. People with the plugin already activated will be auto-set to two weeks before when they upgrade.
+
+= 1.0.10 (2015.05.24) =
+* Adding Portuguese (Portugal) translation.
+* Adding Dutch translation.
+* Bumping WP version tested number.
+
+= 1.0.9 (2015.04.21) =
+* Brazilian Portuguese translation from [matheusmb](https://github.com/matheusmb).
+
+= 1.0.8 (2015.04.21) =
+* VCS games...
+
+= 1.0.7 (2015.04.21) =
+* Adding translation to Serbian by from Andrijana Nikolic of [WebHostingGeeks](http://www.webhostinggeeks.com/). Thanks Andrijana!
+
+= 1.0.6 (2015.03.24) =
+* Adding translation to Norwegian by Alf Otto Fagermo.
+
+= 1.0.5 (2015.03.18) =
+* Adding translation to German by Wolfgang Tischer.
+* Fixing typo in .pot file that was causing a string to not come through translated.
+
+= 1.0.4 (2015.03.10) =
+* Cleaned up settings page a fair bit.
+
+= 1.0.3 (2015.01.27) =
+* Fixed a mis-named function in the Javascript.
+
+= 1.0.2 (2015.01.24) =
+* Made as mistake during VCS games, bumping again was easiest.
+
+= 1.0.1 (2015.01.24) =
+* Realized that JS check to allow for edit of featured-image-less unpublished posts would not work in non-English installs. Found a markup-based way to discover the same thing.
+
+= 1.0.0 (2015.01.24) =
+* Big JS Refactoring so the final action statements are quite obvious.
+* Made it so that when a post is published without a featured image, the plugin doesn't block you from changing it (say to fix a typo).
+* Big version bump! This is too widely used to not be at 1.*, and should have been sooner.
+
+= 0.6.5 (2015.01.12) =
+* Adding Greek translations.
+* Readme changes (4.1 support).
+
+= 0.6.4 (2014.09.18) =
+* Adding Arabic translation.
+* Readme changes (4.0 support).
+
 = 0.6.3 (2013.04.30) =
 * Readme changes (3.9 support rev, some copy changes).
 
 = 0.6.2 (2013.04.05) =
-* Adding Spanish tranlation from Andrew Kurtis of [WebHostingHub](http://www.webhostinghub.com/). Thanks Andrew!
+* Adding Spanish translation from Andrew Kurtis of [WebHostingHub](http://www.webhostinghub.com/). Thanks Andrew!
 
 = 0.6.1 (2013.03.02) =
 * Updating readme so the live version will change, and removing a .mo file I didn't mean to commit.
@@ -84,7 +143,7 @@ The plugin does support other languages, and we're happy to accept contributions
 = 0.5.0 (2013.12.31) =
 * Big changes: now supports all your custom post types out of the box. This can be accessed through the options page (recommended and preferred) or through a filter called 'rfi_post_types'.
 * Created an options page to make it easier to update your custom post types and set them within the admin.
-* Some small improvements to internal code structure to increase readability and comprehensabilty. This plugin may finally be big enough to benefit from some object-based design, but not for 0.5.0.
+* Some small improvements to internal code structure to increase readability and comprehensibility. This plugin may finally be big enough to benefit from some object-based design, but not for 0.5.0.
 
 = 0.3.0 (2013.08.07) =
 * Improved conditional fall-back PHP test of publishing because it was stopping saves.
