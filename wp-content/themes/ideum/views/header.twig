@@ -67,7 +67,7 @@
 
     <section class="front-page-slider{% if post.slides %}{% else %} no-slide{% endif %}">
 
-      <ul rn-carousel rn-carousel-control rn-carousel-indicator>
+     <ul rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-buffered rn-carousel-auto-slide="10">
 
         {% for item in post.get_field('slides') %}
 
