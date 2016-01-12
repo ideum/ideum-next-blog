@@ -27,15 +27,16 @@
 			<section class="pull-quote">
 
       	<div class="pull-quote-img" style="background-image:url('{{post.thumbnail.src}}');">
-      	<!-- the code below worked before upgrading timber -->
+      	<!-- the code below (visible in template) worked before upgrading timber -->
       	{# <div class="pull-quote-img" style="background-image:url('{{post.thumbnail.src|resize(640, 400)}}');"> #}
-
-				  <a href="{{post.thumbnail.src}}"><img class="phone-only" src="{{post.thumbnail.src}}" 
-				  alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/></a>
-					<!-- the code below worked before upgrading timber -->
+					{% if post.featured_image_clickable == "yes" %}<a href="{{post.thumbnail.src}}"><img class="phone-only" 
+					src="{{post.thumbnail.src}}" alt="Image for the post: '{{post.title}}'" 
+					title="Image for the post: '{{post.title}}'"/></a>{% else %}<img class="phone-only" src="{{post.thumbnail.src}}" 
+				  alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/>{% endif %}
+				  
+					<!-- the code below (visible in template) worked before upgrading timber -->
 					{# <a href="{{post.thumbnail.src}}"><img class="phone-only" src="{{post.thumbnail.src|resize(600)}}" 
 						alt="Image for the post: '{{post.title}}'" title="Image for the post: '{{post.title}}'"/></a> #}
-
       	</div>
 
       	<div class="pull-quote-txt">
