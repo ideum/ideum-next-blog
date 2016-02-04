@@ -203,7 +203,7 @@ $product-spec-list-left-margin: 15px;
 			position:relative;
 			width:50%;
 
-      &.no-bg-phone { background-image: initial !important; }
+      &.no-bg-phone { background-image: initial; }
 
 			&.img-left {
 				float:left;
