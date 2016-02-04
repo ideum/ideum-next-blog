@@ -178,7 +178,7 @@ $product-spec-list-left-margin: 15px;
 	@include media($small-screen-up) { 
 	
 		.prod-sect-img-wrap {
-      &.no-bg-phone { background-image: none !important; }
+      &.no-bg-phone { background-position: center top !important; }
 
 			img {
 				height: 100%;
@@ -203,7 +203,7 @@ $product-spec-list-left-margin: 15px;
 			position:relative;
 			width:50%;
 
-      &.no-bg-phone { background-image: initial; }
+      &.no-bg-phone { background-position: initial !important; }
 
 			&.img-left {
 				float:left;
