@@ -64,4 +64,4 @@ Redirect      permanent /blog/ideum_project          /creative-services
 Redirect      permanent /category                    http://ideum.com/blog/category
 Redirect      permanent /tag                         http://ideum.com/blog/tag
 
-Redirect 			302				/touch-walls								 http://ideum.com/touch-walls/presenter
+Redirect 			302				/touch-walls/								 http://ideum.com/touch-walls/presenter/
