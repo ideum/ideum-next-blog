@@ -6,7 +6,7 @@ Redirect      permanent /inquiry                     http://ideum.com/contact
 Redirect      permanent /contact-us                  http://ideum.com/contact
 Redirect      permanent /multitouch                  http://ideum.com/touch-tables
 RedirectMatch permanent ^/products/?$                http://ideum.com/touch-tables
-
+RedirectMatch 301 /touch-walls/?$ 					 	 http://ideum.com/touch-walls/presenter/
 
 
 # Products
@@ -63,4 +63,3 @@ Redirect      permanent /blog/ideum_project          /creative-services
 ## Archives
 Redirect      permanent /category                    http://ideum.com/blog/category
 Redirect      permanent /tag                         http://ideum.com/blog/tag
-
