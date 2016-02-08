@@ -529,7 +529,7 @@ $product-spec-list-left-margin: 15px;
         vertical-align: middle;
         width: 100%;
         @include media($small-screen-up) {  
-          padding: 1.5vh 2em;
+          padding: 1.5vh 1em;
         }
         /*
         @include media($medium-screen-up) {  
