@@ -6,7 +6,7 @@
 @include media($small-screen-up) {
   .phone-only {
     visibility: visible !Important;
-    position: relative !Important;
+    position: relative;
       left: -0px; top: -0px;
     &.gone {
       display: block;
@@ -14,7 +14,7 @@
   }
   .phone-n-tablet {
     visibility: visible !Important;
-    position: relative !Important;
+    position: relative;
       left: -0px; top: -0px; 
     &.gone {
       display: block;
@@ -22,7 +22,7 @@
   }
   .tablet-only {
     visibility: hidden !Important;
-    position: absolute !Important;
+    position: absolute;
       left: -4000px; top:-4000px; 
     &.gone {
       display: none;
@@ -30,7 +30,7 @@
   }
   .tablet-n-desktop {
     visibility: hidden !Important;
-    position: absolute !Important;
+    position: absolute;
       left: -4000px; top:-4000px; 
     &.gone {
       display: none;
@@ -38,7 +38,7 @@
   }
   .desktop-only {
     visibility: hidden !Important;
-    position: absolute !Important;
+    position: absolute;
       left: -4000px; top:-4000px;
     &.gone {
       display: none;
@@ -60,7 +60,7 @@
   }
   .phone-n-tablet {
     visibility: visible !Important;
-    position: relative !Important;
+    position: relative;
       left: -0px; top: -0px;
     &.gone {
       display: block;
@@ -68,7 +68,7 @@
   }
   .tablet-only {
     visibility: visible !Important;
-    position: relative !Important;
+    position: relative;
       left: -0px; top: -0px;
     &.gone {
       display: block;
@@ -76,7 +76,7 @@
   }
   .tablet-n-desktop {
     visibility: visible !Important;
-    position: relative !Important;
+    position: relative;
       left: -0px; top: -0px;
     &.gone {
       display: block;
@@ -119,7 +119,7 @@
   }
   .tablet-n-desktop {
     visibility: visible !Important;
-    position: relative !Important;
+    position: relative;
       left: -0px; top: -0px;
     &.gone {
       display: block;
@@ -127,7 +127,7 @@
   }
   .desktop-only {
     visibility: visible !Important;
-    position: relative !Important;
+    position: relative;
       left: -0px; top: -0px;
     &.gone {
       display: block;
