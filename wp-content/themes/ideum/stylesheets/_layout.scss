@@ -134,3 +134,10 @@
     }    
   }
 }
+
+@include media($small-screen-up) {
+	.visible-desktop-only { display:none; }
+}
+@include media($large-screen-up) {
+	.visible-desktop-only { display:inline; }
+}
