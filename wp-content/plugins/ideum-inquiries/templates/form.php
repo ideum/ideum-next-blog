@@ -63,25 +63,25 @@
         <fieldset>
           <div class="dark faux-label fieldset-label">Product or service you are interested in? (Select all that apply)</div>
           <div class="half-box">
-            <input class="left-checkbox" type="checkbox" name="inquiries[service][app-web-dev]" id="check-app-web-dev" value="App / Web Development" />
-            <label class="dark check-label right-label" for="check-app-web-dev">App / Web development</label>
-          </div>
-          <div class="half-box">
-            <input class="left-checkbox" type="checkbox" name="inquiries[service][cust-exhibit-dev]" id="check-cust-exhibit-dev" value="Custom Exhibit Development" />
-            <label class="dark check-label right-label" for="check-cust-exhibit-dev">Custom exhibit development</label>
-          </div>
-          <div class="half-box">
             <input class="left-checkbox" type="checkbox" name="inquiries[service][touch-tables]" id="check-touch-tables" value="Touch Tables" />
             <label class="dark check-label right-label" for="check-touch-tables">Touch Tables</label>
           </div>
           <div class="half-box">
-            <input class="left-checkbox" type="checkbox" name="inquiries[service][touch-walls]" id="check-touch-walls" value="Touch Walls" />
-            <label class="dark check-label right-label" for="check-touch-walls">Touch Walls</label>
+            <input class="left-checkbox" type="checkbox" name="inquiries[service][cust-software-dev]" id="check-cust-software-dev" value="Custom Software Development" />
+            <label class="dark check-label right-label" for="check-cust-software-dev">Custom Software Development</label>
           </div>
           <div class="half-box">
+            <input class="left-checkbox" type="checkbox" name="inquiries[service][touch-walls]" id="check-touch-walls" value="Touch Walls" />
+            <label class="dark check-label right-label" for="check-touch-walls">Touch Walls</label>
+					</div>
+          <div class="half-box">
+            <input class="left-checkbox" type="checkbox" name="inquiries[service][cust-hardware-dev]" id="check-cust-hardware-dev" value="Custom Hardware Development" />
+            <label class="dark check-label right-label" for="check-cust-hardware-dev">Custom Hardware Development</label>
+					</div>
+       		<div class="half-box">
             <input class="left-checkbox" type="checkbox" name="inquiries[service][product-rentals]" id="check-product-rentals" value="Product Rentals" />
-            <label class="dark check-label right-label" for="check-product-rentals">Product Rentals</label>
-          </div>          
+            <label class="dark check-label right-label" for="check-product-rentals">Product Rentals (US only)</label>
+          </div>
         </fieldset>
       </div>
 
