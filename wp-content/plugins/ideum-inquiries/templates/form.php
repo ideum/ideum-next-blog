@@ -8,14 +8,14 @@
 
         <div class="half-box">
           <div class="required fname">
-            <label class="medium" for="first-name">First name <span class="requiredNote">*</span></label>
+            <label class="medium" for="first-name">First name <span class="required-note">*</span></label>
             <input class="full-input" type="text" name="inquiries[first-name]" id="first-name" autofocus required>
           </div>
         </div>
 
         <div class="half-box">
           <div class="required lname">
-            <label class="medium" for="last-name">Last name <span class="requiredNote">*</span></label>
+            <label class="medium" for="last-name">Last name <span class="required-note">*</span></label>
             <input class="full-input" type="text" name="inquiries[last-name]" id="last-name" required>
           </div>
         </div>
@@ -23,7 +23,7 @@
       </div>
 
       <div class="required email">
-        <label class="medium" for="email">Email <span class="requiredNote">*</span></label>
+        <label class="medium" for="email">Email <span class="required-note">*</span></label>
         <input class="full-input" type="email" name="inquiries[email]" id="email" autocomplete="off" required>
       </div>
 
@@ -36,7 +36,7 @@
         <fieldset>
           <div class="dark faux-label fieldset-label">Contact me by phone</div>
           <div class="half-box">
-            <input class="left-radio" type="radio" name="inquiries[contact-by-phone]" id="contact-by-phone-yes" onclick="javascript:yesnoCheck();" value="yes" checked />
+            <input class="left-radio" type="radio" name="inquiries[contact-by-phone]" id="contact-by-phone-yes" onclick="javascript:yesnoCheck();" value="yes" />
             <label class="radio-label right-label" for="contact-by-phone-yes">Yes</label>
           </div>
           <div class="half-box">            
@@ -44,7 +44,7 @@
             <label class="radio-label right-label" for="contact-by-phone-no">No</label>
           </div>
           
-          <div id="ifphoneYes">
+          <div id="ifphoneYes" style="display:none;">
             <hr>
 
             <div class="full-box">
@@ -87,6 +87,9 @@
 
       <label for="inquiries-comments">Please include your questions and interest in working with us.</label>
       <textarea name="inquiries[comments]" id="inquiries-comments" rows="5" cols="60"></textarea>
+      
+      <label for="inquiries-howheard">How did you hear about us?</label>
+      <textarea name="inquiries[howheard]" id="inquiries-howheard" rows="2" cols="60"></textarea>
 
       <p class="required-note">* - Required</p>
 
@@ -97,3 +100,15 @@
   </section>
 
 </div>
+
+<script>
+$(document).ready(function(){
+	$('#ifphoneYes').fadeOut('slow');
+	$('#inquiries[contact-by-phone]').change(function(){
+		if(this.checked)
+			$('#ifphoneYes').fadeIn('slow');
+		else
+			$('#ifphoneYes').fadeOut('slow');
+	});
+});
+</script>

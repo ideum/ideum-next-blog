@@ -16,6 +16,10 @@ class Mailer
         if (isset($data['company'])) {
             $body .= "\n\nCompany: ${data['company']}";
         }
+			
+				if (isset($data['howheard'])) {
+            $body .= "\n\nHow Heard: ${data['howheard']}";
+        }
 
         $body .= "\n\nComments:\n${data['comments']}";
 
