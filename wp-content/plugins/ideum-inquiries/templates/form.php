@@ -93,7 +93,7 @@
 
       <p class="required-note">* - Required</p>
       
-      <p>The form may take time to process. Please do not submit it multiple times.</p>
+      <p>The form may take time to process - do not submit it multiple times.</p>
       <p class="submit-wrap"><input class="button dark active" type="submit" value="Submit"></p>
 
     </form>
@@ -102,14 +102,4 @@
 
 </div>
 
-<script>
-$(document).ready(function(){
-	$('#ifphoneYes').fadeOut('slow');
-	$('#inquiries[contact-by-phone]').change(function(){
-		if(this.checked)
-			$('#ifphoneYes').fadeIn('slow');
-		else
-			$('#ifphoneYes').fadeOut('slow');
-	});
-});
-</script>
+
