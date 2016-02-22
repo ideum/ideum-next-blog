@@ -1,5 +1,13 @@
 <?php
 
+add_action( 'init', 'my_deregister_heartbeat', 1 );
+function my_deregister_heartbeat() {
+	global $pagenow;
+
+	if ( 'post.php' != $pagenow && 'post-new.php' != $pagenow )
+		wp_deregister_script('heartbeat');
+}
+
 	if (!class_exists('Timber')){
 		add_action( 'admin_notices', function(){
 			echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . admin_url('plugins.php#timber') . '">' . admin_url('plugins.php') . '</a></p></div>';
