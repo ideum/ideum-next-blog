@@ -92,7 +92,8 @@
       <textarea name="inquiries[howheard]" id="inquiries-howheard" rows="2" cols="60"></textarea>
 
       <p class="required-note">* - Required</p>
-
+      
+      <p>The form may take time to process. Please do not submit it multiple times.</p>
       <p class="submit-wrap"><input class="button dark active" type="submit" value="Submit"></p>
 
     </form>
