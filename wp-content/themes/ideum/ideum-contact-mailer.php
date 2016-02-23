@@ -50,9 +50,4 @@ if (isset($_POST['comments'])) {
 
 
 $status = wp_mail($mailto, $subject, $body);
-
-if ( $status ){
-  header( 'Location: http://www.ideum-next.dev/thanks' ) ;
-} else {
-  echo "Email not sent.";
-}
+?>
