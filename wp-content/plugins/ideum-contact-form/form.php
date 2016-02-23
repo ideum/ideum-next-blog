@@ -172,20 +172,17 @@ function deliver_mail() {
 
 		// if email processed, display success message
 		if ( wp_mail( $mailto, $subject, $body ) ) {
-			echo '<a name="message"></a><div style="background: #006600; color: #fff; font-weight: bold; padding: 10px 2px; margin: 2px 0 20px; text-align: center;">';
-      echo '<p>Thanks for contacting us!.<br>';
-      echo 'We will be in touch with you shortly.</p>';
-      echo '</div>';
+			echo "<a name='message'></a><div style='background:#006600;color:#fff;font-weight:bold;padding:10px 2px;margin:2px 0 20px;text-align:center;'><p>Thanks for contacting us!.<br>We will be in touch with you shortly.</p></div>";
       header( "refresh:4;url=http://ideum.com/contact" ) or die(""); 
       exit();
 		} else {
-			echo '<a name="message"></a><div style="background: #FF6600; color: #fff; font-weight: bold; padding: 10px 2px; margin:2px 0 20px; text-align: center;">An unexpected error occurred.</div>';
+			echo "<a name='message'></a><div style='background:#FF6600;color:#fff;font-weight:bold;padding:10px 2px;margin:2px 0 20px;text-align:center;''>An unexpected error occurred.</div>";
 		}
 	}
 }
 
-
-function cf_shortcode() {
+//shortcode
+function form_shortcode() {
 	ob_start();
 	deliver_mail();
 	html_form_code();
@@ -193,6 +190,6 @@ function cf_shortcode() {
 	return ob_get_clean(); //
 }
 
-add_shortcode( 'ideum_contact_form', 'cf_shortcode' );
+add_shortcode( 'ideum_contact_form', 'form_shortcode' );
 
 ?>
