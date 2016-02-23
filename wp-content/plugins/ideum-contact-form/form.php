@@ -14,7 +14,7 @@ function html_form_code() {
 	echo'
   <div class="inquiry-content">
 	  <section id="inquiry-form">
-	    <form action="/contact#message" autocomplete="on" class="ng-pristine ng-valid" method="post">
+	    <form action="/contact/" autocomplete="on" method="post">
 	      <div class="full-box">
 	        <div class="half-box">
 	          <div class="required fname">
@@ -178,7 +178,8 @@ function deliver_mail() {
       echo '<p>Thanks for contacting us!.<br>';
       echo 'We will be in touch with you shortly.</p>';
       echo '</div>';
-      header( "refresh:4;url=http://ideum-next.dev/contact" ) or die("");  
+      header( "refresh:4;url=http://ideum.com/contact" ) or die(""); 
+      exit(); 
 		} else {
 			echo '<a name="message"></a><div style="background: #FF6600; color: #fff; font-weight: bold; padding: 10px 2px; margin:2px 0 20px; text-align: center;">An unexpected error occurred.</div>';
 		}
