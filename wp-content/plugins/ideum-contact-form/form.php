@@ -14,7 +14,7 @@ function html_form_code() {
 	echo'
   <div class="inquiry-content">
 	  <section id="inquiry-form">
-	    <form action="' . $_SERVER['REQUEST_URI'] . '#message" autocomplete="on" class="ng-pristine ng-valid" method="post">
+	    <form action="/contact#message" autocomplete="on" class="ng-pristine ng-valid" method="post">
 	      <div class="full-box">
 	        <div class="half-box">
 	          <div class="required fname">
