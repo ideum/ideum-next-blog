@@ -196,4 +196,3 @@ function cf_shortcode() {
 add_shortcode( 'ideum_contact_form', 'cf_shortcode' );
 
 ?>
-
