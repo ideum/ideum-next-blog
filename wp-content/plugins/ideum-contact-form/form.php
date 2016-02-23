@@ -170,16 +170,14 @@ function deliver_mail() {
 
 		$body .= "\r";
 
-		//$headers = "From: $name <$email>" . "\r\n";
-
-		// If email has been process for sending, display a success message
+		// if email processed, display success message
 		if ( wp_mail( $mailto, $subject, $body ) ) {
 			echo '<a name="message"></a><div style="background: #006600; color: #fff; font-weight: bold; padding: 10px 2px; margin: 2px 0 20px; text-align: center;">';
       echo '<p>Thanks for contacting us!.<br>';
       echo 'We will be in touch with you shortly.</p>';
       echo '</div>';
       header( "refresh:4;url=http://ideum.com/contact" ) or die(""); 
-      exit(); 
+      exit();
 		} else {
 			echo '<a name="message"></a><div style="background: #FF6600; color: #fff; font-weight: bold; padding: 10px 2px; margin:2px 0 20px; text-align: center;">An unexpected error occurred.</div>';
 		}
