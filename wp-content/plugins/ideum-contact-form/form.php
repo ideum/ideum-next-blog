@@ -91,6 +91,7 @@ function html_form_code() {
 	      <label for="inquiries-howheard">How did you hear about us?</label>
 	      <textarea name="howheard" id="howheard" rows="2" cols="60">' . ( isset( $_POST["howheard"] ) ? esc_attr( $_POST["howheard"] ) : '' ) . '</textarea>
 	      <p class="required-note">* - Required</p>
+	      <p>Form may take up to a minute to process - please do not resubmit.</dip>
 	      <p class="submit-wrap"><input class="button dark active" name="form-submitted" type="submit" value="Submit"></p>
 	    </form>
 	  </section>
@@ -177,7 +178,7 @@ function deliver_mail() {
       echo '<p>Thanks for contacting us!.<br>';
       echo 'We will be in touch with you shortly.</p>';
       echo '</div>';
-      header( "refresh:4;url=contact" );
+      header( "refresh:4;url=http://ideum-next.dev/contact" ) or die("");  
 		} else {
 			echo '<a name="message"></a><div style="background: #FF6600; color: #fff; font-weight: bold; padding: 10px 2px; margin:2px 0 20px; text-align: center;">An unexpected error occurred.</div>';
 		}
