@@ -6,9 +6,7 @@
 <link rel="shortcut icon" href="/wp-content/themes/ideum/images/favicon.ico" />
 <link rel="apple-touch-icon" href="/wp-content/themes/ideum/images/iPhoneIcon.png"/>
 
-{% if post.id != '11797' %}
 <meta name="google-site-verification" content="brxnLtsKoz7BBFWkh_keSUHpdLYn7ZDnH8WNzvSke8Q" />
-{% endif %}
 
 <title>{% if post.alternative_meta_title %}{{ post.alternative_meta_title }}{% elseif blog.alternative_meta_title %}{{ blog.alternative_meta_title }}{% elseif acf.alternative_meta_title.value %}{{ acf.alternative_meta_title.value }}{% elseif post.title  %}{{ post.title }} | Ideum{% elseif ogp_title %}{{ ogp_title }}{% elseif post.title  %}{{ post.title }} | Ideum{% else %}{{wp_title}} | Ideum{% endif %}</title>
 
@@ -78,7 +76,6 @@ _atrk_opts = { atrk_acct:"+cU1j1a8Dy002H", domain:"ideum.com",dynamic: true};
 </script>
 <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=+cU1j1a8Dy002H" style="display:none" height="1" width="1" alt="" /></noscript>
 <!-- End Alexa Certify Javascript -->
-
 
 <script type="text/javascript">
 	function yesnoCheck() {
