@@ -9,6 +9,8 @@
   Author URI: http://ideum.com
 */
 
+ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
 // create function to hold our form
 function insightly_form_code() {
 	if($_GET['m'] == "thanks") {
@@ -66,7 +68,7 @@ function insightly_form_code() {
 				      </div>
 				      <div class="full-box">
 				        <label class="dark two-thirds-label left-label" for="phonetime">What time is best for reaching you?</label>
-				        <input class="third-input right-input" type="text" name="preferred-time" id="phonetime" placeholder="Time">
+				        <input class="third-input right-input" type="text" name="preferred-time" id="phonetime">
 				      </div>
 				    </div>
 				  </fieldset>
@@ -100,7 +102,7 @@ function insightly_form_code() {
 				<textarea id="insightly_background" name="background" rows="5" cols="60"></textarea>
 				<label for="inquiries-howheard">How did you hear about us?</label>
 				<textarea name="how-heard" id="how-heard" rows="2" cols="60"></textarea>
-				<p class="required-note">* - Required</p>
+				<p class="required-note">* - indicates a required fields</p>
 				<p style="color:#999;">Caution: the form may take some time to process - please do not resubmit.</dip>
 				<p class="submit-wrap"><input class="button dark active" type="submit" value="Submit"></p>
 			</form>
