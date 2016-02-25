@@ -101,7 +101,7 @@ function insightly_form_code() {
 				<label for="inquiries-howheard">How did you hear about us?</label>
 				<textarea name="how-heard" id="how-heard" rows="2" cols="60"></textarea>
 				<p class="required-note">* - Required</p>
-				<p class="alert">Caution: the form may take up to a minute to process - please do not resubmit.</dip>
+				<p class="alert">Caution: the form may take some time to process - please do not resubmit.</dip>
 				<p class="submit-wrap"><input class="button dark active" type="submit" value="Submit"></p>
 			</form>
 	  </section>
