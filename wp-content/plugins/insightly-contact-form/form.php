@@ -14,27 +14,26 @@
 // create function to hold our form
 function insightly_form_code() {
 	if($_GET['m'] == "thanks") {
-	echo'
-		<a name="message"></a><div style="background:#006600;color:#fff;font-weight:bold;padding:10px 2px;margin:20px 0 20px;text-align:center;""><p>Thanks for contacting us!.<br>We will be in touch with you shortly.</p></div>';
-		header( "refresh:4;url=http://ideum-next.dev/contact" ); 
+	echo'<a name="message"></a><div style="background:#006600;color:#fff;font-weight:bold;padding:10px 2px;margin:20px 0 20px;text-align:center;""><p>Thanks for contacting us!.<br>We will be in touch with you shortly.</p></div>';
+	header( "refresh:4;url=http://".$_SERVER['SERVER_NAME']."/contact" ); 
 	}
 
 	echo'
   <div class="inquiry-content">
 	  <section id="inquiry-form">
-	  	<form name="insightly_web_to_contact" action="https://googleapps.insight.ly/WebToContact/Create" method="post">
-				<input type="hidden" name="formId" value="MpB0vVjf7OV7GjWOz1k2Gw=="/>
+	  	<form action="https://googleapps.insight.ly/WebToContact/Create" name="insightly_web_to_contact" method="post">
+				<input type="hidden" name="formId" value="MpB0vVjf7OV7GjWOz1k2Gw=="/><!-- formId value comes from web-to-contact form on Insightly -->
 				<div class="full-box">
 				  <div class="half-box">
 				    <div class="required fname">
 				      <label class="medium" for="insightly_firstName">First name <span class="required-note">*</span></label>
-				      <input autofocus="" class="full-input" id="insightly_firstName" name="FirstName" pattern="[a-zA-Z0-9 ]+" required="" type="text">
+				      <input autofocus="" class="full-input" id="insightly_firstName" name="FirstName" required="" type="text">
 				    </div>
 				  </div>
 				  <div class="half-box">
 				    <div class="required lname">
 				      <label class="medium" for="insightly_lastName">Last name <span class="required-note">*</span></label>
-				      <input class="full-input" id="insightly_lastName" name="LastName" pattern="[a-zA-Z0-9 ]+" required="" type="text">
+				      <input class="full-input" id="insightly_lastName" name="LastName" required="" type="text">
 				    </div>
 				  </div>
 				</div>
@@ -52,11 +51,11 @@ function insightly_form_code() {
 				    <div class="dark faux-label fieldset-label">Contact me by phone</div>
 				    <div class="half-box">
 				    	<input type="hidden" name="phones[0].Label" value="Work"/>
-				      <input class="left-radio" type="radio" name="contact-by-phone" id="contact-by-phone-yes" onclick="javascript:yesnoCheck();" value="yes">
+				      <input class="left-radio" id="contact-by-phone-yes" name="contact-by-phone" onclick="javascript:yesnoCheck();" type="radio" value="yes">
 				      <label class="radio-label right-label" for="contact-by-phone-yes">Yes</label>
 				    </div>
 				    <div class="half-box">            
-				      <input class="left-radio" type="radio" name="contact-by-phone" id="contact-by-phone-no" onclick="javascript:yesnoCheck();" value="no">
+				      <input class="left-radio" id="contact-by-phone-no" name="contact-by-phone" onclick="javascript:yesnoCheck();" type="radio" value="no">
 				      <label class="radio-label right-label" for="contact-by-phone-no">No</label>
 				    </div>
 				    <div id="ifphoneYes" style="display:none;">
@@ -64,11 +63,11 @@ function insightly_form_code() {
 				      <div class="full-box">
 				      	<input type="hidden" name="phones[0].Label" value="Work"/>
 				        <label class="dark two-thirds-label left-label" for="phones[0]_Value">What phone number is best for reaching you?</label>
-				        <input class="third-input right-input" id="phones[0]_Value" name="phones[0].Value" placeholder="Phone" type="tel">
+				        <input class="third-input right-input" id="phones[0]_Value" name="phones[0].Value" type="tel">
 				      </div>
 				      <div class="full-box">
 				        <label class="dark two-thirds-label left-label" for="phonetime">What time is best for reaching you?</label>
-				        <input class="third-input right-input" type="text" name="preferred-time" id="phonetime">
+				        <input class="third-input right-input" id="phonetime" name="preferred-time" type="text">
 				      </div>
 				    </div>
 				  </fieldset>
@@ -81,11 +80,11 @@ function insightly_form_code() {
 				      <label class="dark check-label right-label" for="check-touch-tables">Touch Tables</label>
 				    </div>
 				    <div class="half-box">
-				      <input class="left-checkbox" type="checkbox" name="custom-software-development" id="check-cust-software-dev" value="yes">
+				      <input class="left-checkbox" id="check-cust-software-dev" name="custom-software-development" type="checkbox" value="yes">
 				      <label class="dark check-label right-label" for="check-cust-software-dev">Custom Software Development</label>
 				    </div>
 				    <div class="half-box">
-				      <input class="left-checkbox" type="checkbox" name="touch-walls" id="check-touch-walls" value="yes">
+				      <input class="left-checkbox" id="check-touch-walls" name="touch-walls" type="checkbox" value="yes">
 				      <label class="dark check-label right-label" for="check-touch-walls">Touch Walls</label>
 						</div>
 				    <div class="half-box">
@@ -93,7 +92,7 @@ function insightly_form_code() {
 				      <label class="dark check-label right-label" for="check-cust-hardware-dev">Custom Hardware Development</label>
 						</div>
 				 		<div class="half-box">
-				      <input class="left-checkbox" type="checkbox" name="product-rentals" id="check-product-rentals" value="yes">
+				      <input class="left-checkbox" id="check-product-rentals" name="product-rentals" type="checkbox" value="yes">
 				      <label class="dark check-label right-label" for="check-product-rentals">Product Rentals (US only)</label>
 				    </div>
 				  </fieldset>
