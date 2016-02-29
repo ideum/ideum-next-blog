@@ -1,6 +1,6 @@
 # ideum-next-blog
 Site for Ideum
 
-Apparently WordPress is being used as a git submodule, perhaps as a custom variation of <a href="https://github.com/ErikFontanel/Wordpress-Corpse#problems-commitingupdating-after-updating-wordpress">WordPress Corpse</a>.
+WordPress is being used as a git submodule. See our 'Ideum Site Maintenance - General' doc for how to update WordPress via the command line.
 
-Sadly, there is no documentation about what variations were used, the logic behind those decisions, nor how to update WordPress (if desired for security reasons) beyond the version used by WordPress Corpse.
+If you try and update the version from within WordPress Admin or by updating local dev copy by manually switching out files and folders, the next time you push any changes to the site the WordPress version will revert to whatever the git head of the WordPress submodule indicates.
