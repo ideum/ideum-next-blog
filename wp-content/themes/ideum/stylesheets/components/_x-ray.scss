@@ -113,10 +113,22 @@ body {
     @include x-ray-image("images/x-rays/pro-outline.png");
     @include navAndButtonColors($pro-color);
   }
+	
+	&.pro-55{
+    background-image: url("images/x-rays/pro-img.png");
+    @include x-ray-image("images/x-rays/pro-outline.png");
+    @include navAndButtonColors($pro-color);
+  }
 
   &.pro-lab{
     background-image: url("images/x-rays/pro-lab-img.png");
     @include x-ray-image("images/x-rays/pro-lab-outline.png");
+    @include navAndButtonColors($pro-color);
+  }
+	
+	&.pro-65{
+    background-image: url("images/x-rays/pro65-img.png");
+    @include x-ray-image("images/x-rays/pro65-outline.png");
     @include navAndButtonColors($pro-color);
   }
 
