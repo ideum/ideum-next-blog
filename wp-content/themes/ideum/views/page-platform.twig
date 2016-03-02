@@ -6,7 +6,7 @@
 
   <header>
     <h1 class="tablet-n-desktop">Platform</h1>
-    <img src="{{theme.link}}/images/products/platform/header.jpg">
+    <img src="{{theme.link}}/images/products/platform/platform-65-header.jpg">
   </header>
 
   <main class="productInnerWrapper">
@@ -15,6 +15,50 @@
 
       <!-- Tabs -->
       <div tabs class="platform">
+
+       <!-- Platform 65 Tab -->
+        <div pane title="Platform 65" class="tablet-n-desktop">
+
+          <header>
+            <h1>Platform 65</h1>
+            <h2>The Latest in Touch</h2>
+          </header>
+
+          <div ng-app="productDetails">
+
+            <section class="x-ray platform65pcap" ng-controller="xRayCtrl" ng-init="dataIndex = 3">
+
+              <section class="overlay" ng-style="overlayStyle">
+
+                <nav>
+                  <a href=""
+                  ng-repeat="detail in productDetails"
+                  ng-class="{active: (currentDetail == $index)}"
+                  ng-click="goToDetail($index)"
+                  >{{ '{{ detail.title }}' }}</a>
+                </nav>
+
+                <div class="content" ng-repeat="detail in productDetails" ng-show="currentDetail == $index">
+
+                  <h2>{{ '{{ detail.blurb }}' }}</h2>
+
+                  <div class="body" ng-show="detailOpen" ng-bind-html="detail.content"></div>
+
+                  <button ng-hide="detailOpen" ng-click="openDetail(true)">{{ '{{ detail.title }}' }}</button>
+                  <button ng-show="detailOpen" ng-click="openDetail(false)">Close</button>
+
+                </div>
+
+                <button class="prev" ng-hide="detailOpen" ng-disabled="!hasPrev()" ng-click="prev()"></button>
+                <button class="next" ng-hide="detailOpen" ng-disabled="!hasNext()" ng-click="next()"></button>
+
+              </section>
+
+            </section>
+
+          </div>
+
+        </div>
 
         <!-- Platform 55 Tab -->
         <div pane title="Platform 55" class="tablet-n-desktop">
