@@ -83,6 +83,12 @@ body {
     @include navAndButtonColors($platform-color);
   }
 
+  &.platform65pcap{
+    background-image: url("images/x-rays/platform65-img.png");
+    @include x-ray-image("images/x-rays/platform65-outline.png");
+    @include navAndButtonColors($platform-color);
+  }
+
   //drafting table styles
   &.platform-drafting-46{
     background-image: url("images/x-rays/platform-drafting46-img.png");
