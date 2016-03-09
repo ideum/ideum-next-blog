@@ -86,6 +86,16 @@ a {
   }
 }
 
+.social-media-feed {
+  .article-content {
+    .article-body {
+      a {
+        border-bottom: 0px dotted $base-link-color;
+      }
+    }
+  }
+}
+
 .light-link-color {
 
   a {
