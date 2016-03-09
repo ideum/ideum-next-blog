@@ -67,9 +67,15 @@ $product-spec-list-left-margin: 15px;
 
 .productInnerWrapper{
 	max-width: $product-section-width; // corrected spelling of var
-	margin: -20% auto 0 auto;
-	z-index: 999;
-	position: relative;
+  position: relative;
+  z-index: 999;
+
+  @include media($small-screen-up) {
+    margin: -3% auto 0 auto;
+  }
+  @include media($medium-screen-up) {
+  	margin: -20% auto 0 auto;
+  }
 
 	> h1, h2{
 		text-align: center;
